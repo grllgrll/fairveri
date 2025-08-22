@@ -1,0 +1,160 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "identifier": "doi:10.5281/fairveri.2024.chemistry-lab",
+  "name": "Organik Sentez Karakterizasyon Verileri",
+  "alternateName": "Organic Synthesis Characterization Data",
+  "description": "Yeni organik bileşiklerin sentezi ve karakterizasyonu için toplanan laboratuvar verileri. NMR, IR, MS spektroskopi verileri ve kristalografik analizleri içerir.",
+  "url": "https://fairveri.com/datasets/lab-data/chemistry/",
+  "sameAs": [
+    "https://www.ccdc.cam.ac.uk/structures/",
+    "https://pubchem.ncbi.nlm.nih.gov/"
+  ],
+  "version": "1.0.0",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Prof. Dr. Selim Özkan",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "İTÜ Kimya Mühendisliği Bölümü"
+      },
+      "identifier": "https://orcid.org/0000-0000-0000-0003"
+    },
+    {
+      "@type": "Person",
+      "name": "Dr. Gamze Yılmaz",
+      "affiliation": {
+        "@type": "Organization", 
+        "name": "ODTÜ Kimya Bölümü"
+      },
+      "identifier": "https://orcid.org/0000-0000-0000-0004"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "FairVeri Platform",
+    "url": "https://fairveri.com"
+  },
+  "datePublished": "2024-03-20",
+  "dateModified": "2024-03-20", 
+  "temporalCoverage": "2023-03-15/2023-05-18",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Türkiye",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.9334,
+      "longitude": 32.8597
+    }
+  },
+  "keywords": [
+    "organik kimya",
+    "spektroskopi",
+    "NMR",
+    "IR spektroskopi", 
+    "kütle spektrometresi",
+    "moleküler karakterizasyon",
+    "organik sentez",
+    "laboratuvar verileri"
+  ],
+  "subjectOf": {
+    "@type": "ScholarlyArticle",
+    "name": "Novel Organic Compounds: Synthesis and Spectroscopic Characterization",
+    "url": "https://example.com/article/organic-synthesis-2024"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv", 
+      "contentUrl": "./compound_data.csv",
+      "contentSize": "25KB",
+      "description": "Ana veri seti - 127 bileşik karakterizasyon verisi"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/pdf",
+      "contentUrl": "./experimental_protocols.pdf", 
+      "description": "Deneysel protokoller ve sentez yöntemleri"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "chemical/x-mdl-sdfile",
+      "contentUrl": "./structures.sdf",
+      "description": "Moleküler yapı dosyaları (SDF formatı)"
+    }
+  ],
+  "measurementTechnique": "NMR spektroskopisi, IR spektroskopisi, kütle spektrometresi, erime noktası tayini",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "moleküler_ağırlık",
+      "description": "Bileşiğin moleküler ağırlığı",
+      "unitCode": "g/mol"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "erime_noktası", 
+      "description": "Bileşiğin erime noktası",
+      "unitCode": "celsius"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "verim_yüzdesi",
+      "description": "Sentez verimi yüzdesi",
+      "unitCode": "percent"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "saflık_yüzdesi",
+      "description": "Bileşik saflığı yüzdesi", 
+      "unitCode": "percent"
+    }
+  ],
+  "size": "127 bileşik, 19 değişken",
+  "funder": {
+    "@type": "Organization",
+    "name": "TÜBİTAK",
+    "identifier": "https://ror.org/04z0kn126"
+  },
+  "citation": "Özkan, S., & Yılmaz, G. (2024). Organik Sentez Karakterizasyon Verileri [Dataset]. FairVeri Platform. https://doi.org/10.5281/fairveri.2024.chemistry-lab",
+  "ethicsPolicy": "Bu çalışma İTÜ Etik Kurulu tarafından onaylanmıştır. Tüm deneyler güvenlik protokollerine uygun şekilde gerçekleştirilmiştir.",
+  "qualityControl": [
+    "Spektral verilerin doğruluğu kontrol edilmiş",
+    "Erime noktası ölçümleri tekrar edilmiş",
+    "Saflık analizleri HPLC ile doğrulanmış",
+    "Moleküler yapılar X-ray kristalografisi ile onaylanmış"
+  ],
+  "technicalInfo": {
+    "format": "CSV (UTF-8)",
+    "delimiter": ",",
+    "encoding": "UTF-8",
+    "missingValueCode": "NA",
+    "dateFormat": "YYYY-MM-DD"
+  },
+  "instrumentation": [
+    {
+      "name": "Bruker Avance III 400 MHz NMR",
+      "type": "NMR Spektrometresi",
+      "manufacturer": "Bruker"
+    },
+    {
+      "name": "Perkin Elmer Spectrum 100 FT-IR",
+      "type": "IR Spektrometresi", 
+      "manufacturer": "Perkin Elmer"
+    },
+    {
+      "name": "Agilent 6460 Triple Quad LC/MS",
+      "type": "Kütle Spektrometresi",
+      "manufacturer": "Agilent"
+    }
+  ],
+  "chemicalStandards": [
+    "IUPAC nomenclature",
+    "InChI identifiers",
+    "SMILES notation",
+    "CAS Registry Numbers"
+  ]
+}

@@ -1,0 +1,26 @@
+participant_id,age,gender,role,region,education_level,years_experience,satisfaction_teaching,satisfaction_curriculum,satisfaction_resources,satisfaction_admin,importance_technology,importance_creativity,importance_assessment,remote_teaching_comfort,professional_development_hours,salary_satisfaction,class_size_avg,student_engagement,parent_communication,workload_management,career_plans,suggestions
+EDU001,32,Female,Teacher,Marmara,Bachelors,7,6,4,3,5,8,9,7,7,25,4,28,6,8,5,Stay in teaching,More technology resources needed
+EDU002,45,Male,Teacher,Central Anatolia,Masters,18,7,6,5,4,7,8,8,5,40,6,22,7,7,6,Stay in teaching,Reduce administrative burden
+EDU003,28,Female,Teacher,Aegean,Bachelors,3,5,3,2,3,9,8,6,8,15,3,35,5,6,4,Consider leaving,Better salary and working conditions
+EDU004,39,Male,Administrator,Mediterranean,Masters,12,8,7,7,8,6,7,9,6,30,7,0,8,9,8,Stay in education,Continue current practices
+EDU005,34,Female,Parent,Black Sea,Bachelors,0,7,5,4,6,8,7,6,0,0,0,0,6,8,0,NA,More parent involvement opportunities
+EDU006,41,Male,Teacher,Eastern Anatolia,Bachelors,15,6,4,3,4,7,8,7,4,20,5,30,6,7,5,Stay in teaching,Infrastructure improvements
+EDU007,29,Female,Teacher,Southeastern Anatolia,Masters,5,7,6,5,5,9,9,8,9,35,4,25,7,8,6,Stay in teaching,Professional development programs
+EDU008,50,Male,Administrator,Marmara,PhD,22,8,8,7,9,7,6,9,5,50,8,0,9,9,9,Stay in education,Leadership training programs
+EDU009,26,Female,Student,Aegean,High School,0,6,5,4,0,9,8,7,8,0,0,0,0,0,0,Continue education,More vocational options
+EDU010,43,Female,Parent,Central Anatolia,Masters,0,6,4,3,5,8,7,6,0,0,0,0,7,7,0,NA,Better communication with teachers
+EDU011,35,Male,Teacher,Mediterranean,Bachelors,10,7,5,4,5,8,8,7,6,25,5,27,6,7,5,Stay in teaching,Smaller class sizes
+EDU012,31,Female,Teacher,Black Sea,Masters,6,8,7,6,6,9,9,8,8,30,5,23,7,8,7,Stay in teaching,Curriculum modernization
+EDU013,47,Male,Administrator,Eastern Anatolia,Masters,20,7,6,5,7,6,7,8,4,45,7,0,8,8,7,Stay in education,Budget allocation improvements
+EDU014,28,Female,Student,Southeastern Anatolia,Bachelors,0,7,6,5,0,9,8,7,9,0,0,0,0,0,0,Continue education,Internship opportunities
+EDU015,38,Female,Parent,Marmara,Bachelors,0,8,6,5,6,8,7,7,0,0,0,0,8,8,0,NA,Extracurricular activities
+EDU016,44,Male,Teacher,Aegean,PhD,19,8,7,6,6,7,8,9,6,40,6,21,8,8,7,Stay in teaching,Research opportunities
+EDU017,30,Female,Teacher,Central Anatolia,Bachelors,4,6,4,3,4,8,9,6,7,20,4,32,6,6,5,Consider leaving,Career advancement paths
+EDU018,52,Male,Administrator,Mediterranean,Masters,25,9,8,8,9,6,6,9,5,55,8,0,9,9,8,Stay in education,Mentorship programs
+EDU019,27,Female,Student,Black Sea,High School,0,5,4,3,0,9,8,6,8,0,0,0,0,0,0,Continue education,Financial aid programs
+EDU020,40,Female,Parent,Eastern Anatolia,Masters,0,7,5,4,5,7,8,6,0,0,0,0,7,8,0,NA,Transportation improvements
+EDU021,33,Male,Teacher,Southeastern Anatolia,Bachelors,8,7,5,4,5,8,8,7,5,22,5,29,7,7,6,Stay in teaching,Health and safety measures
+EDU022,46,Female,Teacher,Marmara,Masters,17,8,7,6,7,7,8,8,7,38,7,24,8,8,7,Stay in teaching,Work-life balance support
+EDU023,29,Male,Administrator,Aegean,Masters,3,6,5,4,6,8,7,7,7,25,5,0,7,7,6,Stay in education,Technology integration training
+EDU024,37,Female,Parent,Central Anatolia,Bachelors,0,6,4,3,4,8,7,6,0,0,0,0,6,7,0,NA,Special needs support
+EDU025,42,Male,Teacher,Mediterranean,Masters,14,7,6,5,6,7,8,8,6,35,6,26,7,7,6,Stay in teaching,Peer collaboration opportunities

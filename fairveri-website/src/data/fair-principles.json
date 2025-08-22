@@ -1,0 +1,255 @@
+{
+  "principles": {
+    "title": "FAIR Prensipleri",
+    "description": "FAIR, dört temel prensibe dayalı rehber ilkeler bütünüdür",
+    "overview": "Verilerin bulunabilir, erişilebilir, birlikte çalışabilir ve yeniden kullanılabilir olması için sistematik yaklaşım",
+    "items": [
+      {
+        "letter": "F",
+        "title": "Bulunabilirlik",
+        "titleEn": "Findable",
+        "description": "Verilerin bulunabilir olması, araştırma verilerini yeniden kullanmanın ilk adımıdır. Hem insanlar hem de bilgisayarlar için verilerin kolayca bulunabilir olması gerekir.",
+        "color": "#3B82F6",
+        "icon": "🔍",
+        "principles": [
+          {
+            "id": "F1",
+            "title": "(Meta)verilere benzersiz ve kalıcı tanımlayıcı atanmalı",
+            "description": "Her veri seti için DOI, Handle, ORCID gibi benzersiz ve kalıcı tanımlayıcılar kullanılmalıdır.",
+            "example": {
+              "title": "DOI Örneği",
+              "code": "doi:10.5281/zenodo.123456",
+              "description": "Zenodo'da yayınlanmış veri seti için DOI örneği"
+            }
+          },
+          {
+            "id": "F2",
+            "title": "Veriler zengin metadata ile tanımlanmalı",
+            "description": "Metadata, veri setini detaylı olarak tanımlamalı ve arama motorları tarafından bulunabilir olmalıdır.",
+            "example": {
+              "title": "Metadata Alanları",
+              "fields": [
+                "Başlık",
+                "Yazar(lar)",
+                "Oluşturma tarihi",
+                "Açıklama",
+                "Anahtar kelimeler",
+                "Metodoloji",
+                "Veri formatı"
+              ]
+            }
+          },
+          {
+            "id": "F3",
+            "title": "Metadata, tanımladığı verinin tanımlayıcısını açıkça içermeli",
+            "description": "Metadata, hangi veri setini tanımladığını açıkça belirtmelidir.",
+            "example": {
+              "title": "JSON Metadata Örneği",
+              "code": "{\n  \"dataset_id\": \"doi:10.5281/zenodo.123456\",\n  \"title\": \"Türkiye İklim Değişikliği Veri Seti\",\n  \"description\": \"2020-2025 yılları arası iklim verileri\"\n}"
+            }
+          },
+          {
+            "id": "F4",
+            "title": "(Meta)veriler aranabilir bir kaynağa kaydedilmeli",
+            "description": "Veriler ve metadata arama motorları tarafından indekslenebilecek platformlarda depolanmalıdır.",
+            "example": {
+              "title": "Önerilen Platformlar",
+              "platforms": {
+                "national": ["APERTA", "TÜBİTAK Açık Arşiv"],
+                "international": ["Zenodo", "Figshare", "Dryad"]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "letter": "A",
+        "title": "Erişilebilirlik",
+        "titleEn": "Accessible",
+        "description": "Kullanıcı gerekli verileri bulduğunda, muhtemelen kimlik doğrulama ve yetkilendirme dahil olmak üzere bunlara nasıl erişilebileceğini bilmelidir.",
+        "color": "#10B981",
+        "icon": "🔓",
+        "principles": [
+          {
+            "id": "A1",
+            "title": "(Meta)veriler standartlaştırılmış iletişim protokolü ile erişilebilir olmalı",
+            "description": "Veriler standart, yaygın kullanılan protokoller üzerinden erişilebilir olmalıdır.",
+            "example": {
+              "title": "Protokol Örnekleri",
+              "protocols": ["HTTP/HTTPS", "FTP", "REST API"]
+            }
+          },
+          {
+            "id": "A1.1",
+            "title": "Protokol açık, ücretsiz ve evrensel olarak uygulanabilir olmalı",
+            "description": "Kullanılan protokoller herkesçe bilinen ve uygulanabilir açık standartlar olmalıdır."
+          },
+          {
+            "id": "A1.2",
+            "title": "Protokol gerektiğinde kimlik doğrulama ve yetkilendirmeye izin vermeli",
+            "description": "Hassas veriler için güvenli erişim kontrol mekanizmaları sağlanmalıdır.",
+            "example": {
+              "title": "Erişim Seviyeleri",
+              "levels": [
+                "Açık Erişim (Herkes)",
+                "Kayıtlı Kullanıcılar",
+                "Kurumsal Erişim",
+                "Özel İzinli Erişim"
+              ]
+            }
+          },
+          {
+            "id": "A2",
+            "title": "Veriler artık mevcut olmadığında bile metadata'ya erişilebilir olmalı",
+            "description": "Veriler silinse bile metadata kalıcı olarak erişilebilir durumda tutulmalıdır."
+          }
+        ]
+      },
+      {
+        "letter": "I",
+        "title": "Birlikte Çalışabilirlik",
+        "titleEn": "Interoperable",
+        "description": "Veriler genellikle diğer verilerle entegre edilmesi gerekir. Ayrıca, veriler uygulamalar veya iş akışları ile analiz, depolama ve işleme için birlikte çalışabilir olmalıdır.",
+        "color": "#8B5CF6",
+        "icon": "🔗",
+        "principles": [
+          {
+            "id": "I1",
+            "title": "(Meta)veriler bilgi temsili için resmi, erişilebilir, paylaşılan ve geniş çapta uygulanabilir bir dil kullanmalı",
+            "description": "Veriler makine okunabilir, standart formatlarda sunulmalıdır.",
+            "example": {
+              "title": "Önerilen Formatlar",
+              "formats": ["JSON-LD", "RDF", "XML", "CSV (yapılandırılmış)"]
+            }
+          },
+          {
+            "id": "I2",
+            "title": "(Meta)veriler FAIR prensiplerini takip eden kelime dağarcıkları kullanmalı",
+            "description": "Kontrollü kelime dağarcıkları ve ontolojiler kullanılmalıdır.",
+            "example": {
+              "title": "Kontrollü Kelime Dağarcıkları",
+              "vocabularies": [
+                {
+                  "name": "ORCID",
+                  "description": "araştırmacı kimlikleri"
+                },
+                {
+                  "name": "ROR",
+                  "description": "kurum kimlikleri"
+                },
+                {
+                  "name": "MeSH",
+                  "description": "tıp terimleri"
+                },
+                {
+                  "name": "AGROVOC",
+                  "description": "tarım terimleri"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I3",
+            "title": "(Meta)veriler diğer (meta)verilere nitelikli referanslar içermeli",
+            "description": "Veri setleri arasındaki ilişkiler açıkça belirtilmelidir.",
+            "example": {
+              "title": "İlişki Örneği",
+              "code": "{\n  \"relatedDatasets\": [\n    {\n      \"identifier\": \"doi:10.5281/zenodo.789012\",\n      \"relationType\": \"IsDerivedFrom\"\n    }\n  ]\n}"
+            }
+          }
+        ]
+      },
+      {
+        "letter": "R",
+        "title": "Yeniden Kullanılabilirlik",
+        "titleEn": "Reusable",
+        "description": "FAIR'in nihai hedefi verilerin yeniden kullanımını optimize etmektir. Bunu başarmak için, metadata ve veriler farklı ortamlarda çoğaltılabilmeleri ve/veya birleştirilebilmeleri için iyi tanımlanmış olmalıdır.",
+        "color": "#F59E0B",
+        "icon": "♻️",
+        "principles": [
+          {
+            "id": "R1",
+            "title": "(Meta)veriler çok sayıda doğru ve ilgili özellikle zengin bir şekilde tanımlanmalı",
+            "description": "Veriler yeniden kullanım için yeterli dokümantasyonla desteklenmelidir.",
+            "example": {
+              "title": "Minimum Metadata Öğeleri",
+              "elements": [
+                "Veri toplama metodolojisi",
+                "Kalite kontrol prosedürleri",
+                "Değişken tanımları",
+                "Birimler ve ölçüler",
+                "Eksik veri açıklamaları"
+              ]
+            }
+          },
+          {
+            "id": "R1.1",
+            "title": "(Meta)veriler açık ve erişilebilir bir veri kullanım lisansı ile yayınlanmalı",
+            "description": "Veriler için açık lisanslar kullanılmalıdır.",
+            "example": {
+              "title": "Önerilen Lisanslar",
+              "licenses": [
+                {
+                  "name": "CC0",
+                  "description": "Kamu Malı"
+                },
+                {
+                  "name": "CC BY",
+                  "description": "Atıf"
+                },
+                {
+                  "name": "CC BY-SA",
+                  "description": "Atıf-AynıLisanslaPaylaş"
+                }
+              ]
+            }
+          },
+          {
+            "id": "R1.2",
+            "title": "(Meta)veriler detaylı köken bilgisi ile ilişkilendirilmeli",
+            "description": "Verinin nereden geldiği ve nasıl üretildiği detaylı olarak açıklanmalıdır.",
+            "example": {
+              "title": "Köken Bilgisi Örnekleri",
+              "provenance": [
+                "Veri toplama tarihi ve yeri",
+                "Kullanılan cihazlar ve yazılımlar",
+                "Veri işleme adımları",
+                "Sürüm geçmişi"
+              ]
+            }
+          },
+          {
+            "id": "R1.3",
+            "title": "(Meta)veriler alana özgü topluluk standartlarını karşılamalı",
+            "description": "Her disiplinin kendine özgü veri standartları ve gereksinimleri dikkate alınmalıdır."
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "title": "FAIR Prensipleri Özeti",
+    "items": [
+      {
+        "principle": "F",
+        "title": "Bulunabilirlik",
+        "summary": "Benzersiz tanımlayıcılar, zengin metadata, aranabilir kayıtlar"
+      },
+      {
+        "principle": "A",
+        "title": "Erişilebilirlik",
+        "summary": "Standart protokoller, kimlik doğrulama, kalıcı metadata"
+      },
+      {
+        "principle": "I",
+        "title": "Birlikte Çalışabilirlik",
+        "summary": "Standart formatlar, kontrollü kelime dağarcıkları, ilişkili veriler"
+      },
+      {
+        "principle": "R",
+        "title": "Yeniden Kullanılabilirlik",
+        "summary": "Zengin dokümantasyon, açık lisanslar, köken bilgisi"
+      }
+    ]
+  }
+}

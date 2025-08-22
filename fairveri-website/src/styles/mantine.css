@@ -1,0 +1,772 @@
+/* Import Mantine core styles */
+@import '@mantine/core/styles.css';
+@import '@mantine/notifications/styles.css';
+@import '@mantine/spotlight/styles.css';
+@import '@mantine/charts/styles.css';
+@import '@mantine/dates/styles.css';
+@import '@mantine/dropzone/styles.css';
+
+/* Prevent content reflow and layout shifts */
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fix sliding/shifting issues with cards and containers */
+.mantine-Card-root {
+  transform: translateZ(0);
+  will-change: auto;
+}
+
+/* Ensure stable dimensions for animated elements */
+[data-mantine-animate] {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Custom overrides for professional appearance */
+:root {
+  --mantine-color-body: #ffffff;
+  --mantine-color-text: #1f2937;
+  --mantine-font-family: var(--font-inter), Inter, system-ui, sans-serif;
+  --mantine-font-family-monospace: var(--font-jetbrains-mono), JetBrains Mono, ui-monospace, monospace;
+  --mantine-line-height: 1.6;
+  --mantine-radius-default: 0.75rem;
+  --mantine-shadow-default: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+[data-mantine-color-scheme='dark'] {
+  --mantine-color-body: #111827;
+  --mantine-color-text: #f9fafb;
+}
+
+/* Global improvements */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Button enhancements */
+.mantine-Button-root {
+  font-weight: 600;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+}
+
+.mantine-Button-root:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.mantine-Button-root:active {
+  transform: translateY(0);
+}
+
+/* Card enhancements */
+.mantine-Card-root {
+  border: 1px solid #e5e7eb;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
+}
+
+.mantine-Card-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #d1d5db;
+}
+
+[data-mantine-color-scheme='dark'] .mantine-Card-root {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+[data-mantine-color-scheme='dark'] .mantine-Card-root:hover {
+  border-color: #4b5563;
+}
+
+/* Input enhancements */
+.mantine-Input-input {
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #d1d5db;
+}
+
+.mantine-Input-input:focus {
+  transform: scale(1.01);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+[data-mantine-color-scheme='dark'] .mantine-Input-input {
+  border-color: #4b5563;
+  background: #374151;
+  color: #f9fafb;
+}
+
+/* Paper enhancements */
+.mantine-Paper-root {
+  background: #ffffff;
+  border: 1px solid #f3f4f6;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-mantine-color-scheme='dark'] .mantine-Paper-root {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+/* Table enhancements */
+.mantine-Table-root {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.mantine-Table-thead {
+  background: #f9fafb;
+}
+
+.mantine-Table-th {
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem;
+}
+
+.mantine-Table-td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.mantine-Table-tbody .mantine-Table-tr:last-child .mantine-Table-td {
+  border-bottom: none;
+}
+
+[data-mantine-color-scheme='dark'] .mantine-Table-root {
+  border-color: #374151;
+}
+
+[data-mantine-color-scheme='dark'] .mantine-Table-thead {
+  background: #111827;
+}
+
+[data-mantine-color-scheme='dark'] .mantine-Table-th {
+  color: #f9fafb;
+  border-bottom-color: #374151;
+}
+
+[data-mantine-color-scheme='dark'] .mantine-Table-td {
+  border-bottom-color: #374151;
+}
+
+/* Badge enhancements */
+.mantine-Badge-root {
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.025em;
+}
+
+/* Notification enhancements */
+.mantine-Notification-root {
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+[data-mantine-color-scheme='dark'] .mantine-Notification-root {
+  border-color: #374151;
+}
+
+/* Modal enhancements */
+.mantine-Modal-content {
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid #e5e7eb;
+}
+
+[data-mantine-color-scheme='dark'] .mantine-Modal-content {
+  border-color: #374151;
+}
+
+/* Spotlight enhancements */
+.mantine-Spotlight-root {
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid #e5e7eb;
+}
+
+[data-mantine-color-scheme='dark'] .mantine-Spotlight-root {
+  border-color: #374151;
+}
+
+/* Loading overlay enhancements */
+.mantine-LoadingOverlay-root {
+  border-radius: inherit;
+  backdrop-filter: blur(4px);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+  transition: background 200ms ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+[data-mantine-color-scheme='dark'] ::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+[data-mantine-color-scheme='dark'] ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+[data-mantine-color-scheme='dark'] ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Focus improvements */
+.mantine-focus-auto:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .mantine-Button-root,
+  .mantine-ActionIcon-root {
+    display: none !important;
+  }
+  
+  .mantine-Card-root,
+  .mantine-Paper-root {
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .mantine-Button-root {
+    border: 2px solid currentColor !important;
+  }
+  
+  .mantine-Card-root,
+  .mantine-Paper-root {
+    border: 2px solid currentColor !important;
+  }
+}
+
+/* Custom utility classes */
+.fairveri-gradient-text {
+  background: linear-gradient(135deg, #1e40af 0%, #0891b2 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  /* Ensure text is always readable with strong fallback */
+  color: #1e40af !important; /* Strong fallback color */
+  font-weight: 600; /* Ensure good readability */
+}
+
+/* Enhanced fallback for browsers that don't support gradient text */
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .fairveri-gradient-text {
+    background: none !important;
+    -webkit-text-fill-color: #1e40af !important;
+    text-fill-color: #1e40af !important;
+    color: #1e40af !important;
+  }
+}
+
+/* Fix for dark mode to ensure text remains visible */
+[data-mantine-color-scheme='dark'] .fairveri-gradient-text {
+  color: #60a5fa !important; /* Better contrast for dark mode */
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .fairveri-gradient-text {
+    background: none !important;
+    -webkit-text-fill-color: #1e40af !important;
+    text-fill-color: #1e40af !important;
+    color: #1e40af !important;
+  }
+  
+  [data-mantine-color-scheme='dark'] .fairveri-gradient-text {
+    color: #ffffff !important;
+  }
+}
+
+/* Ensure gradient text never applies to buttons or interactive elements */
+button.fairveri-gradient-text,
+[role="button"].fairveri-gradient-text,
+a.fairveri-gradient-text {
+  background: none !important;
+  -webkit-text-fill-color: inherit !important;
+  text-fill-color: inherit !important;
+  color: inherit !important;
+}
+
+/* Ensure gradient text remains visible during print */
+@media print {
+  .fairveri-gradient-text {
+    background: none !important;
+    -webkit-text-fill-color: #000000 !important;
+    text-fill-color: #000000 !important;
+    color: #000000 !important;
+  }
+}
+
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  [data-mantine-color-scheme='dark'] .fairveri-gradient-text {
+    background: none !important;
+    -webkit-text-fill-color: #3b82f6 !important;
+    text-fill-color: #3b82f6 !important;
+    color: #3b82f6 !important;
+  }
+}
+
+/* Ensure text remains visible on hover and focus */
+.fairveri-gradient-text:hover,
+.fairveri-gradient-text:focus {
+  opacity: 0.9;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .fairveri-gradient-text {
+    background: none !important;
+    -webkit-text-fill-color: currentColor !important;
+    text-fill-color: currentColor !important;
+    color: currentColor !important;
+  }
+}
+
+.fairveri-hero-gradient {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+}
+
+[data-mantine-color-scheme='dark'] .fairveri-hero-gradient {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #374151 100%);
+}
+
+.fairveri-card-hover {
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.fairveri-card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 600ms ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.fairveri-card-hover:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(59, 130, 246, 0.1),
+    0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+.fairveri-card-hover:hover::before {
+  left: 100%;
+}
+
+.fairveri-card-hover:active {
+  transform: translateY(-2px) scale(1.01);
+  transition-duration: 100ms;
+}
+
+/* Enhanced card variants */
+.fairveri-card-interactive {
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fairveri-card-interactive:hover {
+  border-color: #3b82f6;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.02) 0%, rgba(14, 165, 233, 0.02) 100%);
+}
+
+.fairveri-card-interactive:focus-within {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Advanced animations and micro-interactions */
+.fairveri-fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fairveri-bounce-in {
+  animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fairveri-slide-in {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Button enhancements */
+.fairveri-btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.fairveri-btn-glow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: width 0.6s, height 0.6s;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.fairveri-btn-glow:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.fairveri-btn-glow > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Loading pulse animations */
+.fairveri-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.fairveri-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Shimmer effect for loading states */
+.fairveri-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Text animations */
+.fairveri-text-reveal {
+  overflow: hidden;
+  position: relative;
+}
+
+.fairveri-text-reveal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: textReveal 1.5s ease-out forwards;
+}
+
+[data-mantine-color-scheme='dark'] .fairveri-text-reveal::after {
+  background: #111827;
+}
+
+@keyframes textReveal {
+  to {
+    width: 0;
+  }
+}
+
+/* Glass morphism effects */
+.fairveri-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-mantine-color-scheme='dark'] .fairveri-glass {
+  background: rgba(31, 41, 55, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient borders */
+.fairveri-gradient-border {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+}
+
+.fairveri-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(135deg, #3b82f6, #14b8a6, #f59e0b);
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+}
+
+[data-mantine-color-scheme='dark'] .fairveri-gradient-border {
+  background: #1f2937;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  .fairveri-card-hover:hover {
+    transform: translateY(-3px) scale(1.02);
+  }
+  
+  .fairveri-gradient-text {
+    animation-duration: 4s;
+  }
+  
+  /* Reduce motion for mobile performance */
+  .fairveri-card-hover::before {
+    display: none;
+  }
+  
+  /* Touch-friendly interactions */
+  .fairveri-card-interactive {
+    min-height: 44px;
+    padding: 12px;
+  }
+  
+  /* Optimized shadows for mobile */
+  .mantine-Card-root:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* High performance mode for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fairveri-gradient-text {
+    animation: none;
+  }
+  
+  .fairveri-card-hover::before {
+    display: none;
+  }
+  
+  .fairveri-fade-in,
+  .fairveri-bounce-in,
+  .fairveri-slide-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  .fairveri-shimmer {
+    animation: none;
+  }
+}
+
+/* Enhanced focus states for accessibility */
+.mantine-Button-root:focus-visible,
+.mantine-Input-input:focus-visible,
+.mantine-Select-input:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-color: #3b82f6;
+}
+
+/* Loading state enhancements */
+.fairveri-loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  position: relative;
+}
+
+.fairveri-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e5e7eb;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.fairveri-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+[data-mantine-color-scheme='dark'] .fairveri-skeleton {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200% 100%;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Performance optimizations */
+.fairveri-will-change {
+  will-change: transform, opacity;
+}
+
+.fairveri-gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Error state styling */
+.fairveri-error-state {
+  background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+  border: 1px solid #f87171;
+  color: #dc2626;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+[data-mantine-color-scheme='dark'] .fairveri-error-state {
+  background: linear-gradient(135deg, #451a1a 0%, #7f1d1d 100%);
+  border-color: #dc2626;
+  color: #fca5a5;
+}
+
+/* Success state styling */
+.fairveri-success-state {
+  background: linear-gradient(135deg, #f0fdf4 0%, #bbf7d0 100%);
+  border: 1px solid #22c55e;
+  color: #166534;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+[data-mantine-color-scheme='dark'] .fairveri-success-state {
+  background: linear-gradient(135deg, #14532d 0%, #166534 100%);
+  border-color: #22c55e;
+  color: #86efac;
+}

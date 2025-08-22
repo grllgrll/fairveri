@@ -1,0 +1,3374 @@
+{
+  "learningModules": {
+    "title": "FAIR Öğrenme Yolculuğu",
+    "description": "FAIR prensiplerini adım adım öğrenin ve uygulamaya dökün",
+    "modules": [
+      {
+        "id": "intro",
+        "title": "FAIR'e Giriş",
+        "description": "FAIR prensiplerinin temellerini keşfedin. Bu modülde FAIR'in doğuşu, önemi ve temel kavramları hakkında bilgi edinin. İnteraktif örnekler ve gerçek vaka çalışmaları ile öğrenmenizi pekiştirin.",
+        "icon": "🎯",
+        "color": "#3B82F6",
+        "difficulty": "beginner",
+        "estimatedTime": "2-3 dakika",
+        "learningObjectives": [
+          "FAIR prensiplerinin ne olduğunu ve neden önemli olduğunu anlayın",
+          "Findable, Accessible, Interoperable, Reusable kavramlarını ayırt edin",
+          "FAIR ile Açık Veri arasındaki farkı kavrayın",
+          "Gerçek örneklerle FAIR prensiplerini tanıyın"
+        ],
+        "modules": [
+          {
+            "id": "intro-1",
+            "title": "FAIR Nedir?",
+            "type": "lesson",
+            "content": {
+              "introduction": "FAIR, araştırma verilerinin daha etkili kullanımı için geliştirilmiş bir rehber ilkeler bütünüdür.",
+              "sections": [
+                {
+                  "title": "FAIR'in Doğuşu",
+                  "content": "2016 yılında yayınlanan FAIR prensipleri, verilerin bulunabilir, erişilebilir, birlikte çalışabilir ve yeniden kullanılabilir olmasını hedefler.",
+                  "highlights": [
+                    "Veriler hem insanlar hem de makineler için optimize edilmelidir",
+                    "FAIR, açık veri değildir - kontrollü erişim de FAIR olabilir",
+                    "Her disiplin kendi FAIR uygulamalarını geliştirebilir"
+                  ]
+                },
+                {
+                  "title": "Neden FAIR?",
+                  "content": "Araştırma verilerinin %80'inden fazlası kaybolmakta veya yeniden kullanılamamaktadır.",
+                  "benefits": [
+                    "Araştırma etkisini artırır",
+                    "Veri kaybını önler",
+                    "İşbirliğini kolaylaştırır",
+                    "Zaman ve kaynak tasarrufu sağlar"
+                  ]
+                }
+              ],
+              "quiz": {
+                "questions": [
+                  {
+                    "id": "q1",
+                    "question": "Aşağıdakilerden hangisi FAIR verinin en önemli özelliğidir?",
+                    "options": [
+                      "Ücretsiz olması", 
+                      "Hem insanlar hem de makineler tarafından anlaşılabilir olması", 
+                      "Sadece araştırmacılar tarafından erişilebilir olması", 
+                      "Mümkün olduğunca hızlı indirilebilir olması"
+                    ],
+                    "correct": 1,
+                    "explanation": "FAIR'in temel amacı, verilerin hem insanlar hem de makineler tarafından bulunabilir, erişilebilir, birlikte çalışabilir ve yeniden kullanılabilir olmasıdır."
+                  },
+                  {
+                    "id": "q2",
+                    "question": "Bir araştırmacı, 5 yıl önceki bir projede kullanılan verilere ihtiyaç duyuyor ancak bu verilere erişemiyor. Bu durum hangi sorunu örnekler?",
+                    "options": [
+                      "Veriler çok büyük olduğu için depolanamıyor", 
+                      "Araştırma verilerinin %80'inden fazlasının kaybolması problemi", 
+                      "Verilerin telif hakkı koruması altında olması", 
+                      "İnternet bağlantısının yavaş olması"
+                    ],
+                    "correct": 1,
+                    "explanation": "FAIR prensiplerinin geliştirilme nedenlerinden biri, araştırma verilerinin %80'inden fazlasının kaybolması veya yeniden kullanılamamasıdır."
+                  },
+                  {
+                    "id": "q3",
+                    "question": "FAIR veriler hakkında aşağıdakilerden hangisi doğrudur?",
+                    "options": [
+                      "FAIR veriler mutlaka açık erişimli olmalıdır", 
+                      "FAIR veriler sadece akademik amaçlar için kullanılabilir", 
+                      "FAIR veriler kontrollü erişim ile de sağlanabilir", 
+                      "FAIR veriler sadece İngilizce olarak sunulmalıdır"
+                    ],
+                    "correct": 2,
+                    "explanation": "FAIR, açık veri anlamına gelmez. Veriler kontrollü erişim, kayıt gerekliliği veya lisanslama ile korunarak da FAIR olabilir."
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "intro-2",
+            "title": "FAIR'in Faydaları",
+            "type": "interactive",
+            "content": {
+              "introduction": "FAIR prensiplerini uygulamanın somut faydalarını keşfedin.",
+              "interactiveElements": [
+                {
+                  "type": "scenario",
+                  "title": "Senaryo: Araştırma Verilerine Erişim",
+                  "description": "Bir araştırmacı olarak, 5 yıl önce tamamlanmış benzer bir projenin verilerine ihtiyacınız var. Yeni araştırmanızı bu verileri temel alarak geliştirmek istiyorsunuz. Karşılaştığınız iki farklı durumu değerlendirin:",
+                  "choices": [
+                    {
+                      "option": "Geleneksel Veri Yönetimi",
+                      "result": "Araştırmacıyla iletişim kurmaya çalışıyorsunuz ama veriler kişisel bilgisayarında saklı, dosya formatları eskimiş ve metadata eksik. Verilere erişim sağlanamıyor.",
+                      "impact": {
+                        "time": "-6 ay",
+                        "cost": "-50.000₺",
+                        "efficiency": "-80%"
+                      }
+                    },
+                    {
+                      "option": "FAIR Veri Yönetimi",
+                      "result": "Veriler DOI ile tanımlanmış, açık repoda depolanmış, standart formatlar kullanılmış ve zengin metadata ile tanımlanmış. Anında erişebilir ve kullanabilirsiniz.",
+                      "impact": {
+                        "time": "+5 ay",
+                        "cost": "+45.000₺",
+                        "efficiency": "+90%"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "achievements": [
+          {
+            "id": "first-step",
+            "title": "İlk Adım",
+            "description": "FAIR yolculuğuna başladınız!",
+            "icon": "🚀",
+            "points": 10
+          },
+          {
+            "id": "quiz-master",
+            "title": "Quiz Ustası",
+            "description": "İlk quizi başarıyla tamamladınız",
+            "icon": "🧠",
+            "points": 20
+          }
+        ]
+      },
+      {
+        "id": "findable",
+        "title": "F - Bulunabilirlik",
+        "description": "Verilerinizi global veri havuzunda bulunabilir hale getirmeyi öğrenin. DOI sistemi, metadata standartları ve arama indeksleri ile verilerinizin keşfedilebilirliğini artırın. Uygulamalı alıştırmalarla kalıcı tanımlayıcı oluşturma süreci.",
+        "icon": "🔍",
+        "color": "#3B82F6",
+        "difficulty": "intermediate",
+        "estimatedTime": "3-4 dakika",
+        "prerequisite": "intro",
+        "learningObjectives": [
+          "Kalıcı tanımlayıcıların (DOI, Handle, URN) önemini kavrayın",
+          "Zengin metadata oluşturma tekniklerini öğrenin",
+          "Dublin Core ve DataCite standartlarını uygulayın",
+          "Veri kataloglarına kayıt sürecini deneyimleyin"
+        ],
+        "modules": [
+          {
+            "id": "f1-identifiers",
+            "title": "F1: Benzersiz Tanımlayıcılar",
+            "type": "lesson",
+            "content": {
+              "introduction": "Her veri seti benzersiz ve kalıcı bir tanımlayıcıya sahip olmalıdır.",
+              "sections": [
+                {
+                  "title": "Tanımlayıcı Türleri",
+                  "content": "DOI, Handle, ORCID gibi kalıcı tanımlayıcılar kullanılmalıdır.",
+                  "examples": [
+                    {
+                      "type": "DOI",
+                      "format": "10.5281/zenodo.123456",
+                      "description": "Digital Object Identifier - En yaygın kullanılan tanımlayıcı"
+                    },
+                    {
+                      "type": "Handle",
+                      "format": "20.500.12345/67890",
+                      "description": "Handle System - Alternatif kalıcı tanımlayıcı"
+                    },
+                    {
+                      "type": "ORCID",
+                      "format": "0000-0002-1825-0097",
+                      "description": "Araştırmacılar için benzersiz tanımlayıcı"
+                    }
+                  ]
+                }
+              ],
+              "practice": {
+                "title": "DOI Oluşturma Simülasyonu",
+                "description": "Kendi veri setiniz için DOI oluşturmayı öğrenin",
+                "steps": [
+                  "Veri deposu seçin (örn: Zenodo)",
+                  "Metadata bilgilerini girin",
+                  "Veri setini yükleyin",
+                  "DOI'yi alın ve kaydedin"
+                ]
+              }
+            }
+          },
+          {
+            "id": "f2-metadata",
+            "title": "F2: Zengin Metadata",
+            "type": "interactive",
+            "content": {
+              "introduction": "Metadata, verilerinizin 'kimlik kartı'dır.",
+              "interactiveElements": [
+                {
+                  "type": "metadata-builder",
+                  "title": "Metadata Oluşturucu",
+                  "description": "Adım adım zengin metadata oluşturun",
+                  "fields": [
+                    {
+                      "id": "title",
+                      "label": "Başlık",
+                      "required": true,
+                      "hint": "Açıklayıcı ve aranabilir bir başlık"
+                    },
+                    {
+                      "id": "creator",
+                      "label": "Oluşturan",
+                      "required": true,
+                      "hint": "ORCID ile birlikte"
+                    },
+                    {
+                      "id": "description",
+                      "label": "Açıklama",
+                      "required": true,
+                      "hint": "En az 200 karakter"
+                    },
+                    {
+                      "id": "keywords",
+                      "label": "Anahtar Kelimeler",
+                      "required": true,
+                      "hint": "En az 5 anahtar kelime"
+                    },
+                    {
+                      "id": "subject",
+                      "label": "Konu",
+                      "required": true,
+                      "hint": "Kontrollü kelime dağarcığından seçin"
+                    },
+                    {
+                      "id": "date",
+                      "label": "Tarih",
+                      "required": true,
+                      "hint": "ISO 8601 formatında"
+                    },
+                    {
+                      "id": "language",
+                      "label": "Dil",
+                      "required": true,
+                      "hint": "ISO 639-1 kodu"
+                    },
+                    {
+                      "id": "format",
+                      "label": "Format",
+                      "required": true,
+                      "hint": "MIME tipi"
+                    }
+                  ],
+                  "validation": {
+                    "checkCompleteness": true,
+                    "checkStandards": true,
+                    "provideFeedback": true
+                  }
+                }
+              ],
+              "exercise": {
+                "title": "Metadata Kalite Kontrolü",
+                "description": "Verilen metadata örneklerini değerlendirin",
+                "examples": [
+                  {
+                    "id": "poor",
+                    "metadata": {
+                      "title": "Veriler",
+                      "creator": "Ali"
+                    },
+                    "task": "Bu metadata'yı iyileştirin"
+                  },
+                  {
+                    "id": "good",
+                    "metadata": {
+                      "title": "İstanbul'da 2023 Yılı Hava Kalitesi Ölçümleri",
+                      "creator": "Ali Yılmaz (ORCID: 0000-0002-1825-0097)",
+                      "description": "İstanbul'un 39 ilçesinde 2023 yılı boyunca toplanan günlük hava kalitesi ölçümleri. PM10, PM2.5, NO2, SO2 ve O3 parametrelerini içerir.",
+                      "keywords": ["hava kalitesi", "İstanbul", "PM10", "PM2.5", "2023"]
+                    },
+                    "task": "İyi örnekleri inceleyin"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "f3-f4-searchable",
+            "title": "F3-F4: Aranabilir Kayıtlar",
+            "type": "practice",
+            "content": {
+              "introduction": "Verilerinizi arama motorları için optimize edin.",
+              "challenges": [
+                {
+                  "id": "repository-selection",
+                  "title": "Doğru Depo Seçimi",
+                  "description": "Araştırma alanınıza uygun veri deposunu seçin",
+                  "scenario": "Tıbbi görüntüleme verileriniz var",
+                  "options": [
+                    {
+                      "name": "Zenodo",
+                      "pros": ["Genel amaçlı", "DOI sağlar", "Ücretsiz"],
+                      "cons": ["Alan-spesifik değil"],
+                      "score": 7
+                    },
+                    {
+                      "name": "TCIA",
+                      "pros": ["Tıbbi görüntüleme için özel", "Standartlar sağlar"],
+                      "cons": ["Onay süreci var"],
+                      "score": 9
+                    },
+                    {
+                      "name": "GitHub",
+                      "pros": ["Popüler", "Kolay kullanım"],
+                      "cons": ["Veri için uygun değil", "DOI yok"],
+                      "score": 3
+                    }
+                  ],
+                  "feedback": {
+                    "optimal": "TCIA, tıbbi görüntüleme verileri için en uygun seçimdir.",
+                    "acceptable": "Zenodo genel bir alternatif olabilir.",
+                    "avoid": "GitHub kod için uygundur, veri depolama için değil."
+                  }
+                }
+              ],
+              "miniProject": {
+                "title": "Mini Proje: Veri Setinizi Bulunabilir Yapın",
+                "tasks": [
+                  {
+                    "step": 1,
+                    "task": "Örnek bir veri seti seçin veya oluşturun"
+                  },
+                  {
+                    "step": 2,
+                    "task": "Zengin metadata hazırlayın"
+                  },
+                  {
+                    "step": 3,
+                    "task": "Uygun bir depo seçin"
+                  },
+                  {
+                    "step": 4,
+                    "task": "DOI alın (simülasyon)"
+                  },
+                  {
+                    "step": 5,
+                    "task": "Aranabilirliği test edin"
+                  }
+                ],
+                "deliverable": "Tamamlanmış bir F-prensipleri kontrol listesi"
+              }
+            }
+          }
+        ],
+        "quiz": {
+          "questions": [
+            {
+              "id": "f_q1",
+              "question": "Bir veri seti için DOI oluştururken en önemli unsur hangisidir?",
+              "options": [
+                "DOI'nin kısa ve kolay hatırlanır olması", 
+                "Metadata bilgilerinin eksiksiz ve standart formatta olması", 
+                "Veri setinin mümkün olduğunca küçük boyutta olması", 
+                "DOI'nin sadece rakam içermesi"
+              ],
+              "correct": 1,
+              "explanation": "DOI'nin değeri, ona bağlı zengin metadata bilgilerinde yatar. Metadata ne kadar eksiksiz ve standart formatta olursa, veri o kadar bulunabilir olur."
+            },
+            {
+              "id": "f_q2",
+              "question": "Aşağıdaki metadata örneklerinden hangisi daha iyi bulunabilirlik sağlar?",
+              "options": [
+                "Başlık: 'Verilerim', Yazar: 'Ali'", 
+                "Başlık: 'İstanbul 2023 Hava Kalitesi Ölçümleri', Yazar: 'Ali Yılmaz (ORCID: 0000-0002-1825-0097)'", 
+                "Başlık: 'Data_final_v2', Yazar: 'A.Y.'", 
+                "Başlık: 'Measurement Results', Yazar: 'Researcher'"
+              ],
+              "correct": 1,
+              "explanation": "İyi metadata açıklayıcı başlık, tam isim ve ORCID gibi kalıcı tanımlayıcılar içerir. Bu, hem insanlar hem de arama motorları için daha anlaşılır ve bulunabilir hale getirir."
+            },
+            {
+              "id": "f_q3",
+              "question": "Tıbbi görüntüleme verileriniz için depo seçerken en uygun seçenek hangisidir?",
+              "options": [
+                "GitHub - çünkü popüler ve ücretsiz", 
+                "Kişisel website - çünkü tam kontrol sağlar", 
+                "TCIA (The Cancer Imaging Archive) - çünkü alan-spesifik", 
+                "Google Drive - çünkü kolay kullanım"
+              ],
+              "correct": 2,
+              "explanation": "Alan-spesifik depolar ilgili topluluk standartlarını destekler ve hedef kitle tarafından daha iyi bilinir. TCIA gibi depolar tıbbi görüntüleme için özel metadata şemaları ve kalite kontrolleri sağlar."
+            },
+            {
+              "id": "f_q4",
+              "question": "Dublin Core metadata standardında hangi öğeler zorunludur?",
+              "options": [
+                "Sadece başlık (title)", 
+                "Başlık, yaratıcı, konu", 
+                "Hiçbiri - tüm öğeler isteğe bağlı", 
+                "15 öğenin tamamı"
+              ],
+              "correct": 2,
+              "explanation": "Dublin Core'un güçlü yanı esnekliğidir. Hiçbir öğe zorunlu değildir, bu da farklı türdeki kaynaklar için uyarlanabilirlik sağlar. Ancak iyi bulunabilirlik için başlık, yaratıcı ve açıklama gibi temel öğeler şiddetle önerilir."
+            }
+          ]
+        },
+        "achievements": [
+          {
+            "id": "doi-expert",
+            "title": "DOI Uzmanı",
+            "description": "İlk DOI'nizi başarıyla oluşturdunuz",
+            "icon": "🔖",
+            "points": 30
+          },
+          {
+            "id": "metadata-master",
+            "title": "Metadata Ustası",
+            "description": "Zengin metadata oluşturmayı öğrendiniz",
+            "icon": "📝",
+            "points": 40
+          },
+          {
+            "id": "search-optimizer",
+            "title": "Arama Optimizasyonu",
+            "description": "Verilerinizi aranabilir hale getirdiniz",
+            "icon": "🔎",
+            "points": 35
+          }
+        ]
+      },
+      {
+        "id": "accessible",
+        "title": "A - Erişilebilirlik",
+        "description": "Verilerinizi güvenli ve erişilebilir hale getirin",
+        "icon": "🔓",
+        "color": "#10B981",
+        "difficulty": "intermediate",
+        "estimatedTime": "2 dakika",
+        "prerequisite": "findable",
+        "modules": [
+          {
+            "id": "a1-protocols",
+            "title": "A1: Standart Protokoller",
+            "type": "lesson",
+            "content": {
+              "introduction": "Verilerinize standart protokoller üzerinden erişim sağlayın.",
+              "sections": [
+                {
+                  "title": "Protokol Seçimi",
+                  "content": "HTTP/HTTPS, FTP, REST API gibi yaygın protokoller kullanın.",
+                  "comparison": {
+                    "protocols": [
+                      {
+                        "name": "HTTPS",
+                        "security": "Yüksek",
+                        "ease": "Çok kolay",
+                        "universal": "Evrensel",
+                        "recommendation": "Önerilen"
+                      },
+                      {
+                        "name": "FTP/SFTP",
+                        "security": "Orta/Yüksek",
+                        "ease": "Orta",
+                        "universal": "Yaygın",
+                        "recommendation": "Büyük dosyalar için"
+                      },
+                      {
+                        "name": "REST API",
+                        "security": "Yüksek",
+                        "ease": "Gelişmiş",
+                        "universal": "Yaygın",
+                        "recommendation": "Programatik erişim için"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "demo": {
+                "title": "API Erişimi Demo",
+                "description": "REST API ile veri erişimi simülasyonu",
+                "endpoint": "https://api.fairdata.example/dataset/{id}",
+                "methods": ["GET", "HEAD", "OPTIONS"],
+                "authentication": ["API Key", "OAuth2"],
+                "playground": true
+              }
+            }
+          },
+          {
+            "id": "a1-authentication",
+            "title": "A1.1-A1.2: Kimlik Doğrulama",
+            "type": "interactive",
+            "content": {
+              "introduction": "Hassas veriler için güvenli erişim kontrolü sağlayın.",
+              "interactiveElements": [
+                {
+                  "type": "access-control-designer",
+                  "title": "Erişim Kontrolü Tasarımcısı",
+                  "description": "Veri setiniz için uygun erişim seviyelerini belirleyin",
+                  "dataTypes": [
+                    {
+                      "type": "Açık Veri",
+                      "sensitivity": "Düşük",
+                      "examples": ["Hava durumu verileri", "Açık kaynak kodlar"],
+                      "accessLevel": "Herkes",
+                      "authentication": "Gerekli değil"
+                    },
+                    {
+                      "type": "Kayıtlı Erişim",
+                      "sensitivity": "Orta",
+                      "examples": ["Araştırma verileri", "Anket sonuçları"],
+                      "accessLevel": "Kayıtlı kullanıcılar",
+                      "authentication": "E-posta doğrulama"
+                    },
+                    {
+                      "type": "Kısıtlı Erişim",
+                      "sensitivity": "Yüksek",
+                      "examples": ["Kişisel sağlık verileri", "Finansal veriler"],
+                      "accessLevel": "Onaylı araştırmacılar",
+                      "authentication": "Çok faktörlü doğrulama"
+                    }
+                  ],
+                  "exercise": {
+                    "title": "Erişim Politikası Oluştur",
+                    "scenario": "Bir üniversite hastanesi COVID-19 hasta verilerini paylaşmak istiyor",
+                    "tasks": [
+                      "Veri hassasiyetini değerlendirin",
+                      "Uygun erişim seviyesini belirleyin",
+                      "Kimlik doğrulama yöntemini seçin",
+                      "Veri kullanım sözleşmesi hazırlayın"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "a2-persistent-metadata",
+            "title": "A2: Kalıcı Metadata",
+            "type": "practice",
+            "content": {
+              "introduction": "Veriler silinse bile metadata erişilebilir kalmalıdır.",
+              "concept": {
+                "title": "Tombstone Sayfaları",
+                "description": "Silinen veya geri çekilen veriler için bilgi sayfaları",
+                "elements": [
+                  "Veri setinin önceki varlığı",
+                  "Silme/geri çekme nedeni",
+                  "İletişim bilgileri",
+                  "Alternatif kaynaklar"
+                ]
+              },
+              "simulation": {
+                "title": "Veri Yaşam Döngüsü Simülasyonu",
+                "stages": [
+                  {
+                    "stage": "Aktif",
+                    "description": "Veri ve metadata tamamen erişilebilir",
+                    "access": "Tam erişim"
+                  },
+                  {
+                    "stage": "Arşivlenmiş",
+                    "description": "Veri pasif depolamada, metadata aktif",
+                    "access": "İstek üzerine erişim"
+                  },
+                  {
+                    "stage": "Geri Çekilmiş",
+                    "description": "Veri kaldırıldı, metadata ve açıklama mevcut",
+                    "access": "Sadece metadata"
+                  }
+                ],
+                "exercise": {
+                  "title": "Tombstone Sayfası Tasarlayın",
+                  "task": "Geri çekilen bir veri seti için bilgilendirici bir sayfa oluşturun"
+                }
+              }
+            }
+          }
+        ],
+        "quiz": {
+          "questions": [
+            {
+              "id": "a_q1",
+              "question": "Hassas kişisel sağlık verilerini paylaşırken en uygun erişim kontrolü hangisidir?",
+              "options": [
+                "Herkes erişebilir - verilerin daha çok kullanılması için", 
+                "Sadece kayıtlı kullanıcılar - e-posta doğrulama ile", 
+                "Onaylı araştırmacılar - çok faktörlü doğrulama ve etik onay ile", 
+                "Sadece kurum içi erişim - dış paylaşım yasak"
+              ],
+              "correct": 2,
+              "explanation": "Hassas veriler için çok faktörlü doğrulama, etik onay ve veri kullanım sözleşmesi gereklidir. Bu, hem veri korumasını hem de araştırma amaçlı kullanımı sağlar."
+            },
+            {
+              "id": "a_q2",
+              "question": "HTTPS protokolünün FTP'ye göre veri erişiminde avantajı nedir?",
+              "options": [
+                "Daha hızlı veri transferi sağlar", 
+                "Evrensel destek ve yüksek güvenlik sağlar", 
+                "Daha az bant genişliği kullanır", 
+                "Sadece büyük dosyalar için uygun"
+              ],
+              "correct": 1,
+              "explanation": "HTTPS hem evrensel olarak desteklenir hem de SSL/TLS şifrelemesi ile yüksek güvenlik sağlar. Modern web tarayıcıları ve API'ler için standart protokoldür."
+            },
+            {
+              "id": "a_q3",
+              "question": "Bir veri seti geri çekildiğinde (retracted) en iyi uygulama nedir?",
+              "options": [
+                "Tüm izleri sil ve hiç var olmamış gibi davran", 
+                "Sadece yöneticilere bilgi ver, halka açıklama", 
+                "Tombstone sayfası oluştur - metadata kalsın, geri çekme nedeni belirtilsin", 
+                "Veriyi arşivle ama erişimi tamamen kapat"
+              ],
+              "correct": 2,
+              "explanation": "Tombstone sayfaları, bilimsel şeffaflığı korur ve gelecekteki araştırmacıları veri setinin varlığı ve geri çekilme nedeni hakkında bilgilendirir."
+            },
+            {
+              "id": "a_q4",
+              "question": "REST API ile veri erişimi sağlarken hangi HTTP metodları standart olarak kullanılmalıdır?",
+              "options": [
+                "Sadece GET", 
+                "GET, POST, PUT, DELETE", 
+                "GET, HEAD, OPTIONS", 
+                "Sadece POST"
+              ],
+              "correct": 2,
+              "explanation": "Veri erişimi için GET (veri alma), HEAD (metadata alma), OPTIONS (desteklenen metodları öğrenme) metodları standarttır. Bu, RESTful tasarım prensipleriyle uyumludur."
+            }
+          ]
+        },
+        "achievements": [
+          {
+            "id": "protocol-pro",
+            "title": "Protokol Uzmanı",
+            "description": "Standart protokolleri başarıyla uyguladınız",
+            "icon": "🔌",
+            "points": 35
+          },
+          {
+            "id": "security-guardian",
+            "title": "Güvenlik Muhafızı",
+            "description": "Güvenli erişim kontrolü sağladınız",
+            "icon": "🛡️",
+            "points": 40
+          },
+          {
+            "id": "persistence-champion",
+            "title": "Kalıcılık Şampiyonu",
+            "description": "Metadata kalıcılığını sağladınız",
+            "icon": "🏛️",
+            "points": 35
+          }
+        ]
+      },
+      {
+        "id": "interoperable",
+        "title": "I - Birlikte Çalışabilirlik",
+        "description": "Verilerinizi diğer sistemlerle uyumlu hale getirin",
+        "icon": "🔗",
+        "color": "#8B5CF6",
+        "difficulty": "advanced",
+        "estimatedTime": "2-3 dakika",
+        "prerequisite": "accessible",
+        "modules": [
+          {
+            "id": "i1-formats",
+            "title": "I1: Standart Formatlar",
+            "type": "lesson",
+            "content": {
+              "introduction": "Makine okunabilir, standart veri formatları kullanın.",
+              "sections": [
+                {
+                  "title": "Format Seçimi",
+                  "content": "Veri tipinize uygun standart formatları seçin.",
+                  "formatGuide": {
+                    "tabular": {
+                      "preferred": ["CSV", "TSV", "Parquet"],
+                      "acceptable": ["Excel (açık format)"],
+                      "avoid": ["PDF tabloları", "Resim formatları"]
+                    },
+                    "structured": {
+                      "preferred": ["JSON", "XML", "RDF"],
+                      "acceptable": ["YAML"],
+                      "avoid": ["Word belgeleri", "Düz metin"]
+                    },
+                    "semantic": {
+                      "preferred": ["JSON-LD", "RDF/XML", "Turtle"],
+                      "acceptable": ["N-Triples"],
+                      "avoid": ["Yapılandırılmamış formatlar"]
+                    }
+                  }
+                }
+              ],
+              "converter": {
+                "title": "Format Dönüştürücü",
+                "description": "Verilerinizi standart formatlara dönüştürün",
+                "examples": [
+                  {
+                    "from": "Excel tablosu",
+                    "to": "CSV",
+                    "considerations": ["Kodlama (UTF-8)", "Ayırıcı karakter", "Başlık satırı"]
+                  },
+                  {
+                    "from": "Word belgesi",
+                    "to": "Markdown/HTML",
+                    "considerations": ["Yapısal elemanlar", "Metadata korunumu"]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "i2-vocabularies",
+            "title": "I2: Kontrollü Kelime Dağarcıkları",
+            "type": "interactive",
+            "content": {
+              "introduction": "Standart terminolojiler kullanarak anlamsal uyumluluk sağlayın.",
+              "interactiveElements": [
+                {
+                  "type": "vocabulary-explorer",
+                  "title": "Kelime Dağarcığı Gezgini",
+                  "description": "Alanınıza uygun kontrollü kelime dağarcıklarını keşfedin",
+                  "domains": [
+                    {
+                      "field": "Yaşam Bilimleri",
+                      "vocabularies": [
+                        {
+                          "name": "MeSH",
+                          "description": "Tıbbi konu başlıkları",
+                          "url": "https://www.nlm.nih.gov/mesh/",
+                          "example": "Diabetes Mellitus, Type 2 [C19.246.300]"
+                        },
+                        {
+                          "name": "Gene Ontology",
+                          "description": "Gen ve gen ürünleri",
+                          "url": "http://geneontology.org/",
+                          "example": "GO:0006915 - apoptotic process"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "Tarım",
+                      "vocabularies": [
+                        {
+                          "name": "AGROVOC",
+                          "description": "Tarım terimleri",
+                          "url": "https://www.fao.org/agrovoc/",
+                          "example": "Zea mays (Mısır)"
+                        }
+                      ]
+                    },
+                    {
+                      "field": "Genel",
+                      "vocabularies": [
+                        {
+                          "name": "Dublin Core",
+                          "description": "Metadata elemanları",
+                          "url": "https://dublincore.org/",
+                          "example": "dc:creator, dc:title"
+                        },
+                        {
+                          "name": "Schema.org",
+                          "description": "Yapılandırılmış veri",
+                          "url": "https://schema.org/",
+                          "example": "Dataset, Person, Organization"
+                        }
+                      ]
+                    }
+                  ],
+                  "exercise": {
+                    "title": "Terim Eşleştirme",
+                    "description": "Serbest metni kontrollü terimlere dönüştürün",
+                    "examples": [
+                      {
+                        "freeText": "şeker hastalığı tip 2",
+                        "vocabulary": "MeSH",
+                        "controlledTerm": "Diabetes Mellitus, Type 2",
+                        "uri": "https://id.nlm.nih.gov/mesh/D003924"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "practicalExercise": {
+                "title": "Metadata Zenginleştirme",
+                "task": "Basit metadata'yı kontrollü kelime dağarcıkları ile zenginleştirin",
+                "before": {
+                  "creator": "Ali Yılmaz",
+                  "subject": "diyabet araştırması",
+                  "institution": "İstanbul Üniversitesi"
+                },
+                "after": {
+                  "creator": {
+                    "@type": "Person",
+                    "name": "Ali Yılmaz",
+                    "identifier": "https://orcid.org/0000-0002-1825-0097"
+                  },
+                  "subject": {
+                    "@type": "MedicalCondition",
+                    "name": "Diabetes Mellitus, Type 2",
+                    "identifier": "https://id.nlm.nih.gov/mesh/D003924"
+                  },
+                  "institution": {
+                    "@type": "Organization",
+                    "name": "İstanbul Üniversitesi",
+                    "identifier": "https://ror.org/03a5qrr21"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "id": "i3-linking",
+            "title": "I3: Veri Bağlantıları",
+            "type": "practice",
+            "content": {
+              "introduction": "Veriler arasında anlamlı bağlantılar kurun.",
+              "linkTypes": [
+                {
+                  "relation": "IsDerivedFrom",
+                  "description": "Bu veri başka bir veriden türetildi",
+                  "example": "Analiz sonuçları ← Ham veri"
+                },
+                {
+                  "relation": "IsSupplementTo",
+                  "description": "Bu veri bir yayını destekliyor",
+                  "example": "Veri seti → Makale"
+                },
+                {
+                  "relation": "IsVersionOf",
+                  "description": "Bu veri başka bir verinin versiyonu",
+                  "example": "v2.0 ← v1.0"
+                },
+                {
+                  "relation": "IsPartOf",
+                  "description": "Bu veri daha büyük bir koleksiyonun parçası",
+                  "example": "Örnek → Veri seti"
+                }
+              ],
+              "linkingExercise": {
+                "title": "Veri Ağı Oluşturma",
+                "description": "Bir araştırma projesinin veri bağlantılarını tasarlayın",
+                "scenario": "İklim değişikliği araştırma projesi",
+                "datasets": [
+                  {
+                    "id": "raw-measurements",
+                    "title": "Ham Sıcaklık Ölçümleri"
+                  },
+                  {
+                    "id": "processed-data",
+                    "title": "İşlenmiş İklim Verileri"
+                  },
+                  {
+                    "id": "analysis-results",
+                    "title": "Trend Analizi Sonuçları"
+                  },
+                  {
+                    "id": "visualization",
+                    "title": "Görselleştirme Dosyaları"
+                  },
+                  {
+                    "id": "publication",
+                    "title": "Araştırma Makalesi"
+                  }
+                ],
+                "task": "Bu veri setleri arasındaki ilişkileri belirleyin ve görselleştirin"
+              }
+            }
+          }
+        ],
+        "quiz": {
+          "questions": [
+            {
+              "id": "i_q1",
+              "question": "Tabular veri için hangi format en uygun birlikte çalışabilirlik sağlar?",
+              "options": [
+                "PDF tabloları - evrensel görüntüleme için", 
+                "Excel dosyaları - yaygın kullanım için", 
+                "CSV (UTF-8) - makine okunabilir ve standart", 
+                "Resim formatları - görsel sunum için"
+              ],
+              "correct": 2,
+              "explanation": "CSV (UTF-8 kodlama ile) hem insan hem de makine tarafından okunabilir, platform bağımsız ve tüm analiz araçları tarafından desteklenir."
+            },
+            {
+              "id": "i_q2",
+              "question": "Kontrollü kelime dağarcığı kullanmanın temel faydası nedir?",
+              "options": [
+                "Metadata boyutunu küçültür", 
+                "Anlamsal uyumluluk ve otomatik işleme imkanı sağlar", 
+                "Veri boyutunu sıkıştırır", 
+                "Sadece İngilizce terimler kullanımını zorunlu kılar"
+              ],
+              "correct": 1,
+              "explanation": "Kontrollü kelime dağarcıkları, farklı sistemler arasında anlamsal uyumluluk sağlar ve otomatik veri işleme, bağlantı kurma ve keşif imkanları sunar."
+            },
+            {
+              "id": "i_q3",
+              "question": "MeSH kelime dağarcığındaki 'Diabetes Mellitus, Type 2 [C19.246.300]' örneğinde köşeli parantez içindeki kod neyi ifade eder?",
+              "options": [
+                "Yayın yılı ve sayfa numarası", 
+                "Hiyerarşik sınıflandırma kodu", 
+                "Yazar ve makale referansı", 
+                "Dosya boyutu ve versiyonu"
+              ],
+              "correct": 1,
+              "explanation": "MeSH kodları hiyerarşik yapıyı gösterir: C (hastalıklar), C19 (endokrin hastalıklar), C19.246 (diabetes mellitus), C19.246.300 (tip 2 diabetes)."
+            },
+            {
+              "id": "i_q4",
+              "question": "Veri setleri arasında 'IsDerivedFrom' ilişkisi hangi durumu ifade eder?",
+              "options": [
+                "İki veri seti aynı konuda", 
+                "Bir veri seti diğerinden türetilmiş (işlenmiş)", 
+                "Bir veri seti diğerinin yedeği", 
+                "İki veri seti aynı araştırmacı tarafından oluşturulmuş"
+              ],
+              "correct": 1,
+              "explanation": "'IsDerivedFrom' ilişkisi, bir veri setinin başka bir veri setinden işleme, analiz veya dönüştürme yoluyla türetildiğini belirtir (örn: analiz sonuçları ← ham veri)."
+            },
+            {
+              "id": "i_q5",
+              "question": "JSON-LD formatının JSON'a göre avantajı nedir?",
+              "options": [
+                "Daha az yer kaplar", 
+                "Daha hızlı işlenir", 
+                "Anlamsal bağlam (@context) sağlar", 
+                "Sadece sayısal veriler için uygundur"
+              ],
+              "correct": 2,
+              "explanation": "JSON-LD, JSON'un basitliğini korurken @context ile anlamsal bağlam ekler. Bu, verilerin ne anlama geldiğini makinelerin anlayabilmesini sağlar."
+            }
+          ]
+        },
+        "achievements": [
+          {
+            "id": "format-master",
+            "title": "Format Ustası",
+            "description": "Standart veri formatlarını başarıyla uyguladınız",
+            "icon": "📊",
+            "points": 40
+          },
+          {
+            "id": "vocabulary-virtuoso",
+            "title": "Kelime Dağarcığı Virtüözü",
+            "description": "Kontrollü terminolojileri ustalıkla kullandınız",
+            "icon": "📚",
+            "points": 45
+          },
+          {
+            "id": "link-architect",
+            "title": "Bağlantı Mimarı",
+            "description": "Veri bağlantıları oluşturdunuz",
+            "icon": "🏗️",
+            "points": 45
+          }
+        ]
+      },
+      {
+        "id": "reusable",
+        "title": "R - Yeniden Kullanılabilirlik",
+        "description": "Verilerinizi maksimum yeniden kullanım için optimize edin",
+        "icon": "♻️",
+        "color": "#F59E0B",
+        "difficulty": "advanced",
+        "estimatedTime": "2-3 dakika",
+        "prerequisite": "interoperable",
+        "modules": [
+          {
+            "id": "r1-documentation",
+            "title": "R1: Zengin Dokümantasyon",
+            "type": "lesson",
+            "content": {
+              "introduction": "Verilerinizi anlamak ve kullanmak için gereken tüm bilgileri sağlayın.",
+              "sections": [
+                {
+                  "title": "Dokümantasyon Öğeleri",
+                  "content": "Kapsamlı dokümantasyon için gereken temel öğeler.",
+                  "checklist": [
+                    {
+                      "category": "Veri Toplama",
+                      "items": [
+                        "Metodoloji açıklaması",
+                        "Örnekleme stratejisi",
+                        "Zaman ve yer bilgisi",
+                        "Kullanılan ekipmanlar"
+                      ]
+                    },
+                    {
+                      "category": "Veri Yapısı",
+                      "items": [
+                        "Değişken tanımları",
+                        "Birimler ve ölçekler",
+                        "Kodlama şemaları",
+                        "Eksik veri kodları"
+                      ]
+                    },
+                    {
+                      "category": "Kalite Kontrolü",
+                      "items": [
+                        "Kalite kontrol prosedürleri",
+                        "Doğrulama yöntemleri",
+                        "Bilinen sınırlamalar",
+                        "Hata düzeltmeleri"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "template": {
+                "title": "README Şablonu",
+                "description": "Veri setiniz için kapsamlı bir README oluşturun",
+                "sections": [
+                  "Proje Başlığı ve Özeti",
+                  "Veri Toplama Metodolojisi",
+                  "Veri Yapısı ve İçeriği",
+                  "Değişken Sözlüğü",
+                  "Kalite Güvencesi",
+                  "Kullanım Kılavuzu",
+                  "Lisans Bilgisi",
+                  "İletişim ve Destek"
+                ]
+              }
+            }
+          },
+          {
+            "id": "r1-licensing",
+            "title": "R1.1: Açık Lisanslama",
+            "type": "interactive",
+            "content": {
+              "introduction": "Verilerinizin yasal kullanım koşullarını net bir şekilde belirtin.",
+              "interactiveElements": [
+                {
+                  "type": "license-selector",
+                  "title": "Lisans Seçici",
+                  "description": "Verileriniz için en uygun lisansı bulun",
+                  "questions": [
+                    {
+                      "id": "attribution",
+                      "question": "Kullanıcıların size atıf yapmasını istiyor musunuz?",
+                      "options": ["Evet", "Hayır"]
+                    },
+                    {
+                      "id": "commercial",
+                      "question": "Ticari kullanıma izin veriyor musunuz?",
+                      "options": ["Evet", "Hayır"]
+                    },
+                    {
+                      "id": "derivatives",
+                      "question": "Türev çalışmalara izin veriyor musunuz?",
+                      "options": ["Evet", "Evet, aynı lisansla", "Hayır"]
+                    }
+                  ],
+                  "recommendations": {
+                    "CC0": {
+                      "conditions": {
+                        "attribution": "Hayır",
+                        "commercial": "Evet",
+                        "derivatives": "Evet"
+                      },
+                      "description": "Kamu malı - hiçbir hak saklı değil"
+                    },
+                    "CC-BY": {
+                      "conditions": {
+                        "attribution": "Evet",
+                        "commercial": "Evet",
+                        "derivatives": "Evet"
+                      },
+                      "description": "Sadece atıf gerektirir"
+                    },
+                    "CC-BY-SA": {
+                      "conditions": {
+                        "attribution": "Evet",
+                        "commercial": "Evet",
+                        "derivatives": "Evet, aynı lisansla"
+                      },
+                      "description": "Atıf + aynı lisansla paylaşım"
+                    },
+                    "CC-BY-NC": {
+                      "conditions": {
+                        "attribution": "Evet",
+                        "commercial": "Hayır",
+                        "derivatives": "Evet"
+                      },
+                      "description": "Atıf + ticari olmayan kullanım"
+                    }
+                  }
+                }
+              ],
+              "comparison": {
+                "title": "Lisans Karşılaştırması",
+                "description": "Popüler açık lisansların özellikleri",
+                "interactive": true
+              }
+            }
+          },
+          {
+            "id": "r1-provenance",
+            "title": "R1.2: Köken Bilgisi",
+            "type": "practice",
+            "content": {
+              "introduction": "Köken bilgisi (provenance), verilerinizin güvenilirliğini ve yeniden kullanılabilirliğini sağlayan kritik metadata'dır. Bu bilgiler olmadan, araştırmacılar verilerinizi doğru şekilde yorumlayamaz ve güvenemez.",
+              "importance": {
+                "title": "Köken Bilgisinin Önemi",
+                "reasons": [
+                  "Verinin güvenilirliğini kanıtlar",
+                  "Yeniden üretilebilirlik sağlar",
+                  "Hata takibi ve düzeltme imkanı verir",
+                  "Yasal ve etik gereklilikleri karşılar",
+                  "Veri kalitesi değerlendirmesi yapar"
+                ],
+                "realWorldExample": {
+                  "scenario": "COVID-19 Veri Skandalı",
+                  "problem": "2020'de prestijli bir tıp dergisinde yayınlanan COVID-19 çalışması, köken bilgisi eksikliği nedeniyle geri çekildi. Verinin nereden geldiği ve nasıl işlendiği açık değildi.",
+                  "lesson": "Köken bilgisi olmadan, en saygın dergilerde bile çalışmalar güvenilirliğini kaybedebilir."
+                }
+              },
+              "provenanceModel": {
+                "title": "PROV-O Modeli - W3C Standardı",
+                "description": "Dünya çapında kabul görmüş köken bilgisi modeli",
+                "elements": [
+                  {
+                    "type": "Entity (Varlık)",
+                    "description": "Veri setleri, dosyalar, veritabanı kayıtları - herhangi bir dijital nesne",
+                    "icon": "📄",
+                    "examples": [
+                      "ham_sensör_verileri.csv",
+                      "temizlenmiş_hasta_kayıtları.json",
+                      "analiz_sonuçları.xlsx"
+                    ],
+                    "properties": [
+                      "Benzersiz tanımlayıcı (URI/DOI)",
+                      "Oluşturulma/değiştirilme tarihi",
+                      "Dosya boyutu ve format",
+                      "Checksum (dosya bütünlüğü)"
+                    ]
+                  },
+                  {
+                    "type": "Activity (Etkinlik)",
+                    "description": "Veri üzerinde yapılan işlemler - dönüştürme, analiz, temizleme",
+                    "icon": "⚙️",
+                    "examples": [
+                      "Veri temizleme",
+                      "İstatistiksel analiz",
+                      "Makine öğrenmesi modeli eğitimi",
+                      "Veri görselleştirme"
+                    ],
+                    "properties": [
+                      "Başlangıç ve bitiş zamanı",
+                      "Kullanılan parametreler",
+                      "Yazılım versiyonu",
+                      "Çalışma ortamı bilgisi"
+                    ]
+                  },
+                  {
+                    "type": "Agent (Aktör)",
+                    "description": "İşlemleri gerçekleştiren kişiler, kurumlar veya yazılımlar",
+                    "icon": "👤",
+                    "examples": [
+                      "Dr. Ayşe Yılmaz (ORCID: 0000-0002-1825-0097)",
+                      "Python v3.9.2",
+                      "İstanbul Üniversitesi",
+                      "Apache Spark v3.1.1"
+                    ],
+                    "properties": [
+                      "Benzersiz tanımlayıcı",
+                      "Rol ve yetkilendirme",
+                      "İletişim bilgileri",
+                      "Kurumsal bağlılık"
+                    ]
+                  }
+                ]
+              },
+              "relationships": {
+                "title": "PROV-O İlişkileri",
+                "description": "Entity, Activity ve Agent arasındaki bağlantılar",
+                "relationTypes": [
+                  {
+                    "name": "wasGeneratedBy",
+                    "description": "Bir entity, bir activity tarafından üretildi",
+                    "example": "temizlenmiş_veri.csv wasGeneratedBy veri_temizleme_işlemi"
+                  },
+                  {
+                    "name": "used",
+                    "description": "Bir activity, bir entity'yi kullandı",
+                    "example": "veri_temizleme_işlemi used ham_veri.csv"
+                  },
+                  {
+                    "name": "wasAssociatedWith",
+                    "description": "Bir activity, bir agent ile ilişkilendirildi",
+                    "example": "veri_analizi wasAssociatedWith Dr_Ayse_Yilmaz"
+                  },
+                  {
+                    "name": "wasAttributedTo",
+                    "description": "Bir entity, bir agent'a atfedildi",
+                    "example": "son_rapor.pdf wasAttributedTo Arastirma_Ekibi"
+                  }
+                ]
+              },
+              "practicalExamples": {
+                "title": "Gerçek Dünya Örnekleri",
+                "examples": [
+                  {
+                    "domain": "Genomik Araştırması",
+                    "scenario": "DNA sekanslama verilerinin analiz süreci",
+                    "provenanceChain": [
+                      {
+                        "step": 1,
+                        "entity": "Ham FASTQ dosyaları",
+                        "activity": "DNA ekstraksiyonu ve sekanslama",
+                        "agent": "Illumina NovaSeq 6000",
+                        "metadata": {
+                          "date": "2023-03-15",
+                          "protocol": "Library Prep Kit v2.1",
+                          "quality_score": "Q30 > 85%"
+                        }
+                      },
+                      {
+                        "step": 2,
+                        "entity": "Kalite kontrollü okumalar",
+                        "activity": "Kalite filtreleme",
+                        "agent": "FastQC v0.11.9 + Trimmomatic v0.39",
+                        "metadata": {
+                          "parameters": "LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36",
+                          "filtered_reads": "8.2M reads removed"
+                        }
+                      },
+                      {
+                        "step": 3,
+                        "entity": "Referans genoma hizalanmış okumalar",
+                        "activity": "Genom hizalaması",
+                        "agent": "BWA-MEM v0.7.17",
+                        "metadata": {
+                          "reference_genome": "GRCh38.p13",
+                          "alignment_rate": "94.7%"
+                        }
+                      }
+                    ],
+                    "importance": "Bu köken bilgisi, başka araştırmacıların aynı analizi tekrarlayabilmesini ve sonuçlara güvenebilmesini sağlar."
+                  },
+                  {
+                    "domain": "İklim Verileri",
+                    "scenario": "Meteoroloji istasyonu verilerinin işlenmesi",
+                    "provenanceChain": [
+                      {
+                        "step": 1,
+                        "entity": "Ham sensör ölçümleri",
+                        "activity": "Otomatik veri toplama",
+                        "agent": "AWS (Automated Weather Station) MGM-2023",
+                        "metadata": {
+                          "location": "39.9334°N, 32.8597°E",
+                          "elevation": "875m",
+                          "sampling_rate": "10 dakikalık"
+                        }
+                      },
+                      {
+                        "step": 2,
+                        "entity": "Kalibrasyon düzeltmeli veriler",
+                        "activity": "Sensör kalibrasyonu",
+                        "agent": "Kalibrasyon algoritması v2.1",
+                        "metadata": {
+                          "calibration_date": "2023-01-15",
+                          "correction_factors": "Sıcaklık: +0.3°C, Nem: -2.1%"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "tools": {
+                "title": "Köken Bilgisi Araçları",
+                "description": "Köken bilgisini oluşturmak ve yönetmek için kullanabileceğiniz araçlar",
+                "categories": [
+                  {
+                    "category": "Otomatik Provenance Yakalama",
+                    "tools": [
+                      {
+                        "name": "YesWorkflow",
+                        "description": "Python ve R scriptlerinden otomatik provenance çıkarımı",
+                        "use_case": "Veri analiz scriptleri",
+                        "example": "# @begin veri_temizleme\n# @in ham_veri\n# @out temiz_veri\n# @end veri_temizleme"
+                      },
+                      {
+                        "name": "MLflow",
+                        "description": "Makine öğrenmesi deneylerinin köken bilgisi",
+                        "use_case": "ML model geliştirme",
+                        "features": ["Parametre takibi", "Model versiyonlama", "Artifact depolama"]
+                      }
+                    ]
+                  },
+                  {
+                    "category": "Manuel Provenance Dokümantasyonu",
+                    "tools": [
+                      {
+                        "name": "PROV-JSON",
+                        "description": "JSON formatında provenance kayıtları",
+                        "example": {
+                          "entity": {
+                            "ex:data1": {
+                              "prov:type": "Dataset",
+                              "prov:generatedAtTime": "2023-03-20T10:30:00Z"
+                            }
+                          },
+                          "activity": {
+                            "ex:analysis1": {
+                              "prov:type": "Analysis",
+                              "prov:startedAtTime": "2023-03-20T10:00:00Z"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "bestPractices": {
+                "title": "En İyi Uygulamalar",
+                "practices": [
+                  {
+                    "practice": "Otomatik Kayıt",
+                    "description": "Mümkün olduğunca otomatik araçlar kullanın",
+                    "rationale": "İnsan hatalarını azaltır ve tutarlılık sağlar",
+                    "implementation": "Script'lerinize logging ekleyin, workflow araçları kullanın"
+                  },
+                  {
+                    "practice": "Granular Detay",
+                    "description": "Yeterince detaylı ama fazla karmaşık olmayan kayıtlar",
+                    "rationale": "Çok az detay güvensizlik, çok fazla detay karmaşıklık yaratır",
+                    "guideline": "Her adımda girdi, çıktı, kullanılan araç ve parametreleri kaydedin"
+                  },
+                  {
+                    "practice": "Standart Formatlar",
+                    "description": "PROV-O gibi standart ontolojiler kullanın",
+                    "rationale": "Birlikte çalışabilirlik ve araç desteği sağlar"
+                  },
+                  {
+                    "practice": "Metadata Entegrasyonu",
+                    "description": "Provenance'ı diğer metadata ile entegre edin",
+                    "rationale": "Bütüncül veri dokümantasyonu sağlar"
+                  }
+                ]
+              },
+              "exercise": {
+                "title": "Uygulamalı Alıştırma: Kendi Provenance Grafiğinizi Oluşturun",
+                "description": "Aşağıdaki senaryolardan birini seçin ve detaylı bir provenance grafiği oluşturun",
+                "scenarios": [
+                  {
+                    "id": "survey-analysis",
+                    "title": "Anket Verisi Analizi",
+                    "description": "Online anket → Veri temizleme → İstatistiksel analiz → Rapor",
+                    "starting_points": [
+                      "Ham anket verileri (CSV)",
+                      "Demografik bilgiler",
+                      "Eksik veri durumları"
+                    ],
+                    "required_steps": [
+                      "Veri doğrulama",
+                      "Eksik veri işleme",
+                      "Görselleştirme",
+                      "Rapor oluşturma"
+                    ]
+                  },
+                  {
+                    "id": "image-processing",
+                    "title": "Görüntü İşleme Projesi",
+                    "description": "Ham görüntüler → Ön işleme → Makine öğrenmesi → Sonuçlar",
+                    "starting_points": [
+                      "Dijital kamera görüntüleri",
+                      "Metadata bilgileri (EXIF)",
+                      "Kalibrasyon verileri"
+                    ],
+                    "required_steps": [
+                      "Görüntü düzeltme",
+                      "Özellik çıkarımı",
+                      "Model eğitimi",
+                      "Doğruluk testi"
+                    ]
+                  }
+                ],
+                "deliverables": [
+                  "PROV-O formatında köken grafiği",
+                  "Her adım için detaylı açıklama",
+                  "Kullanılan araçlar ve parametreler listesi",
+                  "Kalite kontrol checkpointleri"
+                ],
+                "evaluation_criteria": [
+                  "Tüm önemli adımlar dahil edilmiş mi?",
+                  "Entity-Activity-Agent ilişkileri doğru kurulmuş mu?",
+                  "Metadata yeterince detaylı mı?",
+                  "Başka birisi bu bilgilerle analizi tekrarlayabilir mi?"
+                ]
+              }
+            }
+          },
+          {
+            "id": "r1-standards",
+            "title": "R1.3: Topluluk Standartları",
+            "type": "practice",
+            "content": {
+              "introduction": "Topluluk standartları, alanınızdaki araştırmacıların verilerinizi doğru şekilde anlayabilmesi ve kullanabilmesi için kritik öneme sahiptir. Bu standartlar, yılların deneyimiyle şekillenmiş en iyi uygulamaları temsil eder.",
+              "whyStandards": {
+                "title": "Neden Topluluk Standartları Önemlidir?",
+                "reasons": [
+                  {
+                    "reason": "Birlikte Çalışabilirlik",
+                    "explanation": "Farklı araştırma gruplarının verileri kolayca entegre edebilmesi",
+                    "example": "Genomik veriler için FASTQ formatı kullanıldığında, tüm analiz araçları bu veriyi anlayabilir"
+                  },
+                  {
+                    "reason": "Kalite Güvencesi",
+                    "explanation": "Standartlar, veri kalitesi için minimum gereksinimleri belirler",
+                    "example": "MIAME standardı, microarray deneylerinin tekrarlanabilir olmasını sağlar"
+                  },
+                  {
+                    "reason": "Otomatik İşleme",
+                    "explanation": "Standart formatlardaki veriler, otomatik araçlarla işlenebilir",
+                    "example": "Dublin Core metadata'sı olan veriler, kataloglarda otomatik indekslenir"
+                  },
+                  {
+                    "reason": "Uzun Vadeli Koruma",
+                    "explanation": "Kabul görmüş standartlar, zaman içinde korunma şansı daha yüksektir",
+                    "example": "XML tabanlı standartlar, 20 yıl sonra bile okunabilir kalacaktır"
+                  }
+                ]
+              },
+              "domainStandards": [
+                {
+                  "field": "Yaşam Bilimleri",
+                  "description": "Biyoloji, tıp ve ilgili alanlar için standartlar",
+                  "standards": [
+                    {
+                      "name": "MIAME (Minimum Information About a Microarray Experiment)",
+                      "description": "Microarray deneyleri için minimum bilgi gereksinimleri",
+                      "authority": "MGED (Microarray Gene Expression Data Society)",
+                      "version": "1.1",
+                      "mandatory_fields": [
+                        "Deneysel tasarım açıklaması",
+                        "Array tasarımı ve üretici bilgileri",
+                        "Örnek açıklamaları ve işleme protokolleri",
+                        "Hibridizasyon prosedürleri ve parametreleri",
+                        "Ham ve normalize edilmiş veri değerleri",
+                        "Veri işleme adımları"
+                      ],
+                      "compliance_example": {
+                        "good": {
+                          "experimental_design": "Tip 2 diyabet hastalarında (n=30) ve sağlıklı kontrollerde (n=30) gen ekspresyon profillerinin karşılaştırması. Çift gruplu, randomize tasarım.",
+                          "sample_info": "Hasta yaşları 45-65, BMI >30. 12 saat açlık sonrası kan örnekleri. RNA izolasyonu: Qiagen RNeasy kit."
+                        },
+                        "poor": {
+                          "experimental_design": "Diyabet çalışması",
+                          "sample_info": "Hasta örnekleri kullanıldı"
+                        }
+                      },
+                      "tools": ["ArrayExpress", "GEO", "MAGE-ML"],
+                      "related_standards": ["MAGE-OM", "MAGE-ML"]
+                    },
+                    {
+                      "name": "FAIR4Health",
+                      "description": "Sağlık verilerinde FAIR prensiplerinin uygulanması",
+                      "authority": "IMI FAIR4Health Consortium",
+                      "focus_areas": [
+                        "Klinik araştırma verileri",
+                        "Hasta kayıtları",
+                        "Tedavi protokolleri",
+                        "Sağlık sonuçları"
+                      ],
+                      "key_requirements": [
+                        "Hasta gizliliği korunmalı",
+                        "Yasal düzenlemelere uygunluk (GDPR, HIPAA)",
+                        "Standardize terminolojiler (ICD-10, SNOMED CT)",
+                        "Birlikte çalışabilir formatlar (HL7 FHIR)"
+                      ]
+                    },
+                    {
+                      "name": "OMOP Common Data Model",
+                      "description": "Sağlık verilerinin standardizasyonu",
+                      "authority": "OHDSI Collaborative",
+                      "benefits": [
+                        "Çok merkezli çalışmalar",
+                        "Meta-analizler",
+                        "Makine öğrenmesi uygulamaları"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "field": "Çevre Bilimleri",
+                  "description": "Ekoloji, iklim, çevre bilimi alanları için standartlar",
+                  "standards": [
+                    {
+                      "name": "EML (Ecological Metadata Language)",
+                      "description": "Ekolojik araştırma verilerinin metadata standardı",
+                      "authority": "Knowledge Network for Biocomplexity (KNB)",
+                      "version": "2.2.0",
+                      "core_modules": [
+                        {
+                          "module": "dataset",
+                          "description": "Veri setinin genel tanımı",
+                          "required_elements": ["title", "creator", "pubDate", "abstract"]
+                        },
+                        {
+                          "module": "coverage",
+                          "description": "Coğrafi, zamansal, taksonomik kapsam",
+                          "sub_elements": [
+                            "geographicCoverage (koordinatlar, alan adı)",
+                            "temporalCoverage (başlangıç/bitiş tarihleri)",
+                            "taxonomicCoverage (tür hiyerarşisi)"
+                          ]
+                        },
+                        {
+                          "module": "methods",
+                          "description": "Veri toplama metodolojisi",
+                          "details": ["Örnekleme stratejisi", "Ölçüm protokolleri", "Kalite kontrolü"]
+                        },
+                        {
+                          "module": "dataTable",
+                          "description": "Veri tablosu yapısı",
+                          "attributes": ["Sütun tanımları", "Veri tipleri", "Birimler", "Eksik veri kodları"]
+                        }
+                      ],
+                      "example_usage": {
+                        "title": "İstanbul Boğazı Fitoplankton Çeşitliliği Araştırması",
+                        "geographic_coverage": "41.0082°N, 29.0181°E - Boğaziçi su yüzeyi",
+                        "temporal_coverage": "2022-03-01 / 2023-02-28",
+                        "taxonomic_coverage": "Bacillariophyceae, Dinophyceae, Cyanophyceae",
+                        "sampling_method": "Aylık örnekleme, 0-10m derinlik, Van Dorn şişesi"
+                      },
+                      "tools": ["Morpho", "EML R package", "DataONE"],
+                      "validation": "XML Schema ile otomatik doğrulama mevcut"
+                    },
+                    {
+                      "name": "CF (Climate and Forecast) Conventions",
+                      "description": "İklim ve meteoroloji verilerinin NetCDF formatında standardizasyonu",
+                      "authority": "CF Conventions Committee",
+                      "version": "1.8",
+                      "key_features": [
+                        "Standart değişken adları",
+                        "Koordinat sistemi tanımları",
+                        "Zaman referansları",
+                        "Kalite bayrakları"
+                      ],
+                      "variable_naming": {
+                        "temperature": "air_temperature (K)",
+                        "humidity": "relative_humidity (%)",
+                        "precipitation": "precipitation_flux (kg m-2 s-1)"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "field": "Sosyal Bilimler",
+                  "description": "Sosyoloji, ekonomi, psikoloji alanları için standartlar",
+                  "standards": [
+                    {
+                      "name": "DDI (Data Documentation Initiative)",
+                      "description": "Sosyal bilim verilerinin kapsamlı dokümantasyonu",
+                      "authority": "DDI Alliance",
+                      "version": "3.3",
+                      "lifecycle_coverage": [
+                        "Veri planlama",
+                        "Veri toplama",
+                        "Veri işleme",
+                        "Veri dağıtımı",
+                        "Veri arşivleme"
+                      ],
+                      "metadata_sections": [
+                        {
+                          "section": "Study Description",
+                          "content": "Araştırma soruları, hipotezler, metodoloji"
+                        },
+                        {
+                          "section": "Data Collection",
+                          "content": "Örnekleme, veri toplama araçları, süreçler"
+                        },
+                        {
+                          "section": "Variable Description",
+                          "content": "Değişken tanımları, kodlama şemaları, değer etiketleri"
+                        }
+                      ],
+                      "tool_support": ["Colectica", "Nesstar", "SPSS", "Stata"]
+                    },
+                    {
+                      "name": "CESSDA Metadata Model",
+                      "description": "Avrupa sosyal bilim verilerinin metadata standardı",
+                      "authority": "CESSDA ERIC",
+                      "focus": "Avrupa çapında sosyal bilim veri arşivleri",
+                      "key_elements": [
+                        "Çok dilli destek",
+                        "Yasal ve etik hususlar",
+                        "Veri erişim koşulları"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "field": "Fizik ve Mühendislik",
+                  "description": "Fizik, mühendislik ve malzeme bilimi alanları",
+                  "standards": [
+                    {
+                      "name": "NeXus",
+                      "description": "Nötron, X-ray ve muon bilim verilerinin standardı",
+                      "authority": "NeXus International Advisory Committee",
+                      "format": "HDF5 tabanlı",
+                      "instrument_support": [
+                        "Nötron kırınımı",
+                        "X-ray spektroskopisi",
+                        "Elektron mikroskopisi"
+                      ],
+                      "metadata_hierarchy": "entry/instrument/detector/data"
+                    },
+                    {
+                      "name": "FAIR4Eng",
+                      "description": "Mühendislik verilerinde FAIR prensipleri",
+                      "focus_areas": [
+                        "CAD modelleri",
+                        "Simülasyon verileri",
+                        "Test sonuçları",
+                        "Malzeme özellikleri"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "standard_selection": {
+                "title": "Doğru Standardı Nasıl Seçersiniz?",
+                "decision_tree": [
+                  {
+                    "question": "Verilerinizin alanı nedir?",
+                    "options": [
+                      {
+                        "option": "Yaşam Bilimleri",
+                        "next_question": "Veri türünüz nedir?",
+                        "sub_options": [
+                          "Genomik → MIAME, MAGE-ML",
+                          "Proteomik → MIAPE",
+                          "Klinik → OMOP, HL7 FHIR",
+                          "Ekolojik → EML"
+                        ]
+                      },
+                      {
+                        "option": "Sosyal Bilimler",
+                        "next_question": "Araştırma türünüz nedir?",
+                        "sub_options": [
+                          "Anket → DDI",
+                          "Panel veri → CESSDA",
+                          "Deneysel → APA PsycINFO"
+                        ]
+                      },
+                      {
+                        "option": "Fizik/Mühendislik",
+                        "sub_options": [
+                          "Enstrüman verileri → NeXus",
+                          "Malzeme özellikleri → MatML",
+                          "Simülasyon → OpenMM"
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "evaluation_criteria": [
+                  "Alan topluluğu tarafından kabul görme",
+                  "Araç ve yazılım desteği",
+                  "Dokümantasyon kalitesi",
+                  "Sürdürülebilirlik ve bakım",
+                  "Yasal gerekliliklerle uyumluluk"
+                ]
+              },
+              "implementation_guide": {
+                "title": "Standart Uygulama Rehberi",
+                "steps": [
+                  {
+                    "step": 1,
+                    "title": "Standart Belirleme",
+                    "actions": [
+                      "Alanınızdaki yaygın standartları araştırın",
+                      "Hedef dergi/repo gereksinimlerini kontrol edin",
+                      "Mevcut araç desteğini değerlendirin",
+                      "Topluluk forumlarında tartışmalara katılın"
+                    ],
+                    "resources": [
+                      "FAIRsharing.org - standart katalogu",
+                      "re3data.org - depo gereksinimleri",
+                      "Alan-spesifik topluluk siteleri"
+                    ]
+                  },
+                  {
+                    "step": 2,
+                    "title": "Uyumluluk Planlaması",
+                    "actions": [
+                      "Mevcut verilerinizi standartla karşılaştırın",
+                      "Eksik metadata alanlarını belirleyin",
+                      "Dönüştürme ihtiyaçlarını tespit edin",
+                      "Zaman ve kaynak planlaması yapın"
+                    ],
+                    "tools": [
+                      "Standart şablonları",
+                      "Doğrulama araçları",
+                      "Otomatik dönüştürücüler"
+                    ]
+                  },
+                  {
+                    "step": 3,
+                    "title": "Implementasyon",
+                    "actions": [
+                      "Standart formatında metadata oluşturun",
+                      "Veri dosyalarını uygun formatlara dönüştürün",
+                      "Doğrulama araçlarını çalıştırın",
+                      "Peer review sürecine dahil edin"
+                    ],
+                    "quality_checks": [
+                      "Zorunlu alanların doldurulması",
+                      "Veri tiplerinin doğruluğu",
+                      "Kontrollü kelime dağarcıkları kullanımı",
+                      "Cross-referans bütünlüğü"
+                    ]
+                  },
+                  {
+                    "step": 4,
+                    "title": "Sürdürülebilirlik",
+                    "actions": [
+                      "Standart güncellemelerini takip edin",
+                      "Topluluk geri bildirimlerini değerlendirin",
+                      "Araç ve süreçleri güncel tutun",
+                      "Deneyimleri toplulukla paylaşın"
+                    ]
+                  }
+                ]
+              },
+              "case_studies": {
+                "title": "Başarı Hikayeleri",
+                "examples": [
+                  {
+                    "title": "ArrayExpress - MIAME Uyumluluğu",
+                    "problem": "2000'lerin başında microarray verileri genellikle yeniden kullanılamıyordu",
+                    "solution": "MIAME standardının yaygın adoptasyonu",
+                    "results": [
+                      "100,000+ yeniden kullanılabilir veri seti",
+                      "Meta-analiz çalışmalarında %300 artış",
+                      "Veri kalite skorlarında önemli iyileşme"
+                    ],
+                    "lesson": "Topluluk standardları, tüm ekosistemi dönüştürebilir"
+                  },
+                  {
+                    "title": "Climate Data Modernization Initiative",
+                    "problem": "İklim verilerinin entegrasyonu ve karşılaştırması zor",
+                    "solution": "CF Conventions'ın yaygın kullanımı",
+                    "results": [
+                      "50+ kurum arasında veri paylaşımı",
+                      "Otomatik veri işleme pipelineları",
+                      "Global iklim modellerinin gelişimi"
+                    ],
+                    "lesson": "Standardizasyon, büyük ölçekli işbirliğini mümkün kılar"
+                  }
+                ]
+              },
+              "compliance_checker": {
+                "title": "Standart Uyumluluk Değerlendirmesi",
+                "description": "Verilerinizin seçtiğiniz standarda uygunluğunu değerlendirin",
+                "assessment_areas": [
+                  {
+                    "area": "Metadata Completeness",
+                    "weight": 30,
+                    "criteria": [
+                      "Tüm zorunlu alanlar doldurulmuş mu?",
+                      "Önerilen alanlardan ne kadarı mevcut?",
+                      "Açıklamalar yeterince detaylı mı?"
+                    ]
+                  },
+                  {
+                    "area": "Format Compliance",
+                    "weight": 25,
+                    "criteria": [
+                      "Dosya formatları standarda uygun mu?",
+                      "Encoding doğru mu?",
+                      "Yapısal öğeler yerinde mi?"
+                    ]
+                  },
+                  {
+                    "area": "Terminology Usage",
+                    "weight": 25,
+                    "criteria": [
+                      "Kontrollü kelime dağarcıkları kullanılmış mı?",
+                      "Terimler doğru şekilde uygulanmış mı?",
+                      "URI referansları mevcut mu?"
+                    ]
+                  },
+                  {
+                    "area": "Technical Validation",
+                    "weight": 20,
+                    "criteria": [
+                      "Schema doğrulaması geçiyor mu?",
+                      "Link kontrolü başarılı mı?",
+                      "Dosya bütünlüğü korunmuş mu?"
+                    ]
+                  }
+                ],
+                "scoring": {
+                  "excellent": "90-100%: Standart uyumluluğu mükemmel",
+                  "good": "75-89%: İyi seviyede, küçük iyileştirmeler gerekli",
+                  "fair": "60-74%: Orta seviye, önemli eksiklikler var",
+                  "poor": "<60%: Standart gereksinimlerini karşılamıyor"
+                }
+              },
+              "exercise": {
+                "title": "Praktik Uygulama: Kendi Alanınızda Standart Seçimi ve Uygulaması",
+                "description": "Araştırma alanınıza uygun bir standart seçin ve örnek verilerinizi bu standarda göre düzenleyin",
+                "tasks": [
+                  {
+                    "task": "Standart Araştırması",
+                    "description": "Alanınızdaki mevcut standartları araştırın ve karşılaştırın",
+                    "deliverable": "Standart karşılaştırma tablosu (avantajlar, dezavantajlar, tool desteği)"
+                  },
+                  {
+                    "task": "Veri Analizi",
+                    "description": "Mevcut verilerinizi seçtiğiniz standartla karşılaştırın",
+                    "deliverable": "Gap analizi raporu (eksik alanlar, uyumsuzluklar)"
+                  },
+                  {
+                    "task": "Metadata Oluşturma",
+                    "description": "Standarda uygun metadata oluşturun",
+                    "deliverable": "Tam uyumlu metadata dosyası"
+                  },
+                  {
+                    "task": "Doğrulama",
+                    "description": "Oluşturduğunuz metadata'yı doğrulayın",
+                    "deliverable": "Doğrulama raporu ve iyileştirme planı"
+                  }
+                ],
+                "evaluation": {
+                  "criteria": [
+                    "Standart seçiminin gerekçelendirilmesi",
+                    "Metadata'nın standart uyumluluğu",
+                    "Dokümantasyonun kalitesi",
+                    "Yeniden kullanılabilirlik değerlendirmesi"
+                  ],
+                  "rubric": {
+                    "excellent": "Standart tam anlaşılmış, metadata mükemmel uyumlu, kapsamlı dokümantasyon",
+                    "good": "Standart iyi anlaşılmış, metadata büyük ölçüde uyumlu, yeterli dokümantasyon",
+                    "fair": "Standart kısmen anlaşılmış, metadata kısmen uyumlu, temel dokümantasyon",
+                    "poor": "Standart yanlış anlaşılmış veya metadata uyumsuz"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "quiz": {
+          "questions": [
+            {
+              "id": "r_q1",
+              "question": "Kapsamlı veri dokümantasyonunda en kritik öğe hangisidir?",
+              "options": [
+                "Sadece veri dosyasının boyutu", 
+                "Sadece yayın tarihi", 
+                "Veri toplama metodolojisi ve değişken tanımları", 
+                "Sadece dosya formatı bilgisi"
+              ],
+              "correct": 2,
+              "explanation": "Verinin nasıl toplandığı, değişkenlerin ne anlama geldiği ve hangi birimlerde ölçüldüğü bilinmeden veri yeniden kullanılamaz."
+            },
+            {
+              "id": "r_q2",
+              "question": "CC-BY lisansı ile lisanslanan bir veri setini kullanırken tek zorunluluğunuz nedir?",
+              "options": [
+                "Veriyi ticari amaçla kullanmamak", 
+                "Orijinal yaratıcısına atıf yapmak", 
+                "Türev çalışmaları da aynı lisansla paylaşmak", 
+                "Veriyi değiştirmemek"
+              ],
+              "correct": 1,
+              "explanation": "CC-BY (Creative Commons Attribution) lisansı sadece atıf yapmayı gerektirir. Ticari kullanım, türev çalışma ve değişiklik serbesttir."
+            },
+            {
+              "id": "r_q3",
+              "question": "PROV-O köken modeli hangi üç temel öğeden oluşur?",
+              "options": [
+                "Dosya, Kullanıcı, Zaman", 
+                "Entity (Varlık), Activity (Etkinlik), Agent (Aktör)", 
+                "Girdi, İşlem, Çıktı", 
+                "Kaynak, Hedef, Dönüştürme"
+              ],
+              "correct": 1,
+              "explanation": "PROV-O modeli Entity (veri setleri), Activity (işleme adımları) ve Agent (kişi/kurum/yazılım) üçlüsü ile köken bilgisini yapılandırır."
+            },
+            {
+              "id": "r_q4",
+              "question": "Hangi durumlarda CC-BY-NC lisansı CC-BY'dan daha uygun olabilir?",
+              "options": [
+                "Veriler ticari değer taşıyorsa ve yaratıcı kontrolü korumak istiyorsa", 
+                "Veriler çok büyük boyuttaysa", 
+                "Veriler sadece akademisyenler tarafından kullanılabilirse", 
+                "Veriler henüz yayınlanmamış bir çalışmanın parçasıysa"
+              ],
+              "correct": 0,
+              "explanation": "CC-BY-NC (Non-Commercial) lisansı, ticari kullanımı engelleyerek yaratıcının verinin ticari değeri üzerindeki kontrolünü korumasını sağlar."
+            },
+            {
+              "id": "r_q5",
+              "question": "Ekolojik veriler için EML (Ecological Metadata Language) standardı neden kullanılır?",
+              "options": [
+                "Sadece dosya boyutunu küçültmek için", 
+                "Coğrafi, zamansal ve taksonomik kapsam bilgilerini standart şekilde sunmak için", 
+                "Sadece İngilizce metadata yazmak için", 
+                "Verileri şifrelemek için"
+              ],
+              "correct": 1,
+              "explanation": "EML, ekolojik verilerin coğrafi konumu, zaman aralığı, tür bilgileri ve metodoloji gibi alan-spesifik özelliklerini standart şekilde tanımlar."
+            }
+          ]
+        },
+        "achievements": [
+          {
+            "id": "documentation-expert",
+            "title": "Dokümantasyon Uzmanı",
+            "description": "Kapsamlı dokümantasyon hazırladınız",
+            "icon": "📖",
+            "points": 45
+          },
+          {
+            "id": "license-lawyer",
+            "title": "Lisans Danışmanı",
+            "description": "Uygun açık lisans seçtiniz",
+            "icon": "⚖️",
+            "points": 40
+          },
+          {
+            "id": "provenance-pro",
+            "title": "Köken Bilgisi Uzmanı",
+            "description": "Detaylı köken bilgisi sağladınız",
+            "icon": "🗺️",
+            "points": 45
+          },
+          {
+            "id": "standards-champion",
+            "title": "Standartlar Şampiyonu",
+            "description": "Topluluk standartlarını uyguladınız",
+            "icon": "🏆",
+            "points": 50
+          }
+        ]
+      },
+      {
+        "id": "advanced",
+        "title": "İleri Seviye FAIR",
+        "description": "FAIR uygulamalarında uzmanlaşın",
+        "icon": "🎓",
+        "color": "#EC4899",
+        "difficulty": "expert",
+        "estimatedTime": "3 dakika",
+        "prerequisite": "reusable",
+        "modules": [
+          {
+            "id": "fair-assessment",
+            "title": "FAIR Değerlendirmesi",
+            "type": "interactive",
+            "content": {
+              "introduction": "FAIR değerlendirmesi, verilerinizin gerçek FAIR uyumluluğunu objektif kriterlerle ölçmenizi sağlayan kritik bir süreçtir. Bu kapsamlı analiz, mevcut verilerinizin güçlü yanlarını ortaya koyarken, iyileştirme gerektiren alanları da net bir şekilde belirleyerek size stratejik bir yol haritası sunar.",
+              "why_assessment": {
+                "title": "Neden FAIR Değerlendirmesi Yapmalısınız?",
+                "benefits": [
+                  {
+                    "benefit": "Objektif Ölçüm",
+                    "description": "Subjektif değerlendirmeler yerine, ölçülebilir kriterlerle verilerinizin durumunu anlayın",
+                    "example": "F-UJI aracı ile verilerinizin %73 FAIR skoru aldığını öğrenebilirsiniz"
+                  },
+                  {
+                    "benefit": "Öncelik Belirleme",
+                    "description": "Hangi alanların öncelikli olarak iyileştirilmesi gerektiğini belirleyin",
+                    "example": "Metadata zenginliği %45 iken, erişilebilirlik %90 ise metadata'ya odaklanın"
+                  },
+                  {
+                    "benefit": "Benchmarking",
+                    "description": "Verilerinizi sektör standartları ve rakiplerle karşılaştırın",
+                    "example": "Genomik veriler için ortalama FAIR skoru %67, sizinki %82 ise öndesiniz"
+                  },
+                  {
+                    "benefit": "Sürekli İyileştirme",
+                    "description": "Düzenli değerlendirmelerle ilerlemenizi takip edin",
+                    "example": "6 ay arayla yapılan değerlendirmelerle %15 iyileşme görmek"
+                  }
+                ]
+              },
+              "assessment_framework": {
+                "title": "FAIR Değerlendirme Çerçevesi",
+                "overview": "FAIR değerlendirmesi, her prensibin altında yer alan spesi메틱 kriterlere dayanır",
+                "dimensions": [
+                  {
+                    "principle": "Findable (Bulunabilir)",
+                    "weight": 25,
+                    "criteria": [
+                      {
+                        "code": "F1",
+                        "description": "Kalıcı tanımlayıcı varlığı",
+                        "measurement": "DOI, Handle, ORCID gibi global tanımlayıcılar",
+                        "scoring": {
+                          "excellent": "DOI + ORCID + kurumsal tanımlayıcı",
+                          "good": "DOI + ORCID",
+                          "fair": "Sadece DOI",
+                          "poor": "Kalıcı tanımlayıcı yok"
+                        }
+                      },
+                      {
+                        "code": "F2",
+                        "description": "Zengin metadata içeriği",
+                        "measurement": "Dublin Core, DataCite, alan-spesifik standartlar",
+                        "scoring": {
+                          "excellent": "20+ metadata alanı, alan standartları uyumlu",
+                          "good": "15-19 metadata alanı",
+                          "fair": "10-14 metadata alanı",
+                          "poor": "<10 metadata alanı"
+                        }
+                      },
+                      {
+                        "code": "F3",
+                        "description": "Metadata'da tanımlayıcı referansı",
+                        "measurement": "Metadata'nın veri tanımlayıcısını içermesi"
+                      },
+                      {
+                        "code": "F4",
+                        "description": "Aranabilir kataloglarda indekslenme",
+                        "measurement": "Google Dataset Search, DataCite, alan kataloklarında görünürlük"
+                      }
+                    ]
+                  },
+                  {
+                    "principle": "Accessible (Erişilebilir)",
+                    "weight": 25,
+                    "criteria": [
+                      {
+                        "code": "A1",
+                        "description": "Standart protokol erişimi",
+                        "measurement": "HTTP/HTTPS, FTP, API erişim yöntemleri",
+                        "scoring": {
+                          "excellent": "HTTPS + REST API + alternatif protokoller",
+                          "good": "HTTPS + REST API",
+                          "fair": "Sadece HTTPS",
+                          "poor": "Standart protokol yok"
+                        }
+                      },
+                      {
+                        "code": "A1.1",
+                        "description": "Kimlik doğrulama şeffaflığı",
+                        "measurement": "Erişim gereksinimlerinin net açıklanması"
+                      },
+                      {
+                        "code": "A1.2",
+                        "description": "Yetkilendirme prosedürlerinin açıklığı",
+                        "measurement": "Erişim başvuru süreçlerinin dokümantasyonu"
+                      },
+                      {
+                        "code": "A2",
+                        "description": "Metadata kalıcılığı",
+                        "measurement": "Veri silinse bile metadata'nın erişilebilir kalması"
+                      }
+                    ]
+                  },
+                  {
+                    "principle": "Interoperable (Birlikte Çalışabilir)",
+                    "weight": 25,
+                    "criteria": [
+                      {
+                        "code": "I1",
+                        "description": "Standart format kullanımı",
+                        "measurement": "CSV, JSON, XML, RDF gibi yaygın formatlar",
+                        "scoring": {
+                          "excellent": "Açık format + alternatif formatlar + API",
+                          "good": "Açık format + alternatif formatlar",
+                          "fair": "Açık format",
+                          "poor": "Kapalı/proprietary format"
+                        }
+                      },
+                      {
+                        "code": "I2",
+                        "description": "Kontrollü kelime dağarcığı kullanımı",
+                        "measurement": "MeSH, Gene Ontology, Dublin Core gibi standart terminolojiler"
+                      },
+                      {
+                        "code": "I3",
+                        "description": "Diğer verilerle bağlantılar",
+                        "measurement": "İlgili veri setlerine, yayınlara, projelere referanslar"
+                      }
+                    ]
+                  },
+                  {
+                    "principle": "Reusable (Yeniden Kullanılabilir)",
+                    "weight": 25,
+                    "criteria": [
+                      {
+                        "code": "R1",
+                        "description": "Kapsamlı dokümantasyon",
+                        "measurement": "README, metodoloji, veri sözlüğü varlığı",
+                        "scoring": {
+                          "excellent": "Tam dokümantasyon + örnekler + FAQ",
+                          "good": "Tam dokümantasyon + örnekler",
+                          "fair": "Temel dokümantasyon",
+                          "poor": "Minimal/eksik dokümantasyon"
+                        }
+                      },
+                      {
+                        "code": "R1.1",
+                        "description": "Açık lisans varlığı",
+                        "measurement": "CC, MIT, Apache gibi tanımlı lisanslar"
+                      },
+                      {
+                        "code": "R1.2",
+                        "description": "Köken bilgisi detayı",
+                        "measurement": "PROV-O, veri yaşam döngüsü dokümantasyonu"
+                      },
+                      {
+                        "code": "R1.3",
+                        "description": "Topluluk standartlarına uyum",
+                        "measurement": "Alan-spesifik metadata standartları kullanımı"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "assessment_tools": {
+                "title": "FAIR Değerlendirme Araçları",
+                "categories": [
+                  {
+                    "category": "Otomatik Değerlendirme Araçları",
+                    "tools": [
+                      {
+                        "name": "F-UJI (FAIR Data Assessment Tool)",
+                        "developer": "FAIRsFAIR Project",
+                        "url": "https://www.f-uji.net/",
+                        "features": [
+                          "Web arayüzü ve API erişimi",
+                          "17 farklı FAIR metriğini test eder",
+                          "JSON-LD ve RDF metadata desteği",
+                          "Detaylı skorlama raporu"
+                        ],
+                        "strengths": [
+                          "Tamamen otomatik",
+                          "Hızlı sonuç (2-3 dakika)",
+                          "Çoklu format desteği",
+                          "Ücretsiz kullanım"
+                        ],
+                        "limitations": [
+                          "Sadece web erişimli veriler",
+                          "İnsan yorumu gerektiren kriterler eksik",
+                          "Alan-spesifik standartlar sınırlı"
+                        ],
+                        "use_case": "İlk değerlendirme ve düzenli monitoring için ideal"
+                      },
+                      {
+                        "name": "FAIR Evaluator",
+                        "developer": "FAIR Metrics Group",
+                        "url": "https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/",
+                        "features": [
+                          "14 FAIR prensip testi",
+                          "Topluluk odaklı metrik geliştirme",
+                          "API tabanlı değerlendirme",
+                          "JSON-LD çıktı formatı"
+                        ],
+                        "strengths": [
+                          "Topluluk tarafından geliştirilmiş",
+                          "Şeffaf metrik tanımları",
+                          "API entegrasyonu kolay"
+                        ],
+                        "limitations": [
+                          "Kullanıcı arayüzü karmaşık",
+                          "Dokümantasyon eksiklikleri"
+                        ]
+                      },
+                      {
+                        "name": "FAIR-Aware",
+                        "developer": "RDA FAIR Data Maturity Model WG",
+                        "features": [
+                          "Self-assessment anketi",
+                          "Adım adım rehberlik",
+                          "İyileştirme planı önerileri"
+                        ],
+                        "target_audience": "FAIR'e yeni başlayanlar"
+                      }
+                    ]
+                  },
+                  {
+                    "category": "Manuel Değerlendirme Araçları",
+                    "tools": [
+                      {
+                        "name": "FAIR Data Maturity Model",
+                        "developer": "RDA (Research Data Alliance)",
+                        "description": "5 seviyeli olgunluk modeli",
+                        "levels": [
+                          "Level 0: Not FAIR",
+                          "Level 1: Initial",
+                          "Level 2: Managed", 
+                          "Level 3: Defined",
+                          "Level 4: Quantitatively Managed",
+                          "Level 5: Optimizing"
+                        ],
+                        "use_case": "Kurumsal değerlendirme ve stratejik planlama"
+                      },
+                      {
+                        "name": "FAIR Health Data Assessment Tool",
+                        "developer": "FAIR4Health Consortium",
+                        "specialty": "Sağlık verilerine özel değerlendirme",
+                        "additional_criteria": [
+                          "GDPR uyumluluğu",
+                          "Hasta gizliliği",
+                          "Klinik araştırma standartları"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "step_by_step_assessment": {
+                "title": "Adım Adım FAIR Değerlendirme Süreci",
+                "workflow": [
+                  {
+                    "step": 1,
+                    "title": "Hazırlık ve Planlama",
+                    "duration": "30 dakika",
+                    "actions": [
+                      {
+                        "action": "Değerlendirme kapsamını belirleyin",
+                        "details": "Hangi veri setleri, hangi zaman aralığı, hangi kriterler",
+                        "tip": "İlk değerlendirmede 1-2 temsili veri seti seçin"
+                      },
+                      {
+                        "action": "Değerlendirme aracını seçin",
+                        "details": "Otomatik araçlar hızlı başlangıç için, manuel araçlar derinlemesine analiz için",
+                        "recommendation": "F-UJI ile başlayın, sonra FAIR Maturity Model uygulayın"
+                      },
+                      {
+                        "action": "Gerekli bilgileri toplayın",
+                        "details": "DOI'ler, URL'ler, metadata dosyaları, dokümantasyon",
+                        "checklist": [
+                          "Veri seti URL'si veya DOI",
+                          "Landing page bilgileri",
+                          "Metadata dosyaları",
+                          "README ve dokümantasyon",
+                          "Lisans bilgileri"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "step": 2,
+                    "title": "Otomatik Değerlendirme",
+                    "duration": "15 dakika",
+                    "actions": [
+                      {
+                        "action": "F-UJI ile temel değerlendirme",
+                        "process": [
+                          "https://www.f-uji.net/ adresine gidin",
+                          "Veri seti URL'sini veya DOI'yi girin",
+                          "Değerlendirme tipini seçin (datacite, oai_pmh, etc.)",
+                          "Test'i başlatın ve 2-3 dakika bekleyin",
+                          "Sonuçları JSON veya HTML formatında indirin"
+                        ]
+                      },
+                      {
+                        "action": "Sonuçları ilk analiz",
+                        "focus_areas": [
+                          "Genel FAIR skoru (%0-100)",
+                          "Prensip bazında skorlar (F, A, I, R)",
+                          "Başarısız testlerin detayları",
+                          "Hata mesajları ve uyarılar"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "step": 3,
+                    "title": "Detaylı Manuel İnceleme",
+                    "duration": "45-60 dakika",
+                    "actions": [
+                      {
+                        "action": "Findable prensiplerini değerlendirin",
+                        "checklist": [
+                          "DOI kalıcı mı ve erişilebilir mi?",
+                          "Metadata zengin ve açıklayıcı mı?",
+                          "Veri Google Dataset Search'te bulunabiliyor mu?",
+                          "Alan-spesifik kataloglarda listeleniyor mu?"
+                        ],
+                        "common_issues": [
+                          "Kısa veya belirsiz başlıklar",
+                          "Eksik anahtar kelimeler",
+                          "Coğrafi/zamansal kapsam bilgisi eksik",
+                          "Yazar bilgileri eksik veya ORCID'siz"
+                        ]
+                      },
+                      {
+                        "action": "Accessible prensiplerini kontrol edin",
+                        "checklist": [
+                          "HTTPS üzerinden erişilebilir mi?",
+                          "Erişim gereksinimleri açık mı?",
+                          "API erişimi mevcut mu?",
+                          "Metadata veri silinse bile kalıcı mı?"
+                        ],
+                        "test_methods": [
+                          "Farklı tarayıcılarla erişim testi",
+                          "Curl ile HTTP response kodları kontrol",
+                          "API endpoint'lerini test edin"
+                        ]
+                      },
+                      {
+                        "action": "Interoperable özelliklerini inceleyin",
+                        "checklist": [
+                          "Dosya formatları açık ve standart mı?",
+                          "Kontrollü kelime dağarcıkları kullanılmış mı?",
+                          "İlgili verilerle bağlantılar var mı?",
+                          "Metadata makinece okunabilir mi?"
+                        ]
+                      },
+                      {
+                        "action": "Reusable kriterlerini değerlendirin",
+                        "checklist": [
+                          "Lisans açık ve anlaşılır mı?",
+                          "Dokümantasyon yeterli mi?",
+                          "Köken bilgisi detaylı mı?",
+                          "Topluluk standartlarına uygun mu?"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "step": 4,
+                    "title": "Skorlama ve Önceliklendirme",
+                    "duration": "30 dakika",
+                    "actions": [
+                      {
+                        "action": "Detaylı skor hesaplama",
+                        "method": "Her prensip için 0-100 arası puan verin ve ağırlıklı ortalama alın",
+                        "weighting": {
+                          "Findable": "25%",
+                          "Accessible": "25%", 
+                          "Interoperable": "25%",
+                          "Reusable": "25%"
+                        }
+                      },
+                      {
+                        "action": "Güçlü yanları belirleyin",
+                        "questions": [
+                          "Hangi alanlarda standartların üstündesiniz?",
+                          "Hangi uygulamalarınız örnek teşkil edebilir?",
+                          "En az çaba ile hangi alanları iyileştirebilirsiniz?"
+                        ]
+                      },
+                      {
+                        "action": "İyileştirme önceliklerini sıralayın",
+                        "criteria": [
+                          "Etki seviyesi (yüksek/orta/düşük)",
+                          "Uygulama zorluğu (kolay/orta/zor)",
+                          "Kaynak gereksinimleri (az/orta/çok)",
+                          "Zaman çerçevesi (kısa/orta/uzun)"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "step": 5,
+                    "title": "Eylem Planı Oluşturma",
+                    "duration": "45 dakika",
+                    "actions": [
+                      {
+                        "action": "SMART hedefler belirleyin",
+                        "template": "Specific, Measurable, Achievable, Relevant, Time-bound",
+                        "examples": [
+                          "3 ay içinde tüm veri setlerine DOI atanması",
+                          "6 ay içinde metadata zenginliğinin %20 artırılması",
+                          "1 yıl içinde alan-spesifik standartlara tam uyum"
+                        ]
+                      },
+                      {
+                        "action": "Kaynak planlaması yapın",
+                        "considerations": [
+                          "İnsan kaynağı ihtiyaçları",
+                          "Teknoloji ve araç ihtiyaçları",
+                          "Eğitim gereksinimleri",
+                          "Bütçe planlaması"
+                        ]
+                      },
+                      {
+                        "action": "İzleme metrikleri tanımlayın",
+                        "kpis": [
+                          "Aylık FAIR skor değişimi",
+                          "Yeni DOI atama sayısı",
+                          "Metadata kalite indeksi",
+                          "Kullanıcı geri bildirimleri",
+                          "İndirme/erişim istatistikleri"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "case_study": {
+                "title": "Gerçek Dünya Örneği: Genomik Veri Deposu FAIR Değerlendirmesi",
+                "background": {
+                  "organization": "Ulusal Genomik Araştırma Merkezi",
+                  "dataset": "COVID-19 Variant Genomik Verileri",
+                  "size": "50,000 genom sekansı",
+                  "initial_state": "Araştırmacılar verilerini bulma ve kullanmada zorluk yaşıyordu"
+                },
+                "assessment_process": {
+                  "tools_used": ["F-UJI", "FAIR Evaluator", "Manual Review"],
+                  "timeline": "2 hafta",
+                  "team": "3 veri yöneticisi, 2 bioinformatikçi"
+                },
+                "initial_results": {
+                  "overall_score": "42%",
+                  "findable": "35% - Metadata eksik, anahtar kelimeler yetersiz",
+                  "accessible": "65% - HTTPS erişim var ama API yok",
+                  "interoperable": "30% - Proprietary format kullanımı",
+                  "reusable": "38% - Dokümantasyon minimal, lisans belirsiz"
+                },
+                "improvement_actions": [
+                  {
+                    "priority": "High",
+                    "action": "Dublin Core + genomik standartları ile metadata zenginleştirme",
+                    "timeline": "1 ay",
+                    "result": "Findable skoru %35'ten %78'e yükseldi"
+                  },
+                  {
+                    "priority": "High", 
+                    "action": "FASTQ formatına geçiş ve REST API geliştirme",
+                    "timeline": "2 ay",
+                    "result": "Interoperable skoru %30'dan %85'e yükseldi"
+                  },
+                  {
+                    "priority": "Medium",
+                    "action": "CC-BY lisansı ve kapsamlı README ekleme",
+                    "timeline": "2 hafta",
+                    "result": "Reusable skoru %38'den %72'ye yükseldi"
+                  }
+                ],
+                "final_results": {
+                  "overall_score": "78%",
+                  "user_feedback": "Veri bulma süresi %60 azaldı, kullanım %150 arttı",
+                  "lessons_learned": [
+                    "Otomatik araçlar iyi başlangıç noktası sağlar",
+                    "Alan-spesifik standartlar kritik önem taşır",
+                    "Kullanıcı geri bildirimleri değerlendirmeden daha değerli",
+                    "Sürekli monitoring gerekli"
+                  ]
+                }
+              },
+              "exercise": {
+                "title": "Kapsamlı FAIR Değerlendirme Projesi",
+                "description": "Kendi veri setiniz veya örnek bir veri seti üzerinde tam bir FAIR değerlendirmesi gerçekleştirin",
+                "phases": [
+                  {
+                    "phase": "Hazırlık",
+                    "tasks": [
+                      "Değerlendirme hedefleri ve kapsamını belirleyin",
+                      "Uygun araçları seçin ve test edin",
+                      "Gerekli veri ve dokümantasyonu toplayın"
+                    ],
+                    "deliverable": "Değerlendirme planı dokümenti"
+                  },
+                  {
+                    "phase": "Değerlendirme",
+                    "tasks": [
+                      "F-UJI ile otomatik değerlendirme yapın",
+                      "Manuel kontrol listelerini uygulayın",
+                      "Skorları hesaplayın ve analiz edin"
+                    ],
+                    "deliverable": "Detaylı değerlendirme raporu"
+                  },
+                  {
+                    "phase": "Planlama",
+                    "tasks": [
+                      "İyileştirme önceliklerini belirleyin",
+                      "SMART hedefler tanımlayın",
+                      "Kaynak ve zaman planı oluşturun"
+                    ],
+                    "deliverable": "FAIR iyileştirme eylem planı"
+                  },
+                  {
+                    "phase": "Uygulama (Opsiyonel)",
+                    "tasks": [
+                      "Öncelikli iyileştirmeleri gerçekleştirin",
+                      "Yeniden değerlendirme yapın",
+                      "İlerlemeyi raporlayın"
+                    ],
+                    "deliverable": "İyileştirme sonuçları raporu"
+                  }
+                ],
+                "evaluation_criteria": [
+                  "Değerlendirme metodolojisinin uygunluğu",
+                  "Analizin derinliği ve doğruluğu",
+                  "İyileştirme planının gerçekçiliği",
+                  "Raporlama kalitesi",
+                  "Öğrenilen derslerin paylaşımı"
+                ],
+                "resources": [
+                  "FAIR değerlendirme araçları listesi",
+                  "Değerlendirme raporu şablonları",
+                  "Eylem planı şablonları",
+                  "En iyi uygulama örnekleri"
+                ]
+              }
+            }
+          },
+          {
+            "id": "fair-implementation",
+            "title": "FAIR İmplementasyon Stratejileri",
+            "type": "lesson",
+            "content": {
+              "introduction": "FAIR implementasyonu, veri yönetimi kültürünüzü dönüştüren stratejik bir süreçtir. Başarılı implementasyon için sistematik yaklaşım, paydaş katılımı ve kademeli uygulama kritiktir. Bu kapsamlı rehber, bireysel seviyeden kurumsal ölçeğe kadar FAIR prensiplerini etkili şekilde hayata geçirmek için kanıtlanmış stratejileri, pratik araçları ve gerçek vaka çalışmalarını sunmaktadır.",
+              "implementation_levels": [
+                {
+                  "level": "Bireysel Seviye",
+                  "description": "Araştırmacıların kişisel veri yönetimi pratiklerini FAIR prensipleriyle uyumlu hale getirme",
+                  "strategies": [
+                    {
+                      "strategy": "Kişisel Veri Yönetim Planı (DMP)",
+                      "implementation": "Proje başlangıcında DMP şablonu kullanarak veri yaşam döngüsünü planlayın",
+                      "tools": ["DMPlanner", "ARGOS", "DMP Assistant"],
+                      "timeline": "Proje öncesi 1-2 hafta",
+                      "success_criteria": "Tüm araştırma verilerinin dokümante edilmiş yönetim planına sahip olması"
+                    },
+                    {
+                      "strategy": "Standart Araçlar ve Formatlar",
+                      "implementation": "Disiplin-spesifik standart dosya formatları ve metadata şemaları kullanın",
+                      "examples": [
+                        "Biyomedikal: HL7 FHIR, OMOP CDM",
+                        "Sosyal bilimler: DDI, CESSDA ELSST",
+                        "Fizik: HDF5, FITS formatları",
+                        "Genel: Dublin Core, Schema.org"
+                      ],
+                      "timeline": "İlk kullanım 2-3 gün öğrenme",
+                      "success_criteria": "Alan standartlarına %90+ uyum"
+                    },
+                    {
+                      "strategy": "Düzenli Dokümantasyon ve Versiyon Kontrolü",
+                      "implementation": "Git tabanlı workflow ile veri ve kod versiyonlaması",
+                      "best_practices": [
+                        "Anlamlı commit mesajları yazın",
+                        "README dosyalarını güncel tutun",
+                        "CHANGELOG dosyası oluşturun", 
+                        "Semantic versioning (v1.2.3) kullanın"
+                      ],
+                      "timeline": "Günlük rutin olarak 15-30 dakika",
+                      "success_criteria": "Tüm değişikliklerin izlenebilir olması"
+                    }
+                  ]
+                },
+                {
+                  "level": "Ekip/Laboratuvar Seviyesi", 
+                  "description": "Araştırma gruplarının ortak FAIR uygulamaları geliştirmesi ve standartlaştırması",
+                  "strategies": [
+                    {
+                      "strategy": "Ortak Veri Standartları ve Protokoller",
+                      "implementation": "Ekip içi veri standardizasyon workshops düzenleyerek ortak protokoller belirleyin",
+                      "deliverables": [
+                        "Laboratuvar veri standardı dokümanı",
+                        "Metadata şablonları ve checklistler",
+                        "Naming convention rehberi",
+                        "Quality assurance protokolleri"
+                      ],
+                      "timeline": "2-3 aylık workshop serisi",
+                      "success_criteria": "Ekip üyelerinin %95+ uyum göstermesi"
+                    },
+                    {
+                      "strategy": "Collaborative Data Management Systems",
+                      "implementation": "Merkezi veri yönetim sistemi kurarak ekip içi paylaşımı optimize edin",
+                      "components": [
+                        "Shared storage system (OneDrive, Box, institutional)",
+                        "Electronic Lab Notebook (ELN) sistemi",
+                        "Laboratory Information Management System (LIMS)",
+                        "Collaborative analysis environments (JupyterHub, RStudio Server)"
+                      ],
+                      "timeline": "3-6 ay kurulum ve adaptasyon",
+                      "success_criteria": "Tüm proje verilerinin merkezi sistemde yönetilmesi"
+                    },
+                    {
+                      "strategy": "Peer Review ve Quality Assurance",
+                      "implementation": "Sistematik veri kalite kontrolü ve peer review süreçleri oluşturun",
+                      "framework": [
+                        "Data review checklist oluşturun",
+                        "Cross-validation protokolleri uygulayın",
+                        "Regular data audits planlayın",
+                        "Feedback ve improvement loops kurun"
+                      ],
+                      "timeline": "Sürekli süreç, aylık değerlendirmeler",
+                      "success_criteria": "Kalite problemlerinin %80+ azalması"
+                    }
+                  ]
+                },
+                {
+                  "level": "Kurumsal/Organizasyonel Seviye",
+                  "description": "Kurumun tüm araştırma faaliyetlerinde FAIR prensiplerinin sistemik olarak uygulanması",
+                  "strategies": [
+                    {
+                      "strategy": "FAIR Data Policy ve Governance",
+                      "implementation": "Kapsamlı kurumsal FAIR politikası geliştirerek governance yapısı kurun",
+                      "policy_components": [
+                        "FAIR uyumlu veri yönetimi mandatı",
+                        "Veri sahipliği ve sorumluluk matrisi",
+                        "Veri paylaşım ve erişim kriterleri",
+                        "Compliance ve audit mekanizmaları",
+                        "Incentive ve recognition programları"
+                      ],
+                      "stakeholders": ["Research leadership", "IT department", "Library services", "Legal office", "Researchers"],
+                      "timeline": "6-12 ay geliştirme, 1-2 yıl implementasyon",
+                      "success_criteria": "Kurumsal politika adoption rate %90+"
+                    },
+                    {
+                      "strategy": "Technical Infrastructure Investment",
+                      "implementation": "FAIR-enabling teknoloji altyapısına stratejik yatırımlar yapın",
+                      "infrastructure_components": [
+                        "Institutional data repository sistemi",
+                        "Research data management platform",
+                        "High-performance computing clusters",
+                        "Data backup ve recovery systems",
+                        "Federated identity management",
+                        "API gateway ve service integration"
+                      ],
+                      "budget_planning": "Annual IT budget'ın %15-25'i",
+                      "timeline": "2-3 yıllık technology roadmap",
+                      "success_criteria": "Technical readiness score %85+"
+                    },
+                    {
+                      "strategy": "Comprehensive Training ve Support Programs",
+                      "implementation": "Çok seviyeli eğitim programları ile institutional capacity building sağlayın",
+                      "training_tracks": [
+                        {
+                          "audience": "Early career researchers",
+                          "content": "FAIR fundamentals, hands-on tools training",
+                          "format": "2-day intensive workshops + online modules",
+                          "frequency": "Quarterly"
+                        },
+                        {
+                          "audience": "Senior researchers ve faculty",
+                          "content": "Strategic FAIR implementation, funding implications",
+                          "format": "Half-day executive seminars",
+                          "frequency": "Bi-annually"
+                        },
+                        {
+                          "audience": "Data managers ve support staff",
+                          "content": "Advanced technical training, platform administration",
+                          "format": "Weekly technical sessions",
+                          "frequency": "Ongoing"
+                        }
+                      ],
+                      "timeline": "Year-round program, quarterly evaluation",
+                      "success_criteria": "Training participation rate %80+, satisfaction score 4.5/5"
+                    }
+                  ]
+                }
+              ],
+              "implementation_roadmap": {
+                "title": "Stratejik FAIR İmplementasyon Yol Haritası",
+                "description": "Kanıtlanmış metodoloji ile kademeli ve sürdürülebilir FAIR dönüşümü",
+                "phases": [
+                  {
+                    "phase": "1. Hazırlık ve Değerlendirme Aşaması",
+                    "duration": "2-4 ay",
+                    "objectives": ["Mevcut durum analizi", "Stakeholder mapping", "Resource planning", "Success metrics definition"],
+                    "key_activities": [
+                      {
+                        "activity": "FAIR Maturity Assessment",
+                        "description": "Kurumsal FAIR olgunluk seviyesini ölçün",
+                        "deliverables": ["Current state report", "Gap analysis", "Priority matrix"],
+                        "tools": ["FAIR Data Maturity Model", "Self-assessment surveys"],
+                        "timeline": "4-6 hafta"
+                      },
+                      {
+                        "activity": "Stakeholder Engagement Strategy",
+                        "description": "Tüm paydaşların katılımını sağlayacak yaklaşım geliştirin",
+                        "deliverables": ["Stakeholder map", "Communication plan", "Change management strategy"],
+                        "stakeholder_categories": ["Research leadership", "IT services", "Library", "Legal", "Researchers", "Funders"],
+                        "timeline": "2-3 hafta"
+                      },
+                      {
+                        "activity": "Resource Requirements Planning",
+                        "description": "İnsan kaynağı, teknoloji ve bütçe ihtiyaçlarını belirleyin",
+                        "deliverables": ["Budget proposal", "Staffing plan", "Infrastructure requirements"],
+                        "timeline": "3-4 hafta"
+                      }
+                    ],
+                    "success_criteria": ["Comprehensive assessment completed", "Stakeholder buy-in secured", "Implementation plan approved"],
+                    "common_challenges": ["Stakeholder resistance", "Resource constraints", "Competing priorities"],
+                    "mitigation_strategies": ["Executive sponsorship", "Quick wins demonstration", "Phased approach communication"]
+                  },
+                  {
+                    "phase": "2. Pilot İmplementasyon Aşaması", 
+                    "duration": "4-8 ay",
+                    "objectives": ["Proof of concept development", "Learning and iteration", "Success story creation"],
+                    "key_activities": [
+                      {
+                        "activity": "Pilot Project Selection",
+                        "description": "İmplementasyon için optimal pilot projeler seçin",
+                        "selection_criteria": [
+                          "High visibility and impact potential",
+                          "Manageable scope and complexity", 
+                          "Motivated and skilled team",
+                          "Clear success metrics",
+                          "Representative of broader challenges"
+                        ],
+                        "recommended_number": "2-3 diverse pilot projects",
+                        "timeline": "2-3 hafta"
+                      },
+                      {
+                        "activity": "Pilot Implementation Support",
+                        "description": "Intensive support ile pilot projeleri başarıya ulaştırın",
+                        "support_types": [
+                          "Dedicated FAIR specialist assignment",
+                          "Weekly progress monitoring",
+                          "Technical infrastructure setup",
+                          "Training ve mentoring sessions",
+                          "Regular troubleshooting meetings"
+                        ],
+                        "timeline": "12-16 hafta active support"
+                      },
+                      {
+                        "activity": "Learning and Documentation",
+                        "description": "Pilot deneyimlerinden sistematik olarak öğrenin",
+                        "deliverables": [
+                          "Lessons learned report",
+                          "Best practices documentation", 
+                          "Process refinement recommendations",
+                          "Success stories ve case studies"
+                        ],
+                        "timeline": "Pilot boyunca sürekli, 4 hafta final documentation"
+                      }
+                    ],
+                    "success_criteria": ["Pilot projects achieve FAIR goals", "Measurable improvements demonstrated", "Replicable processes documented"],
+                    "key_metrics": ["FAIR compliance scores", "Time-to-FAIR metrics", "User satisfaction scores", "Cost-benefit analysis"]
+                  },
+                  {
+                    "phase": "3. Ölçeklendirme ve Yaygınlaştırma Aşaması",
+                    "duration": "8-18 ay", 
+                    "objectives": ["Organization-wide rollout", "Process standardization", "Capacity building"],
+                    "key_activities": [
+                      {
+                        "activity": "Rollout Strategy Execution",
+                        "description": "Sistematik yaklaşımla FAIR uygulamalarını tüm organizasyona yayın",
+                        "rollout_approaches": [
+                          "Department-by-department rollout",
+                          "Project-type based rollout", 
+                          "Voluntary adoption with incentives",
+                          "Hybrid approach with mandatory core + optional advanced"
+                        ],
+                        "support_mechanisms": [
+                          "Dedicated change agents per department",
+                          "Help desk ve technical support",
+                          "Regular training programs",
+                          "Peer mentoring networks"
+                        ]
+                      },
+                      {
+                        "activity": "Infrastructure Scaling",
+                        "description": "Teknoloji altyapısını organization-wide kullanım için ölçeklendirin", 
+                        "scaling_considerations": [
+                          "Performance ve capacity planning",
+                          "Security ve compliance requirements",
+                          "Integration with existing systems",
+                          "User experience optimization",
+                          "Backup ve disaster recovery"
+                        ]
+                      },
+                      {
+                        "activity": "Training Program Implementation",
+                        "description": "Kapsamlı eğitim programları ile organizasyonel kapasiteyi artırın",
+                        "training_components": [
+                          "Role-based training curricula",
+                          "Hands-on workshop series",
+                          "Online learning modules",
+                          "Certification programs",
+                          "Train-the-trainer initiatives"
+                        ]
+                      }
+                    ],
+                    "success_criteria": ["Wide adoption achieved", "Consistent quality maintained", "Self-sufficiency developed"]
+                  },
+                  {
+                    "phase": "4. Optimizasyon ve Sürdürülebilirlik Aşaması",
+                    "duration": "Devam eden süreç",
+                    "objectives": ["Continuous improvement", "Innovation integration", "Community building"],
+                    "key_activities": [
+                      {
+                        "activity": "Performance Monitoring ve Analytics",
+                        "description": "Sistemik performans izleme ile sürekli iyileştirme sağlayın",
+                        "monitoring_areas": [
+                          "FAIR compliance metrics",
+                          "User adoption ve engagement",
+                          "System performance ve usage",
+                          "Cost-effectiveness analysis",
+                          "Impact measurement"
+                        ],
+                        "reporting_frequency": "Monthly operational, Quarterly strategic"
+                      },
+                      {
+                        "activity": "Innovation ve Technology Updates",
+                        "description": "Emerging FAIR technologies ve best practices'i sürekli entegre edin",
+                        "innovation_processes": [
+                          "Technology scanning ve evaluation",
+                          "Pilot testing of new approaches",
+                          "Community engagement ve knowledge sharing",
+                          "Research collaboration opportunities"
+                        ]
+                      },
+                      {
+                        "activity": "Sustainability Planning",
+                        "description": "Uzun vadeli sürdürülebilirlik için stratejik planning yapın",
+                        "sustainability_factors": [
+                          "Funding model diversification",
+                          "Skill development ve succession planning", 
+                          "Technology refresh cycles",
+                          "Partnership ve collaboration strategy"
+                        ]
+                      }
+                    ],
+                    "success_criteria": ["Sustained high performance", "Innovation integration", "Community leadership"]
+                  }
+                ],
+                "critical_success_factors": [
+                  "Strong executive sponsorship ve leadership commitment",
+                  "Adequate resource allocation ve sustainable funding",
+                  "User-centric design ve implementation approach",
+                  "Change management ve communication excellence",
+                  "Technical expertise ve ongoing skill development",
+                  "Measurement, monitoring ve continuous improvement culture"
+                ],
+                "common_pitfalls": [
+                  "Underestimating change management requirements",
+                  "Technology-first approach without user focus",  
+                  "Insufficient training ve support provision",
+                  "Lack of clear governance ve accountability",
+                  "Inadequate integration with existing workflows"
+                ]
+              }
+            }
+          },
+          {
+            "id": "fair-ecosystem",
+            "title": "FAIR Ekosistemi",
+            "type": "practice",
+            "content": {
+              "introduction": "FAIR veri ekosistemi, araştırma verilerinin yaşam döngüsü boyunca değer yaratmak için birbirine bağlı aktörlerin, teknolojilerin ve süreçlerin oluşturduğu karmaşık bir ağdır. Bu dinamik ekosistemde aktif katılım, hem bireysel araştırmanızın etkisini artırır hem de tüm bilimsel topluluğun ilerlemesine katkıda bulunur. Bu modülde, ekosistem bileşenleri arasındaki entegrasyonları öğrenecek ve kendi rolünüzü optimize edeceksiniz.",
+              "ecosystem_architecture": {
+                "description": "FAIR ekosistemi, birbirini destekleyen altı ana katmandan oluşur",
+                "layers": [
+                  {
+                    "layer": "1. Veri Üretimi Katmanı",
+                    "description": "Araştırma verilerinin oluşturulduğu ve ilk kalite kontrollerinin yapıldığı seviye",
+                    "key_actors": [
+                      {
+                        "actor": "Araştırmacılar ve Veri Bilimciler",
+                        "responsibilities": ["Veri toplama ve üretim", "Kalite kontrolü", "İlk dokümantasyon"],
+                        "fair_contributions": ["Veri standardizasyonu", "Metadata oluşturma", "Bulunabilirlik sağlama"],
+                        "tools_used": ["Electronic Lab Notebooks", "LIMS sistemleri", "Sensor networks", "Survey platforms"],
+                        "integration_points": ["Data validation systems", "Metadata capture tools", "Version control systems"]
+                      },
+                      {
+                        "actor": "Enstrümantasyon ve IoT Cihazları",
+                        "responsibilities": ["Otomatik veri toplama", "Real-time monitoring", "Standart format çıktıları"],
+                        "fair_contributions": ["Tutarlı veri formatları", "Machine-readable output", "Temporal metadata"],
+                        "integration_examples": [
+                          "Spektrometre API'leri otomatik metadata ekleme",
+                          "IoT sensor'lar JSON-LD formatında timestamped data",
+                          "Microscope yazılımları OMERO entegrasyonu"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "layer": "2. Veri İşleme ve Zenginleştirme Katmanı",
+                    "description": "Ham verilerin analiz edilip değer katıldığı ve FAIR uyumlu hale getirildiği seviye",
+                    "key_actors": [
+                      {
+                        "actor": "Veri Mühendisleri ve Analitik Uzmanları",
+                        "responsibilities": ["Veri temizleme ve dönüştürme", "Kalite güvencesi", "Analitik workflow tasarımı"],
+                        "fair_contributions": ["Standart formatları dönüştürme", "Metadata zenginleştirme", "Interoperability sağlama"],
+                        "integration_workflows": [
+                          {
+                            "workflow": "ETL Pipeline Integration",
+                            "description": "Extract-Transform-Load süreçleri ile FAIR metadata otomatik ekleme",
+                            "example": "Apache Airflow ile günlük veri işleme + otomatik DOI assignment + metadata harvesting",
+                            "technologies": ["Apache Airflow", "Pandas", "DataCite API", "DublinCore schemas"]
+                          },
+                          {
+                            "workflow": "Real-time Stream Processing",
+                            "description": "Canlı veri akışlarına FAIR metadata ekleme",
+                            "example": "Kafka streams ile sensor data + automatic schema registry + metadata enrichment",
+                            "technologies": ["Apache Kafka", "Schema Registry", "JSON-LD", "Time-series databases"]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "layer": "3. Veri Depolama ve Yönetim Katmanı",
+                    "description": "FAIR verilerinin güvenli şekilde saklandığı ve organize edildiği seviye",
+                    "key_actors": [
+                      {
+                        "actor": "Veri Depo Sağlayıcıları",
+                        "responsibilities": ["Güvenli depolama", "Erişim yönetimi", "Backup ve recovery"],
+                        "fair_enablement": ["Persistent identifiers", "Rich metadata support", "API access"],
+                        "integration_scenarios": [
+                          {
+                            "scenario": "Multi-Repository Data Distribution",
+                            "description": "Büyük veri setlerinin multiple repository'lerde koordineli yönetimi",
+                            "example": "Genomik veri: Raw sequences → SRA, Processed data → GEO, Publications → PubMed Central",
+                            "cross_references": "DOI linking + ORCID integration + DataCite metadata harvesting",
+                            "tools": ["Repository API automation", "Metadata synchronization", "Cross-reference validation"]
+                          },
+                          {
+                            "scenario": "Hybrid Cloud-Institution Storage",
+                            "description": "Kurumsal ve cloud depoların entegre yönetimi",
+                            "example": "Sensitive data → institutional secure storage, Open data → Zenodo, Large datasets → AWS Open Data",
+                            "synchronization": "Automated metadata mirroring + access control inheritance + usage analytics federation"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "layer": "4. Veri Keşfi ve Kataloglama Katmanı",
+                    "description": "FAIR verilerin bulunabilir ve keşfedilebilir olmasını sağlayan seviye",
+                    "key_actors": [
+                      {
+                        "actor": "Katalog ve İndeksleme Servisleri",
+                        "responsibilities": ["Metadata harvesting", "Search indexing", "Discovery interfaces"],
+                        "fair_enablement": ["Findability through search", "Semantic linking", "Cross-domain discovery"],
+                        "integration_examples": [
+                          {
+                            "integration": "Federated Search Across Domains",
+                            "description": "Multiple katalogların birleşik arama deneyimi",
+                            "implementation": "DataCite + re3data + FAIRsharing + PubMed unified search interface",
+                            "technologies": ["GraphQL federation", "Elasticsearch clusters", "Semantic web technologies"],
+                            "user_experience": "Single search query → results from genomics, chemistry, social sciences repositories"
+                          },
+                          {
+                            "integration": "AI-Powered Data Recommendation",
+                            "description": "Makine öğrenmesi ile kullanıcı profili bazlı veri önerisi",
+                            "implementation": "User behavior + publication history + research interest → relevant dataset suggestions",
+                            "technologies": ["Collaborative filtering", "Natural language processing", "Knowledge graphs"]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "layer": "5. Veri Entegrasyonu ve Analiz Katmanı",
+                    "description": "Multiple veri kaynaklarının birleştirilerek yeni bilgi üretildiği seviye",
+                    "key_actors": [
+                      {
+                        "actor": "Araştırma Platformları ve Analiz Servisleri",
+                        "responsibilities": ["Cross-dataset analysis", "Reproducible workflows", "Collaborative environments"],
+                        "fair_benefits": ["Interoperable data integration", "Reusable analysis pipelines", "Collaborative research"],
+                        "integration_showcases": [
+                          {
+                            "showcase": "Multi-Modal Research Integration",
+                            "description": "Farklı modalitelerden verilerin entegre analizi",
+                            "example": "Galaxy Project: Genomics + proteomics + metabolomics data integration for systems biology",
+                            "workflow": "FAIR datasets → standardized APIs → integrated analysis environment → reproducible results",
+                            "impact": "10x faster discovery, reduced data preparation time, increased collaboration"
+                          },
+                          {
+                            "showcase": "Cross-Institutional Collaborative Analysis",
+                            "description": "Kurumlar arası veri paylaşımı ile büyük ölçekli araştırma",
+                            "example": "COVID-19 data sharing: Multiple countries → standardized schemas → federated analysis → global insights",
+                            "enabling_factors": ["Standardized APIs", "Federated identity", "Harmonized metadata", "Legal frameworks"]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "layer": "6. Topluluk ve Governance Katmanı",
+                    "description": "FAIR ekosisteminin sürdürülebilirliğini ve gelişimini sağlayan seviye",
+                    "key_actors": [
+                      {
+                        "actor": "Standart Organizasyonları ve Topluluklar",
+                        "responsibilities": ["Standart geliştirme", "Best practice paylaşımı", "Governance framework"],
+                        "community_integration": [
+                          {
+                            "community": "Research Data Alliance (RDA)",
+                            "integration_role": "Global koordinasyon ve standart harmonizasyonu",
+                            "contributions": ["Metadata standart geliştirme", "Cross-domain interoperability", "Policy harmonization"],
+                            "participation_ways": ["Working group membership", "Interest group katılımı", "Plenary meeting attendance"]
+                          },
+                          {
+                            "community": "FORCE11 ve GO FAIR",
+                            "integration_role": "FAIR implementasyon ve yaygınlaştırma",
+                            "contributions": ["FAIR metrics development", "Implementation network", "Training materials"],
+                            "engagement_opportunities": ["Implementation network joining", "Pilot project participation", "Training delivery"]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "practical_integration_exercise": {
+                "title": "Kapsamlı FAIR Ekosistem Entegrasyonu Projesi",
+                "description": "Gerçek dünya senaryosu ile tüm FAIR ekosistem katmanlarını kapsayan entegrasyon projesi geliştirin",
+                "project_phases": [
+                  {
+                    "phase": "Senaryo Seçimi ve Planlama",
+                    "duration": "1 hafta",
+                    "objectives": ["Realistic use case belirleme", "Stakeholder analizi", "Integration architecture tasarımı"],
+                    "deliverables": [
+                      "Project charter document",
+                      "Stakeholder map ve integration points",
+                      "Technical architecture diagram",
+                      "Success criteria ve metrics definition"
+                    ],
+                    "example_scenarios": [
+                      {
+                        "scenario": "Multi-Site Clinical Research Integration",
+                        "description": "Hastane ağında patient data sharing için FAIR infrastructure",
+                        "complexity": "High - regulations, privacy, multiple systems",
+                        "learning_focus": "Governance, security, interoperability standards"
+                      },
+                      {
+                        "scenario": "Environmental Monitoring Network",
+                        "description": "IoT sensors + satellite data + lab analysis integration",
+                        "complexity": "Medium - technical integration, data volume",
+                        "learning_focus": "Real-time processing, metadata automation, API design"
+                      },
+                      {
+                        "scenario": "Open Science Collaboration Platform",
+                        "description": "University network for shared research datasets",
+                        "complexity": "Medium - institutional coordination, training",
+                        "learning_focus": "Community building, training delivery, sustainable governance"
+                      }
+                    ]
+                  },
+                  {
+                    "phase": "Prototyping ve Integration Development",
+                    "duration": "2-3 hafta", 
+                    "objectives": ["Working prototype geliştirme", "Key integrations sağlama", "User testing yapma"],
+                    "technical_requirements": [
+                      "At least 2 different data sources integration",
+                      "Automated metadata generation ve synchronization",
+                      "API-based data access ve discovery",
+                      "Quality assurance ve validation workflows",
+                      "User interface for non-technical users"
+                    ],
+                    "integration_examples": [
+                      {
+                        "integration": "Data Repository + Analysis Platform",
+                        "implementation": "Zenodo API + Jupyter Hub + automated workflow",
+                        "fair_benefits": "Seamless data→analysis pipeline, reproducible workflows",
+                        "technical_stack": "Python, Jupyter, Docker, API integrations"
+                      },
+                      {
+                        "integration": "Catalog + Multiple Repositories",
+                        "implementation": "DataCite search + federated repository access",
+                        "fair_benefits": "Discovery across institutional boundaries",
+                        "technical_stack": "GraphQL, Elasticsearch, Microservices architecture"
+                      }
+                    ]
+                  },
+                  {
+                    "phase": "Testing, Documentation ve Evaluation",
+                    "duration": "1 hafta",
+                    "objectives": ["Comprehensive testing", "Documentation completion", "Impact assessment"],
+                    "evaluation_criteria": [
+                      {
+                        "category": "FAIR Compliance",
+                        "metrics": ["F-UJI score improvement", "Metadata richness score", "API discoverability test"],
+                        "target": "90%+ FAIR compliance"
+                      },
+                      {
+                        "category": "User Experience",
+                        "metrics": ["Task completion rate", "Time-to-discovery", "User satisfaction score"],
+                        "target": "80%+ user satisfaction"
+                      },
+                      {
+                        "category": "Integration Quality",
+                        "metrics": ["API response time", "Data consistency check", "Error rate analysis"],
+                        "target": "<5% error rate, <2s response time"
+                      },
+                      {
+                        "category": "Ecosystem Impact",
+                        "metrics": ["Cross-platform data reuse", "Collaboration facilitation", "Community engagement"],
+                        "target": "Measurable collaboration increase"
+                      }
+                    ]
+                  }
+                ],
+                "final_deliverables": [
+                  {
+                    "deliverable": "Working Integration Prototype",
+                    "description": "Functional system demonstrating FAIR ecosystem integration",
+                    "components": ["Source code repository", "Deployment documentation", "API documentation", "User manual"]
+                  },
+                  {
+                    "deliverable": "Comprehensive Documentation Package",
+                    "description": "Complete project documentation for replication ve learning",
+                    "sections": [
+                      "Executive summary ve project overview",
+                      "Architecture design ve rationale",
+                      "Integration challenges ve solutions",
+                      "FAIR compliance assessment report",
+                      "User testing results ve feedback",
+                      "Lessons learned ve recommendations",
+                      "Future development roadmap"
+                    ]
+                  },
+                  {
+                    "deliverable": "Community Contribution",
+                    "description": "Knowledge sharing ile ecosystem'e geri katkı",
+                    "formats": [
+                      "GitHub repository with reusable components",
+                      "Blog post or article about lessons learned", 
+                      "Presentation for research community",
+                      "Contribution to relevant standards or tools"
+                    ]
+                  }
+                ],
+                "assessment_rubric": {
+                  "technical_execution": {
+                    "weight": "30%",
+                    "criteria": ["Code quality", "Integration depth", "Performance", "Security"]
+                  },
+                  "fair_implementation": {
+                    "weight": "25%",
+                    "criteria": ["Findability", "Accessibility", "Interoperability", "Reusability"]
+                  },
+                  "ecosystem_understanding": {
+                    "weight": "20%",
+                    "criteria": ["Stakeholder analysis", "Integration awareness", "Community engagement"]
+                  },
+                  "documentation_quality": {
+                    "weight": "15%", 
+                    "criteria": ["Completeness", "Clarity", "Reproducibility", "Learning value"]
+                  },
+                  "innovation_impact": {
+                    "weight": "10%",
+                    "criteria": ["Novel approaches", "Scalability potential", "Community benefit"]
+                  }
+                },
+                "support_resources": [
+                  "Weekly mentor office hours",
+                  "Technical integration tutorials",
+                  "FAIR assessment tools ve checklists",
+                  "Community forums ve peer support",
+                  "Expert guest speakers from ecosystem organizations"
+                ]
+              }
+            }
+          }
+        ],
+        "quiz": {
+          "questions": [
+            {
+              "id": "adv_q1",
+              "question": "F-UJI aracının değerlendirdiği temel FAIR metrikleri hangisidir?",
+              "options": [
+                "Sadece dosya boyutu ve indirme hızı", 
+                "Tanımlayıcı kalıcılığı, metadata zenginliği, erişim protokolü, format standardizasyonu", 
+                "Sadece yayın yılı ve yazar sayısı", 
+                "Sadece popülerlik ve görüntülenme sayısı"
+              ],
+              "correct": 1,
+              "explanation": "F-UJI, FAIR prensiplerinin dört ana boyutunu (Findable, Accessible, Interoperable, Reusable) kapsamlı metriklere göre otomatik olarak değerlendirir."
+            },
+            {
+              "id": "adv_q2",
+              "question": "Kurumsal FAIR implementasyonunda hangi yaklaşım en etkilidir?",
+              "options": [
+                "Tek seferde tüm sistemi değiştirmek", 
+                "Pilot proje ile başlayıp kademeli olarak yaygınlaştırmak", 
+                "Sadece teknoloji odaklı çözümler uygulamak", 
+                "Sadece bireysel girişimlere bırakmak"
+              ],
+              "correct": 1,
+              "explanation": "Pilot projeler, riskleri minimize ederken öğrenme fırsatı sağlar ve başarılı uygulamaların yaygınlaştırılmasında model oluşturur."
+            },
+            {
+              "id": "adv_q3",
+              "question": "FAIR ekosisteminde veri kataloglarının temel rolü nedir?",
+              "options": [
+                "Sadece veri depolamak", 
+                "FAIR veri keşfi ve bulunabilirliği sağlamak", 
+                "Sadece yedekleme yapmak", 
+                "Sadece kullanıcı sayısını artırmak"
+              ],
+              "correct": 1,
+              "explanation": "Veri katalogları (DataCite, re3data gibi), dağıtık veri depolarından metadata toplayarak araştırmacıların ihtiyaç duydukları verileri keşfetmesini sağlar."
+            },
+            {
+              "id": "adv_q4",
+              "question": "FAIR veri projesi değerlendirmesinde hangi unsur en kritiktir?",
+              "options": [
+                "Projenin maliyeti", 
+                "Tüm FAIR prensiplerinin uygulanması ve dokümantasyonu", 
+                "Sadece veri boyutu", 
+                "Sadece katılımcı sayısı"
+              ],
+              "correct": 1,
+              "explanation": "FAIR projesi, Findable, Accessible, Interoperable ve Reusable prensiplerinin tamamının uygulandığını gösteren kapsamlı dokümantasyon ile değerlendirilir."
+            },
+            {
+              "id": "adv_q5",
+              "question": "FAIR sürdürülebilirlik fazında en önemli aktivite hangisidir?",
+              "options": [
+                "Sadece ilk kurulumu tamamlamak", 
+                "Düzenli değerlendirme ve sürekli iyileştirme", 
+                "Sadece yeni araçlar satın almak", 
+                "Sadece kullanıcı sayısını artırmak"
+              ],
+              "correct": 1,
+              "explanation": "FAIR implementasyonu sürekli bir süreçtir. Düzenli değerlendirmeler, geri bildirimler ve sürekli iyileştirmeler sürdürülebilirlik için kritiktir."
+            },
+            {
+              "id": "adv_q6",
+              "question": "FAIR veri yönetim planında bulunması gereken temel bölümler hangileridir?",
+              "options": [
+                "Sadece veri depolama bilgileri", 
+                "Veri toplama, işleme, depolama, paylaşım ve uzun vadeli koruma", 
+                "Sadece bütçe bilgileri", 
+                "Sadece proje takvimi"
+              ],
+              "correct": 1,
+              "explanation": "Kapsamlı bir FAIR veri yönetim planı, verinin yaşam döngüsünün tüm aşamalarını (toplama, işleme, depolama, paylaşım, arşivleme) içermelidir."
+            }
+          ]
+        },
+        "achievements": [
+          {
+            "id": "fair-evaluator",
+            "title": "FAIR Değerlendirme Uzmanı",
+            "description": "FAIR değerlendirme araçlarını kullandınız",
+            "icon": "🔍",
+            "points": 50
+          },
+          {
+            "id": "implementation-strategist",
+            "title": "Uygulama Stratejisti",
+            "description": "FAIR implementasyon stratejisi geliştirdiniz",
+            "icon": "📋",
+            "points": 55
+          },
+          {
+            "id": "ecosystem-contributor",
+            "title": "Ekosistem Katılımcısı",
+            "description": "FAIR ekosistemine katkıda bulundunuz",
+            "icon": "🌐",
+            "points": 60
+          },
+          {
+            "id": "fair-master",
+            "title": "FAIR Ustası",
+            "description": "Tüm FAIR modüllerini başarıyla tamamladınız!",
+            "icon": "🏅",
+            "points": 100
+          }
+        ]
+      }
+    ]
+  },
+  "achievements": {
+    "categories": [
+      {
+        "id": "progress",
+        "title": "İlerleme Rozetleri",
+        "description": "Öğrenme yolculuğunuzdaki kilometre taşları"
+      },
+      {
+        "id": "mastery",
+        "title": "Ustalık Rozetleri",
+        "description": "Belirli konularda uzmanlık"
+      },
+      {
+        "id": "practice",
+        "title": "Uygulama Rozetleri",
+        "description": "Pratik deneyim ve projeler"
+      },
+      {
+        "id": "special",
+        "title": "Özel Rozetler",
+        "description": "Özel başarılar ve etkinlikler"
+      }
+    ],
+    "levels": [
+      {
+        "id": "bronze",
+        "title": "Bronz",
+        "minPoints": 0,
+        "color": "#CD7F32"
+      },
+      {
+        "id": "silver",
+        "title": "Gümüş",
+        "minPoints": 100,
+        "color": "#C0C0C0"
+      },
+      {
+        "id": "gold",
+        "title": "Altın",
+        "minPoints": 250,
+        "color": "#FFD700"
+      },
+      {
+        "id": "platinum",
+        "title": "Platin",
+        "minPoints": 500,
+        "color": "#E5E4E2"
+      }
+    ]
+  },
+  "gamification": {
+    "pointSystem": {
+      "lessonComplete": 10,
+      "quizPerfect": 20,
+      "exerciseComplete": 15,
+      "projectComplete": 50,
+      "dailyStreak": 5,
+      "weeklyGoal": 30
+    },
+    "streaks": {
+      "daily": {
+        "description": "Her gün en az bir modül tamamlayın",
+        "rewards": [
+          { "days": 3, "bonus": 15 },
+          { "days": 7, "bonus": 50 },
+          { "days": 30, "bonus": 200 }
+        ]
+      }
+    },
+    "challenges": {
+      "weekly": [
+        {
+          "id": "metadata-marathon",
+          "title": "Metadata Maratonu",
+          "description": "Bu hafta 5 farklı metadata standardı öğrenin",
+          "reward": 75
+        },
+        {
+          "id": "fair-implementor",
+          "title": "FAIR Uygulayıcı",
+          "description": "Gerçek bir veri setini FAIR uyumlu hale getirin",
+          "reward": 100
+        }
+      ]
+    }
+  },
+  "certificates": {
+    "types": [
+      {
+        "id": "module-completion",
+        "title": "Modül Tamamlama Sertifikası",
+        "description": "Her ana modül için",
+        "requirements": ["Tüm alt modülleri tamamlama", "Quiz başarısı %80+"]
+      },
+      {
+        "id": "fair-practitioner",
+        "title": "FAIR Uygulayıcı Sertifikası",
+        "description": "Temel FAIR yetkinliği",
+        "requirements": ["Tüm temel modülleri tamamlama", "Final proje"]
+      },
+      {
+        "id": "fair-expert",
+        "title": "FAIR Uzmanı Sertifikası",
+        "description": "İleri seviye FAIR uzmanlığı",
+        "requirements": ["Tüm modülleri tamamlama", "Topluluk katkısı", "Mentörlük"]
+      }
+    ],
+    "verification": {
+      "method": "blockchain",
+      "provider": "Blockcerts",
+      "metadata": ["Tamamlama tarihi", "Kazanılan rozetler", "Proje linkleri"]
+    }
+  }
+}

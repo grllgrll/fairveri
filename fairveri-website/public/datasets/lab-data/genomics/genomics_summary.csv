@@ -1,0 +1,21 @@
+sample_id,population,sex,age,coverage,total_variants,snps,indels,structural_variants,quality_score,ethnicity,consent_level,phenotype_available
+TUR001,Turkish,Female,34,30.2,4567890,4234567,298765,34558,95.6,Anatolian,Broad,Yes
+TUR002,Turkish,Male,45,28.9,4623123,4289012,299876,34235,94.8,Anatolian,Broad,Yes
+TUR003,Turkish,Female,29,31.5,4456789,4123456,287654,45679,96.2,Mediterranean,Broad,No
+TUR004,Turkish,Male,52,27.8,4712345,4367890,312456,31999,93.9,Black Sea,Restricted,Yes
+TUR005,Turkish,Female,38,29.7,4534567,4201234,298765,34568,95.1,Central Anatolian,Broad,Yes
+TUR006,Turkish,Male,42,32.1,4645678,4312345,287654,45679,96.8,Aegean,Broad,No
+TUR007,Turkish,Female,31,30.6,4567123,4234890,301234,30999,95.4,Marmara,Broad,Yes
+TUR008,Turkish,Male,48,28.3,4789012,4456789,312345,19878,94.2,Eastern Anatolian,Restricted,Yes
+TUR009,Turkish,Female,26,33.2,4423456,4190123,287654,45679,97.1,Southeastern Anatolian,Broad,No
+TUR010,Turkish,Male,55,26.9,4856789,4523456,298765,34568,93.5,Anatolian,Restricted,Yes
+TUR011,Turkish,Female,39,30.8,4612345,4278912,301234,32199,95.7,Mediterranean,Broad,Yes
+TUR012,Turkish,Male,33,29.4,4534789,4201456,287654,45679,94.9,Black Sea,Broad,No
+TUR013,Turkish,Female,46,31.9,4723456,4390123,298765,34568,96.3,Central Anatolian,Broad,Yes
+TUR014,Turkish,Male,28,32.7,4445678,4112345,287654,45679,96.9,Aegean,Broad,No
+TUR015,Turkish,Female,51,27.5,4867890,4534567,298765,34558,93.8,Marmara,Restricted,Yes
+TUR016,Turkish,Male,37,30.1,4578901,4245678,301234,31989,95.2,Eastern Anatolian,Broad,Yes
+TUR017,Turkish,Female,44,28.8,4656789,4323456,287654,45679,94.6,Southeastern Anatolian,Broad,No
+TUR018,Turkish,Male,32,31.3,4712456,4379123,298765,34568,96.1,Anatolian,Broad,Yes
+TUR019,Turkish,Female,49,29.9,4489012,4155679,287654,45679,95.0,Mediterranean,Broad,No
+TUR020,Turkish,Male,35,32.5,4801234,4467901,298765,34568,96.7,Black Sea,Broad,Yes

@@ -1,0 +1,426 @@
+{
+  "glossary": {
+    "title": "FAIR Veri Sözlüğü",
+    "description": "FAIR veri yönetimi ile ilgili terimler ve açıklamaları",
+    "categories": [
+      {
+        "id": "technical",
+        "title": "Teknik Terimler",
+        "description": "Teknik kavramlar ve standartlar",
+        "color": "#3B82F6",
+        "icon": "⚙️"
+      },
+      {
+        "id": "process",
+        "title": "Süreç ve Metodoloji",
+        "description": "Veri yönetimi süreçleri",
+        "color": "#10B981",
+        "icon": "🔄"
+      },
+      {
+        "id": "standards",
+        "title": "Standartlar ve Protokoller",
+        "description": "Uluslararası standartlar",
+        "color": "#8B5CF6",
+        "icon": "📋"
+      },
+      {
+        "id": "tools",
+        "title": "Araçlar ve Platformlar",
+        "description": "FAIR değerlendirme araçları",
+        "color": "#F59E0B",
+        "icon": "🛠️"
+      },
+      {
+        "id": "legal",
+        "title": "Hukuki ve Etik",
+        "description": "Lisanslama ve etik konular",
+        "color": "#EF4444",
+        "icon": "⚖️"
+      }
+    ],
+    "terms": [
+      {
+        "id": "fair",
+        "term": "FAIR",
+        "category": "process",
+        "definition": "Findable (Bulunabilir), Accessible (Erişilebilir), Interoperable (Birlikte Çalışabilir) ve Reusable (Yeniden Kullanılabilir) prensiplerinin kısaltması",
+        "detailedDefinition": "FAIR, veri yönetimi için dört temel prensibi tanımlayan bir kavramsal çerçevedir. 2016 yılında Mark Wilkinson ve meslektaşları tarafından ortaya konulmuştur.",
+        "etymology": "İngilizce 'fair' (adil) kelimesinin aynı zamanda bu dört prensibin baş harflerinden oluştuğu akronim",
+        "examples": [
+          "FAIR veri, hem insanlar hem de makineler tarafından kolayca bulunabilir, erişilebilir ve kullanılabilir olmalıdır",
+          "Bir araştırma veri setinin FAIR olması için DOI gibi kalıcı tanımlayıcılara sahip olması gerekir"
+        ],
+        "relatedTerms": ["metadata", "doi", "dmp", "open-data"],
+        "usage": "Bu veri seti FAIR prensiplerini karşılıyor mu?",
+        "references": [
+          "Wilkinson, M. D., et al. (2016). The FAIR Guiding Principles for scientific data management and stewardship. Scientific data, 3(1), 1-9."
+        ]
+      },
+      {
+        "id": "metadata",
+        "term": "Metadata",
+        "category": "technical",
+        "definition": "Veri hakkında veri; veri setini tanımlayan, açıklayan ve bağlam sağlayan bilgiler",
+        "detailedDefinition": "Metadata, veri setinin içeriğini, yapısını, kalitesini, kaynak bilgilerini ve nasıl kullanılacağını açıklayan yapılandırılmış bilgilerdir. FAIR prensiplerinin temel bileşenidir.",
+        "etymology": "Yunanca 'meta' (ötesinde, hakkında) + 'data' (veri)",
+        "examples": [
+          "Başlık, yazar, oluşturma tarihi, açıklama bir veri setinin temel metadata öğeleridir",
+          "Dublin Core, yaygın kullanılan bir metadata standardıdır"
+        ],
+        "relatedTerms": ["dublin-core", "schema-org", "datacite", "fair"],
+        "usage": "Bu veri seti için zengin metadata oluşturmalıyız",
+        "subcategories": [
+          "Tanımlayıcı metadata",
+          "Yapısal metadata", 
+          "İdari metadata",
+          "Teknik metadata"
+        ]
+      },
+      {
+        "id": "doi",
+        "term": "DOI (Digital Object Identifier)",
+        "category": "technical",
+        "definition": "Dijital nesneler için benzersiz ve kalıcı tanımlayıcı sistemi",
+        "detailedDefinition": "DOI, akademik makaleler, veri setleri ve diğer dijital kaynaklar için uluslararası standart olarak kullanılan kalıcı tanımlayıcı sistemidir. URL'ler değişebilirken DOI'ler kalıcıdır.",
+        "etymology": "İngilizce 'Digital Object Identifier' (Dijital Nesne Tanımlayıcısı)",
+        "examples": [
+          "10.5281/zenodo.123456",
+          "10.1038/sdata.2016.18"
+        ],
+        "relatedTerms": ["handle", "orcid", "ror", "fair"],
+        "usage": "Veri setimiz için DOI almamız gerekiyor",
+        "technicalDetails": {
+          "format": "10.prefix/suffix",
+          "registry": "International DOI Foundation",
+          "resolver": "https://doi.org/"
+        }
+      },
+      {
+        "id": "dmp",
+        "term": "DMP (Data Management Plan)",
+        "category": "process",
+        "definition": "Araştırma projesi boyunca verilerin nasıl yönetileceğini açıklayan formal doküman",
+        "detailedDefinition": "Veri yönetim planı, araştırma verilerinin nasıl toplanacağı, organize edileceği, depolanacağı, paylaşılacağı ve korunacağını detaylandıran kapsamlı belgedir.",
+        "etymology": "İngilizce 'Data Management Plan' (Veri Yönetim Planı)",
+        "examples": [
+          "Horizon Europe projelerinde DMP zorunludur",
+          "TÜBİTAK projeleri için DMP şablonu mevcuttur"
+        ],
+        "relatedTerms": ["fair", "metadata", "dmptool"],
+        "usage": "Proje başvurusunda DMP'yi eklemeliyiz",
+        "components": [
+          "Veri toplama metodolojisi",
+          "Metadata standartları",
+          "Depolama ve yedekleme",
+          "Paylaşım stratejisi",
+          "Etik ve hukuki hususlar"
+        ]
+      },
+      {
+        "id": "orcid",
+        "term": "ORCID",
+        "category": "technical",
+        "definition": "Araştırmacılar için benzersiz ve kalıcı dijital tanımlayıcı",
+        "detailedDefinition": "Open Researcher and Contributor ID, araştırmacıların isim benzerliği sorunununu çözmek için geliştirilmiş 16 haneli benzersiz tanımlayıcı sistemidir.",
+        "etymology": "İngilizce 'Open Researcher and Contributor ID' (Açık Araştırmacı ve Katkıda Bulunan Kimliği)",
+        "examples": [
+          "0000-0002-1825-0097",
+          "0000-0003-4789-4874"
+        ],
+        "relatedTerms": ["doi", "ror", "metadata", "researcher-id"],
+        "usage": "ORCID'inizi veri setinizin metadata'sına ekleyin",
+        "benefits": [
+          "İsim karışıklığını önler",
+          "Yayın listesini otomatik günceller",
+          "Uluslararası tanınırlık sağlar",
+          "Fon başvurularında kullanılır"
+        ]
+      },
+      {
+        "id": "ror",
+        "term": "ROR (Research Organization Registry)",
+        "category": "technical",
+        "definition": "Araştırma kurumları için küresel tanımlayıcı sistemi",
+        "detailedDefinition": "Research Organization Registry, üniversiteler, araştırma enstitüleri ve diğer akademik kurumlar için benzersiz ve açık tanımlayıcılar sağlayan küresel kayıt sistemidir.",
+        "etymology": "İngilizce 'Research Organization Registry' (Araştırma Organizasyonu Kayıt Sistemi)",
+        "examples": [
+          "https://ror.org/02k3smh20 (TÜBİTAK)",
+          "https://ror.org/03qp8b891 (Boğaziçi Üniversitesi)"
+        ],
+        "relatedTerms": ["orcid", "doi", "institution", "affiliation"],
+        "usage": "Kurumunuzun ROR ID'sini metadata'ya ekleyin"
+      },
+      {
+        "id": "dublin-core",
+        "term": "Dublin Core",
+        "category": "standards",
+        "definition": "Dijital kaynaklar için basit ve yaygın kullanılan metadata standardı",
+        "detailedDefinition": "Dublin Core Metadata Element Set, 15 temel metadata öğesi içeren uluslararası standart olup, çeşitli kaynak türleri için minimum düzeyde metadata tanımlar.",
+        "etymology": "1995 yılında Dublin, Ohio'da düzenlenen çalıştaydan adını alır",
+        "examples": [
+          "dc:title (Başlık)",
+          "dc:creator (Yaratıcı)",
+          "dc:subject (Konu)"
+        ],
+        "relatedTerms": ["metadata", "schema-org", "datacite"],
+        "usage": "Dublin Core elemanlarını kullanarak basit metadata oluşturduk",
+        "elements": [
+          "Title", "Creator", "Subject", "Description", "Publisher",
+          "Contributor", "Date", "Type", "Format", "Identifier",
+          "Source", "Language", "Relation", "Coverage", "Rights"
+        ]
+      },
+      {
+        "id": "schema-org",
+        "term": "Schema.org",
+        "category": "standards",
+        "definition": "Web üzerinde yapılandırılmış veri için kelime dağarcığı",
+        "detailedDefinition": "Schema.org, web sayfalarının arama motorları tarafından daha iyi anlaşılması için geliştirilmiş yapılandırılmış veri kelime dağarcığıdır. Google, Microsoft, Yahoo ve Yandex tarafından desteklenir.",
+        "etymology": "Web şema (schema) kelimesinden türetilmiştir",
+        "examples": [
+          "schema:Dataset",
+          "schema:CreativeWork",
+          "schema:Organization"
+        ],
+        "relatedTerms": ["json-ld", "rdf", "metadata", "seo"],
+        "usage": "Web sitemizdeki veri setlerini Schema.org ile işaretledik"
+      },
+      {
+        "id": "json-ld",
+        "term": "JSON-LD",
+        "category": "technical",
+        "definition": "JSON tabanlı Linked Data formatı",
+        "detailedDefinition": "JavaScript Object Notation for Linked Data, JSON syntax kullanarak linked data ifade etmeyi sağlayan hafif veri değişim formatıdır. RDF verilerini JSON formatında temsil eder.",
+        "etymology": "JSON (JavaScript Object Notation) + LD (Linked Data)",
+        "examples": [
+          "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Dataset\",\n  \"name\": \"Veri Seti Adı\"\n}"
+        ],
+        "relatedTerms": ["rdf", "schema-org", "linked-data", "semantic-web"],
+        "usage": "Metadata'mızı JSON-LD formatında yayınladık"
+      },
+      {
+        "id": "rdf",
+        "term": "RDF (Resource Description Framework)",
+        "category": "technical",
+        "definition": "Web üzerinde kaynakları tanımlamak için W3C standardı",
+        "detailedDefinition": "Resource Description Framework, web üzerindeki kaynaklar hakkında metadata ve veri değişimi için W3C tarafından geliştirilen standart modeldir. Subject-predicate-object üçlüleri (triples) kullanır.",
+        "etymology": "İngilizce 'Resource Description Framework' (Kaynak Tanımlama Çerçevesi)",
+        "examples": [
+          "Triple: <person> <hasName> \"John Doe\"",
+          "RDF/XML, Turtle, N-Triples formatları"
+        ],
+        "relatedTerms": ["owl", "sparql", "semantic-web", "linked-data"],
+        "usage": "Veri modelimizi RDF formatında tanımladık"
+      },
+      {
+        "id": "sparql",
+        "term": "SPARQL",
+        "category": "technical",
+        "definition": "RDF verileri için sorgulama dili",
+        "detailedDefinition": "SPARQL Protocol and RDF Query Language, RDF verilerini sorgulamak ve işlemek için W3C standardı olan declarative query dilidir. SQL'e benzer syntax kullanır.",
+        "etymology": "SPARQL Protocol and RDF Query Language (Recursive acronym)",
+        "examples": [
+          "SELECT ?name WHERE { ?person foaf:name ?name }"
+        ],
+        "relatedTerms": ["rdf", "triplestore", "semantic-web"],
+        "usage": "SPARQL sorgusu ile linked data'dan bilgi çektik"
+      },
+      {
+        "id": "ontology",
+        "term": "Ontoloji",
+        "category": "technical",
+        "definition": "Bir domain'deki kavramları ve ilişkilerini formal olarak tanımlayan yapı",
+        "detailedDefinition": "Ontoloji, belirli bir alan veya etki alanındaki kavramları, bu kavramlar arasındaki ilişkileri ve kuralları açık ve formal bir şekilde tanımlayan bilgi temsil yapısıdır.",
+        "etymology": "Yunanca 'ontos' (varlık) + 'logos' (bilim)",
+        "examples": [
+          "Gene Ontology (GO) - gen fonksiyonları",
+          "Friend of a Friend (FOAF) - sosyal ağlar"
+        ],
+        "relatedTerms": ["owl", "rdf", "vocabulary", "taxonomy"],
+        "usage": "Alanımız için yeni bir ontoloji geliştirdik"
+      },
+      {
+        "id": "owl",
+        "term": "OWL (Web Ontology Language)",
+        "category": "standards",
+        "definition": "Semantic Web için ontoloji tanımlama dili",
+        "detailedDefinition": "Web Ontology Language, RDF üzerine inşa edilmiş ve semantic web için ontolojileri tanımlamaya yarayan W3C standardı bir dildir. Mantıksal çıkarım yapılmasını sağlar.",
+        "etymology": "İngilizce 'Web Ontology Language' (acronym kasıtlı olarak OWL yapılmıştır)",
+        "examples": [
+          "owl:Class",
+          "owl:ObjectProperty",
+          "owl:DatatypeProperty"
+        ],
+        "relatedTerms": ["rdf", "ontology", "semantic-web", "reasoning"],
+        "usage": "OWL ontolojimizi Protégé ile geliştirdik"
+      },
+      {
+        "id": "cc-license",
+        "term": "Creative Commons Lisansı",
+        "category": "legal",
+        "definition": "Yaratıcı eserlerin paylaşımı için standart lisans sistemi",
+        "detailedDefinition": "Creative Commons, telif hakkı sahibinin eserini hangi koşullarda paylaştığını belirten, yasal olarak geçerli ve makinece okunabilir lisans türleridir.",
+        "etymology": "İngilizce 'Creative Commons' (Yaratıcı Ortaklık)",
+        "examples": [
+          "CC0 (Kamu Malı)",
+          "CC BY (Atıf)",
+          "CC BY-SA (Atıf-AynıLisanslaPaylaş)"
+        ],
+        "relatedTerms": ["open-data", "copyright", "license", "fair"],
+        "usage": "Veri setimizi CC BY lisansı ile yayınladık",
+        "types": [
+          {
+            "name": "CC0",
+            "description": "Kamu malı, hiçbir hak saklı değil"
+          },
+          {
+            "name": "CC BY",
+            "description": "Atıf koşuluyla kullanım"
+          },
+          {
+            "name": "CC BY-SA",
+            "description": "Atıf + aynı lisansla paylaşım"
+          },
+          {
+            "name": "CC BY-NC",
+            "description": "Atıf + ticari olmayan kullanım"
+          }
+        ]
+      },
+      {
+        "id": "open-data",
+        "term": "Açık Veri",
+        "category": "process",
+        "definition": "Herkes tarafından özgürce kullanılabilen, değiştirilebilen ve paylaşılabilen veri",
+        "detailedDefinition": "Açık veri, teknik ve yasal kısıtlamalar olmaksızın herkes tarafından erişilebilen, kullanılabilen, değiştirilebilen ve yeniden dağıtılabilen veri anlamına gelir. Open Knowledge Foundation tanımına göre 8 temel prensibe sahiptir.",
+        "etymology": "İngilizce 'Open Data' (Açık Veri)",
+        "examples": [
+          "data.gov.tr - Türkiye açık veri platformu",
+          "Dünya Bankası açık veri portalı"
+        ],
+        "relatedTerms": ["fair", "cc-license", "open-science", "transparency"],
+        "usage": "Kurumumuz açık veri politikası benimsedi",
+        "principles": [
+          "Eksiksiz", "Birincil kaynak", "Zamanında", "Erişilebilir",
+          "Makine okunabilir", "Ayrım gözetmeyen", "Açık standartlar", "Lisanslı"
+        ]
+      },
+      {
+        "id": "persistent-identifier",
+        "term": "Kalıcı Tanımlayıcı",
+        "category": "technical",
+        "definition": "Dijital kaynaklara uzun vadeli erişim sağlayan değişmez tanımlayıcı",
+        "detailedDefinition": "Kalıcı tanımlayıcılar, dijital kaynakların fiziksel konumu değişse bile erişilebilir olmalarını sağlayan, uzun vadede kararlı kalan benzersiz tanımlayıcılardır.",
+        "etymology": "İngilizce 'Persistent Identifier' (Kalıcı Tanımlayıcı)",
+        "examples": [
+          "DOI: 10.5281/zenodo.123456",
+          "Handle: hdl:1721.1/12345",
+          "ARK: ark:/12345/abc123"
+        ],
+        "relatedTerms": ["doi", "handle", "ark", "urn"],
+        "usage": "Veri setimiz için kalıcı tanımlayıcı aldık",
+        "types": [
+          "DOI (Digital Object Identifier)",
+          "Handle System",
+          "ARK (Archival Resource Key)",
+          "URN (Uniform Resource Name)"
+        ]
+      },
+      {
+        "id": "repository",
+        "term": "Veri Deposu",
+        "category": "tools",
+        "definition": "Araştırma verilerinin depolandığı, yönetildiği ve paylaşıldığı platform",
+        "detailedDefinition": "Veri deposu, araştırma verilerinin uzun vadeli korunması, organize edilmesi ve erişilebilir kılınması için tasarlanmış dijital altyapıdır. Genellikle metadata yönetimi ve arama özellikleri sunar.",
+        "etymology": "İngilizce 'Data Repository' (Veri Deposu)",
+        "examples": [
+          "Zenodo - genel amaçlı uluslararası depo",
+          "APERTA - Türkiye ulusal veri deposu",
+          "Figshare - görsel odaklı depo"
+        ],
+        "relatedTerms": ["zenodo", "figshare", "dataverse", "dspace"],
+        "usage": "Verilerimizi güvenilir bir depoda saklıyoruz",
+        "types": [
+          "Genel amaçlı (Zenodo, Figshare)",
+          "Alan-özel (GenBank, PDB)",
+          "Kurumsal (DSpace tabanlı)",
+          "Ulusal (APERTA)"
+        ]
+      },
+      {
+        "id": "api",
+        "term": "API (Application Programming Interface)",
+        "category": "technical",
+        "definition": "Uygulamalar arası veri alışverişi için arayüz",
+        "detailedDefinition": "Application Programming Interface, farklı yazılım bileşenleri arasında iletişim kurmayı sağlayan tanımlanmış kurallar ve protokoller bütünüdür. FAIR veriler için programatik erişim sağlar.",
+        "etymology": "İngilizce 'Application Programming Interface' (Uygulama Programlama Arayüzü)",
+        "examples": [
+          "REST API",
+          "GraphQL API",
+          "SPARQL endpoint"
+        ],
+        "relatedTerms": ["rest", "graphql", "web-service", "interoperability"],
+        "usage": "Veri setimize API üzerinden erişilebilir"
+      },
+      {
+        "id": "provenance",
+        "term": "Köken Bilgisi (Provenance)",
+        "category": "process",
+        "definition": "Verinin geçmişi, kaynağı ve üzerinde yapılan işlemlerin kaydı",
+        "detailedDefinition": "Provenance, verinin nereden geldiğini, kim tarafından üretildiğini, hangi işlemlerden geçtiğini ve nasıl dönüştürüldüğünü açıklayan metadata türüdür. Verinin güvenilirliği ve tekrar üretilebilirliği için kritiktir.",
+        "etymology": "Fransızca 'provenance' (köken, kaynak)",
+        "examples": [
+          "Veri toplama tarihi ve yöntemi",
+          "Kullanılan cihaz ve yazılım bilgileri",
+          "Veri işleme adımları"
+        ],
+        "relatedTerms": ["workflow", "lineage", "audit-trail", "reproducibility"],
+        "usage": "Verinin köken bilgisini detaylı olarak dokümante ettik"
+      },
+      {
+        "id": "workflow",
+        "term": "İş Akışı (Workflow)",
+        "category": "process",
+        "definition": "Veri işleme sürecindeki adımların ve bağımlılıklarının tanımı",
+        "detailedDefinition": "Workflow, veri analizi veya işleme sürecindeki tüm adımların, araçların, parametrelerin ve bağımlılıkların sistematik olarak tanımlandığı ve genellikle otomatikleştirilebildiği süreç tanımıdır.",
+        "etymology": "İngilizce 'work' (iş) + 'flow' (akış)",
+        "examples": [
+          "Galaxy workflow",
+          "Nextflow pipeline",
+          "Snakemake workflow"
+        ],
+        "relatedTerms": ["pipeline", "provenance", "reproducibility", "automation"],
+        "usage": "Analiz workflow'umuzu paylaştık"
+      },
+      {
+        "id": "interoperability",
+        "term": "Birlikte Çalışabilirlik",
+        "category": "process",
+        "definition": "Farklı sistemlerin birbirleriyle veri alışverişi yapabilme yeteneği",
+        "detailedDefinition": "Interoperability, farklı sistemler, uygulamalar veya bileşenlerin birbirleriyle etkili bir şekilde çalışabilmesi ve veri alışverişi yapabilmesi anlamına gelir. FAIR prensiplerinin 'I' harfini oluşturur.",
+        "etymology": "İngilizce 'inter' (arasında) + 'operability' (işlevsellik)",
+        "examples": [
+          "JSON-LD ile farklı sistemler arası veri paylaşımı",
+          "SPARQL endpoint'ler arası sorgulama"
+        ],
+        "relatedTerms": ["fair", "standards", "api", "protocol"],
+        "usage": "Sistemlerimiz arasında tam interoperability sağladık"
+      },
+      {
+        "id": "semantic-web",
+        "term": "Semantic Web",
+        "category": "technical",
+        "definition": "Makinelerin web içeriğini anlayabildiği gelecek nesil web vizyonu",
+        "detailedDefinition": "Semantic Web, Tim Berners-Lee tarafından önerilen ve web üzerindeki bilgilerin makineler tarafından anlaşılabilir hale getirilmesini amaçlayan web teknolojileri vizyonudur. RDF, OWL ve SPARQL gibi standartları kullanır.",
+        "etymology": "İngilizce 'Semantic' (anlamsal) + 'Web' (ağ)",
+        "examples": [
+          "Linked Open Data bulutları",
+          "Knowledge Graph'lar"
+        ],
+        "relatedTerms": ["rdf", "owl", "linked-data", "knowledge-graph"],
+        "usage": "Semantic Web teknolojileri ile veri entegrasyonu sağladık"
+      }
+    ]
+  }
+}

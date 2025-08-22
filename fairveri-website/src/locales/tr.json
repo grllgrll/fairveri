@@ -1,0 +1,706 @@
+{
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "retry": "Tekrar Dene",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "close": "Kapat",
+    "next": "Sonraki",
+    "previous": "Önceki",
+    "submit": "Gönder",
+    "search": "Ara",
+    "clear": "Temizle",
+    "select": "Seç",
+    "home": "Ana Sayfa",
+    "back": "Geri",
+    "continue": "Devam Et",
+    "finish": "Bitir",
+    "start": "Başla",
+    "stop": "Durdur",
+    "pause": "Duraklat",
+    "resume": "Devam Et",
+    "complete": "Tamamla",
+    "success": "Başarılı",
+    "warning": "Uyarı",
+    "info": "Bilgi",
+    "help": "Yardım",
+    "about": "Hakkında",
+    "contact": "İletişim",
+    "privacy": "Gizlilik",
+    "terms": "Şartlar",
+    "cookies": "Çerezler"
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "principles": "FAIR Prensipleri",
+    "principlesShort": "Prensipler",
+    "tools": "Araçlar",
+    "metadataTools": "Metadata Araçları",
+    "dataCleaning": "Veri Temizleme",
+    "dataRepositories": "Veri Depoları",
+    "surveyData": "Anket Verisi",
+    "labData": "Laboratuvar Verisi",
+    "softwareProject": "Yazılım Projesi",
+    "gettingStarted": "Başlangıç Rehberi",
+    "generalQuestions": "Genel Sorular",
+    "technicalQuestions": "Teknik Sorular",
+    "examples": "Pratik Örnekler",
+    "examplesShort": "Örnekler",
+    "learn": "Öğrenme",
+    "faq": "Sık Sorulan Sorular",
+    "faqShort": "SSS",
+    "resources": "Kaynaklar",
+    "assessment": "FAIR Değerlendirmesi",
+    "assessmentShort": "Değerlendirme",
+    "research": "Araştırmalar",
+    "glossary": "Sözlük",
+    "roadmap": "Yol Haritası",
+    "partners": "Ortaklar",
+    "partnersDescription": "İşbirliği yaptığımız kurumlar ve organizasyonlar",
+    "contact": "İletişim",
+    "contactDescription": "Bizimle iletişime geçin",
+    "skipToContent": "Ana içeriğe geç",
+    "skipToNavigation": "Navigasyona geç",
+    "skipToFooter": "Footer'a geç",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat"
+  },
+  "fair": {
+    "title": "FAIR Veri Prensipleri",
+    "titleWithoutFair": "Veri Prensipleri",
+    "subtitle": "Araştırma Verilerinin Bulunabilir, Erişilebilir, Birlikte Çalışabilir ve Yeniden Kullanılabilir Olması İçin Rehber",
+    "description": "FAIR, araştırma verilerinin ve dijital nesnelerin Bulunabilir, Erişilebilir, Birlikte Çalışabilir ve Yeniden Kullanılabilir olması gerektiğini belirten rehber ilkeler bütünüdür.",
+    "findable": {
+      "title": "Bulunabilir (Findable)",
+      "shortTitle": "Bulunabilir",
+      "description": "Verileriniz kalıcı tanımlayıcılar (DOI, Handle) ve zengin metadata ile arama motorları ve kataloglarda kolayca keşfedilebilir hale gelir. Bu, araştırmanızın görünürlüğünü artırır ve yeni işbirliklerin kapısını açar.",
+      "letter": "F"
+    },
+    "accessible": {
+      "title": "Erişilebilir (Accessible)",
+      "shortTitle": "Erişilebilir",
+      "description": "Verilerinize HTTP/HTTPS gibi standart protokollerle güvenli erişim sağlanır. Kimlik doğrulama ve yetkilendirme mekanizmaları ile kontrollü paylaşım mümkün olur. Metadata her zaman erişilebilir kalır.",
+      "letter": "A"
+    },
+    "interoperable": {
+      "title": "Birlikte Çalışabilir (Interoperable)",
+      "shortTitle": "Birlikte Çalışabilir",
+      "description": "Standart veri formatları (JSON, XML, CSV) ve kontrollü kelime dağarcıkları kullanılarak verileriniz diğer sistemlerle sorunsuz entegre olur. Bu, veri analizi ve meta-analizleri kolaylaştırır.",
+      "letter": "I"
+    },
+    "reusable": {
+      "title": "Yeniden Kullanılabilir (Reusable)",
+      "shortTitle": "Yeniden Kullanılabilir",
+      "description": "Creative Commons gibi açık lisanslar ve detaylı provenance bilgileri ile verileriniz gelecek nesil araştırmacılar tarafından güvenle yeniden kullanılabilir. Bu, bilimsel ilerlemeyi hızlandırır.",
+      "letter": "R"
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title": "FAIR Veri Prensipleri",
+      "subtitle": "Sosyal bilimlerden mühendisliğe, genomikten finansa, her türlü büyük verinin bulunabilirliğini, erişilebilirliğini, birlikte çalışabilirliğini ve yeniden kullanılabilirliğini artırarak araştırma ve iş süreçlerinizin küresel etkisini maksimize edin",
+      "description": "IoT sensör verilerinden biyomedikal araştırmalara, e-ticaret analizlerinden coğrafi bilgi sistemlerine kadar, 50,000+ araştırmacı ve veri uzmanı tarafından benimsenmiş FAIR prensipleri ile tüm veri türlerinizin değerini artırın",
+      "ctaStart": "FAIR Değerlendirmesi Başlat",
+      "ctaExplore": "Araştırmaları İncele"
+    },
+    "whatIsFair": {
+      "title": "FAIR Nedir?",
+      "subtitle": "Her harf, veri yönetiminde kritik bir prensibi temsil eder"
+    },
+    "benefits": {
+      "title": "FAIR Prensiplerinin Faydaları",
+      "subtitle": "Verilerinizi FAIR hale getirerek araştırmanızın etkisini artırın",
+      "items": [
+        {
+          "title": "Araştırma Etkisini Artırın",
+          "description": "FAIR veriler %25 daha fazla atıf alır ve çok disiplinli araştırmalarda kullanılır. Görünürlüğünüzü artırarak akademik kariyerinizi güçlendirin.",
+          "stats": "%25 daha fazla atıf"
+        },
+        {
+          "title": "Küresel İşbirliği Kurun",
+          "description": "Standardize edilmiş verilerle dünya çapında araştırmacılarla işbirliği yapın. 150+ ülkeden bilim insanı FAIR verilerinizi kullanabilir.",
+          "stats": "150+ ülke erişimi"
+        },
+        {
+          "title": "Uzun Vadeli Değer Yaratın",
+          "description": "10-20 yıl sonra bile verileriniz değerli kalır. Dijital koruma stratejileri ile araştırma mirasınızı gelecek nesillere aktarın.",
+          "stats": "20+ yıl sürdürülebilirlik"
+        },
+        {
+          "title": "Veri Kalitesini Garantileyin",
+          "description": "Standart metadata şemaları ile %90 daha az veri hatası. Otomatik doğrulama araçları ile hata-free veri setleri oluşturun.",
+          "stats": "%90 daha az hata"
+        },
+        {
+          "title": "Araştırma Verimliliğini 3x Artırın",
+          "description": "Organize edilmiş verilerle analiz süresini kısaltın. Meta-veri sayesinde geçmiş çalışmalarınızı anında bulun ve yeniden kullanın.",
+          "stats": "3x daha hızlı analiz"
+        },
+        {
+          "title": "Güvenlik ve Uyumluluğu Sağlayın",
+          "description": "GDPR, TÜBİTAK ve uluslararası fonlama kurumlarının gereksinimlerini karşılayın. Güvenli veri paylaşımı ile yasal riskleri minimize edin.",
+          "stats": "100% uyumluluk garantisi"
+        }
+      ]
+    },
+    "successStories": {
+      "title": "Başarı Hikayeleri",
+      "subtitle": "FAIR prensiplerini uygulayan araştırmacıların gerçek deneyimleri"
+    },
+    "statistics": {
+      "title": "FAIR ile Değişen Rakamlar",
+      "subtitle": "Dünya çapında FAIR prensiplerinin etkisini gösteren güncel istatistikler",
+      "items": [
+        {
+          "number": "50,000+",
+          "label": "Aktif Araştırmacı",
+          "description": "FAIR prensiplerini günlük çalışmalarında uygulayan bilim insanı sayısı"
+        },
+        {
+          "number": "2.5M+",
+          "label": "FAIR Veri Seti",
+          "description": "Küresel veri havuzunda FAIR standartlarını karşılayan veri seti sayısı"
+        },
+        {
+          "number": "150+",
+          "label": "Ülke",
+          "description": "FAIR prensiplerini resmi olarak benimseyen ülke sayısı"
+        },
+        {
+          "number": "%73",
+          "label": "Daha Fazla Atıf",
+          "description": "FAIR veriler geleneksel veri paylaşımına göre ortalama atıf artışı"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bugün FAIR Yolculuğunuzu Başlatın",
+      "description": "Sadece 15 dakikada verilerinizin FAIR durumunu değerlendirin ve dünya çapında 50,000+ araştırmacının kullandığı kanıtlanmış yöntemlerle araştırmanızın etkisini maksimize edin",
+      "features": [
+        "Ücretsiz değerlendirme",
+        "Anında sonuçlar",
+        "Özel rehberlik"
+      ],
+      "primaryButton": "🚀 Hemen Değerlendirme Başlat",
+      "secondaryButton": "📚 Önce Öğrenmek İstiyorum",
+      "tip": "💡 İpucu: Değerlendirme sadece 5-10 dakika sürüyor ve anında kişiselleştirilmiş öneriler alıyorsunuz"
+    }
+  },
+  "assessment": {
+    "title": "FAIR Prensipleri Değerlendirmesi",
+    "subtitle": "Veri setinizin FAIR prensiplerine uyumluluğunu kapsamlı değerlendirme aracımızla değerlendirin. Veri yönetimi uygulamalarınızı geliştirmek için kişiselleştirilmiş öneriler ve uygulanabilir içgörüler edinin.",
+    "start": "Değerlendirmeyi Başlat",
+    "continue": "Değerlendirmeye Devam Et",
+    "complete": "Değerlendirmeyi Tamamla",
+    "progress": "{{current}} / {{total}} soru tamamlandı",
+    "questions": "{{count}} Soru",
+    "duration": "15-20 Dakika",
+    "report": "Kişiselleştirilmiş Rapor",
+    "features": {
+      "comprehensive": "Tüm FAIR prensiplerinin kapsamlı değerlendirilmesi",
+      "duration": "Kapsamlı değerlendirme için tipik tamamlanma süresi",
+      "personalized": "Uygulanabilir önerilerle detaylı sonuçlar"
+    },
+    "showExplanations": "Açıklamaları Göster",
+    "hideExplanations": "Açıklamaları Gizle",
+    "exportProgress": "İlerlemeyi Dışa Aktar",
+    "import": "İçe Aktar",
+    "reset": "Sıfırla",
+    "progressTitle": "Değerlendirme İlerlemesi",
+    "questionsLabel": "soru",
+    "questionCounter": "{{current}}/{{total}}",
+    "importPlaceholder": "Dışa aktardığınız değerlendirme verilerini buraya yapıştırın...",
+    "invalidImportData": "Geçersiz içe aktarma verisi. Lütfen formatı kontrol edip tekrar deneyin.",
+    "exportFileName": "fair-degerlendirmesi-{{date}}",
+    "results": {
+      "progress": "İlerleme",
+      "overallScore": "Genel FAIR Puanı"
+    },
+    "whyThisMatters": "Neden önemli:",
+    "feedback": "Geri bildirim:",
+    "tipsForImprovement": "Geliştirme önerileri:",
+    "questions": {
+      "f1": {
+        "title": "Benzersiz ve Kalıcı Tanımlayıcılar",
+        "question": "Veri setinizin benzersiz ve kalıcı bir tanımlayıcısı var mı (DOI, Handle veya UUID gibi)?",
+        "explanation": "Benzersiz bir tanımlayıcı, veri setinizin tutarlı bir şekilde referans alınmasını ve atıf yapılmasını sağlar. DOI gibi kalıcı tanımlayıcılar, konum değişse bile geçerli kalır.",
+        "options": {
+          "yes_doi": {
+            "label": "Evet, DOI veya benzer kalıcı tanımlayıcı kullanıyoruz",
+            "feedback": "Mükemmel! DOI ve benzer kalıcı tanımlayıcılar, veri seti tanımlama için altın standarttır."
+          },
+          "yes_uuid": {
+            "label": "Evet, UUID veya benzer benzersiz tanımlayıcı kullanıyoruz",
+            "feedback": "İyi! UUID'ler benzersizlik sağlar ancak daha iyi uzun ömürlülük için DOI gibi kalıcı tanımlayıcılara yükseltmeyi düşünün."
+          },
+          "partial": {
+            "label": "Bir tür tanımlayıcımız var ama küresel olarak benzersiz değil",
+            "feedback": "Bu bir başlangıç, ancak daha iyi bulunabilirlik için küresel olarak benzersiz tanımlayıcılar uygulamayı düşünün."
+          },
+          "no": {
+            "label": "Hayır, benzersiz tanımlayıcılarımız yok",
+            "feedback": "Benzersiz tanımlayıcıları öncelik olarak uygulamayı düşünün. DOI veya UUID sistemleri ile başlayın."
+          }
+        },
+        "tips": {
+          "0": "Yayınlanmış veri setleri için DOI kullanın",
+          "1": "Kurumsal depolar için Handle Sistemi'ni düşünün",
+          "2": "Tanımlayıcıların tüm metadata'da dahil edildiğinden emin olun"
+        }
+      },
+      "f2": {
+        "title": "Zengin Metadata",
+        "question": "Veri setinizi tanımlayan metadata ne kadar kapsamlı?",
+        "explanation": "Zengin metadata, hem insanların hem de makinelerin veri setinizin ne içerdiğini, nasıl oluşturulduğunu ve nasıl kullanılabileceğini anlamasına yardımcı olur.",
+        "options": {
+          "comprehensive": {
+            "label": "Metodoloji, değişkenler ve bağlam dahil kapsamlı metadata",
+            "feedback": "Mükemmel! Kapsamlı metadata, veri seti keşfi ve yeniden kullanımı için çok önemlidir."
+          },
+          "good": {
+            "label": "Temel bilgiler ve bazı detaylarla iyi metadata",
+            "feedback": "İyi başlangıç! Daha fazla metodolojik detay ve bağlam bilgisi eklemeyi düşünün."
+          },
+          "basic": {
+            "label": "Başlık, yazar ve açıklama ile temel metadata",
+            "feedback": "Temel metadata mevcut ancak metodoloji ve bağlam hakkında daha fazla detayla zenginleştirilebilir."
+          },
+          "minimal": {
+            "label": "Minimal veya metadata yok",
+            "feedback": "Metadata bulunabilirlik için gereklidir. Temel öğelerle başlayın ve kademeli olarak daha fazla detay ekleyin."
+          }
+        },
+        "tips": {
+          "0": "Oluşturma tarihi, metodoloji ve veri toplama detaylarını ekleyin",
+          "1": "Anahtar kelimeler ve konu sınıflandırmaları ekleyin",
+          "2": "Veri kalitesi ve sınırlamaları belgeleyin"
+        }
+      },
+      "f3": {
+        "title": "Metadata-Veri İlişkisi",
+        "question": "Metadata'nız hangi veri setini tanımladığını açıkça belirtiyor mu?",
+        "explanation": "Metadata, tanımladığı veri setine açıkça referans vermeli, ikisi arasında net bir bağlantı oluşturmalıdır.",
+        "options": {
+          "explicit": {
+            "label": "Evet, metadata veri seti tanımlayıcısına açıkça referans veriyor",
+            "feedback": "Mükemmel! Açık metadata-veri ilişkileri otomatik keşif için gereklidir."
+          },
+          "implicit": {
+            "label": "İlişki örtük ama açık",
+            "feedback": "Metadata'ya veri seti tanımlayıcılarını dahil ederek ilişkiyi daha açık hale getirmeyi düşünün."
+          },
+          "unclear": {
+            "label": "İlişki belirsiz veya muğlak",
+            "feedback": "Otomatik keşfi iyileştirmek için metadata-veri ilişkisini daha açık hale getirin."
+          },
+          "no": {
+            "label": "Metadata ve veri arasında açık bir ilişki yok",
+            "feedback": "Açık referanslar ekleyerek metadata ve veri arasında net bağlantılar kurun."
+          }
+        }
+      },
+      "f4": {
+        "title": "Aranabilir Kayıt",
+        "question": "Veri ve metadata'nız aranabilir bir kaynakta kayıtlı mı?",
+        "explanation": "Aranabilir kataloglar, depolar veya veritabanlarına kayıt, veri setinizin arama motorları ve diğer araştırmacılar tarafından keşfedilebilir olmasını sağlar.",
+        "options": {
+          "multiple": {
+            "label": "Birden fazla aranabilir depo/katalogda kayıtlı",
+            "feedback": "Mükemmel! Çoklu kayıtlar farklı topluluklar arasında keşfedilebilirliği artırır."
+          },
+          "institutional": {
+            "label": "Kurumsal veya disiplin deposunda kayıtlı",
+            "feedback": "Harika! Kurumsal depolar alanınız içinde iyi keşfedilebilirlik sağlar."
+          },
+          "single": {
+            "label": "Tek bir aranabilir kaynakta kayıtlı",
+            "feedback": "İyi başlangıç! Daha geniş erişim için ek ilgili depolara kayıt olmayı düşünün."
+          },
+          "no": {
+            "label": "Aranabilir bir kaynakta kayıtlı değil",
+            "feedback": "Keşfedilebilirliği artırmak için veri setinizi uygun depolara kaydetmeyi düşünün."
+          }
+        },
+        "tips": {
+          "0": "İç keşfedilebilirlik için kurumsal depoları kullanın",
+          "1": "Alan-spesifik keşif için disiplin veritabanlarına kayıt olun",
+          "2": "Daha geniş erişim için Zenodo gibi genel depoları düşünün"
+        }
+      },
+      "a1": {
+        "title": "Standart İletişim Protokolü",
+        "question": "Veri ve metadata'nıza standartlaştırılmış iletişim protokolleri aracılığıyla erişilebilir mi?",
+        "explanation": "HTTP, HTTPS, FTP gibi standart protokoller, verilerinize evrensel erişim sağlar.",
+        "options": {
+          "multiple": {
+            "label": "Birden fazla standart protokol destekleniyor (HTTP/HTTPS, FTP, vb.)",
+            "feedback": "Mükemmel! Çoklu protokol desteği maksimum erişilebilirlik sağlar."
+          },
+          "https": {
+            "label": "HTTPS üzerinden güvenli erişim",
+            "feedback": "Harika! HTTPS güvenli veri erişimi için standart haline gelmiştir."
+          },
+          "http": {
+            "label": "HTTP üzerinden erişim",
+            "feedback": "İyi, ancak hassas veriler için HTTPS'ye yükseltmeyi düşünün."
+          },
+          "proprietary": {
+            "label": "Özel veya standart olmayan protokol",
+            "feedback": "Daha geniş erişilebilirlik için standart protokolleri benimsemeyi düşünün."
+          }
+        }
+      },
+      "a1_1": {
+        "title": "Açık Protokol",
+        "question": "Erişim protokolleriniz açık, ücretsiz ve evrensel olarak uygulanabilir mi?",
+        "explanation": "Açık protokoller, herkesin özel yazılım veya lisans olmadan verilerinize erişebilmesini sağlar.",
+        "options": {
+          "fully_open": {
+            "label": "Tamamen açık ve ücretsiz protokoller",
+            "feedback": "Mükemmel! Açık protokoller maksimum erişilebilirlik sağlar."
+          },
+          "mostly_open": {
+            "label": "Çoğunlukla açık, bazı küçük kısıtlamalar var",
+            "feedback": "İyi! Tam açıklık için kalan kısıtlamaları kaldırmayı düşünün."
+          },
+          "mixed": {
+            "label": "Açık ve özel protokollerin karışımı",
+            "feedback": "Mümkün olduğunca açık protokollere geçmeyi düşünün."
+          },
+          "proprietary": {
+            "label": "Özel veya lisanslı protokoller",
+            "feedback": "Erişilebilirliği artırmak için açık protokolleri benimsemeyi düşünün."
+          }
+        }
+      },
+      "a1_2": {
+        "title": "Kimlik Doğrulama ve Yetkilendirme",
+        "question": "Erişim protokolünüz gerektiğinde kimlik doğrulama ve yetkilendirmeyi destekliyor mu?",
+        "explanation": "Güvenli kimlik doğrulama, hassas verileri korurken kontrollü erişim sağlar.",
+        "options": {
+          "comprehensive": {
+            "label": "Kapsamlı kimlik doğrulama ve detaylı yetkilendirme",
+            "feedback": "Mükemmel! Güvenlik ve erişilebilirlik arasında iyi denge."
+          },
+          "standard": {
+            "label": "Standart kimlik doğrulama sistemleri (OAuth, SAML, vb.)",
+            "feedback": "Harika! Standart sistemler güvenli ve yaygın olarak desteklenir."
+          },
+          "basic": {
+            "label": "Temel kimlik doğrulama mevcut",
+            "feedback": "İyi başlangıç! Daha gelişmiş güvenlik için modern standartları düşünün."
+          },
+          "none": {
+            "label": "Kimlik doğrulama sistemi yok",
+            "feedback": "Hassas veriler için kimlik doğrulama eklemeyi düşünün."
+          }
+        }
+      },
+      "a2": {
+        "title": "Kalıcı Metadata",
+        "question": "Veri artık mevcut olmasa bile metadata erişilebilir kalacak mı?",
+        "explanation": "Metadata'nın kalıcılığı, veri kaybolsa bile bağlamın ve bilginin korunmasını sağlar.",
+        "options": {
+          "guaranteed": {
+            "label": "Evet, metadata kalıcılığı garanti edilmiştir",
+            "feedback": "Mükemmel! Kalıcı metadata uzun vadeli bilgi korunumu sağlar."
+          },
+          "likely": {
+            "label": "Muhtemelen, güçlü kurumsal destek var",
+            "feedback": "İyi! Resmi kalıcılık politikaları oluşturmayı düşünün."
+          },
+          "uncertain": {
+            "label": "Belirsiz, açık bir politika yok",
+            "feedback": "Metadata kalıcılığı için net politikalar geliştirin."
+          },
+          "no": {
+            "label": "Hayır, metadata veri ile birlikte kaybolacak",
+            "feedback": "Metadata'yı veriden bağımsız olarak korumak için stratejiler geliştirin."
+          }
+        }
+      },
+      "i1": {
+        "title": "Biçimsel Dil",
+        "question": "Veri ve metadata'nız bilgi temsili için biçimsel, erişilebilir, paylaşılan ve geniş çapta uygulanabilir bir dil kullanıyor mu?",
+        "explanation": "RDF, JSON-LD, XML gibi standart formatlar, makineler arası birlikte çalışabilirliği sağlar.",
+        "options": {
+          "multiple_standards": {
+            "label": "Birden fazla standart format destekleniyor (RDF, JSON-LD, XML)",
+            "feedback": "Mükemmel! Çoklu format desteği maksimum birlikte çalışabilirlik sağlar."
+          },
+          "single_standard": {
+            "label": "Tek bir yaygın standart kullanılıyor",
+            "feedback": "İyi! Yaygın kullanılan bir standart iyi birlikte çalışabilirlik sağlar."
+          },
+          "semi_standard": {
+            "label": "Yarı standart veya topluluk formatı",
+            "feedback": "Daha geniş birlikte çalışabilirlik için tam standartlara geçmeyi düşünün."
+          },
+          "proprietary": {
+            "label": "Özel veya standart olmayan format",
+            "feedback": "Birlikte çalışabilirliği artırmak için standart formatları benimsemeyi düşünün."
+          }
+        }
+      },
+      "i2": {
+        "title": "FAIR Kelime Dağarcıkları",
+        "question": "Veri ve metadata'nız FAIR prensiplerini takip eden kelime dağarcıkları kullanıyor mu?",
+        "explanation": "FAIR kelime dağarcıkları, terimlerin tutarlı ve makine tarafından anlaşılabilir kullanımını sağlar.",
+        "options": {
+          "extensive": {
+            "label": "Kapsamlı FAIR kelime dağarcıkları kullanımı",
+            "feedback": "Mükemmel! FAIR kelime dağarcıkları semantik birlikte çalışabilirliği maksimize eder."
+          },
+          "moderate": {
+            "label": "Bazı FAIR kelime dağarcıkları kullanılıyor",
+            "feedback": "İyi! Daha fazla FAIR kelime dağarcığı entegre etmeyi düşünün."
+          },
+          "minimal": {
+            "label": "Minimal FAIR kelime dağarcığı kullanımı",
+            "feedback": "Birlikte çalışabilirliği artırmak için daha fazla standart kelime dağarcığı kullanın."
+          },
+          "none": {
+            "label": "FAIR kelime dağarcığı kullanılmıyor",
+            "feedback": "Semantik birlikte çalışabilirlik için FAIR kelime dağarcıklarını araştırın ve uygulayın."
+          }
+        },
+        "tips": {
+          "0": "Araştırmacı tanımlaması için ORCID kullanın",
+          "1": "Kurumsal bağlılıklar için ROR uygulayın",
+          "2": "Tıbbi veriler için MeSH gibi alan-spesifik kelime dağarcıklarını benimseyin"
+        }
+      },
+      "i3": {
+        "title": "Nitelikli Referanslar",
+        "question": "Veri ve metadata'nız diğer veri ve metadata'ya nitelikli referanslar içeriyor mu?",
+        "explanation": "Diğer kaynaklara açık referanslar, veri ağları oluşturur ve bağlamı zenginleştirir.",
+        "options": {
+          "comprehensive": {
+            "label": "Kapsamlı ve nitelikli çapraz referanslar",
+            "feedback": "Mükemmel! Zengin referanslar veri ağları ve gelişmiş keşif sağlar."
+          },
+          "good": {
+            "label": "İlgili veri setlerine iyi referanslar",
+            "feedback": "İyi! Daha zengin bağlam için daha fazla referans eklemeyi düşünün."
+          },
+          "basic": {
+            "label": "Bazı temel referanslar mevcut",
+            "feedback": "Veri bağlamını güçlendirmek için daha fazla nitelikli referans ekleyin."
+          },
+          "none": {
+            "label": "Diğer kaynaklara referans yok",
+            "feedback": "İlgili veri setleri ve kaynaklara referanslar eklemeyi düşünün."
+          }
+        }
+      },
+      "r1": {
+        "title": "Zengin Metadata ile Tanımlama",
+        "question": "Verileriniz çok sayıda doğru ve ilgili öznitelikle tanımlanmış mı?",
+        "explanation": "Detaylı öznitelikler, kullanıcıların verilerinizi doğru şekilde anlamasını ve kullanmasını sağlar.",
+        "options": {
+          "comprehensive": {
+            "label": "Kapsamlı metadata ile tam tanımlama",
+            "feedback": "Mükemmel! Zengin tanımlama maksimum yeniden kullanılabilirlik sağlar."
+          },
+          "detailed": {
+            "label": "İyi detaylandırılmış öznitelikler",
+            "feedback": "Harika! Detaylı öznitelikler iyi yeniden kullanılabilirlik sağlar."
+          },
+          "basic": {
+            "label": "Temel öznitelikler mevcut",
+            "feedback": "Yeniden kullanılabilirliği artırmak için daha fazla tanımlayıcı öznitelik ekleyin."
+          },
+          "minimal": {
+            "label": "Minimal tanımlama",
+            "feedback": "Verilerinizin değerini artırmak için kapsamlı öznitelikler ekleyin."
+          }
+        }
+      },
+      "r1_1": {
+        "title": "Açık Kullanım Lisansı",
+        "question": "Verileriniz açık ve erişilebilir bir kullanım lisansı ile yayınlanmış mı?",
+        "explanation": "Açık lisanslar, kullanıcıların verilerinizi nasıl kullanabileceklerini net olarak belirtir.",
+        "options": {
+          "open": {
+            "label": "Açık lisans (CC0, CC-BY, vb.)",
+            "feedback": "Mükemmel! Açık lisanslar maksimum yeniden kullanılabilirlik sağlar."
+          },
+          "clear": {
+            "label": "Net kullanım koşulları olan lisans",
+            "feedback": "İyi! Net lisanslama güvenli yeniden kullanım sağlar."
+          },
+          "restrictive": {
+            "label": "Kısıtlayıcı ama açık lisans",
+            "feedback": "Daha geniş kullanım için daha açık lisansları düşünün."
+          },
+          "none": {
+            "label": "Lisans bilgisi yok",
+            "feedback": "Yasal netlik için mutlaka bir lisans ekleyin."
+          }
+        }
+      },
+      "r1_2": {
+        "title": "Detaylı Kaynak Bilgisi",
+        "question": "Verileriniz detaylı kaynak (provenance) bilgisi ile ilişkilendirilmiş mi?",
+        "explanation": "Kaynak bilgisi, verinin nereden geldiğini ve nasıl işlendiğini belgeleyerek güven oluşturur.",
+        "options": {
+          "complete": {
+            "label": "Tam kaynak bilgisi ve işlem geçmişi",
+            "feedback": "Mükemmel! Detaylı kaynak bilgisi maksimum güven ve yeniden kullanılabilirlik sağlar."
+          },
+          "good": {
+            "label": "İyi belgelenmiş kaynak bilgisi",
+            "feedback": "Harika! İyi kaynak belgeleri güvenilir yeniden kullanım sağlar."
+          },
+          "basic": {
+            "label": "Temel kaynak bilgisi mevcut",
+            "feedback": "Daha fazla güven için kaynak belgelerini genişletin."
+          },
+          "none": {
+            "label": "Kaynak bilgisi yok",
+            "feedback": "Verinin kökenini ve işlem geçmişini belgelemeyi düşünün."
+          }
+        }
+      },
+      "r1_3": {
+        "title": "Topluluk Standartları",
+        "question": "Veri ve metadata'nız ilgili alan için topluluk standartlarını karşılıyor mu?",
+        "explanation": "Alan-spesifik standartlar, topluluğunuz içinde sorunsuz veri paylaşımı ve yeniden kullanım sağlar.",
+        "options": {
+          "certified": {
+            "label": "Sertifikalı veya tam uyumlu",
+            "feedback": "Mükemmel! Topluluk standartlarına tam uyum ideal yeniden kullanılabilirlik sağlar."
+          },
+          "compliant": {
+            "label": "Büyük ölçüde uyumlu",
+            "feedback": "Harika! İyi standart uyumu topluluk içinde kullanımı kolaylaştırır."
+          },
+          "partial": {
+            "label": "Kısmen uyumlu",
+            "feedback": "Tam uyum için eksik standartları tamamlayın."
+          },
+          "none": {
+            "label": "Topluluk standartları takip edilmiyor",
+            "feedback": "Alanınızdaki standartları araştırın ve uygulayın."
+          }
+        }
+      }
+    },
+    "categories": {
+      "findable": {
+        "title": "Bulunabilir",
+        "description": "Verilerin hem insanlar hem de bilgisayarlar tarafından bulunabilir olmasını sağlayan ilk adım."
+      },
+      "accessible": {
+        "title": "Erişilebilir", 
+        "description": "Veriler, standart protokoller kullanılarak uygun yetkilendirme ile erişilebilir olmalıdır."
+      },
+      "interoperable": {
+        "title": "Birlikte Çalışabilir",
+        "description": "Veriler, diğer verilerle entegre olabilecek ve çeşitli uygulamalarla kullanılabilecek şekilde tasarlanmalıdır."
+      },
+      "reusable": {
+        "title": "Yeniden Kullanılabilir",
+        "description": "Veriler, gelecekteki kullanım için optimize edilmeli ve açık lisanslarla yeniden kullanım için hazır hale getirilmelidir."
+      }
+    }
+  },
+  "search": {
+    "placeholder": "FAIR prensipleri, araçlar, örnekler ara...",
+    "noResults": "\"{{query}}\" için sonuç bulunamadı.",
+    "noResultsHint": "Farklı anahtar kelimeler deneyin veya filtreleri kontrol edin.",
+    "resultsCount": "{{count}} sonuç bulundu",
+    "filters": "Filtreler",
+    "clearFilters": "Temizle",
+    "popularSearches": "Popüler Aramalar",
+    "searchHistory": "Arama Geçmişi",
+    "clearHistory": "Arama Geçmişini Temizle",
+    "tips": {
+      "title": "💡 Arama İpuçları",
+      "items": [
+        "\"FAIR prensipleri\" - Temel bilgiler için",
+        "\"metadata araçları\" - Veri yönetimi araçları",
+        "\"lisans seçimi\" - Veri paylaşım rehberi"
+      ]
+    },
+    "shortcuts": {
+      "select": "⏎ seç",
+      "navigate": "↑↓ gezin",
+      "close": "esc çık"
+    }
+  },
+  "footer": {
+    "description": "FAIR veri prensipleri ile verilerinizin bulunabilirliğini, erişilebilirliğini, birlikte çalışabilirliğini ve yeniden kullanılabilirliğini artırın.",
+    "quickActions": "Hızlı İşlemler",
+    "fairPrinciples": "FAIR Prensipleri",
+    "toolsAndResources": "Araçlar ve Kaynaklar",
+    "supportAndInfo": "Destek ve Bilgi",
+    "copyright": "© 2024 FairVeri. Tüm hakları saklıdır.",
+    "tagline": "FAIR veri prensipleri ile daha iyi bir veri ekosistemi.",
+    "links": {
+      "quickAssessment": "🎯 Hızlı Değerlendirme",
+      "search": "🔍 Arama",
+      "assessmentTools": "Değerlendirme Araçları",
+      "practicalExamples": "Pratik Örnekler",
+      "resourceLibrary": "Kaynak Kitaplığı",
+      "learningGuide": "Öğrenme Rehberi",
+      "frequentlyAsked": "Sık Sorulan Sorular",
+      "dataAssessment": "Veri Değerlendirme",
+      "privacy": "Gizlilik",
+      "terms": "Koşullar",
+      "contact": "İletişim",
+      "accessibility": "Erişilebilirlik"
+    }
+  },
+  "language": {
+    "selector": {
+      "label": "Dil seçimi",
+      "turkish": "Türkçe",
+      "english": "İngilizce",
+      "current": "Mevcut dil: {{language}}",
+      "switch": "{{language}} diline geç",
+      "changed": "Dil {{language}} olarak değiştirildi"
+    }
+  },
+  "accessibility": {
+    "skipToContent": "Ana içeriğe geç",
+    "skipToNavigation": "Navigasyona geç",
+    "skipToFooter": "Alt bilgiye geç",
+    "descriptions": {
+      "metadataTools": "Zengin metadata oluşturma araçları",
+      "dataCleaning": "Verilerinizi standardize edin",
+      "dataRepositories": "Verilerinizi yayınlayın ve paylaşın",
+      "surveyData": "Sosyal bilimler anket verisi örneği",
+      "labData": "Kimya laboratuvarı deneysel verisi",
+      "softwareProject": "Açık kaynak yazılım FAIR dokümantasyonu",
+      "gettingStarted": "FAIR veri prensipleri temelleri",
+      "generalQuestions": "FAIR veri prensipleri genel sorular",
+      "technicalQuestions": "Dosya formatları, metadata, araçlar",
+      "examples": "Gerçek dünya FAIR veri uygulama örnekleri",
+      "learn": "FAIR veri prensiplerini öğrenin",
+      "faq": "FAIR veri hakkında sorular ve yanıtlar",
+      "resources": "Eğitim materyalleri, standartlar ve topluluk"
+    },
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "loading": "Yükleniyor",
+    "loadingComplete": "Yükleme tamamlandı",
+    "error": "Hata oluştu",
+    "success": "İşlem başarılı",
+    "menuExpanded": "Menü açıldı",
+    "menuCollapsed": "Menü kapandı",
+    "pageChanged": "Sayfa değişti: {{title}}",
+    "languageChanged": "Dil {{language}} olarak değiştirildi"
+  },
+  "errors": {
+    "pageNotFound": "Sayfa Bulunamadı",
+    "serverError": "Sunucu Hatası",
+    "networkError": "Ağ Hatası",
+    "tryAgain": "Tekrar Deneyin",
+    "goHome": "Ana Sayfaya Dön",
+    "contactSupport": "Destek ile İletişime Geçin"
+  }
+}

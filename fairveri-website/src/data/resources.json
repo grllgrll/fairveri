@@ -1,0 +1,434 @@
+{
+  "resources": {
+    "title": "Kaynaklar ve İleri Okuma",
+    "description": "FAIR veri prensipleri hakkında detaylı bilgi için kaynaklar",
+    "categories": [
+      {
+        "id": "foundational",
+        "title": "Temel Kaynaklar",
+        "description": "FAIR prensiplerinin temel kaynakları",
+        "items": [
+          {
+            "title": "Orijinal FAIR Makalesi",
+            "authors": "Wilkinson, M. D. et al.",
+            "year": "2016",
+            "description": "FAIR Rehber İlkelerinin orijinal yayını",
+            "publication": "Scientific Data",
+            "doi": "10.1038/sdata.2016.18",
+            "url": "https://www.nature.com/articles/sdata201618",
+            "type": "article",
+            "language": "en"
+          },
+          {
+            "title": "GO FAIR Girişimi",
+            "description": "Küresel FAIR veri girişimi",
+            "url": "https://www.go-fair.org/",
+            "type": "website",
+            "language": "en",
+            "tags": ["international", "initiative"]
+          },
+          {
+            "title": "FORCE11",
+            "description": "Araştırma iletişimi ve e-bilim topluluğu",
+            "url": "https://www.force11.org/",
+            "type": "website",
+            "language": "en",
+            "tags": ["community", "research"]
+          }
+        ]
+      },
+      {
+        "id": "turkish",
+        "title": "Türkçe Kaynaklar",
+        "description": "Türkiye'deki FAIR veri kaynaklarının bulunduğu temel kaynaklar",
+        "items": [
+          {
+            "title": "TÜBİTAK Açık Bilim",
+            "description": "TÜBİTAK'ın açık bilim ve veri yönetimi portalı",
+            "url": "https://acikveri.ulakbim.gov.tr/",
+            "type": "website",
+            "language": "tr",
+            "organization": "TÜBİTAK",
+            "features": [
+              "Kapsamlı Türkçe rehberler",
+              "Veri yönetimi araçları",
+              "Örnek uygulamalar",
+              "Eğitim materyalleri"
+            ]
+          },
+          {
+            "title": "Açık Bilim Türkiye",
+            "description": "Türkiye'deki açık bilim topluluğu",
+            "url": "https://acikbilimtr.org/",
+            "type": "website",
+            "language": "tr",
+            "tags": ["community", "open-science"]
+          },
+          {
+            "title": "OpenAIRE Türkiye",
+            "description": "OpenAIRE Türkiye yardım masası",
+            "url": "https://www.openaire.eu/turkey",
+            "type": "website",
+            "language": "tr",
+            "organization": "OpenAIRE",
+            "services": [
+              "Veri yönetimi danışmanlığı",
+              "Eğitim hizmetleri",
+              "Teknik destek"
+            ]
+          },
+          {
+            "title": "TÜBİTAK Veri Yönetimi Eğitimleri",
+            "description": "Araştırma veri yönetimi eğitim programları",
+            "organization": "TÜBİTAK",
+            "type": "education",
+            "language": "tr",
+            "offerings": [
+              "Online kurslar",
+              "Sertifika programları",
+              "Canlı webinarlar",
+              "Kurumsal eğitimler"
+            ]
+          },
+          {
+            "title": "Üniversite Kütüphaneleri",
+            "description": "Türkiye'deki üniversite kütüphanelerinin veri yönetimi hizmetleri",
+            "type": "service",
+            "language": "tr",
+            "services": [
+              "Veri yönetimi danışmanlığı",
+              "Metadata oluşturma desteği",
+              "Depo seçimi rehberliği",
+              "Eğitim ve workshop'lar"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "education",
+        "title": "Eğitim Materyalleri",
+        "description": "FAIR prensipleri öğrenmek için eğitim kaynakları",
+        "items": [
+          {
+            "title": "FOSTER Open Science",
+            "description": "Açık bilim eğitim platformu",
+            "url": "https://www.fosteropenscience.eu/",
+            "type": "platform",
+            "language": "en",
+            "features": [
+              "Interaktif eğitim modülleri",
+              "FAIR veri kursu",
+              "Sertifika programları",
+              "Çok dilli içerik"
+            ]
+          },
+          {
+            "title": "The Turing Way",
+            "description": "Yeniden üretilebilir, etik ve işbirlikçi veri bilimi rehberi",
+            "url": "https://the-turing-way.netlify.app/",
+            "type": "guide",
+            "language": "en",
+            "features": [
+              "Topluluk odaklı",
+              "Praktik odaklı",
+              "GitHub tabanlı",
+              "Açık kaynak"
+            ]
+          },
+          {
+            "title": "FAIR Cookbook",
+            "description": "FAIR verinin pratikte uygulanması için rehber",
+            "url": "https://faircookbook.elixir-europe.org/",
+            "type": "guide",
+            "language": "en",
+            "organization": "ELIXIR",
+            "features": [
+              "Pratik örnekler",
+              "Adım adım rehberler",
+              "Yaşam bilimleri odaklı",
+              "Topluluk katkıları"
+            ]
+          },
+          {
+            "title": "Research Data Management 101",
+            "description": "Veri yönetimi temel eğitimi",
+            "type": "course",
+            "language": "en",
+            "topics": [
+              "Veri yönetimi planları",
+              "Metadata oluşturma",
+              "Veri depolama",
+              "Veri paylaşımı"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "standards",
+        "title": "Metadata Standartları",
+        "description": "FAIR uyumlu metadata standartları",
+        "items": [
+          {
+            "title": "Dublin Core",
+            "description": "En yaygın kullanılan genel amaçlı metadata standardı",
+            "url": "https://dublincore.org/",
+            "type": "standard",
+            "domain": "general",
+            "elements": [
+              "Title (Başlık)",
+              "Creator (Oluşturucu)",
+              "Subject (Konu)",
+              "Description (Açıklama)",
+              "Publisher (Yayıncı)",
+              "Contributor (Katkıda Bulunan)",
+              "Date (Tarih)",
+              "Type (Tür)",
+              "Format (Format)",
+              "Identifier (Tanımlayıcı)",
+              "Source (Kaynak)",
+              "Language (Dil)",
+              "Relation (İlişki)",
+              "Coverage (Kapsam)",
+              "Rights (Haklar)"
+            ]
+          },
+          {
+            "title": "DataCite Metadata Şeması",
+            "description": "Araştırma verileri için özel metadata standardı",
+            "url": "https://datacite.org/",
+            "type": "standard",
+            "domain": "research-data",
+            "requiredFields": [
+              "Identifier (DOI)",
+              "Creator(s)",
+              "Title(s)",
+              "Publisher",
+              "PublicationYear",
+              "ResourceType"
+            ],
+            "recommendedFields": [
+              "Subject(s)",
+              "Contributor(s)",
+              "Date(s)",
+              "RelatedIdentifier(s)",
+              "Description(s)",
+              "GeoLocation(s)"
+            ]
+          },
+          {
+            "title": "DDI (Data Documentation Initiative)",
+            "description": "Sosyal bilimler için özel metadata standardı",
+            "url": "https://ddialliance.org/",
+            "type": "standard",
+            "domain": "social-sciences",
+            "features": [
+              "Anket verisi dokümantasyonu",
+              "Değişken tanımları",
+              "Kod kitapları",
+              "Metodoloji açıklamaları"
+            ]
+          },
+          {
+            "title": "Darwin Core",
+            "description": "Biyoloji ve biyoçeşitlilik için metadata standardı",
+            "url": "https://dwc.tdwg.org/",
+            "type": "standard",
+            "domain": "biodiversity",
+            "features": [
+              "Tür adları standartlaştırılmış terimler",
+              "Coğrafi konum bilgileri",
+              "Toplama metodu ve zamanı",
+              "Taksonomik sınıflandırma"
+            ]
+          },
+          {
+            "title": "CIF (Crystallographic Information File)",
+            "description": "Kimya ve kristalografi için metadata standardı",
+            "url": "https://www.iucr.org/resources/cif",
+            "type": "standard",
+            "domain": "chemistry",
+            "features": [
+              "Kristal yapı verileri",
+              "Kimyasal formüller",
+              "Deneysel koşullar",
+              "Ölçüm parametreleri"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "communities",
+        "title": "Topluluklar ve Ağlar",
+        "description": "FAIR veri alanında aktif topluluklar",
+        "items": [
+          {
+            "title": "Research Data Alliance (RDA)",
+            "description": "Uluslararası veri paylaşımı topluluğu",
+            "url": "https://www.rd-alliance.org/",
+            "type": "community",
+            "scope": "international",
+            "features": [
+              "Çalışma grupları",
+              "Teknik öneriler",
+              "Yıllık toplantılar",
+              "Metadata standartları"
+            ]
+          },
+          {
+            "title": "CODATA",
+            "description": "Bilimsel veri komitesi",
+            "url": "https://codata.org/",
+            "type": "organization",
+            "scope": "international",
+            "services": [
+              "Veri bilimi eğitimleri",
+              "Politika önerileri",
+              "Araştırma raporları",
+              "Uluslararası işbirliği"
+            ]
+          },
+          {
+            "title": "DataCite",
+            "description": "DOI sağlayıcı konsorsiyum",
+            "url": "https://datacite.org/",
+            "type": "consortium",
+            "scope": "international",
+            "services": [
+              "DOI tahsisi",
+              "Metadata standartları",
+              "Veri keşfi",
+              "Araştırma metrikleri"
+            ]
+          },
+          {
+            "title": "GOFAIR Foundation",
+            "description": "FAIR prensiplerini destekleyen küresel ağ",
+            "url": "https://www.gofair.foundation/",
+            "type": "foundation",
+            "scope": "international",
+            "initiatives": [
+              "Implementation Networks",
+              "FAIR data points",
+              "Training programs",
+              "Policy development"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "funding",
+        "title": "Fon Kaynakları",
+        "description": "FAIR veri gerektiren fon kaynakları",
+        "items": [
+          {
+            "title": "Horizon Europe",
+            "description": "Avrupa Birliği araştırma programı",
+            "url": "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en",
+            "type": "funding",
+            "scope": "european",
+            "requirements": [
+              "Açık bilim gereksinimleri",
+              "Veri yönetimi planı zorunluluğu",
+              "FAIR veri prensipleri",
+              "Açık erişim yayınları"
+            ]
+          },
+          {
+            "title": "TÜBİTAK",
+            "description": "Türkiye Bilimsel ve Teknolojik Araştırma Kurumu",
+            "url": "https://www.tubitak.gov.tr/",
+            "type": "funding",
+            "scope": "national",
+            "programs": [
+              "ARDEB projeleri",
+              "Açık erişim politikası",
+              "Veri yönetimi planı",
+              "Ulusal veri depoları"
+            ]
+          },
+          {
+            "title": "Avrupa Araştırma Konseyi (ERC)",
+            "description": "Avrupa'nın prestijli araştırma fonu",
+            "url": "https://erc.europa.eu/",
+            "type": "funding",
+            "scope": "european",
+            "requirements": [
+              "FAIR veri gereksinimleri",
+              "Veri yönetimi desteği",
+              "Açık erişim zorunluluğu",
+              "Araştırma veri planı"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "projects",
+        "title": "Örnek Projeler",
+        "description": "Türkiye'deki FAIR veri örnek projeleri",
+        "items": [
+          {
+            "title": "FAIR4Health Projesi",
+            "description": "Sağlık verilerinin FAIRleştirilmesi projesi",
+            "organization": "SRDC",
+            "funding": "AB Horizon 2020",
+            "url": "https://www.fair4health.eu/",
+            "scope": "healthcare",
+            "achievements": [
+              "Sağlık veri standardizasyonu",
+              "FAIR metadata şemaları",
+              "Veri dönüştürme araçları",
+              "Pilot uygulamalar"
+            ]
+          },
+          {
+            "title": "Türkiye Biyoçeşitlilik Veritabanı",
+            "description": "Türkiye'nin biyoçeşitlilik verilerinin FAIR standardında yayınlanması",
+            "organization": "Hacettepe Üniversitesi",
+            "standards": [
+              "GBIF standartları",
+              "Darwin Core metadata",
+              "Açık erişim",
+              "Coğrafi koordinatlar"
+            ]
+          },
+          {
+            "title": "TÜBİTAK Açık Veri Girişimi",
+            "description": "Ulusal açık veri ve FAIR prensipleri altyapısı",
+            "organization": "TÜBİTAK ULAKBİM",
+            "components": [
+              "APERTA veri deposu",
+              "Metadata standartları",
+              "Eğitim programları",
+              "Kurumsal destek"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "quickLinks": {
+    "title": "Hızlı Bağlantılar",
+    "essential": [
+      {
+        "title": "FAIR Prensipleri",
+        "url": "https://www.go-fair.org/fair-principles/",
+        "description": "Orijinal FAIR prensipleri"
+      },
+      {
+        "title": "F-UJI Değerlendirme",
+        "url": "https://www.f-uji.net/",
+        "description": "Otomatik FAIR değerlendirme"
+      },
+      {
+        "title": "Zenodo",
+        "url": "https://zenodo.org/",
+        "description": "Ücretsiz veri deposu"
+      },
+      {
+        "title": "TÜBİTAK Açık Bilim",
+        "url": "https://acikveri.ulakbim.gov.tr/",
+        "description": "Türkçe FAIR kaynakları"
+      }
+    ]
+  }
+}

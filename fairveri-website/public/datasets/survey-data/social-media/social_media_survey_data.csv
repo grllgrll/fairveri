@@ -1,0 +1,26 @@
+participant_id,age,gender,education_level,university_year,social_media_platforms,daily_usage_hours,primary_platform,posting_frequency,privacy_awareness,data_sharing_comfort,academic_impact,mental_health_impact,information_source_trust,city,data_collection_date
+SM001,20,Kadın,Lisans,2,"Instagram,TikTok,Twitter",4.5,Instagram,Günlük,Orta,Düşük,Olumsuz,Orta,Orta,İstanbul,2024-01-15
+SM002,22,Erkek,Lisans,4,"Twitter,LinkedIn,YouTube",3.2,Twitter,Haftalık,Yüksek,Yüksek,Olumlu,Düşük,Yüksek,Ankara,2024-01-16
+SM003,19,Kadın,Lisans,1,"Instagram,Snapchat,TikTok",6.1,TikTok,Günlük,Düşük,Düşük,Olumsuz,Yüksek,Düşük,İzmir,2024-01-17
+SM004,21,Erkek,Lisans,3,"Facebook,Instagram,WhatsApp",2.8,Instagram,Haftalık,Yüksek,Orta,Nötr,Düşük,Orta,Bursa,2024-01-18
+SM005,23,Kadın,Yüksek Lisans,1,"LinkedIn,Twitter,Instagram",3.7,LinkedIn,Günlük,Yüksek,Yüksek,Olumlu,Düşük,Yüksek,İstanbul,2024-01-19
+SM006,20,Erkek,Lisans,2,"YouTube,Reddit,Discord",5.2,YouTube,Günlük,Orta,Orta,Nötr,Orta,Orta,Antalya,2024-01-20
+SM007,22,Kadın,Lisans,4,"Instagram,Pinterest,TikTok",4.9,Instagram,Günlük,Düşük,Düşük,Olumsuz,Yüksek,Düşük,Adana,2024-01-21
+SM008,19,Erkek,Lisans,1,"TikTok,Instagram,Snapchat",7.3,TikTok,Günlük,Düşük,Düşük,Olumsuz,Yüksek,Düşük,Gaziantep,2024-01-22
+SM009,24,Kadın,Yüksek Lisans,2,"Twitter,LinkedIn,Medium",2.4,Twitter,Haftalık,Yüksek,Yüksek,Olumlu,Düşük,Yüksek,İstanbul,2024-01-23
+SM010,21,Erkek,Lisans,3,"Instagram,Twitter,Reddit",3.8,Instagram,Günlük,Orta,Orta,Nötr,Orta,Orta,Konya,2024-01-24
+SM011,20,Kadın,Lisans,2,"TikTok,Instagram,YouTube",5.6,TikTok,Günlük,Düşük,Düşük,Olumsuz,Yüksek,Düşük,Kayseri,2024-01-25
+SM012,23,Erkek,Lisans,4,"LinkedIn,Twitter,Instagram",3.1,LinkedIn,Haftalık,Yüksek,Yüksek,Olumlu,Düşük,Yüksek,Eskişehir,2024-01-26
+SM013,19,Kadın,Lisans,1,"Instagram,Snapchat,Pinterest",4.7,Instagram,Günlük,Düşük,Düşük,Olumsuz,Orta,Düşük,Samsun,2024-01-27
+SM014,22,Erkek,Lisans,4,"YouTube,Reddit,Twitter",4.2,YouTube,Günlük,Orta,Orta,Nötr,Orta,Orta,Trabzon,2024-01-28
+SM015,25,Kadın,Yüksek Lisans,3,"LinkedIn,Instagram,Facebook",2.9,LinkedIn,Haftalık,Yüksek,Yüksek,Olumlu,Düşük,Yüksek,İstanbul,2024-01-29
+SM016,20,Erkek,Lisans,2,"TikTok,Instagram,Discord",6.4,TikTok,Günlük,Düşük,Düşük,Olumsuz,Yüksek,Düşük,Diyarbakır,2024-01-30
+SM017,21,Kadın,Lisans,3,"Instagram,Twitter,Pinterest",4.1,Instagram,Günlük,Orta,Orta,Nötr,Orta,Orta,Malatya,2024-01-31
+SM018,24,Erkek,Yüksek Lisans,2,"Twitter,LinkedIn,Medium",3.3,Twitter,Haftalık,Yüksek,Yüksek,Olumlu,Düşük,Yüksek,Ankara,2024-02-01
+SM019,19,Kadın,Lisans,1,"TikTok,Snapchat,Instagram",5.8,TikTok,Günlük,Düşük,Düşük,Olumsuz,Yüksek,Düşük,Van,2024-02-02
+SM020,22,Erkek,Lisans,4,"YouTube,Twitch,Discord",6.1,YouTube,Günlük,Orta,Orta,Nötr,Orta,Orta,İzmir,2024-02-03
+SM021,23,Kadın,Lisans,4,"LinkedIn,Instagram,Twitter",3.6,LinkedIn,Haftalık,Yüksek,Yüksek,Olumlu,Düşük,Yüksek,Mersin,2024-02-04
+SM022,20,Erkek,Lisans,2,"Instagram,TikTok,Reddit",4.8,Instagram,Günlük,Düşük,Düşük,Olumsuz,Yüksek,Düşük,Denizli,2024-02-05
+SM023,21,Kadın,Lisans,3,"Twitter,Instagram,Pinterest",3.9,Twitter,Günlük,Orta,Orta,Nötr,Orta,Orta,Balıkesir,2024-02-06
+SM024,25,Erkek,Yüksek Lisans,3,"LinkedIn,Twitter,YouTube",2.7,LinkedIn,Haftalık,Yüksek,Yüksek,Olumlu,Düşük,Yüksek,İstanbul,2024-02-07
+SM025,19,Kadın,Lisans,1,"TikTok,Instagram,Snapchat",6.7,TikTok,Günlük,Düşük,Düşük,Olumsuz,Yüksek,Düşük,Erzurum,2024-02-08

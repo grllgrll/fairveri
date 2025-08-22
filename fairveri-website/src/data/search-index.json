@@ -1,0 +1,50 @@
+{
+  "searchIndex": [
+    {
+      "id": "fair-principles",
+      "title": "FAIR Veri Prensipleri",
+      "description": "Findable, Accessible, Interoperable, Reusable veri prensipleri hakkında bilgi edinin",
+      "content": "FAIR veri prensipleri bilimsel verilerin daha kolay bulunabilir, erişilebilir, birlikte çalışabilir ve yeniden kullanılabilir olmasını sağlar",
+      "category": "principles",
+      "subcategory": "general",
+      "url": "/principles",
+      "keywords": ["FAIR", "veri", "prensip", "bilim"],
+      "tags": ["FAIR", "veri", "prensip", "bilim"],
+      "weight": 1,
+      "language": "tr",
+      "metadata": {
+        "lastUpdated": "2024-01-01",
+        "importance": "high"
+      }
+    },
+    {
+      "id": "assessment-tool",
+      "title": "FAIR Değerlendirme Aracı",
+      "description": "Veri setinizin FAIR prensiplere uygunluğunu değerlendirin",
+      "content": "15 soru ile veri setinizin FAIR prensiplere ne kadar uygun olduğunu ölçün ve iyileştirme önerileri alın",
+      "category": "tools",
+      "subcategory": "assessment",
+      "url": "/assessment",
+      "keywords": ["değerlendirme", "araç", "FAIR", "test"],
+      "tags": ["değerlendirme", "araç", "FAIR", "test"],
+      "weight": 1,
+      "language": "tr",
+      "metadata": {
+        "lastUpdated": "2024-01-01",
+        "importance": "high"
+      }
+    }
+  ],
+  "searchFilters": {
+    "categories": ["principles", "tools", "education", "support"],
+    "languages": ["tr", "en"],
+    "types": ["guide", "tool", "tutorial", "reference"]
+  },
+  "searchSuggestions": [
+    "fair prensipleri",
+    "değerlendirme aracı",
+    "veri yönetimi",
+    "metadata",
+    "açık veri"
+  ]
+}

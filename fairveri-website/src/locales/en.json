@@ -1,0 +1,711 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "search": "Search",
+    "clear": "Clear",
+    "select": "Select",
+    "home": "Home",
+    "back": "Back",
+    "continue": "Continue",
+    "finish": "Finish",
+    "start": "Start",
+    "stop": "Stop",
+    "pause": "Pause",
+    "resume": "Resume",
+    "complete": "Complete",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information",
+    "help": "Help",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies"
+  },
+  "navigation": {
+    "home": "Home",
+    "principles": "FAIR Principles",
+    "principlesShort": "Principles",
+    "tools": "Tools",
+    "metadataTools": "Metadata Tools",
+    "dataCleaning": "Data Cleaning",
+    "dataRepositories": "Data Repositories",
+    "surveyData": "Survey Data",
+    "labData": "Laboratory Data",
+    "softwareProject": "Software Project",
+    "gettingStarted": "Getting Started Guide",
+    "generalQuestions": "General Questions",
+    "technicalQuestions": "Technical Questions",
+    "examples": "Practical Examples",
+    "examplesShort": "Examples",
+    "learn": "Learn",
+    "faq": "FAQ",
+    "faqShort": "FAQ",
+    "resources": "Resources",
+    "assessment": "FAIR Assessment",
+    "assessmentShort": "Assessment",
+    "research": "Research",
+    "glossary": "Glossary",
+    "roadmap": "Roadmap",
+    "partners": "Partners",
+    "partnersDescription": "Our partner institutions and organizations",
+    "contact": "Contact",
+    "contactDescription": "Get in touch with us",
+    "skipToContent": "Skip to main content",
+    "skipToNavigation": "Skip to navigation",
+    "skipToFooter": "Skip to footer",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "fair": {
+    "title": "FAIR Data Principles",
+    "titleWithoutFair": "Data Principles",
+    "subtitle": "Guidelines for Making Research Data Findable, Accessible, Interoperable, and Reusable",
+    "description": "FAIR comprises a set of guiding principles to make research data and digital assets Findable, Accessible, Interoperable, and Reusable.",
+    "findable": {
+      "title": "Findable",
+      "shortTitle": "Findable",
+      "description": "Your data becomes easily discoverable through persistent identifiers (DOI, Handle) and rich metadata in search engines and catalogs. This increases your research visibility and opens doors to new collaborations.",
+      "letter": "F"
+    },
+    "accessible": {
+      "title": "Accessible",
+      "shortTitle": "Accessible",
+      "description": "Secure access to your data is provided through standard protocols like HTTP/HTTPS. Authentication and authorization mechanisms enable controlled sharing. Metadata remains always accessible.",
+      "letter": "A"
+    },
+    "interoperable": {
+      "title": "Interoperable",
+      "shortTitle": "Interoperable",
+      "description": "Using standard data formats (JSON, XML, CSV) and controlled vocabularies, your data integrates seamlessly with other systems. This facilitates data analysis and meta-analyses.",
+      "letter": "I"
+    },
+    "reusable": {
+      "title": "Reusable",
+      "shortTitle": "Reusable",
+      "description": "With open licenses like Creative Commons and detailed provenance information, your data can be safely reused by future generations of researchers. This accelerates scientific progress.",
+      "letter": "R"
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title": "FAIR Data Principles",
+      "subtitle": "Maximize your research's global impact by enhancing the findability, accessibility, interoperability, and reusability of your data",
+      "description": "Adopted by 50,000+ researchers worldwide since 2016, FAIR principles help you increase your data's scientific value, build new collaborations, and ensure the sustainability of your research outcomes",
+      "ctaStart": "Start FAIR Assessment",
+      "ctaExplore": "Explore Research"
+    },
+    "whatIsFair": {
+      "title": "What is FAIR?",
+      "subtitle": "Each letter represents a critical principle in data management"
+    },
+    "benefits": {
+      "title": "Benefits of FAIR Principles",
+      "subtitle": "Enhance your research impact by making your data FAIR",
+      "items": [
+        {
+          "title": "Increase Research Impact",
+          "description": "FAIR data receives 25% more citations and is used in multidisciplinary research. Boost your academic career by increasing your visibility.",
+          "stats": "25% more citations"
+        },
+        {
+          "title": "Build Global Collaborations",
+          "description": "Collaborate with researchers worldwide through standardized data. Scientists from 150+ countries can use your FAIR data.",
+          "stats": "150+ country access"
+        },
+        {
+          "title": "Create Long-term Value",
+          "description": "Your data remains valuable even 10-20 years later. Transfer your research legacy to future generations with digital preservation strategies.",
+          "stats": "20+ years sustainability"
+        },
+        {
+          "title": "Guarantee Data Quality",
+          "description": "90% fewer data errors with standard metadata schemas. Create error-free datasets with automated validation tools.",
+          "stats": "90% fewer errors"
+        },
+        {
+          "title": "Increase Research Efficiency 3x",
+          "description": "Reduce analysis time with organized data. Instantly find and reuse your past work thanks to metadata.",
+          "stats": "3x faster analysis"
+        },
+        {
+          "title": "Ensure Security and Compliance",
+          "description": "Meet GDPR, international funding agency requirements. Minimize legal risks with secure data sharing.",
+          "stats": "100% compliance guarantee"
+        }
+      ]
+    },
+    "successStories": {
+      "title": "Success Stories",
+      "subtitle": "Real experiences from researchers implementing FAIR principles"
+    },
+    "statistics": {
+      "title": "Numbers Changed by FAIR",
+      "subtitle": "Current statistics showing the global impact of FAIR principles",
+      "items": [
+        {
+          "number": "50,000+",
+          "label": "Active Researchers",
+          "description": "Number of scientists implementing FAIR principles in their daily work"
+        },
+        {
+          "number": "2.5M+",
+          "label": "FAIR Datasets",
+          "description": "Number of datasets meeting FAIR standards in the global data pool"
+        },
+        {
+          "number": "150+",
+          "label": "Countries",
+          "description": "Number of countries officially adopting FAIR principles"
+        },
+        {
+          "number": "73%",
+          "label": "More Citations",
+          "description": "Average citation increase of FAIR data compared to traditional data sharing"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Start Your FAIR Journey Today",
+      "description": "Assess your data's FAIR status in just 15 minutes and maximize your research impact with proven methods used by 50,000+ researchers worldwide",
+      "features": [
+        "Free assessment",
+        "Instant results",
+        "Personalized guidance"
+      ],
+      "primaryButton": "🚀 Start Assessment Now",
+      "secondaryButton": "📚 I Want to Learn First",
+      "tip": "💡 Tip: The assessment takes only 5-10 minutes and you get instant personalized recommendations"
+    }
+  },
+  "assessment": {
+    "title": "FAIR Principles Assessment",
+    "subtitle": "Evaluate your dataset's compliance with FAIR principles using our comprehensive assessment tool. Get personalized recommendations and actionable insights to improve your data management practices.",
+    "start": "Start Assessment",
+    "continue": "Continue Assessment",
+    "complete": "Complete Assessment",
+    "progress": "{{current}} / {{total}} questions completed",
+    "questions": "{{count}} Questions",
+    "duration": "15-20 Minutes",
+    "report": "Personalized Report",
+    "features": {
+      "comprehensive": "Comprehensive evaluation of all FAIR principles",
+      "duration": "Typical completion time for comprehensive assessment",
+      "personalized": "Detailed results with actionable recommendations"
+    },
+    "showExplanations": "Show Explanations",
+    "hideExplanations": "Hide Explanations",
+    "exportProgress": "Export Progress",
+    "import": "Import",
+    "reset": "Reset",
+    "progressTitle": "Assessment Progress",
+    "questionsLabel": "questions",
+    "questionCounter": "{{current}}/{{total}}",
+    "importPlaceholder": "Paste your exported assessment data here...",
+    "invalidImportData": "Invalid import data. Please check the format and try again.",
+    "exportFileName": "fair-assessment-{{date}}",
+    "results": {
+      "progress": "Progress",
+      "overallScore": "Overall FAIR Score"
+    },
+    "whyThisMatters": "Why this matters:",
+    "feedback": "Feedback:",
+    "tipsForImprovement": "Tips for improvement:",
+    "questions": {
+      "f1": {
+        "title": "Unique and Persistent Identifiers",
+        "question": "Does your dataset have a unique and persistent identifier (like DOI, Handle, or UUID)?",
+        "explanation": "A unique identifier ensures your dataset can be consistently referenced and cited. Persistent identifiers like DOI remain valid even if the location changes.",
+        "options": {
+          "yes_doi": {
+            "label": "Yes, we use DOI or similar persistent identifier",
+            "feedback": "Excellent! DOI and similar persistent identifiers are the gold standard for dataset identification."
+          },
+          "yes_uuid": {
+            "label": "Yes, we use UUID or similar unique identifier",
+            "feedback": "Good! UUIDs provide uniqueness but consider upgrading to persistent identifiers like DOI for better longevity."
+          },
+          "partial": {
+            "label": "We have some form of identifier but it's not globally unique",
+            "feedback": "This is a start, but consider implementing globally unique identifiers for better discoverability."
+          },
+          "no": {
+            "label": "No, we don't have unique identifiers",
+            "feedback": "Consider implementing unique identifiers as a priority. Start with DOI or UUID systems."
+          }
+        },
+        "tips": {
+          "0": "Use DOI for published datasets",
+          "1": "Consider Handle System for institutional repositories",
+          "2": "Ensure identifiers are included in all metadata"
+        },
+        "tips": {
+          "0": "Use institutional repositories for internal discoverability",
+          "1": "Register in disciplinary databases for domain-specific discovery", 
+          "2": "Consider general repositories like Zenodo for broader reach"
+        }
+      },
+      "f2": {
+        "title": "Rich Metadata",
+        "question": "How comprehensive is the metadata describing your dataset?",
+        "explanation": "Rich metadata helps both humans and machines understand what your dataset contains, how it was created, and how it can be used.",
+        "options": {
+          "comprehensive": {
+            "label": "Comprehensive metadata including methodology, variables, and context",
+            "feedback": "Excellent! Comprehensive metadata is crucial for dataset discovery and reuse."
+          },
+          "good": {
+            "label": "Good metadata with basic information and some details",
+            "feedback": "Good start! Consider adding more methodological details and context information."
+          },
+          "basic": {
+            "label": "Basic metadata with title, author, and description",
+            "feedback": "Basic metadata is present but could be enriched with more details about methodology and context."
+          },
+          "minimal": {
+            "label": "Minimal or no metadata",
+            "feedback": "Metadata is essential for findability. Start with basic elements and gradually add more details."
+          }
+        },
+        "tips": {
+          "0": "Include creation date, methodology, and data collection details",
+          "1": "Add keywords and subject classifications",
+          "2": "Document data quality and limitations"
+        }
+      },
+      "f3": {
+        "title": "Metadata-Data Relationship",
+        "question": "Does your metadata clearly identify which dataset it describes?",
+        "explanation": "Metadata should explicitly reference the dataset it describes, creating a clear connection between the two.",
+        "options": {
+          "explicit": {
+            "label": "Yes, metadata explicitly references the dataset identifier",
+            "feedback": "Perfect! Clear metadata-data relationships are essential for automated discovery."
+          },
+          "implicit": {
+            "label": "The relationship is implicit but clear",
+            "feedback": "Consider making the relationship more explicit by including dataset identifiers in metadata."
+          },
+          "unclear": {
+            "label": "The relationship is unclear or ambiguous",
+            "feedback": "Make the metadata-data relationship more explicit to improve automated discovery."
+          },
+          "no": {
+            "label": "No clear relationship between metadata and data",
+            "feedback": "Establish clear connections between metadata and data by including explicit references."
+          }
+        }
+      },
+      "f4": {
+        "title": "Searchable Registry",
+        "question": "Are your data and metadata registered in a searchable resource?",
+        "explanation": "Registration in searchable catalogs, repositories, or databases makes your dataset discoverable by search engines and other researchers.",
+        "options": {
+          "multiple": {
+            "label": "Registered in multiple searchable repositories/catalogs",
+            "feedback": "Excellent! Multiple registrations increase discoverability across different communities."
+          },
+          "institutional": {
+            "label": "Registered in institutional or disciplinary repository",
+            "feedback": "Great! Institutional repositories provide good discoverability within your domain."
+          },
+          "single": {
+            "label": "Registered in one searchable resource",
+            "feedback": "Good start! Consider registering in additional relevant repositories for broader reach."
+          },
+          "no": {
+            "label": "Not registered in any searchable resource",
+            "feedback": "Consider registering your dataset in appropriate repositories to increase discoverability."
+          }
+        },
+        "tips": {
+          "0": "Use institutional repositories for internal discoverability",
+          "1": "Register in disciplinary databases for domain-specific discovery",
+          "2": "Consider general repositories like Zenodo for broader reach"
+        }
+      },
+      "a1": {
+        "title": "Standard Communication Protocol",
+        "question": "Are your data and metadata accessible via standardized communication protocols?",
+        "explanation": "Standard protocols such as HTTP, HTTPS, FTP provide universal access to your data.",
+        "options": {
+          "multiple": {
+            "label": "Multiple standard protocols supported (HTTP/HTTPS, FTP, etc.)",
+            "feedback": "Excellent! Multiple protocol support provides maximum accessibility."
+          },
+          "https": {
+            "label": "Secure access via HTTPS",
+            "feedback": "Great! HTTPS has become the standard for secure data access."
+          },
+          "http": {
+            "label": "Access via HTTP",
+            "feedback": "Good, but consider upgrading to HTTPS for sensitive data."
+          },
+          "proprietary": {
+            "label": "Proprietary or non-standard protocol",
+            "feedback": "Consider adopting standard protocols for broader accessibility."
+          }
+        }
+      },
+      "a1_1": {
+        "title": "Open Protocol",
+        "question": "Are the access protocols open, free, and universally implementable?",
+        "explanation": "Open protocols ensure that anyone can access your data without proprietary software or licenses.",
+        "options": {
+          "fully_open": {
+            "label": "Fully open and free protocols",
+            "feedback": "Excellent! Open protocols provide maximum accessibility."
+          },
+          "mostly_open": {
+            "label": "Mostly open with some minor restrictions",
+            "feedback": "Good! Consider removing remaining restrictions for full openness."
+          },
+          "mixed": {
+            "label": "Mix of open and proprietary protocols",
+            "feedback": "Consider migrating to open protocols where possible."
+          },
+          "proprietary": {
+            "label": "Proprietary or licensed protocols",
+            "feedback": "Consider adopting open protocols to improve accessibility."
+          }
+        }
+      },
+      "a1_2": {
+        "title": "Authentication and Authorization",
+        "question": "Does your access protocol support authentication and authorization when needed?",
+        "explanation": "Secure authentication protects sensitive data while enabling controlled access.",
+        "options": {
+          "comprehensive": {
+            "label": "Comprehensive authentication and detailed authorization",
+            "feedback": "Excellent! Good balance between security and accessibility."
+          },
+          "standard": {
+            "label": "Standard authentication systems (OAuth, SAML, etc.)",
+            "feedback": "Great! Standard systems are secure and widely supported."
+          },
+          "basic": {
+            "label": "Basic authentication available",
+            "feedback": "Good start! Consider modern standards for enhanced security."
+          },
+          "none": {
+            "label": "No authentication system",
+            "feedback": "Consider adding authentication for sensitive data."
+          }
+        }
+      },
+      "a2": {
+        "title": "Persistent Metadata",
+        "question": "Will metadata remain accessible even if the data is no longer available?",
+        "explanation": "Metadata persistence ensures that context and information are preserved even if data is lost.",
+        "options": {
+          "guaranteed": {
+            "label": "Yes, metadata persistence is guaranteed",
+            "feedback": "Excellent! Persistent metadata ensures long-term information preservation."
+          },
+          "likely": {
+            "label": "Likely, with strong institutional support",
+            "feedback": "Good! Consider establishing formal persistence policies."
+          },
+          "uncertain": {
+            "label": "Unclear, no explicit policy",
+            "feedback": "Develop clear policies for metadata persistence."
+          },
+          "no": {
+            "label": "No, metadata will be lost with data",
+            "feedback": "Develop strategies to preserve metadata independently from data."
+          }
+        }
+      },
+      "i1": {
+        "title": "Formal Language",
+        "question": "Do your data and metadata use a formal, accessible, shared, and broadly applicable language for knowledge representation?",
+        "explanation": "Standard formats like RDF, JSON-LD, XML enable machine-to-machine interoperability.",
+        "options": {
+          "multiple_standards": {
+            "label": "Multiple standard formats supported (RDF, JSON-LD, XML)",
+            "feedback": "Excellent! Multiple format support provides maximum interoperability."
+          },
+          "single_standard": {
+            "label": "Single widely-used standard in use",
+            "feedback": "Good! A widely-used standard provides good interoperability."
+          },
+          "semi_standard": {
+            "label": "Semi-standard or community format",
+            "feedback": "Consider migrating to full standards for broader interoperability."
+          },
+          "proprietary": {
+            "label": "Proprietary or non-standard format",
+            "feedback": "Consider adopting standard formats to improve interoperability."
+          }
+        }
+      },
+      "i2": {
+        "title": "FAIR Vocabularies",
+        "question": "Do your data and metadata use vocabularies that follow FAIR principles?",
+        "explanation": "FAIR vocabularies enable consistent and machine-understandable use of terms.",
+        "options": {
+          "extensive": {
+            "label": "Extensive use of FAIR vocabularies",
+            "feedback": "Excellent! FAIR vocabularies maximize semantic interoperability."
+          },
+          "moderate": {
+            "label": "Some FAIR vocabularies in use",
+            "feedback": "Good! Consider integrating more FAIR vocabularies."
+          },
+          "minimal": {
+            "label": "Minimal FAIR vocabulary usage",
+            "feedback": "Use more standard vocabularies to improve interoperability."
+          },
+          "none": {
+            "label": "No FAIR vocabularies used",
+            "feedback": "Research and implement FAIR vocabularies for semantic interoperability."
+          }
+        },
+        "tips": {
+          "0": "Use ORCID for researcher identification",
+          "1": "Implement ROR for institutional affiliations",
+          "2": "Adopt domain-specific vocabularies like MeSH for medical data"
+        }
+      },
+      "i3": {
+        "title": "Qualified References",
+        "question": "Do your data and metadata include qualified references to other data and metadata?",
+        "explanation": "Clear references to other resources create data networks and enrich context.",
+        "options": {
+          "comprehensive": {
+            "label": "Comprehensive and qualified cross-references",
+            "feedback": "Excellent! Rich references provide data networks and enhanced discovery."
+          },
+          "good": {
+            "label": "Good references to related datasets",
+            "feedback": "Good! Consider adding more references for richer context."
+          },
+          "basic": {
+            "label": "Some basic references available",
+            "feedback": "Add more qualified references to strengthen data context."
+          },
+          "none": {
+            "label": "No references to other resources",
+            "feedback": "Consider adding references to related datasets and resources."
+          }
+        }
+      },
+      "r1": {
+        "title": "Rich Description with Attributes",
+        "question": "Are your data described with a plurality of accurate and relevant attributes?",
+        "explanation": "Detailed attributes help users understand and properly use your data.",
+        "options": {
+          "comprehensive": {
+            "label": "Comprehensive description with rich metadata",
+            "feedback": "Excellent! Rich description provides maximum reusability."
+          },
+          "detailed": {
+            "label": "Well-detailed attributes",
+            "feedback": "Great! Detailed attributes provide good reusability."
+          },
+          "basic": {
+            "label": "Basic attributes available",
+            "feedback": "Add more descriptive attributes to improve reusability."
+          },
+          "minimal": {
+            "label": "Minimal description",
+            "feedback": "Add comprehensive attributes to increase your data's value."
+          }
+        }
+      },
+      "r1_1": {
+        "title": "Clear Usage License",
+        "question": "Are your data published with a clear and accessible usage license?",
+        "explanation": "Clear licenses explicitly state how users can use your data.",
+        "options": {
+          "open": {
+            "label": "Open license (CC0, CC-BY, etc.)",
+            "feedback": "Excellent! Open licenses provide maximum reusability."
+          },
+          "clear": {
+            "label": "License with clear usage terms",
+            "feedback": "Good! Clear licensing enables safe reuse."
+          },
+          "restrictive": {
+            "label": "Restrictive but clear license",
+            "feedback": "Consider more open licenses for broader usage."
+          },
+          "none": {
+            "label": "No license information",
+            "feedback": "Always add a license for legal clarity."
+          }
+        }
+      },
+      "r1_2": {
+        "title": "Detailed Provenance Information",
+        "question": "Are your data associated with detailed provenance information?",
+        "explanation": "Provenance information documents where data came from and how it was processed, building trust.",
+        "options": {
+          "complete": {
+            "label": "Complete provenance information and processing history",
+            "feedback": "Excellent! Detailed provenance provides maximum trust and reusability."
+          },
+          "good": {
+            "label": "Well-documented provenance information",
+            "feedback": "Great! Good provenance documentation enables reliable reuse."
+          },
+          "basic": {
+            "label": "Basic provenance information available",
+            "feedback": "Expand provenance documentation for more trust."
+          },
+          "none": {
+            "label": "No provenance information",
+            "feedback": "Consider documenting data origin and processing history."
+          }
+        }
+      },
+      "r1_3": {
+        "title": "Community Standards",
+        "question": "Do your data and metadata meet community standards for the relevant domain?",
+        "explanation": "Domain-specific standards enable seamless data sharing and reuse within your community.",
+        "options": {
+          "certified": {
+            "label": "Certified or fully compliant",
+            "feedback": "Excellent! Full compliance with community standards provides ideal reusability."
+          },
+          "compliant": {
+            "label": "Largely compliant",
+            "feedback": "Great! Good standard compliance facilitates community use."
+          },
+          "partial": {
+            "label": "Partially compliant",
+            "feedback": "Complete missing standards for full compliance."
+          },
+          "none": {
+            "label": "Community standards not followed",
+            "feedback": "Research and implement standards in your field."
+          }
+        }
+      }
+    },
+    "categories": {
+      "findable": {
+        "title": "Findable",
+        "description": "The first step in making data reusable is to ensure it can be found by both humans and computers."
+      },
+      "accessible": {
+        "title": "Accessible", 
+        "description": "Data should be accessible through standard protocols with appropriate authorization."
+      },
+      "interoperable": {
+        "title": "Interoperable",
+        "description": "Data should be designed to integrate with other data and be usable with various applications."
+      },
+      "reusable": {
+        "title": "Reusable",
+        "description": "Data should be optimized for future use and prepared for reuse with clear licenses."
+      }
+    }
+  },
+  "search": {
+    "placeholder": "Search FAIR principles, tools, examples...",
+    "noResults": "No results found for \"{{query}}\".",
+    "noResultsHint": "Try different keywords or check your filters.",
+    "resultsCount": "{{count}} results found",
+    "filters": "Filters",
+    "clearFilters": "Clear",
+    "popularSearches": "Popular Searches",
+    "searchHistory": "Search History",
+    "clearHistory": "Clear Search History",
+    "tips": {
+      "title": "💡 Search Tips",
+      "items": [
+        "\"FAIR principles\" - For basic information",
+        "\"metadata tools\" - For data management tools",
+        "\"license selection\" - For data sharing guide"
+      ]
+    },
+    "shortcuts": {
+      "select": "⏎ select",
+      "navigate": "↑↓ navigate",
+      "close": "esc close"
+    }
+  },
+  "footer": {
+    "description": "Enhance the findability, accessibility, interoperability, and reusability of your data with FAIR data principles.",
+    "quickActions": "Quick Actions",
+    "fairPrinciples": "FAIR Principles",
+    "toolsAndResources": "Tools and Resources",
+    "supportAndInfo": "Support and Information",
+    "copyright": "© 2024 FairVeri. All rights reserved.",
+    "tagline": "A better data ecosystem with FAIR data principles.",
+    "links": {
+      "quickAssessment": "🎯 Quick Assessment",
+      "search": "🔍 Search",
+      "assessmentTools": "Assessment Tools",
+      "practicalExamples": "Practical Examples",
+      "resourceLibrary": "Resource Library",
+      "learningGuide": "Learning Guide",
+      "frequentlyAsked": "Frequently Asked Questions",
+      "dataAssessment": "Data Assessment",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "contact": "Contact",
+      "accessibility": "Accessibility"
+    }
+  },
+  "language": {
+    "selector": {
+      "label": "Language selection",
+      "turkish": "Turkish",
+      "english": "English",
+      "current": "Current language: {{language}}",
+      "switch": "Switch to {{language}}",
+      "changed": "Language changed to {{language}}"
+    }
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "skipToNavigation": "Skip to navigation",
+    "skipToFooter": "Skip to footer",
+    "descriptions": {
+      "metadataTools": "Rich metadata creation tools",
+      "dataCleaning": "Standardize your data",
+      "dataRepositories": "Publish and share your data",
+      "surveyData": "Social sciences survey data example",
+      "labData": "Chemistry laboratory experimental data",
+      "softwareProject": "Open source software FAIR documentation",
+      "gettingStarted": "FAIR data principles basics",
+      "generalQuestions": "FAIR data principles general questions",
+      "technicalQuestions": "File formats, metadata, tools",
+      "examples": "Real-world FAIR data implementation examples",
+      "learn": "Learn FAIR data principles",
+      "faq": "Questions and answers about FAIR data",
+      "resources": "Educational materials, standards and community"
+    },
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "loading": "Loading",
+    "loadingComplete": "Loading complete",
+    "error": "Error occurred",
+    "success": "Operation successful",
+    "menuExpanded": "Menu expanded",
+    "menuCollapsed": "Menu collapsed",
+    "pageChanged": "Page changed: {{title}}",
+    "languageChanged": "Language changed to {{language}}"
+  },
+  "errors": {
+    "pageNotFound": "Page Not Found",
+    "serverError": "Server Error",
+    "networkError": "Network Error",
+    "tryAgain": "Try Again",
+    "goHome": "Go to Homepage",
+    "contactSupport": "Contact Support"
+  }
+}

@@ -1,0 +1,563 @@
+{
+  "tools": {
+    "title": "FAIR Değerlendirme Araçları",
+    "description": "Veri setlerinizin FAIR prensiplere uyumluluğunu değerlendirmek için kullanabileceğiniz araçlar",
+    "categories": [
+      {
+        "id": "assessment",
+        "title": "Değerlendirme Araçları",
+        "description": "Veri setlerinizi FAIR prensiplere göre değerlendirin",
+        "tools": [
+          {
+            "id": "f-uji",
+            "name": "F-UJI",
+            "fullName": "Automated FAIR Data Assessment Tool",
+            "description": "Otomatik FAIR veri değerlendirme aracı",
+            "url": "https://www.f-uji.net",
+            "features": [
+              "🤖 Otomatik değerlendirme",
+              "📊 16 FAIR metriği",
+              "🌐 Web tabanlı",
+              "🆓 Ücretsiz"
+            ],
+            "howToUse": [
+              "https://www.f-uji.net adresine gidin",
+              "Veri setinizin DOI veya URL'sini girin",
+              "\"Assess\" butonuna tıklayın",
+              "Sonuçları inceleyin"
+            ],
+            "sampleResult": {
+              "findability": 80,
+              "accessibility": 60,
+              "interoperability": 40,
+              "reusability": 70,
+              "overall": 62.5
+            },
+            "type": "automated",
+            "cost": "free",
+            "language": "en",
+            "discipline": "general"
+          },
+          {
+            "id": "fair-aware",
+            "name": "FAIR-Aware",
+            "description": "Eğitim odaklı FAIR değerlendirme aracı",
+            "url": "https://www.fairaware.dans.knaw.nl",
+            "features": [
+              "📝 Anket tabanlı",
+              "👥 Eğitim odaklı",
+              "📚 Zengin rehberlik",
+              "🏢 Grup değerlendirmesi"
+            ],
+            "suitableFor": [
+              "FAIR'e yeni başlayanlar",
+              "Eğitim verenler",
+              "Araştırma grupları"
+            ],
+            "type": "manual",
+            "cost": "free",
+            "language": "en",
+            "discipline": "general"
+          },
+          {
+            "id": "fairshake",
+            "name": "FAIRshake",
+            "description": "Biyomedikal odaklı FAIR değerlendirme platformu",
+            "url": "https://fairshake.cloud",
+            "features": [
+              "🔬 Biyomedikal odaklı",
+              "🏅 FAIR rozetleri",
+              "🤝 Topluluk tabanlı",
+              "📊 Karşılaştırmalı analiz"
+            ],
+            "type": "semi-automated",
+            "cost": "free",
+            "language": "en",
+            "discipline": "biomedical"
+          },
+          {
+            "id": "ardc-tool",
+            "name": "ARDC FAIR Assessment Tool",
+            "description": "Avustralya Araştırma Veri Topluluğu değerlendirme aracı",
+            "url": "https://ardc.edu.au/resources/working-with-data/fair-data/fair-self-assessment-tool/",
+            "features": [
+              "🇦🇺 ARDC destekli",
+              "📋 Kapsamlı kontrol listesi",
+              "🎯 Hedef odaklı",
+              "📈 İlerleme takibi"
+            ],
+            "type": "manual",
+            "cost": "free",
+            "language": "en",
+            "discipline": "general"
+          }
+        ]
+      },
+      {
+        "id": "metadata",
+        "title": "Metadata Oluşturma Araçları",
+        "description": "Veri setleriniz için zengin metadata oluşturun",
+        "tools": [
+          {
+            "id": "dmptool",
+            "name": "DMPTool",
+            "description": "Veri yönetim planı oluşturma aracı",
+            "url": "https://dmptool.org",
+            "features": [
+              "📝 Veri yönetimi planı şablonları",
+              "🏛️ Kurum entegrasyonu",
+              "👥 İşbirliği desteği",
+              "📊 Fon sağlayıcı gereksinimleri"
+            ],
+            "type": "web-based",
+            "cost": "free",
+            "language": "en"
+          },
+          {
+            "id": "cedar",
+            "name": "CEDAR Workbench",
+            "description": "Metadata şablonu ve ontoloji editörü",
+            "url": "https://cedar.metadatacenter.org",
+            "features": [
+              "🗂️ Metadata şablonları",
+              "🔗 Ontoloji entegrasyonu",
+              "🤖 Otomatik tamamlama",
+              "🌐 Web tabanlı"
+            ],
+            "type": "web-based",
+            "cost": "free",
+            "language": "en"
+          },
+          {
+            "id": "colectica",
+            "name": "Colectica",
+            "description": "DDI metadata editörü",
+            "url": "https://www.colectica.com",
+            "features": [
+              "📊 DDI standartları",
+              "📋 Anket metadata",
+              "🔄 Versiyon kontrolü",
+              "💼 Kurumsal çözümler"
+            ],
+            "type": "desktop/web",
+            "cost": "commercial",
+            "language": "en"
+          }
+        ]
+      },
+      {
+        "id": "data-cleaning",
+        "title": "Veri Temizleme Araçları",
+        "description": "Verilerinizi FAIR standartlarına uygun hale getirin",
+        "tools": [
+          {
+            "id": "openrefine",
+            "name": "OpenRefine",
+            "description": "Veri temizleme ve dönüştürme aracı",
+            "url": "https://openrefine.org",
+            "features": [
+              "🧹 Veri temizleme",
+              "🔄 Veri dönüştürme",
+              "📊 Kalite kontrol",
+              "🆓 Açık kaynak"
+            ],
+            "type": "desktop",
+            "cost": "free",
+            "language": "multi"
+          },
+          {
+            "id": "trifacta",
+            "name": "Trifacta Wrangler",
+            "description": "Veri hazırlama platformu",
+            "url": "https://www.trifacta.com",
+            "features": [
+              "🤖 Akıllı veri hazırlama",
+              "📊 Görsel arayüz",
+              "🔄 Otomatik öneriler",
+              "☁️ Bulut tabanlı"
+            ],
+            "type": "cloud",
+            "cost": "commercial",
+            "language": "en"
+          }
+        ]
+      },
+      {
+        "id": "publishing",
+        "title": "Veri Yayınlama Araçları",
+        "description": "Verilerinizi FAIR prensiplere uygun şekilde yayınlayın",
+        "tools": [
+          {
+            "id": "dataverse",
+            "name": "Dataverse",
+            "description": "Kurumsal veri deposu yazılımı",
+            "url": "https://dataverse.org",
+            "features": [
+              "🏛️ Kurumsal depo",
+              "📊 Veri yayınlama",
+              "🔐 Erişim kontrolü",
+              "🆓 Açık kaynak"
+            ],
+            "type": "software",
+            "cost": "free",
+            "language": "multi"
+          },
+          {
+            "id": "ckan",
+            "name": "CKAN",
+            "description": "Açık veri portalı yazılımı",
+            "url": "https://ckan.org",
+            "features": [
+              "🌐 Açık veri portalı",
+              "🔍 Veri kataloğu",
+              "🔗 API desteği",
+              "🆓 Açık kaynak"
+            ],
+            "type": "software",
+            "cost": "free",
+            "language": "multi"
+          },
+          {
+            "id": "dspace",
+            "name": "DSpace",
+            "description": "Dijital depo yazılımı",
+            "url": "https://duraspace.org/dspace/",
+            "features": [
+              "📚 Dijital arşiv",
+              "🔗 Handle sistem",
+              "📊 Metadata desteği",
+              "🆓 Açık kaynak"
+            ],
+            "type": "software",
+            "cost": "free",
+            "language": "multi"
+          }
+        ]
+      },
+      {
+        "id": "genomic",
+        "title": "Genomik Veri Araçları",
+        "description": "Genomik ve multi-omiks veriler için özel FAIR araçları",
+        "tools": [
+          {
+            "id": "fair-genomes",
+            "name": "FAIR Genomes",
+            "fullName": "FAIR Genomes Metadata Standard",
+            "description": "Genomik veriler için FAIR metadata standardı ve araçları",
+            "url": "https://fair-genomes.org",
+            "features": [
+              "🧬 Genomik metadata şeması",
+              "📋 MINSEQE uyumluluğu",
+              "🔗 GA4GH standartları",
+              "🔧 Validation araçları"
+            ],
+            "howToUse": [
+              "fair-genomes.org sayfasını ziyaret edin",
+              "Metadata şemalarını indirin",
+              "Verilerinizi şemaya göre organize edin",
+              "Validation araçları ile doğrulayın"
+            ],
+            "suitableFor": [
+              "WGS/WES projeleri",
+              "RNA-seq çalışmaları",
+              "Epigenetik araştırmalar",
+              "Varyant analizi"
+            ],
+            "type": "standard",
+            "cost": "free",
+            "language": "en",
+            "discipline": "genomics"
+          },
+          {
+            "id": "beacon-network",
+            "name": "Beacon Network",
+            "description": "Genomik veri keşfi için GA4GH Beacon protokolü",
+            "url": "https://beacon-network.org",
+            "features": [
+              "🔍 Varyant sorgulama",
+              "🌐 Federated search",
+              "🔒 Gizlilik koruma",
+              "🏛️ Uluslararası ağ"
+            ],
+            "suitableFor": [
+              "Varyant keşfi",
+              "Popülasyon genomik",
+              "Nadir hastalık araştırması",
+              "Klinik genomik"
+            ],
+            "type": "network",
+            "cost": "free",
+            "language": "en",
+            "discipline": "genomics"
+          },
+          {
+            "id": "fairshake-genomics",
+            "name": "FAIRshake",
+            "description": "Biyomedikal ve genomik veriler için FAIR değerlendirme",
+            "url": "https://fairshake.cloud",
+            "features": [
+              "🧬 Genomik odaklı",
+              "🏅 FAIR skorları",
+              "📊 Detaylı raporlar",
+              "🤝 Topluluk destekli"
+            ],
+            "type": "assessment",
+            "cost": "free",
+            "language": "en",
+            "discipline": "genomics"
+          },
+          {
+            "id": "phenopackets",
+            "name": "Phenopackets",
+            "description": "Genomik ve fenotipik veri entegrasyonu için GA4GH standardı",
+            "url": "https://phenopackets.org",
+            "features": [
+              "🧬 Genomik+Fenotip entegrasyonu",
+              "📋 JSON/Protobuf formatları",
+              "🌐 GA4GH standardı",
+              "🔧 Schema validation"
+            ],
+            "howToUse": [
+              "Phenopackets şemasını indirin",
+              "Hasta fenotip verilerini organize edin",
+              "Genomik verilerle bağlantı kurun",
+              "JSON formatında export edin"
+            ],
+            "suitableFor": [
+              "Klinik genomik",
+              "Hasta-veri entegrasyonu",
+              "Nadir hastalık çalışmaları",
+              "Precision medicine"
+            ],
+            "type": "standard",
+            "cost": "free",
+            "language": "en",
+            "discipline": "genomics"
+          },
+          {
+            "id": "elixir-tools",
+            "name": "ELIXIR Tools",
+            "description": "Avrupa'nın yaşam bilimleri veri altyapısı araçları",
+            "url": "https://elixir-europe.org/platforms/tools",
+            "features": [
+              "🔬 Biyoinformatik araçları",
+              "📊 Workflow sistemleri",
+              "🗄️ Veri depoları",
+              "🌍 Pan-Avrupa ağı"
+            ],
+            "suitableFor": [
+              "Multi-omiks analizi",
+              "Workflow geliştirme",
+              "Veri entegrasyonu",
+              "İşbirlikçi projeler"
+            ],
+            "type": "platform",
+            "cost": "free",
+            "language": "multi",
+            "discipline": "multi-omics"
+          },
+          {
+            "id": "isa-tools",
+            "name": "ISA Tools",
+            "description": "Multi-omiks çalışmalar için Investigation-Study-Assay metadata standardı",
+            "url": "https://isa-tools.org",
+            "features": [
+              "📋 ISA-Tab formatı",
+              "🔬 Multi-omiks desteği",
+              "🔧 Validation araçları",
+              "📊 Metadata templates"
+            ],
+            "howToUse": [
+              "ISA-Creator aracını indirin",
+              "Çalışma tasarımınızı tanımlayın",
+              "Omiks katmanlarını organize edin",
+              "ISA-Tab formatında export edin"
+            ],
+            "suitableFor": [
+              "Multi-omiks projeler",
+              "Sistemik biyoloji",
+              "Metabolomik çalışmalar",
+              "Entegratif analiz"
+            ],
+            "type": "software",
+            "cost": "free",
+            "language": "en",
+            "discipline": "multi-omics"
+          }
+        ]
+      }
+    ]
+  },
+  "comparison": {
+    "title": "Değerlendirme Araçları Karşılaştırması",
+    "headers": ["Araç", "Otomatik", "Manuel", "Ücretsiz", "Türkçe", "Disiplin"],
+    "rows": [
+      {
+        "tool": "F-UJI",
+        "automated": true,
+        "manual": false,
+        "free": true,
+        "turkish": false,
+        "discipline": "Genel"
+      },
+      {
+        "tool": "FAIR-Aware",
+        "automated": false,
+        "manual": true,
+        "free": true,
+        "turkish": false,
+        "discipline": "Genel"
+      },
+      {
+        "tool": "FAIRshake",
+        "automated": "partial",
+        "manual": true,
+        "free": true,
+        "turkish": false,
+        "discipline": "Biyomedikal"
+      },
+      {
+        "tool": "ARDC Tool",
+        "automated": false,
+        "manual": true,
+        "free": true,
+        "turkish": false,
+        "discipline": "Genel"
+      }
+    ]
+  },
+  "repositories": {
+    "title": "Veri Depoları",
+    "description": "FAIR veri yayınlamak için önerilen depolar",
+    "general": {
+      "title": "Genel Amaçlı Depolar",
+      "items": [
+        {
+          "name": "Zenodo",
+          "url": "https://zenodo.org",
+          "description": "Avrupa Birliği destekli genel amaçlı veri deposu",
+          "advantages": [
+            "Tamamen ücretsiz",
+            "50GB limit (daha fazlası talep edilebilir)",
+            "Avrupa Birliği destekli",
+            "GitHub entegrasyonu",
+            "Tüm dosya formatları"
+          ],
+          "disadvantages": [
+            "Klasör yapısı yok",
+            "Düzenleme imkanı sınırlı"
+          ],
+          "cost": "free",
+          "sizeLimit": "50GB",
+          "doi": true,
+          "versionControl": true,
+          "turkishSupport": false
+        },
+        {
+          "name": "Figshare",
+          "url": "https://figshare.com",
+          "description": "Görsel içerik için ideal veri deposu",
+          "advantages": [
+            "20GB ücretsiz alan",
+            "Görsel içerik için ideal",
+            "Gömülü görüntüleyici",
+            "Özel paylaşım linkleri"
+          ],
+          "disadvantages": [
+            "Toplu indirme zorluğu",
+            "Sınırlı ücretsiz alan"
+          ],
+          "cost": "freemium",
+          "sizeLimit": "20GB",
+          "doi": true,
+          "versionControl": true,
+          "turkishSupport": false
+        },
+        {
+          "name": "Dryad",
+          "url": "https://datadryad.org",
+          "description": "Dergi entegrasyonu olan profesyonel veri deposu",
+          "advantages": [
+            "Profesyonel kürasyon",
+            "Dergi entegrasyonları",
+            "Yüksek kalite standartları"
+          ],
+          "disadvantages": [
+            "Ücretli ($120 temel)",
+            "Düzenleme yapılamaz"
+          ],
+          "cost": "paid",
+          "sizeLimit": "unlimited",
+          "doi": true,
+          "versionControl": false,
+          "turkishSupport": false
+        }
+      ]
+    },
+    "national": {
+      "title": "Türkiye'deki Veri Depoları",
+      "items": [
+        {
+          "name": "APERTA",
+          "url": "https://aperta.ulakbim.gov.tr",
+          "description": "TÜBİTAK tarafından desteklenen ulusal veri deposu",
+          "features": [
+            "🇹🇷 Türkçe arayüz",
+            "🏛️ Ulusal altyapı",
+            "🔐 Güvenli depolama",
+            "📊 FAIR uyumlu"
+          ],
+          "uploadProcess": [
+            "Sisteme kayıt olun",
+            "\"Yeni Veri Seti\" oluşturun",
+            "Metadata bilgilerini girin",
+            "Dosyaları yükleyin",
+            "Lisans seçin",
+            "Yayınlayın"
+          ],
+          "cost": "free",
+          "turkishSupport": true
+        }
+      ]
+    },
+    "institutional": {
+      "title": "Kurumsal Açık Arşivler",
+      "description": "Türkiye'deki üniversitelerin DSpace tabanlı kurumsal arşivleri",
+      "items": [
+        "İTÜ Açık Arşiv",
+        "ODTÜ Açık Arşiv",
+        "Hacettepe Açık Arşiv",
+        "Boğaziçi Üniversitesi Dijital Arşivi"
+      ]
+    },
+    "disciplineSpecific": {
+      "title": "Alan-Özel Depolar",
+      "categories": [
+        {
+          "discipline": "Sosyal Bilimler",
+          "repositories": [
+            "ICPSR (International Consortium for Political and Social Research)",
+            "UK Data Service",
+            "CESSDA (Avrupa Sosyal Bilimler Veri Arşivi)"
+          ]
+        },
+        {
+          "discipline": "Yaşam Bilimleri",
+          "repositories": [
+            "GenBank (genetik diziler)",
+            "Protein Data Bank (protein yapıları)",
+            "ArrayExpress (gen ifade verileri)"
+          ]
+        },
+        {
+          "discipline": "Yer Bilimleri",
+          "repositories": [
+            "PANGAEA",
+            "EarthChem",
+            "IRIS (sismik veriler)"
+          ]
+        }
+      ]
+    }
+  }
+}

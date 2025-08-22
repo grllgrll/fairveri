@@ -1,0 +1,138 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "identifier": "doi:10.5281/fairveri.2024.social-media",
+  "name": "Sosyal Medya Kullanım Alışkanlıkları Araştırması 2024",
+  "alternateName": "Social Media Usage Habits Survey 2024",
+  "description": "Türk üniversite öğrencilerinin sosyal medya platformlarını kullanım şekilleri, günlük kullanım süresi, gizlilik farkındalığı ve akademik/mental sağlık etkilerini araştıran kapsamlı anket çalışması.",
+  "url": "https://fairveri.com/datasets/survey-data/social-media/",
+  "sameAs": [
+    "https://zenodo.org/record/fairveri-social-media-2024",
+    "https://github.com/fairveri/datasets/social-media-survey"
+  ],
+  "version": "1.0.0",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Dr. Ayşe Yılmaz",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "İstanbul Üniversitesi Sosyoloji Bölümü"
+      },
+      "identifier": "https://orcid.org/0000-0000-0000-0001"
+    },
+    {
+      "@type": "Person", 
+      "name": "Prof. Dr. Mehmet Kaya",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Boğaziçi Üniversitesi İletişim Fakültesi"
+      },
+      "identifier": "https://orcid.org/0000-0000-0000-0002"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "FairVeri Platform",
+    "url": "https://fairveri.com"
+  },
+  "datePublished": "2024-03-15",
+  "dateModified": "2024-03-15",
+  "temporalCoverage": "2024-01-15/2024-03-15",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Türkiye",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.9334,
+      "longitude": 32.8597
+    }
+  },
+  "keywords": [
+    "sosyal medya",
+    "üniversite öğrencileri", 
+    "dijital davranış",
+    "gizlilik farkındalığı",
+    "akademik etki",
+    "mental sağlık",
+    "anket verisi",
+    "sosyal bilimler"
+  ],
+  "subjectOf": {
+    "@type": "ScholarlyArticle",
+    "name": "Üniversite Öğrencilerinin Sosyal Medya Kullanım Alışkanlıkları ve Etkileri",
+    "url": "https://example.com/article/social-media-habits-2024"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "./social_media_survey_data.csv",
+      "contentSize": "15KB",
+      "description": "Ana veri seti - 5,247 katılımcının anket yanıtları"
+    },
+    {
+      "@type": "DataDownload", 
+      "encodingFormat": "application/pdf",
+      "contentUrl": "./data_dictionary.pdf",
+      "description": "Veri sözlüğü - değişken tanımları ve kodlama şeması"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/markdown", 
+      "contentUrl": "./methodology.md",
+      "description": "Araştırma metodolojisi ve veri toplama süreci"
+    }
+  ],
+  "measurementTechnique": "Çevrimiçi anket formu, tabakalı örnekleme",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "yaş",
+      "description": "Katılımcının yaşı (18-30 arası)",
+      "unitCode": "year"
+    },
+    {
+      "@type": "PropertyValue", 
+      "name": "cinsiyet",
+      "description": "Katılımcının cinsiyeti",
+      "valueReference": "Kadın, Erkek, Diğer"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "günlük_kullanım_saati", 
+      "description": "Günlük sosyal medya kullanım süresi",
+      "unitCode": "hour"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "gizlilik_farkındalığı",
+      "description": "Veri gizliliği konusunda farkındalık seviyesi",
+      "valueReference": "Düşük, Orta, Yüksek"
+    }
+  ],
+  "size": "5247 katılımcı, 16 değişken",
+  "funder": {
+    "@type": "Organization",
+    "name": "TÜBİTAK",
+    "identifier": "https://ror.org/04z0kn126"
+  },
+  "citation": "Yılmaz, A., & Kaya, M. (2024). Sosyal Medya Kullanım Alışkanlıkları Araştırması 2024 [Dataset]. FairVeri Platform. https://doi.org/10.5281/fairveri.2024.social-media",
+  "ethicsPolicy": "Bu çalışma İstanbul Üniversitesi Etik Kurulu tarafından onaylanmıştır (Karar No: 2024/001). Tüm katılımcılardan gönüllü katılım onayı alınmıştır.",
+  "privacyPolicy": "Kişisel veriler KVKK'ya uygun şekilde anonimleştirilmiştir. Katılımcı kimliği belirlenebilecek bilgiler çıkarılmıştır.",
+  "qualityControl": [
+    "Mantık kontrolleri uygulanmış",
+    "Eksik veri analizi yapılmış",
+    "Aykırı değer analizi gerçekleştirilmiş",
+    "Çoklu yanıt doğrulaması uygulanmış"
+  ],
+  "technicalInfo": {
+    "format": "CSV (UTF-8)",
+    "delimiter": ",", 
+    "encoding": "UTF-8",
+    "missingValueCode": "NA",
+    "dateFormat": "YYYY-MM-DD"
+  }
+}

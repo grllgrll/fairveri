@@ -1,0 +1,314 @@
+{
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "description": "FAIR veri prensipleri hakkında en çok sorulan sorular ve yanıtları",
+    "categories": [
+      {
+        "id": "general",
+        "title": "Genel Sorular",
+        "questions": [
+          {
+            "id": "fair-vs-open",
+            "question": "FAIR veri ile Açık Veri arasındaki fark nedir?",
+            "answer": "FAIR veri mutlaka açık olmak zorunda değildir. FAIR prensipleri verinin makine tarafından okunabilir, iyi tanımlanmış ve yönetilebilir olmasına odaklanır. Hassas veriler (örn: hasta verileri, ticari sır) FAIR olabilir ancak erişim kısıtlamaları içerebilir. Açık veri ise herkesin erişimine açık olan veridir.",
+            "tags": ["fair", "open-data", "access"],
+            "relatedQuestions": ["minimum-requirements", "license-choice"]
+          },
+          {
+            "id": "time-investment",
+            "question": "Verilerimi FAIRleştirmek ne kadar zaman alır?",
+            "answer": "Bu, veri setinizin büyüklüğüne ve karmaşıklığına bağlıdır. İyi planlanmış bir projede, veri toplama sırasında FAIR prensiplerini uygulamak ek %5-10 zaman gerektirir. Var olan verileri FAIRleştirmek daha uzun sürebilir, ancak uzun vadede veri yeniden kullanımı ile zaman tasarrufu sağlar.",
+            "tags": ["time", "effort", "planning"],
+            "tips": [
+              "Proje başında planlama yapın",
+              "Veri toplama sırasında metadata oluşturun",
+              "Standart formatlar kullanın",
+              "Kurumsal desteği alın"
+            ]
+          },
+          {
+            "id": "minimum-requirements",
+            "question": "FAIR uyumluluğu için minimum gereksinimler nelerdir?",
+            "answer": "Minimum olarak şunlar gereklidir: Kalıcı tanımlayıcı (DOI gibi), temel metadata (başlık, yazar, tarih, açıklama), açık lisans bilgisi, ve makine okunabilir format. Bu minimum gereksinimler verinizin bulunabilir, erişilebilir ve yeniden kullanılabilir olmasını sağlar.",
+            "tags": ["requirements", "minimum", "standards"],
+            "checklist": [
+              "DOI veya benzeri kalıcı tanımlayıcı",
+              "Başlık, yazar, tarih, açıklama",
+              "Açık lisans (CC0, CC BY vb.)",
+              "Makine okunabilir format (CSV, JSON vb.)",
+              "Veri sözlüğü/değişken tanımları"
+            ]
+          },
+          {
+            "id": "benefits",
+            "question": "FAIR veri prensiplerini uygularken hangi faydaları elde ederim?",
+            "answer": "FAIR veri prensiplerini uyguladığınızda araştırmanızın görünürlüğü artar, daha fazla atıf alır, diğer araştırmacılarla işbirliği kolaylaşır, verilerinizi gelecekte tekrar kullanabilirsiniz ve fon başvurularında avantaj sağlarsınız. Ayrıca bilimsel şeffaflığa katkıda bulunmuş olursunuz.",
+            "tags": ["benefits", "citation", "collaboration"],
+            "benefits": [
+              "Araştırma görünürlüğü artışı",
+              "Daha fazla atıf alma",
+              "Kolay işbirliği imkanları",
+              "Zaman tasarrufu",
+              "Fon başvurularında avantaj"
+            ]
+          },
+          {
+            "id": "cost",
+            "question": "FAIR'in maliyeti nedir?",
+            "answer": "FAIR prensiplerini uygulamanın başlangıç maliyeti nispeten düşüktür. Eğitim için kişi başına 2-5 gün, altyapı için mevcut sistemler genelde yeterli, depolama için çoğu depo ücretsiz. Uzun vadede veri tekrarının önlenmesi ve işbirliği artışı sayesinde tasarruf sağlanır.",
+            "tags": ["cost", "investment", "savings"],
+            "costs": {
+              "training": "2-5 gün/kişi",
+              "infrastructure": "Mevcut sistemler genelde yeterli",
+              "storage": "Çoğu depo ücretsiz",
+              "longTerm": "Tasarruf: veri tekrarı önleme, işbirliği artışı"
+            }
+          }
+        ]
+      },
+      {
+        "id": "technical",
+        "title": "Teknik Sorular",
+        "questions": [
+          {
+            "id": "file-formats",
+            "question": "Hangi dosya formatları FAIR için uygundur?",
+            "answer": "FAIR için tercih sırası şöyledir: 1) Açık, metin tabanlı formatlar (CSV, JSON, XML), 2) Yaygın kullanılan açık formatlar (HDF5, NetCDF), 3) Topluluk standartları (FITS, DICOM). Kaçınılması gerekenler: Özel formatlar (örn: .xlsx yerine .csv tercih edin).",
+            "tags": ["formats", "standards", "compatibility"],
+            "recommended": [
+              "CSV (structured data)",
+              "JSON (metadata)",
+              "XML (structured)",
+              "HDF5 (scientific data)",
+              "NetCDF (climate data)",
+              "FITS (astronomy)",
+              "DICOM (medical imaging)"
+            ],
+            "avoid": [
+              "Proprietary formats",
+              "Excel files (.xlsx)",
+              "Word documents (.docx)",
+              "PDF for data tables"
+            ]
+          },
+          {
+            "id": "large-datasets",
+            "question": "Büyük veri setleri (>100GB) için öneriler nelerdir?",
+            "answer": "Büyük veri setleri için: veriyi mantıklı parçalara bölün, her parça için ayrı DOI alın, ana DOI ile ilişkilendirin, bulut tabanlı çözümleri değerlendirin (AWS Open Data, Google Cloud Public Datasets). Ayrıca sıkıştırma ve progressive download seçeneklerini kullanın.",
+            "tags": ["large-data", "partitioning", "cloud"],
+            "strategies": [
+              "Mantıklı parçalara bölme",
+              "Her parça için ayrı DOI",
+              "Ana DOI ile ilişkilendirme",
+              "Bulut tabanlı çözümler",
+              "Sıkıştırma kullanımı",
+              "Progressive download"
+            ]
+          },
+          {
+            "id": "version-control",
+            "question": "Sürekli güncellenen veriler nasıl yönetilir?",
+            "answer": "Sürekli güncellenen veriler için: versiyon kontrolü kullanın, her önemli güncelleme için yeni versiyon yayınlayın, değişiklik günlüğü (CHANGELOG) tutun, API üzerinden canlı veri sunmayı düşünün. Semantic versioning (v1.2.3) kullanarak değişikliklerin boyutunu belirtin.",
+            "tags": ["versioning", "updates", "changelog"],
+            "bestPractices": [
+              "Semantic versioning kullanın",
+              "Değişiklik günlüğü tutun",
+              "Major/minor/patch versiyonları",
+              "API versiyonlama",
+              "Backward compatibility",
+              "Automated versioning"
+            ]
+          },
+          {
+            "id": "metadata-automation",
+            "question": "Metadata oluşturma süreci nasıl otomatikleştirilebilir?",
+            "answer": "Metadata oluşturma otomasyonu için: veri toplama araçlarınızı metadata oluşturacak şekilde yapılandırın, CEDAR Workbench gibi araçları kullanın, veri işleme scriptlerinize metadata üretim adımları ekleyin, kurumsal metadata şablonları oluşturun.",
+            "tags": ["automation", "metadata", "tools"],
+            "tools": [
+              "CEDAR Workbench",
+              "DataCite Metadata Generator",
+              "Custom scripts",
+              "Institutional templates"
+            ]
+          },
+          {
+            "id": "quality-control",
+            "question": "Veri kalitesini nasıl sağlayabilirim?",
+            "answer": "Veri kalitesi için: veri doğrulama kuralları oluşturun, eksik verileri standart şekilde işaretleyin (-999, NA, NULL), tutarlılık kontrolleri yapın, peer review sürecine dahil edin, kalite metrikleri tanımlayın ve dokümante edin.",
+            "tags": ["quality", "validation", "standards"],
+            "practices": [
+              "Veri doğrulama kuralları",
+              "Eksik veri standartları",
+              "Tutarlılık kontrolleri",
+              "Peer review",
+              "Kalite metrikleri"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "legal",
+        "title": "Lisans ve Hukuki Sorular",
+        "questions": [
+          {
+            "id": "license-choice",
+            "question": "Hangi lisansı seçmeliyim?",
+            "answer": "Veri için önerilen lisanslar: CC0 (Kamu malı, atıf zorunlu değil - en açık), CC BY (Atıf zorunlu), CC BY-SA (Atıf + aynı lisansla paylaş), CC BY-NC (Ticari olmayan kullanım). Genellikle CC0 veya CC BY önerilir çünkü en geniş yeniden kullanım imkanı sağlar.",
+            "tags": ["license", "creative-commons", "reuse"],
+            "licenses": [
+              {
+                "name": "CC0",
+                "description": "Kamu malı, atıf zorunlu değil",
+                "use": "En geniş kullanım, maksimum FAIR"
+              },
+              {
+                "name": "CC BY",
+                "description": "Atıf zorunlu",
+                "use": "Yaygın kullanım, atıf istiyorsanız"
+              },
+              {
+                "name": "CC BY-SA",
+                "description": "Atıf + aynı lisansla paylaş",
+                "use": "Türev çalışmaların aynı lisansla paylaşılmasını istiyorsanız"
+              },
+              {
+                "name": "CC BY-NC",
+                "description": "Ticari olmayan kullanım",
+                "use": "Ticari kullanımı kısıtlamak istiyorsanız"
+              }
+            ]
+          },
+          {
+            "id": "personal-data",
+            "question": "Kişisel veri içeren araştırmalar için ne yapmalıyım?",
+            "answer": "Kişisel veri içeren araştırmalar için: KVKK/GDPR uyumlu anonimleştirme yapın, erişim kontrollü depolar kullanın, metadata'yı açık, veriyi kapalı tutun, veri kullanım sözleşmesi hazırlayın. Etik kurul onayı alın ve veri sahiplerinden açık izin alın.",
+            "tags": ["personal-data", "privacy", "gdpr", "kvkk"],
+            "requirements": [
+              "KVKK/GDPR uyumlu anonimleştirme",
+              "Erişim kontrollü depolar",
+              "Metadata açık, veri kapalı",
+              "Veri kullanım sözleşmesi",
+              "Etik kurul onayı",
+              "Açık izin (informed consent)"
+            ]
+          },
+          {
+            "id": "commercial-data",
+            "question": "Ticari veya hassas verileri nasıl FAIR yapabilirim?",
+            "answer": "Ticari veya hassas veriler için: metadata'yı açık tutun ama veriyi kısıtlayın, erişim kontrol sistemi kullanın, veri kullanım anlaşmaları hazırlayın, federated learning veya differential privacy tekniklerini değerlendirin. Verinin varlığını duyurun ama erişimi kontrol edin.",
+            "tags": ["commercial", "sensitive", "access-control"],
+            "approaches": [
+              "Açık metadata, kısıtlı veri",
+              "Erişim kontrol sistemi",
+              "Veri kullanım anlaşmaları",
+              "Federated learning",
+              "Differential privacy",
+              "Secure multi-party computation"
+            ]
+          },
+          {
+            "id": "intellectual-property",
+            "question": "Fikri mülkiyet haklarını nasıl koruyabilirim?",
+            "answer": "Fikri mülkiyet haklarını korumak için: uygun lisanslar seçin, patent başvurularını veri paylaşımından önce yapın, ticari sır niteliğindeki verileri kısıtlayın, kurumsal politikaları takip edin. Hukuki danışmanlık alın ve teknoloji transfer ofisi ile çalışın.",
+            "tags": ["ip", "patent", "trade-secret"],
+            "protections": [
+              "Uygun lisans seçimi",
+              "Patent başvuruları",
+              "Ticari sır koruması",
+              "Kurumsal politika uyumu",
+              "Hukuki danışmanlık",
+              "Teknoloji transfer ofisi"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "institutional",
+        "title": "Kurumsal Sorular",
+        "questions": [
+          {
+            "id": "institutional-promotion",
+            "question": "Kurumumda FAIR'i nasıl teşvik edebilirim?",
+            "answer": "Kurumunuzda FAIR'i teşvik etmek için: pilot proje başlatın, başarı hikayelerini paylaşın, eğitimler düzenleyin, kurumsal politika önerisi hazırlayın, teşvik mekanizmaları önerin. Üst yönetimin desteğini alın ve kademeli uygulama stratejisi benimseyin.",
+            "tags": ["institutional", "promotion", "policy"],
+            "steps": [
+              "Pilot proje başlatma",
+              "Başarı hikayelerini paylaşma",
+              "Eğitim düzenleme",
+              "Kurumsal politika önerisi",
+              "Teşvik mekanizmaları",
+              "Üst yönetim desteği"
+            ]
+          },
+          {
+            "id": "infrastructure",
+            "question": "FAIR için hangi altyapı gereksinimlerim var?",
+            "answer": "FAIR altyapısı için: kurumsal veri deposu (DSpace, Dataverse), metadata yönetim sistemi, persistent identifier servisi (DOI), yedekleme ve arşivleme sistemi, erişim kontrol mekanizmaları. Bulut tabanlı çözümler de değerlendirilebilir.",
+            "tags": ["infrastructure", "repository", "systems"],
+            "components": [
+              "Kurumsal veri deposu",
+              "Metadata yönetim sistemi",
+              "Persistent identifier servisi",
+              "Yedekleme sistemi",
+              "Erişim kontrol mekanizmaları",
+              "Bulut tabanlı çözümler"
+            ]
+          },
+          {
+            "id": "training",
+            "question": "Araştırmacıları FAIR konusunda nasıl eğitebilirim?",
+            "answer": "FAIR eğitimi için: hands-on workshop'lar düzenleyin, online kaynakları kullanın (FOSTER, The Turing Way), mentorship programı başlatın, disiplin-spesifik örnekler kullanın, sertifika programları sunun. Düzenli tekrar eğitimler ve güncel kalma önemli.",
+            "tags": ["training", "education", "workshop"],
+            "methods": [
+              "Hands-on workshop'lar",
+              "Online kaynaklar",
+              "Mentorship programı",
+              "Disiplin-spesifik örnekler",
+              "Sertifika programları",
+              "Düzenli tekrar eğitimler"
+            ]
+          },
+          {
+            "id": "compliance",
+            "question": "Fon sağlayıcıların FAIR gereksinimlerini nasıl karşılarım?",
+            "answer": "Fon sağlayıcı gereksinimlerini karşılamak için: veri yönetimi planı (DMP) hazırlayın, uygun veri deposu seçin, metadata standartlarını uygulayın, açık erişim politikalarını takip edin, proje süresince dokümantasyon tutun. Her fon sağlayıcının özel gereksinimlerini inceleyin.",
+            "tags": ["compliance", "funding", "dmp"],
+            "requirements": [
+              "Veri yönetimi planı hazırlama",
+              "Uygun veri deposu seçimi",
+              "Metadata standartları",
+              "Açık erişim politikaları",
+              "Sürekli dokümantasyon",
+              "Fon sağlayıcı özel gereksinimleri"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "searchTags": {
+    "title": "Arama Etiketleri",
+    "tags": [
+      "fair",
+      "open-data",
+      "metadata",
+      "license",
+      "repository",
+      "doi",
+      "access-control",
+      "privacy",
+      "gdpr",
+      "kvkk",
+      "formats",
+      "standards",
+      "versioning",
+      "automation",
+      "quality",
+      "training",
+      "policy",
+      "infrastructure",
+      "compliance",
+      "funding"
+    ]
+  }
+}

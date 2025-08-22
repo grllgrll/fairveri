@@ -1,0 +1,311 @@
+{
+  "papers": {
+    "title": "FAIR Data Principles Academic Literature",
+    "description": "Comprehensive collection of peer-reviewed academic papers on FAIR data principles",
+    "totalPapers": 23,
+    "totalCitations": 24380,
+    "categories": [
+      {
+        "id": "foundational",
+        "title": "Foundational FAIR Principles",
+        "description": "Core papers that define and establish FAIR principles",
+        "papers": [
+          {
+            "id": "wilkinson-2016",
+            "title": "The FAIR Guiding Principles for scientific data management and stewardship",
+            "authors": "Mark D. Wilkinson, M. Dumontier, I. J. Aalbersberg, Gabrielle Appleton, M. Axton, A. Baak, N. Blomberg, J. Boiten, Luiz Olavo Bonino da Silva Santos, P. Bourne, et al.",
+            "year": 2016,
+            "citations": 12380,
+            "journal": "Scientific Data",
+            "sjrQuartile": "Q1",
+            "doi": "10.1038/sdata.2016.18",
+            "consensusLink": "https://consensus.app/papers/the-fair-guiding-principles-for-scientific-data-clark-hoen/4c5895b681da50f49121075fd4537ad9/",
+            "abstract": "The FAIR Data Principles aim to enhance the reusability of scientific data by improving machine findability and supporting individual reuse.",
+            "takeaway": "The FAIR Data Principles aim to enhance the reusability of scientific data by improving machine findability and supporting individual reuse.",
+            "category": "foundational"
+          },
+          {
+            "id": "jacobsen-2020",
+            "title": "FAIR Principles: Interpretations and Implementation Considerations",
+            "authors": "Annika Jacobsen, R. de Miranda Azevedo, N. Juty, Dominique Batista, S. Coles, R. Cornet, Mélanie Courtot, M. Crosas, M. Dumontier, et al.",
+            "year": 2020,
+            "citations": 267,
+            "journal": "Data Intelligence",
+            "sjrQuartile": "Q1",
+            "doi": "10.1162/dint_r_00024",
+            "consensusLink": "https://consensus.app/papers/fair-principles-interpretations-and-implementation-kersloot-coles/76c4000046275227bfaf2a908bc98a53/",
+            "abstract": "The FAIR principles have been widely cited, endorsed and adopted by a broad range of stakeholders since their publication in 2016. By intention, the 15 FAIR guiding principles do not dictate specific technological implementations, but provide guidance for improving Findability, Accessibility, Interoperability and Reusability of digital resources.",
+            "takeaway": "FAIR principles can be implemented in various ways, but consistent implementation is crucial for true interoperability and accelerating global participation in digital resource discovery and reuse.",
+            "category": "foundational"
+          },
+          {
+            "id": "mons-2017",
+            "title": "Cloudy, increasingly FAIR; revisiting the FAIR Data guiding principles for the European Open Science Cloud",
+            "authors": "B. Mons, C. Neylon, Jan Velterop, M. Dumontier, Luiz Olavo Bonino da Silva Santos, Mark D. Wilkinson",
+            "year": 2017,
+            "citations": 309,
+            "journal": "Information Services and Use",
+            "sjrQuartile": "Q3",
+            "doi": "10.3233/ISU-170824",
+            "consensusLink": "https://consensus.app/papers/cloudy-increasingly-fair-revisiting-the-fair-data-guiding-mons-dumontier/b2ab0633e1a65a2fb1f9d5616a6bf5f4/",
+            "abstract": "The FAIR Data Principles propose that all scholarly output should be Findable, Accessible, Interoperable, and Reusable. As a set of guiding principles, expressing only the kinds of behaviours that researchers should expect from contemporary data resources, how the FAIR principles should manifest in reality was largely open to interpretation.",
+            "takeaway": "The FAIR Data Principles, which propose that all scholarly output should be Findable, Accessible, Interoperable, and Reusable, have become increasingly relevant in the European Open Science Cloud, with a growing understanding of their meaning and implications.",
+            "category": "foundational"
+          },
+          {
+            "id": "jati-2022",
+            "title": "FAIR Versus Open Data: A Comparison of Objectives and Principles",
+            "authors": "Putu Hadi Purnama Jati, Yi Lin, Sara Nodehi, D. B. Cahyono, M. Reisen",
+            "year": 2022,
+            "citations": 16,
+            "journal": "Data Intelligence",
+            "sjrQuartile": "Q1",
+            "doi": "10.1162/dint_a_00176",
+            "consensusLink": "https://consensus.app/papers/fair-versus-open-data-a-comparison-of-objectives-and-cahyono-reisen/87239e3730085f3394bb4d021193cd80/",
+            "abstract": "This article assesses the difference between the concepts of 'open data' and 'FAIR data' in data management. FAIR data is understood as data that complies with the FAIR Guidelines—data that is Findable, Accessible, Interoperable and Reusable—while open data was born out of awareness of the need to democratise data by improving its accessibility.",
+            "takeaway": "FAIR data focuses on research data complexity, while open data primarily aims to provide public access to non-confidential data, with different approaches to achieve these goals.",
+            "category": "foundational"
+          }
+        ]
+      },
+      {
+        "id": "sectoral-applications",
+        "title": "Sectoral Applications",
+        "description": "FAIR principles implementation across different domains and industries",
+        "papers": [
+          {
+            "id": "wise-2019",
+            "title": "Implementation and relevance of FAIR data principles in biopharmaceutical R&D",
+            "authors": "J. Wise, Alexandra Grebe de Barron, A. Splendiani, B. Balali-Mood, Drashtti Vasant, E. Little, Gaspare Mellino, Ian Harrow, et al.",
+            "year": 2019,
+            "citations": 126,
+            "journal": "Drug discovery today",
+            "sjrQuartile": "Q1",
+            "doi": "10.1016/j.drudis.2019.01.008",
+            "consensusLink": "https://consensus.app/papers/implementation-and-relevance-of-fair-data-principles-in-little-mellino/646da4bf25f850138513118d37976400/",
+            "abstract": "",
+            "takeaway": "Implementing FAIR data principles in biopharmaceutical R&D significantly improves efficiency and effectiveness, enabling digital transformation and enabling new analytical tools like AI and machine learning.",
+            "category": "sectoral-applications"
+          },
+          {
+            "id": "vesteghem-2019",
+            "title": "Implementing the FAIR Data Principles in precision oncology: review of supporting initiatives",
+            "authors": "C. Vesteghem, R. Brøndum, Mads Sønderkær, Mia Sommer, Alexander Schmitz, J. Bødker, K. Dybkær, T. El‐Galaly, M. Bøgsted",
+            "year": 2019,
+            "citations": 50,
+            "journal": "Briefings in Bioinformatics",
+            "sjrQuartile": "Q1",
+            "doi": "10.1093/bib/bbz044",
+            "consensusLink": "https://consensus.app/papers/implementing-the-fair-data-principles-in-precision-dybk%C3%A6r-s%C3%B8nderk%C3%A6r/51b05790020c51ada59a29801d39cf00/",
+            "abstract": "Compelling research has recently shown that cancer is so heterogeneous that single research centres cannot produce enough data to fit prognostic and predictive models of sufficient accuracy. Data sharing in precision oncology is therefore of utmost importance.",
+            "takeaway": "Implementing FAIR Data Principles in precision oncology requires using well-documented models for clinical data, diagnosis classification, bioinformatics pipeline, and variant naming.",
+            "category": "sectoral-applications"
+          },
+          {
+            "id": "sinaci-2020",
+            "title": "From Raw Data to FAIR Data: The FAIRification Workflow for Health Research",
+            "authors": "Ali Anil Sinaci, Francisco Núñez-Benjumea, M. Gencturk, M. Jauer, T. Deserno, C. Chronaki, Giorgio Cangioli, et al.",
+            "year": 2020,
+            "citations": 81,
+            "journal": "Methods of Information in Medicine",
+            "sjrQuartile": "Q1",
+            "doi": "10.1055/s-0040-1713684",
+            "consensusLink": "https://consensus.app/papers/from-raw-data-to-fair-data-the-fairification-workflow-for-deserno-chronaki/3d5b27524fc355acb6a93cb2bc9caf5e/",
+            "abstract": "FAIR (findability, accessibility, interoperability, and reusability) guiding principles seek the reuse of data and other digital research input, output, and objects (algorithms, tools, and workflows that led to that data) making them findable, accessible, interoperable, and reusable.",
+            "takeaway": "The proposed FAIRification workflow and technical architecture can effectively transform raw health datasets into FAIR data, enabling their reuse and sharing within the health research community.",
+            "category": "sectoral-applications"
+          },
+          {
+            "id": "krisnawijaya-2025",
+            "title": "Implementing FAIR principles in data management systems: A multi-case study in precision farming",
+            "authors": "N. Krisnawijaya, B. Tekinerdogan, C. Catal, R. V. D. Tol, Y. Herdiyeni",
+            "year": 2025,
+            "citations": 0,
+            "journal": "Comput. Electron. Agric.",
+            "sjrQuartile": "Q1",
+            "doi": "10.1016/j.compag.2024.109855",
+            "consensusLink": "https://consensus.app/papers/implementing-fair-principles-in-data-management-systems-a-herdiyeni-krisnawijaya/3bf6cf6d689c5f6ca82a0dba05aade93/",
+            "abstract": "",
+            "takeaway": "Implementing FAIR principles in agricultural data management systems requires metadata, secure access protocols, semantic interoperability, and comprehensive documentation.",
+            "category": "sectoral-applications"
+          },
+          {
+            "id": "top-2022",
+            "title": "Cultivating FAIR principles for agri-food data",
+            "authors": "J. Top, S. Janssen, H. Boogaard, R. Knapen, Görkem Şimşek-Şenel",
+            "year": 2022,
+            "citations": 28,
+            "journal": "Comput. Electron. Agric.",
+            "sjrQuartile": "Q1",
+            "doi": "10.1016/j.compag.2022.106909",
+            "consensusLink": "https://consensus.app/papers/cultivating-fair-principles-for-agrifood-data-knapen-janssen/2bcf87f52b4356d3ab816d240c2be79c/",
+            "abstract": "",
+            "takeaway": "FAIR principles in agriculture and food require automated tools, community-based approaches, and scientific insight to effectively share and reuse data.",
+            "category": "sectoral-applications"
+          },
+          {
+            "id": "uribe-2022",
+            "title": "Dental Research Data Availability and Quality According to the FAIR Principles",
+            "authors": "S. Uribe, A. Sofi-Mahmudi, E. Raittio, I. Maldupa, B. Vilne",
+            "year": 2022,
+            "citations": 15,
+            "journal": "Journal of Dental Research",
+            "sjrQuartile": "Q1",
+            "doi": "10.1177/00220345221101321",
+            "consensusLink": "https://consensus.app/papers/dental-research-data-availability-and-quality-according-maldupa-vilne/683014c47d975812aa0620bdfd47c17f/",
+            "abstract": "According to the FAIR principles, data produced by scientific research should be findable, accessible, interoperable, and reusable—for instance, to be used in machine learning algorithms. However, to date, there is no estimate of the quantity or quality of dental research data evaluated via the FAIR principles.",
+            "takeaway": "Dental researchers rarely share data, and when they do, the quality is suboptimal, hindering reproducibility and hindering the use of machine learning algorithms in dental research.",
+            "category": "sectoral-applications"
+          }
+        ]
+      },
+      {
+        "id": "technical-implementation",
+        "title": "Technical Implementation",
+        "description": "Technical frameworks, architectures, and tools for implementing FAIR principles",
+        "papers": [
+          {
+            "id": "santos-2022",
+            "title": "FAIR Data Point: A FAIR-Oriented Approach for Metadata Publication",
+            "authors": "Luiz Olavo Bonino da Silva Santos, K. Burger, R. Kaliyaperumal, Mark D. Wilkinson",
+            "year": 2022,
+            "citations": 33,
+            "journal": "Data Intelligence",
+            "sjrQuartile": "Q1",
+            "doi": "10.1162/dint_a_00160",
+            "consensusLink": "https://consensus.app/papers/fair-data-point-a-fairoriented-approach-for-metadata-wilkinson-burger/1f6efd19764550be97cf32d7b855a05f/",
+            "abstract": "Metadata, data about other digital objects, play an important role in FAIR with a direct relation to all FAIR principles. In this paper we present and discuss the FAIR Data Point (FDP), a software architecture aiming to define a common approach to publish semantically-rich and machine-actionable metadata according to the FAIR principles.",
+            "takeaway": "The FAIR Data Point (FDP) is a software architecture that aims to publish semantically-rich and machine-actionable metadata according to FAIR principles, enabling users to register, index, and search for metadata content.",
+            "category": "technical-implementation"
+          },
+          {
+            "id": "bernasconi-2023",
+            "title": "Ontological Representation of FAIR Principles: A Blueprint for FAIRer Data Sources",
+            "authors": "Anna Bernasconi, Alberto García Simón, G. Guizzardi, Luiz Olavo Bonino da Silva Santos, V. Storey",
+            "year": 2023,
+            "citations": 7,
+            "journal": "",
+            "sjrQuartile": "",
+            "doi": "10.1007/978-3-031-34560-9_16",
+            "consensusLink": "https://consensus.app/papers/ontological-representation-of-fair-principles-a-guizzardi-santos/e3132e47f73653e1a0ff42956c10fa7b/",
+            "abstract": "Guidelines to improve the Findability, Accessibility, Interoperability, and Reuse of datasets, known as FAIR principles, were introduced in 2016 to enable machines to perform automatic actions on a variety of digital objects, including datasets.",
+            "takeaway": "The OntoUML FAIR Principles Schema provides an ontological representation of FAIR principles for data practitioners, providing a blueprint for designing FAIR classification strategies for datasets.",
+            "category": "technical-implementation"
+          },
+          {
+            "id": "hasnain-2018",
+            "title": "Assessing FAIR Data Principles Against the 5-Star Open Data Principles",
+            "authors": "Ali Hasnain, Dietrich Rebholz-Schuhmann",
+            "year": 2018,
+            "citations": 43,
+            "journal": "",
+            "sjrQuartile": "",
+            "doi": "10.1007/978-3-319-98192-5_60",
+            "consensusLink": "https://consensus.app/papers/assessing-fair-data-principles-against-the-5star-open-data-rebholz-schuhmann-hasnain/1c3fba679a04562c89380e6883781d2e/",
+            "abstract": "Access to biomedical data is increasingly important to enable data driven science in the research community. The Linked Open Data (LOD) principles (by Tim Berner-Lee) have been suggested to judge the quality of data by its accessibility (open data access), by its format and structures, and by its interoperability with other data sources.",
+            "takeaway": "FAIR data principles extend the Linked Open Data principles by requiring a stated license for access and focusing on reusability, while LOD emphasizes openness and interoperability.",
+            "category": "technical-implementation"
+          },
+          {
+            "id": "arefolov-2021",
+            "title": "Implementation of the FAIR Data Principles for Exploratory Biomarker Data from Clinical Trials",
+            "authors": "A. Arefolov, Laura Adam, Shoshana D. Brown, Yelena Budovskaya, Cong Chen, Diya Das, Chen Farhy, et al.",
+            "year": 2021,
+            "citations": 7,
+            "journal": "Data Intelligence",
+            "sjrQuartile": "Q1",
+            "doi": "10.1162/dint_a_00106",
+            "consensusLink": "https://consensus.app/papers/implementation-of-the-fair-data-principles-for-mccreary-brown/6010dc13af475c4595ec15b7417d9bf3/",
+            "abstract": "The FAIR data guiding principles have been recently developed and widely adopted to improve the Findability, Accessibility, Interoperability, and Reuse of digital assets in the face of an exponential increase of data volume and complexity.",
+            "takeaway": "FAIR data principles can improve the findability, accessibility, interoperability, and reuse of clinical exploratory biomarker data from clinical trials.",
+            "category": "technical-implementation"
+          }
+        ]
+      },
+      {
+        "id": "assessment-quality",
+        "title": "Assessment & Quality",
+        "description": "Evaluation methods, metrics, and quality assessment of FAIR implementation",
+        "papers": [
+          {
+            "id": "dunning-2017",
+            "title": "Are the FAIR Data Principles fair?",
+            "authors": "A. Dunning, Madeleine de Smaele, Jasmin Böhmer",
+            "year": 2017,
+            "citations": 66,
+            "journal": "Int. J. Digit. Curation",
+            "sjrQuartile": "",
+            "doi": "10.2218/IJDC.V12I2.567",
+            "consensusLink": "https://consensus.app/papers/are-the-fair-data-principles-fair-b%C3%B6hmer-dunning/352791d5992c51cd954d23591da5d705/",
+            "abstract": "This practice paper describes an ongoing research project to test the effectiveness and relevance of the FAIR Data Principles. Simultaneously, it will analyse how easy it is for data archives to adhere to the principles.",
+            "takeaway": "The FAIR Data Principles are effective and relevant, but data archives need improvement in their ability to adhere to them.",
+            "category": "assessment-quality"
+          },
+          {
+            "id": "boeckhout-2018",
+            "title": "The FAIR guiding principles for data stewardship: fair enough?",
+            "authors": "M. Boeckhout, G. Zielhuis, A. Bredenoord",
+            "year": 2018,
+            "citations": 182,
+            "journal": "European Journal of Human Genetics",
+            "sjrQuartile": "Q1",
+            "doi": "10.1038/s41431-018-0160-0",
+            "consensusLink": "https://consensus.app/papers/the-fair-guiding-principles-for-data-stewardship-fair-zielhuis-boeckhout/8620179f38a0556fb2047ac63abfad3d/",
+            "abstract": "",
+            "takeaway": "The FAIR principles can facilitate data sharing in life sciences, but ethical, methodological, and organizational challenges must be addressed for widespread adoption.",
+            "category": "assessment-quality"
+          },
+          {
+            "id": "gotz-2023",
+            "title": "The fair principles: Trusting in fair data repositories",
+            "authors": "A. Götz",
+            "year": 2023,
+            "citations": 3,
+            "journal": "Open Access Government",
+            "sjrQuartile": "",
+            "doi": "10.56367/oag-039-10749",
+            "consensusLink": "https://consensus.app/papers/the-fair-principles-trusting-in-fair-data-repositories-g%C3%B6tz/b99f969e93da5949a7b0a0aed99c17f5/",
+            "abstract": "Andy Götz, ESRF data manager and PaNOSC coordinator, discusses the impact of applying the FAIR principles to research data. In the previous article in this series on FAIR data, we explained how the scientific world is undergoing a major change with the widespread adoption of the so-called FAIR principles for research data.",
+            "takeaway": "Applying the FAIR principles to research data ensures it can be found, downloaded, understood, and reused, addressing the reproducibility crisis in science and improving scientific data access.",
+            "category": "assessment-quality"
+          }
+        ]
+      },
+      {
+        "id": "education-adoption",
+        "title": "Education & Adoption",
+        "description": "Teaching approaches, training, and adoption strategies for FAIR principles",
+        "papers": [
+          {
+            "id": "shanahan-2021",
+            "title": "Progress toward a comprehensive teaching approach to the FAIR data principles",
+            "authors": "Hugh P. Shanahan, N. Hoebelheinrich, A. Whyte",
+            "year": 2021,
+            "citations": 4,
+            "journal": "Patterns",
+            "sjrQuartile": "Q1",
+            "doi": "10.1016/j.patter.2021.100324",
+            "consensusLink": "https://consensus.app/papers/progress-toward-a-comprehensive-teaching-approach-to-the-shanahan-hoebelheinrich/35c148fd0ac059b7a6511b6a0270010e/",
+            "abstract": "",
+            "takeaway": "Effective teaching of FAIR data principles requires linking resources to educational frameworks, providing consistent descriptions, and developing an instructor community of practice.",
+            "category": "education-adoption"
+          },
+          {
+            "id": "clifford-2018",
+            "title": "Data Protection and the Role of Fairness",
+            "authors": "Damian Clifford, J. Ausloos",
+            "year": 2018,
+            "citations": 47,
+            "journal": "Yearbook of European Law",
+            "sjrQuartile": "Q1",
+            "doi": "10.2139/SSRN.3013139",
+            "consensusLink": "https://consensus.app/papers/data-protection-and-the-role-of-fairness-ausloos-clifford/c6251ede6790586daa99acc8811aa630/",
+            "abstract": "The purpose of this article is to examine the principle of fairness as it appears in EU data protection law. Despite the fact that this principle is often referred to as a key tenet of the data protection framework, a precise understanding of its role remains elusive.",
+            "takeaway": "The principle of fairness in EU data protection law is divided into procedural fairness and fair balancing elements, with gaps and shortcomings requiring further research.",
+            "category": "education-adoption"
+          }
+        ]
+      }
+    ]
+  }
+}

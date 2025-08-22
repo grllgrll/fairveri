@@ -1,0 +1,109 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Ulusal Eğitim Memnuniyet Araştırması 2024",
+  "description": "Öğretmen, veli ve öğrenci perspektifinden eğitim sistemi değerlendirmesi. Bu araştırma, Türkiye'deki eğitim sisteminin çeşitli paydaşlar tarafından nasıl algılandığını ve hangi alanlarda iyileştirme yapılması gerektiğini belirlemeyi amaçlamaktadır.",
+  "identifier": "https://doi.org/10.5281/zenodo.education.survey.2024",
+  "url": "https://fairveri.org/datasets/survey-data/education/",
+  "keywords": [
+    "education",
+    "survey",
+    "teacher satisfaction",
+    "parent engagement",
+    "education quality",
+    "Turkey",
+    "educational research",
+    "stakeholder analysis"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Dr. Ayşe Demir",
+      "affiliation": "Eğitim Araştırmaları Merkezi",
+      "identifier": "https://orcid.org/0000-0000-0000-0002"
+    },
+    {
+      "@type": "Person", 
+      "name": "Prof. Dr. Mehmet Kaya",
+      "affiliation": "Ankara Üniversitesi Eğitim Bilimleri Fakültesi",
+      "identifier": "https://orcid.org/0000-0000-0000-0003"
+    }
+  ],
+  "datePublished": "2024-06-15",
+  "dateCreated": "2024-02-01",
+  "dateModified": "2024-06-15",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "1.0",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "./education_survey_data.csv",
+      "contentSize": "3.2KB"
+    },
+    {
+      "@type": "DataDownload", 
+      "encodingFormat": "application/json",
+      "contentUrl": "./education_metadata.json",
+      "contentSize": "2.8KB"
+    }
+  ],
+  "temporalCoverage": "2024-02-01/2024-05-31",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Turkey",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "35.815,25.663 42.107,44.834"
+    }
+  },
+  "measurementTechnique": [
+    "Likert scale survey",
+    "Structured questionnaire",
+    "Multi-stakeholder sampling"
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "satisfaction_teaching",
+      "description": "Teaching satisfaction level (1-10 scale)",
+      "unitText": "scale"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "satisfaction_curriculum", 
+      "description": "Curriculum satisfaction level (1-10 scale)",
+      "unitText": "scale"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "role",
+      "description": "Participant role in education system",
+      "unitText": "categorical"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "name": "Eğitim Kalitesi Araştırma Projesi",
+      "funder": {
+        "@type": "Organization",
+        "name": "TÜBİTAK"
+      },
+      "identifier": "TUBITAK-121K123"
+    }
+  ],
+  "isPartOf": {
+    "@type": "DataCatalog",
+    "name": "FAIR Eğitim Verileri Kataloğu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FairVeri",
+    "url": "https://fairveri.org"
+  },
+  "provider": {
+    "@type": "Organization", 
+    "name": "Eğitim Araştırmaları Merkezi"
+  }
+}

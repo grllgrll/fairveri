@@ -1,0 +1,166 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Türk Popülasyonu Genom Projesi",
+  "description": "Türk popülasyonundaki genetik çeşitliliği haritalayan kapsamlı genom dizileme projesi. Bu proje, 1,000 bireyin tüm genom dizileme verilerini GA4GH standartlarına uygun şekilde analiz etmektedir.",
+  "identifier": "https://doi.org/10.5281/zenodo.turkish.genome.2024",
+  "url": "https://fairveri.org/datasets/lab-data/genomics/",
+  "keywords": [
+    "genomics",
+    "whole genome sequencing",
+    "population genetics",
+    "Turkish population",
+    "genetic diversity",
+    "WGS",
+    "variants",
+    "SNP",
+    "INDEL",
+    "GA4GH"
+  ],
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Prof. Dr. Fatma Genomcu",
+      "affiliation": "İstanbul Üniversitesi Tıp Fakültesi Tıbbi Genetik Anabilim Dalı",
+      "identifier": "https://orcid.org/0000-0000-0000-0004"
+    },
+    {
+      "@type": "Person",
+      "name": "Dr. Ahmet Biyoinformatik",
+      "affiliation": "Hacettepe Üniversitesi Biyoinformatik Enstitüsü",
+      "identifier": "https://orcid.org/0000-0000-0000-0005"
+    }
+  ],
+  "datePublished": "2024-08-15",
+  "dateCreated": "2023-01-01",
+  "dateModified": "2024-08-15",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "version": "1.0",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "./genomics_summary.csv",
+      "contentSize": "2.1KB",
+      "description": "Genome sequencing summary statistics"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "./genomics_metadata.json",
+      "contentSize": "3.5KB",
+      "description": "GA4GH compliant metadata"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/markdown",
+      "contentUrl": "./data_access_guide.md",
+      "contentSize": "8KB",
+      "description": "Data access procedures and ethical guidelines"
+    }
+  ],
+  "temporalCoverage": "2023-01-01/2025-12-31",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Turkey",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "35.815,25.663 42.107,44.834"
+    }
+  },
+  "measurementTechnique": [
+    "Whole Genome Sequencing (WGS)",
+    "Illumina NovaSeq 6000",
+    "30x coverage minimum",
+    "GA4GH variant calling pipeline"
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "coverage",
+      "description": "Average sequencing depth coverage",
+      "unitText": "x-fold"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "total_variants",
+      "description": "Total number of genetic variants identified",
+      "unitText": "count"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "snps",
+      "description": "Single nucleotide polymorphisms",
+      "unitText": "count"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "indels",
+      "description": "Insertion/deletion variants",
+      "unitText": "count"
+    }
+  ],
+  "funding": [
+    {
+      "@type": "Grant",
+      "name": "Türk Genomu Projesi",
+      "funder": {
+        "@type": "Organization",
+        "name": "TÜBİTAK"
+      },
+      "identifier": "TUBITAK-120S567"
+    },
+    {
+      "@type": "Grant",
+      "name": "Personalized Medicine Initiative",
+      "funder": {
+        "@type": "Organization",
+        "name": "Sağlık Bakanlığı"
+      },
+      "identifier": "SB-2023-GENOM-01"
+    }
+  ],
+  "isPartOf": [
+    {
+      "@type": "DataCatalog",
+      "name": "European Genome-phenome Archive (EGA)",
+      "identifier": "EGAS00001234567"
+    },
+    {
+      "@type": "DataCatalog",
+      "name": "dbGaP",
+      "identifier": "phs001234.v1.p1"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "FairVeri",
+    "url": "https://fairveri.org"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Türk Genom Konsorsiyumu"
+  },
+  "ethicsApproval": {
+    "@type": "CreativeWork",
+    "name": "Ethics Committee Approval",
+    "identifier": "2023/001-ETK",
+    "publisher": {
+      "@type": "Organization",
+      "name": "İstanbul Üniversitesi Etik Kurulu"
+    }
+  },
+  "accessRights": "Controlled access - Data Access Committee approval required",
+  "conformsTo": [
+    {
+      "@type": "CreativeWork",
+      "name": "GA4GH International Standards",
+      "url": "https://www.ga4gh.org/genomics-standards/"
+    },
+    {
+      "@type": "CreativeWork", 
+      "name": "FAIR Data Principles",
+      "url": "https://www.go-fair.org/fair-principles/"
+    }
+  ]
+}
