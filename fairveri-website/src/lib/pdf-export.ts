@@ -170,8 +170,10 @@ export class PDFExporter {
 
     // Executive Summary
     this.addSection('Executive Summary');
-    const overallPercentage = Math.round((results.totalScore / results.maxScore) * 100);
-    this.addText(`Your dataset achieved an overall FAIR score of ${overallPercentage}% (${results.totalScore}/${results.maxScore} points).`);
+    const liveMax = (assessmentData as any)?.assessment?.scoring?.maxScore;
+    const effectiveMax = typeof liveMax === 'number' && liveMax > 0 ? liveMax : results.maxScore;
+    const overallPercentage = Math.round((results.totalScore / effectiveMax) * 100);
+    this.addText(`Your dataset achieved an overall FAIR score of ${overallPercentage}% (${results.totalScore}/${effectiveMax} points).`);
     this.addText(`Assessment Level: ${results.level}`);
     this.addText(results.levelDescription);
 

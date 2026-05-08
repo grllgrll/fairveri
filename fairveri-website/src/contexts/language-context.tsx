@@ -59,6 +59,14 @@ export function LanguageProvider({ children, defaultLanguage = 'tr' }: LanguageP
     loadInitialLanguage();
   }, []);
 
+  // Keep <html lang> in sync with the active language so CSS text-transform
+  // honours per-locale rules (e.g. Turkish dotted İ vs English I).
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = language;
+    }
+  }, [language]);
+
   // Load translations dynamically
   const loadTranslations = async (lang: Language) => {
     if (translationsCache[lang] && Object.keys(translationsCache[lang]).length > 0) {

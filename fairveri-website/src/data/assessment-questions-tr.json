@@ -1,0 +1,657 @@
+{
+  "assessment": {
+    "title": "FAIR Prensipleri Değerlendirme Aracı",
+    "description": "Veri setinizin FAIR prensiplerine uyumluluğunu kapsamlı bir değerlendirme ile inceleyin",
+    "totalQuestions": 15,
+    "categories": [
+      {
+        "id": "findable",
+        "title": "Bulunabilir",
+        "description": "Verinin yeniden kullanılabilir hâle gelmesinin ilk adımı, hem insanlar hem de bilgisayarlar tarafından bulunabilir olmasıdır.",
+        "color": "#3B82F6",
+        "icon": "🔍",
+        "weight": 0.25,
+        "questions": [
+          {
+            "id": "f1",
+            "principle": "F1",
+            "title": "Benzersiz ve Kalıcı Tanımlayıcılar",
+            "question": "Veri setinizin benzersiz ve kalıcı bir tanımlayıcısı (DOI, Handle veya UUID gibi) var mı?",
+            "explanation": "Benzersiz bir tanımlayıcı, veri setinizin tutarlı biçimde referans verilmesini ve atıfta bulunulmasını sağlar. DOI gibi kalıcı tanımlayıcılar, konum değişse bile geçerliliğini korur.",
+            "options": [
+              {
+                "value": "yes_doi",
+                "label": "Evet, DOI veya benzeri kalıcı tanımlayıcı kullanıyoruz",
+                "score": 10,
+                "feedback": "Mükemmel! DOI ve benzeri kalıcı tanımlayıcılar, veri seti tanımlamada altın standarttır."
+              },
+              {
+                "value": "yes_uuid",
+                "label": "Evet, UUID veya benzeri benzersiz tanımlayıcı kullanıyoruz",
+                "score": 7,
+                "feedback": "İyi! UUID benzersizlik sağlar; uzun vadeli kalıcılık için DOI gibi kalıcı tanımlayıcılara geçmeyi düşünebilirsiniz."
+              },
+              {
+                "value": "partial",
+                "label": "Bir tür tanımlayıcımız var ama küresel olarak benzersiz değil",
+                "score": 4,
+                "feedback": "Başlangıç için fena değil; ancak daha iyi keşfedilebilirlik için küresel olarak benzersiz tanımlayıcılar uygulamayı düşünün."
+              },
+              {
+                "value": "no",
+                "label": "Hayır, benzersiz tanımlayıcımız yok",
+                "score": 0,
+                "feedback": "Benzersiz tanımlayıcı uygulamayı önceliklendirin. DOI veya UUID sistemleriyle başlayın."
+              }
+            ],
+            "tips": [
+              "Yayımlanmış veri setleri için DOI kullanın",
+              "Kurumsal depolar için Handle System düşünün",
+              "Tanımlayıcıların tüm meta verilerde yer aldığından emin olun"
+            ]
+          },
+          {
+            "id": "f2",
+            "principle": "F2",
+            "title": "Zengin Meta Veri",
+            "question": "Veri setinizi tanımlayan meta veri ne kadar kapsamlı?",
+            "explanation": "Zengin meta veri, hem insanların hem de makinelerin veri setinin neyi içerdiğini, nasıl oluşturulduğunu ve nasıl kullanılabileceğini anlamasına yardımcı olur.",
+            "options": [
+              {
+                "value": "comprehensive",
+                "label": "Metodoloji, değişkenler ve bağlam dahil kapsamlı meta veri",
+                "score": 10,
+                "feedback": "Mükemmel! Kapsamlı meta veri, veri setinin keşfedilebilirliği ve yeniden kullanımı için kritiktir."
+              },
+              {
+                "value": "good",
+                "label": "Temel bilgiler ve bazı detaylar içeren iyi meta veri",
+                "score": 7,
+                "feedback": "İyi başlangıç! Daha fazla metodolojik detay ve bağlam bilgisi ekleyebilirsiniz."
+              },
+              {
+                "value": "basic",
+                "label": "Başlık, yazar ve açıklama içeren temel meta veri",
+                "score": 4,
+                "feedback": "Temel meta veri var ama metodoloji ve bağlamla zenginleştirilebilir."
+              },
+              {
+                "value": "minimal",
+                "label": "Çok az veya hiç meta veri yok",
+                "score": 0,
+                "feedback": "Meta veri bulunabilirlik için şarttır. Temel öğelerle başlayın ve detayları aşamalı olarak artırın."
+              }
+            ],
+            "tips": [
+              "Oluşturma tarihi, metodoloji ve veri toplama detaylarını ekleyin",
+              "Anahtar kelimeler ve konu sınıflandırmaları ekleyin",
+              "Veri kalitesini ve sınırlamaları belgeleyin"
+            ]
+          },
+          {
+            "id": "f3",
+            "principle": "F3",
+            "title": "Meta Veri – Veri İlişkisi",
+            "question": "Meta veriniz, hangi veri setini tanımladığını açıkça belirtiyor mu?",
+            "explanation": "Meta veri, tanımladığı veri setine açıkça referans vermeli; ikisi arasında net bir bağ kurulmalıdır.",
+            "options": [
+              {
+                "value": "explicit",
+                "label": "Evet, meta veri veri setinin tanımlayıcısına açıkça referans veriyor",
+                "score": 10,
+                "feedback": "Harika! Net meta veri – veri ilişkileri otomatik keşif için şarttır."
+              },
+              {
+                "value": "implicit",
+                "label": "İlişki örtük ama anlaşılır",
+                "score": 6,
+                "feedback": "Meta veride veri tanımlayıcısını açıkça belirterek ilişkiyi daha net hale getirin."
+              },
+              {
+                "value": "unclear",
+                "label": "İlişki belirsiz veya muğlak",
+                "score": 2,
+                "feedback": "Otomatik keşfi iyileştirmek için meta veri – veri ilişkisini daha açık hale getirin."
+              },
+              {
+                "value": "no",
+                "label": "Meta veri ile veri arasında net bir ilişki yok",
+                "score": 0,
+                "feedback": "Açık referanslar ekleyerek meta veri ile veri arasındaki bağı kurun."
+              }
+            ]
+          },
+          {
+            "id": "f4",
+            "principle": "F4",
+            "title": "Aranabilir Kayıt",
+            "question": "Veriniz ve meta veriniz aranabilir bir kaynakta kayıtlı mı?",
+            "explanation": "Aranabilir kataloglara, depolara veya veri tabanlarına kayıt; veri setinizin arama motorları ve diğer araştırmacılar tarafından bulunmasını sağlar.",
+            "options": [
+              {
+                "value": "multiple",
+                "label": "Birden fazla aranabilir depo/katalogda kayıtlı",
+                "score": 10,
+                "feedback": "Mükemmel! Birden fazla kayıt, farklı topluluklarda keşfedilebilirliği artırır."
+              },
+              {
+                "value": "institutional",
+                "label": "Kurumsal veya disiplin bazlı bir depoda kayıtlı",
+                "score": 8,
+                "feedback": "Harika! Kurumsal depolar alanınız içinde iyi keşfedilebilirlik sağlar."
+              },
+              {
+                "value": "single",
+                "label": "Tek bir aranabilir kaynakta kayıtlı",
+                "score": 5,
+                "feedback": "Güzel başlangıç! Daha geniş erişim için ek depolara da kayıt yaptırmayı düşünün."
+              },
+              {
+                "value": "no",
+                "label": "Hiçbir aranabilir kaynakta kayıtlı değil",
+                "score": 0,
+                "feedback": "Zenodo, kurumsal depolar veya disiplin bazlı veri tabanlarına kayıt yaptırmayı düşünün."
+              }
+            ],
+            "tips": [
+              "İç keşfedilebilirlik için kurumsal depoları kullanın",
+              "Alan bazlı keşif için disiplin veri tabanlarına kayıt olun",
+              "Daha geniş erişim için Zenodo gibi genel depoları değerlendirin"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "accessible",
+        "title": "Erişilebilir",
+        "description": "Kullanıcılar verinizi bulduktan sonra ona nasıl erişebileceklerini bilmelidir; gerektiğinde kimlik doğrulama ve yetkilendirme dahil.",
+        "color": "#10B981",
+        "icon": "🔓",
+        "weight": 0.25,
+        "questions": [
+          {
+            "id": "a1",
+            "principle": "A1",
+            "title": "Standart İletişim Protokolü",
+            "question": "Veriniz ve meta veriniz standart iletişim protokolleri üzerinden erişilebilir mi?",
+            "explanation": "HTTP/HTTPS, FTP veya API gibi standart protokoller; verinin farklı sistemler ve kullanıcılar tarafından güvenilir biçimde alınmasını sağlar.",
+            "options": [
+              {
+                "value": "https_api",
+                "label": "HTTPS ve standart API'ler üzerinden erişilebilir",
+                "score": 10,
+                "feedback": "Mükemmel! HTTPS ve API'ler güvenli ve programatik erişim sunar."
+              },
+              {
+                "value": "https",
+                "label": "HTTPS/HTTP üzerinden erişilebilir",
+                "score": 8,
+                "feedback": "İyi! HTTP/HTTPS yaygın olarak desteklenir. Daha iyi entegrasyon için API erişimi de eklemeyi düşünün."
+              },
+              {
+                "value": "ftp",
+                "label": "FTP veya benzeri standart protokoller üzerinden erişilebilir",
+                "score": 6,
+                "feedback": "FTP işe yarar ama güvenlik ve uyumluluk için HTTPS'e geçmeyi düşünün."
+              },
+              {
+                "value": "proprietary",
+                "label": "Yalnızca tescilli veya standart olmayan protokollerle erişilebilir",
+                "score": 2,
+                "feedback": "Daha iyi erişilebilirlik ve birlikte çalışabilirlik için standart protokoller uygulamayı düşünün."
+              },
+              {
+                "value": "no",
+                "label": "Standart bir erişim yöntemi yok",
+                "score": 0,
+                "feedback": "Veri erişimi için HTTPS gibi standart protokolleri öncelikli olarak uygulayın."
+              }
+            ]
+          },
+          {
+            "id": "a1_1",
+            "principle": "A1.1",
+            "title": "Açık Protokol",
+            "question": "Erişim protokolleri açık, ücretsiz ve evrensel olarak uygulanabilir mi?",
+            "explanation": "Açık protokoller; herkesin tescilli yazılım veya lisans engeli olmadan verinize erişebilmesini sağlar.",
+            "options": [
+              {
+                "value": "fully_open",
+                "label": "Tamamen açık ve ücretsiz protokoller (HTTP/HTTPS, REST API)",
+                "score": 10,
+                "feedback": "Harika! Açık protokoller evrensel erişilebilirlik sağlar."
+              },
+              {
+                "value": "mostly_open",
+                "label": "Çoğunlukla açık ama bazı tescilli unsurlar mevcut",
+                "score": 6,
+                "feedback": "İyi; ancak daha iyi erişilebilirlik için tescilli unsurları kaldırmayı düşünün."
+              },
+              {
+                "value": "mixed",
+                "label": "Açık ve tescilli protokollerin karışımı",
+                "score": 3,
+                "feedback": "Maksimum erişilebilirlik için yalnızca açık protokoller kullanmaya doğru ilerleyin."
+              },
+              {
+                "value": "proprietary",
+                "label": "Ağırlıklı olarak tescilli protokoller",
+                "score": 0,
+                "feedback": "Tüm kullanıcılar için erişilebilirliği iyileştirmek için açık protokollere geçin."
+              }
+            ]
+          },
+          {
+            "id": "a1_2",
+            "principle": "A1.2",
+            "title": "Kimlik Doğrulama ve Yetkilendirme",
+            "question": "Erişim protokolünüz, gerektiğinde kimlik doğrulama ve yetkilendirmeyi destekliyor mu?",
+            "explanation": "Hassas veriler için uygun kimlik doğrulama ve yetkilendirme mekanizmaları; veriyi korurken meşru erişime izin verir.",
+            "options": [
+              {
+                "value": "robust",
+                "label": "Sağlam kimlik doğrulama ve detaylı yetkilendirme",
+                "score": 10,
+                "feedback": "Mükemmel! Doğru güvenlik denetimleri, veriyi korurken yetkili erişime imkân tanır."
+              },
+              {
+                "value": "basic",
+                "label": "Temel kimlik doğrulama ve yetkilendirme",
+                "score": 7,
+                "feedback": "İyi temel! Gerekirse daha ayrıntılı erişim denetimleri uygulamayı düşünün."
+              },
+              {
+                "value": "minimal",
+                "label": "Asgari güvenlik denetimleri",
+                "score": 4,
+                "feedback": "Kimlik doğrulama ve yetkilendirme mekanizmalarını güçlendirmeyi düşünün."
+              },
+              {
+                "value": "open",
+                "label": "Tamamen açık erişim (kimlik doğrulama gerektirmez)",
+                "score": 8,
+                "feedback": "Açık erişim, kamuya açık veriler için harikadır. Veri hassasiyet seviyenizle uyumlu olduğundan emin olun."
+              },
+              {
+                "value": "no_access",
+                "label": "Net bir erişim mekanizması yok",
+                "score": 0,
+                "feedback": "Uygun güvenlik denetimleri ile net erişim mekanizmaları uygulayın."
+              }
+            ]
+          },
+          {
+            "id": "a2",
+            "principle": "A2",
+            "title": "Kalıcı Meta Veri",
+            "question": "Veri artık erişilebilir olmasa bile meta veri erişilebilir kalacak mı?",
+            "explanation": "Kalıcı meta veri; veri setinin kendisi kaldırılsa dahi atıf ve referans için bilgilerin erişilebilir kalmasını sağlar.",
+            "options": [
+              {
+                "value": "guaranteed",
+                "label": "Meta veri kalıcılığı depo/kurum tarafından garanti edilmiştir",
+                "score": 10,
+                "feedback": "Mükemmel! Kalıcı meta veri, uzun vadeli keşfedilebilirlik ve atıf imkânı sağlar."
+              },
+              {
+                "value": "likely",
+                "label": "Meta verinin kalıcı olması olası ama garanti değil",
+                "score": 6,
+                "feedback": "Uzun vadeli meta veri korumayı garanti eden depoları kullanmayı düşünün."
+              },
+              {
+                "value": "uncertain",
+                "label": "Meta veri kalıcılığı belirsiz",
+                "score": 3,
+                "feedback": "Meta veri kalıcılık politikalarını araştırın ve daha güvenilir barındırma seçeneklerini değerlendirin."
+              },
+              {
+                "value": "no",
+                "label": "Meta veri, veriyle birlikte silinecek",
+                "score": 0,
+                "feedback": "Uzun vadeli keşfedilebilirlik ve atıf yeteneği için meta veri kalıcılığını sağlayın."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "interoperable",
+        "title": "Birlikte çalışabilir",
+        "description": "Veri genellikle başka verilerle bütünleştirilmesi ve analiz, depolama ve işleme için uygulamalar veya iş akışlarıyla çalışması gereken bir varlıktır.",
+        "color": "#8B5CF6",
+        "icon": "🔗",
+        "weight": 0.25,
+        "questions": [
+          {
+            "id": "i1",
+            "principle": "I1",
+            "title": "Resmi Dil",
+            "question": "Veriniz ve meta veriniz; bilgi temsili için resmi, erişilebilir, paylaşılan ve geniş kapsamlı bir dil kullanıyor mu?",
+            "explanation": "Standart, makine-okunabilir formatların kullanılması; verinizin farklı sistemler tarafından işlenebilmesini ve diğer veri setleriyle entegre edilebilmesini sağlar.",
+            "options": [
+              {
+                "value": "json_ld",
+                "label": "JSON-LD, RDF veya diğer anlamsal web formatları",
+                "score": 10,
+                "feedback": "Mükemmel! Anlamsal web formatları zengin makine-okunabilir meta veri ve bağ kurma imkânı sunar."
+              },
+              {
+                "value": "structured",
+                "label": "JSON, XML veya iyi biçimlendirilmiş CSV gibi yapılandırılmış formatlar",
+                "score": 8,
+                "feedback": "İyi! Bu formatlar makine-okunabilir ve geniş ölçüde desteklenir."
+              },
+              {
+                "value": "standard",
+                "label": "Alana özgü standart formatlar",
+                "score": 6,
+                "feedback": "Alan bazlı standartlar iyidir; daha geniş birlikte çalışabilirlik formatlarını da değerlendirin."
+              },
+              {
+                "value": "proprietary",
+                "label": "Tescilli veya yetersiz yapılandırılmış formatlar",
+                "score": 2,
+                "feedback": "Daha standart ve birlikte çalışabilir formatlara geçmeyi düşünün."
+              },
+              {
+                "value": "none",
+                "label": "Resmi yapı yok",
+                "score": 0,
+                "feedback": "Yapılandırılmış, makine-okunabilir formatları öncelikli olarak uygulayın."
+              }
+            ]
+          },
+          {
+            "id": "i2",
+            "principle": "I2",
+            "title": "FAIR Kelime Dağarcıkları",
+            "question": "Veriniz ve meta veriniz, FAIR prensiplerine uyan kelime dağarcıkları kullanıyor mu?",
+            "explanation": "Kontrollü kelime dağarcıkları ve ontolojiler; tutarlı terminoloji sağlar ve veri entegrasyonunu kolaylaştırır.",
+            "options": [
+              {
+                "value": "multiple",
+                "label": "Birden fazla FAIR uyumlu kelime dağarcığı ve ontoloji",
+                "score": 10,
+                "feedback": "Mükemmel! Birden fazla FAIR kelime dağarcığı kullanmak, birlikte çalışabilirliği maksimize eder."
+              },
+              {
+                "value": "domain",
+                "label": "Alana özgü kontrollü kelime dağarcıkları",
+                "score": 8,
+                "feedback": "Harika! Alan dağarcıkları üst düzey anlamsal hassasiyet sağlar."
+              },
+              {
+                "value": "basic",
+                "label": "Temel kontrollü kelime dağarcıkları",
+                "score": 5,
+                "feedback": "Güzel başlangıç! Daha kapsamlı alan dağarcıklarını değerlendirin."
+              },
+              {
+                "value": "minimal",
+                "label": "Asgari düzeyde kontrollü kelime dağarcığı kullanımı",
+                "score": 2,
+                "feedback": "Daha iyi anlamsal birlikte çalışabilirlik için kontrollü kelime dağarcığı kullanımını artırın."
+              },
+              {
+                "value": "none",
+                "label": "Kontrollü kelime dağarcığı yok",
+                "score": 0,
+                "feedback": "Araştırmacılar için ORCID gibi temel olanlardan başlayarak kontrollü kelime dağarcıkları uygulayın."
+              }
+            ],
+            "tips": [
+              "Araştırmacı kimliği için ORCID kullanın",
+              "Kurumsal bağlılıklar için ROR uygulayın",
+              "Tıbbi veri için MeSH gibi alana özgü dağarcıkları benimseyin"
+            ]
+          },
+          {
+            "id": "i3",
+            "principle": "I3",
+            "title": "Nitelendirilmiş Referanslar",
+            "question": "Veriniz ve meta veriniz, diğer meta verilere nitelendirilmiş referanslar içeriyor mu?",
+            "explanation": "Nitelendirilmiş referanslar; veri setleri arasında açık ilişkiler kurar ve bağlamı netleştirir.",
+            "options": [
+              {
+                "value": "comprehensive",
+                "label": "İlişki türleri ile birlikte kapsamlı nitelendirilmiş referanslar",
+                "score": 10,
+                "feedback": "Harika! Detaylı ilişki meta verisi, zengin veri entegrasyonu sağlar."
+              },
+              {
+                "value": "basic",
+                "label": "İlgili veri setlerine temel referanslar",
+                "score": 6,
+                "feedback": "İyi! Daha spesifik ilişki nitelendiricileri eklemeyi düşünün."
+              },
+              {
+                "value": "minimal",
+                "label": "Asgari veya nitelendirilmemiş referanslar",
+                "score": 3,
+                "feedback": "Veri entegrasyon yeteneklerini iyileştirmek için daha fazla nitelendirilmiş referans ekleyin."
+              },
+              {
+                "value": "none",
+                "label": "Diğer verilere referans yok",
+                "score": 0,
+                "feedback": "Keşfedilebilirlik ve bağlamı iyileştirmek için ilgili veri setlerine referanslar eklemeyi düşünün."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "reusable",
+        "title": "Yeniden kullanılabilir",
+        "description": "FAIR'in nihai amacı verinin yeniden kullanımını optimize etmektir. Bunun için meta veri ve veri; farklı bağlamlarda kopyalanabilecek veya birleştirilebilecek şekilde iyi tanımlanmalıdır.",
+        "color": "#F59E0B",
+        "icon": "♻️",
+        "weight": 0.25,
+        "questions": [
+          {
+            "id": "r1",
+            "principle": "R1",
+            "title": "Zengin Öznitelikler",
+            "question": "Veriniz ve meta veriniz, doğru ve ilgili özniteliklerle zengin biçimde tanımlanıyor mu?",
+            "explanation": "Zengin tanımlamalar kullanıcıların verinin bağlamını, sınırlarını ve uygun kullanım alanlarını anlamalarına yardımcı olur.",
+            "options": [
+              {
+                "value": "comprehensive",
+                "label": "Metodoloji, kalite ve bağlam dahil kapsamlı belgeleme",
+                "score": 10,
+                "feedback": "Mükemmel! Kapsamlı belgeleme, güvenli yeniden kullanımı mümkün kılar."
+              },
+              {
+                "value": "good",
+                "label": "Önemli noktaları kapsayan iyi belgeleme",
+                "score": 7,
+                "feedback": "İyi kapsam! Metodoloji ve sınırlamalar hakkında daha fazla detay eklemeyi düşünün."
+              },
+              {
+                "value": "basic",
+                "label": "Bazı detayları içeren temel belgeleme",
+                "score": 4,
+                "feedback": "Temel belgeleme mevcut; daha iyi yeniden kullanım için zenginleştirilebilir."
+              },
+              {
+                "value": "minimal",
+                "label": "Asgari belgeleme",
+                "score": 1,
+                "feedback": "Belgelemeyi metodoloji, kalite bilgisi ve kullanım bağlamı ile geliştirin."
+              }
+            ]
+          },
+          {
+            "id": "r1_1",
+            "principle": "R1.1",
+            "title": "Açık Kullanım Lisansı",
+            "question": "Veriniz ve meta veriniz, açık ve erişilebilir bir kullanım lisansı ile yayımlandı mı?",
+            "explanation": "Açık lisanslama; yeniden kullanımın önündeki yasal engelleri kaldırır ve kullanıcıların verinizi nasıl kullanabileceğini netleştirir.",
+            "options": [
+              {
+                "value": "cc0",
+                "label": "CC0 (Kamu Malı)",
+                "score": 10,
+                "feedback": "Mükemmel! CC0 azami yeniden kullanım özgürlüğü sağlar."
+              },
+              {
+                "value": "cc_by",
+                "label": "CC BY (Atıf gerekli)",
+                "score": 9,
+                "feedback": "Harika! CC BY; uygun atıfla geniş yeniden kullanıma imkân verir."
+              },
+              {
+                "value": "open",
+                "label": "Diğer açık lisans",
+                "score": 7,
+                "feedback": "İyi! Açık lisanslar yeniden kullanımı kolaylaştırır. Daha geniş tanınırlık için CC lisanslarını değerlendirin."
+              },
+              {
+                "value": "restrictive",
+                "label": "Kısıtlayıcı lisans",
+                "score": 3,
+                "feedback": "Kısıtlayıcı lisanslar yeniden kullanımı sınırlar. Mümkünse daha açık alternatifleri değerlendirin."
+              },
+              {
+                "value": "none",
+                "label": "Net bir lisans yok",
+                "score": 0,
+                "feedback": "Verinin yasal yeniden kullanımına imkân tanımak için net bir lisans ekleyin."
+              }
+            ]
+          },
+          {
+            "id": "r1_2",
+            "principle": "R1.2",
+            "title": "Köken Bilgisi",
+            "question": "Veriniz ve meta veriniz, ayrıntılı köken bilgisi ile ilişkilendirilmiş mi?",
+            "explanation": "Köken bilgisi; verinin kaynağını, işleme geçmişini ve güvenilirliğini anlamayı sağlar.",
+            "options": [
+              {
+                "value": "detailed",
+                "label": "Tüm işleme geçmişini içeren ayrıntılı köken bilgisi",
+                "score": 10,
+                "feedback": "Mükemmel! Ayrıntılı köken bilgisi güvenli yeniden kullanım ve tekrarlanabilirlik sağlar."
+              },
+              {
+                "value": "good",
+                "label": "Ana noktaları kapsayan iyi köken bilgisi",
+                "score": 7,
+                "feedback": "İyi kapsam! İşleme adımları ve kullanılan araçlar hakkında daha fazla detay eklemeyi düşünün."
+              },
+              {
+                "value": "basic",
+                "label": "Temel köken bilgisi",
+                "score": 4,
+                "feedback": "Temel köken bilgisi mevcut; işleme detaylarıyla zenginleştirilebilir."
+              },
+              {
+                "value": "minimal",
+                "label": "Asgari veya hiç köken bilgisi yok",
+                "score": 1,
+                "feedback": "Veri kaynakları, işleme adımları ve kullanılan araçları içeren köken bilgisi ekleyin."
+              }
+            ]
+          },
+          {
+            "id": "r1_3",
+            "principle": "R1.3",
+            "title": "Topluluk Standartları",
+            "question": "Veriniz ve meta veriniz, alanınıza özgü topluluk standartlarını karşılıyor mu?",
+            "explanation": "Topluluk standartlarına uymak; verinin alanınızdaki mevcut uygulamalar ve araçlarla iyi çalışmasını sağlar.",
+            "options": [
+              {
+                "value": "full",
+                "label": "Topluluk standartlarına tam uyumlu",
+                "score": 10,
+                "feedback": "Mükemmel! Topluluk standartlarına uyum, sorunsuz entegrasyon sağlar."
+              },
+              {
+                "value": "mostly",
+                "label": "Küçük eksiklerle çoğunlukla uyumlu",
+                "score": 7,
+                "feedback": "İyi uyum! Kalan eksikleri kapatmaya odaklanın."
+              },
+              {
+                "value": "partial",
+                "label": "Topluluk standartlarına kısmen uyumlu",
+                "score": 4,
+                "feedback": "Daha iyi yeniden kullanım için topluluk standartlarına uyumu artırın."
+              },
+              {
+                "value": "minimal",
+                "label": "Standartlara asgari düzeyde uyum",
+                "score": 1,
+                "feedback": "Alanınıza ilgili topluluk standartlarını belirleyip uygulayın."
+              },
+              {
+                "value": "none",
+                "label": "Topluluk standartları konusunda farkındalık yok",
+                "score": 0,
+                "feedback": "Alanınıza ilgili topluluk standartlarını araştırın ve benimseyin."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "scoring": {
+      "maxScore": 150,
+      "levels": [
+        {
+          "min": 0,
+          "max": 37,
+          "level": "Geliştirilmesi Gerekiyor",
+          "description": "Veri setinizin FAIR uyumunda önemli boşluklar var. Temel FAIR prensiplerini uygulamaya odaklanın.",
+          "color": "#EF4444",
+          "recommendations": [
+            "Veri setleriniz için benzersiz tanımlayıcılarla başlayın",
+            "Temel meta veri açıklamalarını uygulayın",
+            "Uygun veri depolarını seçin",
+            "Açık kullanım lisansları ekleyin"
+          ]
+        },
+        {
+          "min": 38,
+          "max": 75,
+          "level": "Temel FAIR",
+          "description": "Veri setiniz temel düzeyde FAIR uyumlu; iyileştirmelerle daha da güçlenebilir.",
+          "color": "#F59E0B",
+          "recommendations": [
+            "Meta veriyi daha ayrıntılı açıklamalarla zenginleştirin",
+            "DOI gibi kalıcı tanımlayıcılar uygulayın",
+            "Yapılandırılmış veri formatları ekleyin",
+            "Köken bilgisi ekleyin"
+          ]
+        },
+        {
+          "min": 76,
+          "max": 112,
+          "level": "İyi FAIR",
+          "description": "Veri setiniz iyi düzeyde FAIR uyumlu; optimize edilmesi için biraz alan var.",
+          "color": "#10B981",
+          "recommendations": [
+            "Daha iyi birlikte çalışabilirlik için anlamsal web formatlarını benimseyin",
+            "Kapsamlı kontrollü kelime dağarcıkları uygulayın",
+            "Ayrıntılı köken bilgisi ve metodoloji ekleyin",
+            "Daha geniş keşfedilebilirlik için birden fazla depoya kayıt yaptırın"
+          ]
+        },
+        {
+          "min": 113,
+          "max": 150,
+          "level": "Mükemmel FAIR",
+          "description": "Veri setiniz mükemmel FAIR uyumu sergiliyor ve başkalarına örnek teşkil ediyor.",
+          "color": "#059669",
+          "recommendations": [
+            "Uygulamalarınızı toplulukla paylaşın",
+            "Alanınızda bir FAIR öncüsü olmayı değerlendirin",
+            "Standartlar geliştikçe uygulamalarınızı sürekli güncelleyin",
+            "FAIR uygulamalarında başkalarına mentorluk yapın"
+          ]
+        }
+      ]
+    }
+  }
+}

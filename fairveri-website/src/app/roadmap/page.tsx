@@ -1,46 +1,45 @@
-import { Metadata } from 'next'
-import {
-  Container,
-  Card,
-  Title,
-  Text,
-  Stack
-} from '@mantine/core'
+import type { Metadata } from 'next';
+import { Section } from '@/components/ui/section';
+import { Timeline } from '@/components/home/Timeline';
 
 export const metadata: Metadata = {
   title: 'FAIR Uygulama Yol Haritası | FairVeri',
-  description: 'Verilerinizi FAIR prensiplere uygun hale getirmek için adım adım rehber ve ilerleme takibi',
-  keywords: ['FAIR yol haritası', 'veri yönetimi planı', 'uygulama rehberi', 'FAIR dönüşüm', 'veri standardları'],
+  description:
+    'Verilerinizi FAIR prensiplere uygun hale getirmek için adım adım rehber ve ilerleme takibi',
+  keywords: [
+    'FAIR yol haritası',
+    'veri yönetimi planı',
+    'uygulama rehberi',
+    'FAIR dönüşüm',
+    'veri standardları',
+  ],
   openGraph: {
     title: 'FAIR Uygulama Yol Haritası',
-    description: 'Verilerinizi FAIR prensiplere uygun hale getirmek için kapsamlı rehber',
+    description:
+      'Verilerinizi FAIR prensiplere uygun hale getirmek için kapsamlı rehber',
     type: 'website',
   },
-}
+};
 
 export default function RoadmapPage() {
   return (
-    <Container size="xl" py="xl">
-      <Stack gap="xl">
-        <Stack align="center" ta="center" gap="xl" py="xl">
-          <Title order={1} size="h1">
-            FAIR Uygulama Yol Haritası
-          </Title>
-          <Text size="xl" c="dimmed" maw={900} ta="center">
-            Verilerinizi FAIR prensiplere uygun hale getirmek için kapsamlı, adım adım rehber ve kişiselleştirilmiş ilerleme takibi
-          </Text>
-        </Stack>
-
-        <Card p="xl" withBorder>
-          <Stack gap="md" align="center">
-            <Title order={3}>Yol Haritası Özelliği Geliştiriliyor</Title>
-            <Text c="dimmed" ta="center">
-              FAIR uygulama yol haritası yakında hazır olacak. 
-              Şimdilik öğrenme modüllerinden yararlanabilirsiniz.
-            </Text>
-          </Stack>
-        </Card>
-      </Stack>
-    </Container>
-  )
+    <>
+      <Section
+        align="center"
+        title="FAIR Uygulama Yol Haritası"
+        description="Verilerinizi FAIR prensiplere uygun hale getirmek için kapsamlı, adım adım rehber ve kişiselleştirilmiş ilerleme takibi."
+      >
+        <div className="mx-auto max-w-[680px] rounded-2xl border border-line bg-surface p-7 text-center shadow-xs">
+          <h3 className="mb-2 text-[18px] font-semibold text-ink">
+            Yol haritası özelliği geliştiriliyor
+          </h3>
+          <p className="text-sm leading-relaxed text-ink-2">
+            Yakında bütünleşik bir takip aracı sunacağız. Şimdilik aşağıdaki tarihçeyi
+            inceleyebilir ve öğrenme modüllerinden yararlanabilirsiniz.
+          </p>
+        </div>
+      </Section>
+      <Timeline />
+    </>
+  );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { useMantineColorScheme } from '@mantine/core';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -26,6 +27,7 @@ export function ThemeProvider({
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
   const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('light');
+  const { setColorScheme: setMantineColorScheme } = useMantineColorScheme();
 
   // Initialize theme from localStorage or system preference
   useEffect(() => {
@@ -67,23 +69,30 @@ export function ThemeProvider({
   // Apply theme to document
   useEffect(() => {
     const root = window.document.documentElement;
-    
+
     root.classList.remove('light', 'dark');
     root.classList.add(actualTheme);
-    
-    // Update theme-color meta tag
+    root.setAttribute('data-theme', actualTheme);
+    root.setAttribute('data-mantine-color-scheme', actualTheme);
+
+    // Drive Mantine's internal color scheme state so its components re-render.
+    setMantineColorScheme(actualTheme);
+
     const themeColorMeta = document.querySelector('meta[name="theme-color"]');
     if (themeColorMeta) {
-      themeColorMeta.setAttribute('content', actualTheme === 'dark' ? '#0f172a' : '#ffffff');
+      themeColorMeta.setAttribute('content', actualTheme === 'dark' ? '#0b1018' : '#fbfbf8');
     }
-  }, [actualTheme]);
+  }, [actualTheme, setMantineColorScheme]);
 
   // Handle theme changes
   const handleThemeChange = (newTheme: Theme) => {
     setTheme(newTheme);
-    
+
     try {
       window.localStorage.setItem(storageKey, newTheme);
+      // Keep Mantine's color scheme manager in sync so its components match.
+      const mantineValue = newTheme === 'system' ? 'auto' : newTheme;
+      window.localStorage.setItem('mantine-color-scheme-value', mantineValue);
     } catch (error) {
       // Failed to save theme to localStorage
     }

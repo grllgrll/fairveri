@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
-import { MantineProvider } from '@mantine/core';
+import { Inter, JetBrains_Mono, Quicksand, Playfair_Display } from "next/font/google";
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
 import { mantineTheme } from "@/theme/mantine-theme";
 import "@/styles/mantine.css";
@@ -27,6 +27,21 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   display: 'swap',
   weight: ['400', '500', '600', '700'],
+});
+
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
+  subsets: ["latin"],
+  display: 'swap',
+  weight: ['500', '600', '700'],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
 });
 
 export const metadata: Metadata = {
@@ -64,7 +79,7 @@ export function generateViewport() {
     width: 'device-width',
     initialScale: 1,
     maximumScale: 5,
-    themeColor: "#3B82F6",
+    themeColor: "#fbfbf8",
   }
 }
 
@@ -74,7 +89,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" className="scroll-smooth">
+    <html lang="tr" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -82,10 +97,15 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <ColorSchemeScript defaultColorScheme="light" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var k='fairveri-theme';var t=localStorage.getItem(k);if(t!=='light'&&t!=='dark'){t='light';}var d=document.documentElement;d.setAttribute('data-theme',t);d.setAttribute('data-mantine-color-scheme',t);d.classList.add(t);}catch(e){}})();`,
+          }}
+        />
       </head>
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
-        style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}
+        className={`${inter.variable} ${jetbrainsMono.variable} ${quicksand.variable} ${playfair.variable} antialiased`}
       >
         <LanguageProvider defaultLanguage="tr">
           <MantineProvider theme={mantineTheme} defaultColorScheme="light">

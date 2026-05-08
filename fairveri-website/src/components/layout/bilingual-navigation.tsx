@@ -1,469 +1,181 @@
 'use client';
 
-import { useState } from 'react';
-import { useDisclosure } from '@mantine/hooks';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import {
-  Group,
-  Button,
-  Menu,
-  Burger,
-  Container,
-  Drawer,
-  Stack,
-  Text,
-  Badge,
-  Box,
-  Divider,
-} from '@mantine/core';
-import {
-  IconChevronDown,
-} from '@tabler/icons-react';
-import { designTokens } from '@/theme/design-tokens';
-import { useTranslation } from '@/contexts/language-context';
-import { LanguageSelector } from '@/components/ui/language-selector';
+import { Menu, Moon, Search, Sun, X } from 'lucide-react';
+import { useLanguage, useTranslation } from '@/contexts/language-context';
+import { useTheme } from '@/contexts/theme-context';
+import { FairveriLogo } from '@/components/ui/fairveri-logo';
 
-interface NavigationItem {
-  titleKey: string;
-  href: string;
-  descriptionKey?: string;
-  icon?: string;
-  badge?: string;
-  children?: NavigationItem[];
-}
+type NavLink = { href: string; tr: string; en: string };
 
-// Navigation structure with translation keys
-const getNavigationItems = (): NavigationItem[] => [
-  {
-    titleKey: 'navigation.principles',
-    href: '/principles',
-    descriptionKey: 'fair.subtitle',
-    icon: '📚',
-    children: [
-      {
-        titleKey: 'fair.findable.title',
-        href: '/principles#findable',
-        descriptionKey: 'fair.findable.description',
-        icon: '🔍'
-      },
-      {
-        titleKey: 'fair.accessible.title',
-        href: '/principles#accessible',
-        descriptionKey: 'fair.accessible.description',
-        icon: '🔓'
-      },
-      {
-        titleKey: 'fair.interoperable.title',
-        href: '/principles#interoperable',
-        descriptionKey: 'fair.interoperable.description',
-        icon: '🔗'
-      },
-      {
-        titleKey: 'fair.reusable.title',
-        href: '/principles#reusable',
-        descriptionKey: 'fair.reusable.description',
-        icon: '♻️'
-      }
-    ]
-  },
-  {
-    titleKey: 'navigation.tools',
-    href: '/tools',
-    descriptionKey: 'navigation.tools',
-    icon: '🔧',
-    children: [
-      {
-        titleKey: 'footer.links.assessmentTools',
-        href: '/tools#assessment',
-        descriptionKey: 'assessment.subtitle',
-        icon: '📊'
-      },
-      {
-        titleKey: 'navigation.metadataTools',
-        href: '/tools#metadata',
-        descriptionKey: 'accessibility.descriptions.metadataTools',
-        icon: '📝'
-      },
-      {
-        titleKey: 'navigation.dataCleaning',
-        href: '/tools#cleaning',
-        descriptionKey: 'accessibility.descriptions.dataCleaning',
-        icon: '🧹'
-      },
-      {
-        titleKey: 'navigation.dataRepositories',
-        href: '/tools#repositories',
-        descriptionKey: 'accessibility.descriptions.dataRepositories',
-        icon: '🏛️'
-      }
-    ]
-  },
-  {
-    titleKey: 'navigation.examples',
-    href: '/examples',
-    descriptionKey: 'accessibility.descriptions.examples',
-    icon: '💡',
-    children: [
-      {
-        titleKey: 'navigation.surveyData',
-        href: '/examples#survey-data',
-        descriptionKey: 'accessibility.descriptions.surveyData',
-        icon: '📊'
-      },
-      {
-        titleKey: 'navigation.labData',
-        href: '/examples#lab-data',
-        descriptionKey: 'accessibility.descriptions.labData',
-        icon: '🔬'
-      },
-      {
-        titleKey: 'navigation.softwareProject',
-        href: '/examples#software-project',
-        descriptionKey: 'accessibility.descriptions.softwareProject',
-        icon: '💻'
-      }
-    ]
-  },
-  {
-    titleKey: 'navigation.learn',
-    href: '/learn',
-    descriptionKey: 'accessibility.descriptions.learn',
-    icon: '🎓',
-    badge: 'Yeni',
-    children: [
-      {
-        titleKey: 'navigation.gettingStarted',
-        href: '/learn#basics',
-        descriptionKey: 'accessibility.descriptions.gettingStarted',
-        icon: '📖'
-      },
-      {
-        titleKey: 'navigation.assessment',
-        href: '/assessment',
-        descriptionKey: 'assessment.subtitle',
-        icon: '🎯'
-      }
-    ]
-  },
-  {
-    titleKey: 'navigation.faq',
-    href: '/faq',
-    descriptionKey: 'accessibility.descriptions.faq',
-    icon: '❓',
-    children: [
-      {
-        titleKey: 'navigation.generalQuestions',
-        href: '/faq#general',
-        descriptionKey: 'accessibility.descriptions.generalQuestions',
-        icon: '💭'
-      },
-      {
-        titleKey: 'navigation.technicalQuestions',
-        href: '/faq#technical',
-        descriptionKey: 'accessibility.descriptions.technicalQuestions',
-        icon: '⚙️'
-      }
-    ]
-  },
-  {
-    titleKey: 'navigation.resources',
-    href: '/resources',
-    descriptionKey: 'accessibility.descriptions.resources',
-    icon: '📚'
-  },
-  {
-    titleKey: 'navigation.partners',
-    href: '/partners',
-    descriptionKey: 'navigation.partnersDescription',
-    icon: '🤝'
-  },
-  {
-    titleKey: 'navigation.contact',
-    href: '/contact',
-    descriptionKey: 'navigation.contactDescription',
-    icon: '📧'
-  }
+const NAV_LINKS: NavLink[] = [
+  { href: '/principles', tr: 'FAIR nedir?', en: 'What is FAIR?' },
+  { href: '/roadmap', tr: 'Tarihçe', en: 'History' },
+  { href: '/resources', tr: 'Kaynaklar', en: 'Resources' },
+  { href: '/faq', tr: 'SSS', en: 'FAQ' },
 ];
 
+function tx(t: (k: string, p?: any) => any, key: string, fallback: string) {
+  const v = t(key);
+  return !v || v === key ? fallback : v;
+}
+
 export default function BilingualNavigation() {
-  const [opened, { toggle, close }] = useDisclosure(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+  const { language, setLanguage } = useLanguage();
   const { t } = useTranslation();
+  const { actualTheme, toggleTheme } = useTheme();
+  const [open, setOpen] = useState(false);
 
-  const navigationItems = getNavigationItems();
-
-  // Helper function to get display text based on screen size
-  const getDisplayText = (titleKey: string, useShort: boolean = false) => {
-    const shortKeyMap: Record<string, string> = {
-      'navigation.principles': 'navigation.principlesShort',
-      'navigation.examples': 'navigation.examplesShort', 
-      'navigation.faq': 'navigation.faqShort',
-      'navigation.assessment': 'navigation.assessmentShort',
-    };
-    
-    if (useShort && shortKeyMap[titleKey]) {
-      return t(shortKeyMap[titleKey]);
-    }
-    return t(titleKey);
-  };
-
-  const isCurrentPath = (href: string) => {
-    if (href === '/') return pathname === '/';
-    return pathname.startsWith(href);
-  };
-
-  const toggleDropdown = (title: string) => {
-    setActiveDropdown(activeDropdown === title ? null : title);
-  };
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
-    <Box
-      component="header"
-      style={{
-        position: 'sticky',
-        top: 0,
-        zIndex: 100,
-        backgroundColor: 'rgba(255, 255, 255, 0.95)',
-        backdropFilter: 'blur(10px)',
-        borderBottom: `1px solid ${designTokens.colors.neutral[200]}`,
-        boxShadow: designTokens.shadows.sm,
-      }}
-      className="safe-area-padding"
-    >
-      <Container size="xl" style={{ maxWidth: '100%' }}>
-        <Group 
-          justify="space-between" 
-          h={{ base: 64, md: 72 }} 
-          px={{ base: 'sm', md: 'sm', xl: 'md' }}
-          style={{ flexWrap: 'nowrap' }}
+    <header className="sticky top-0 z-50 border-b border-line bg-[var(--topbar-bg)] backdrop-blur-md backdrop-saturate-[180%]">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-[1fr_auto] items-center gap-4 px-[var(--gutter)] py-3.5 md:grid-cols-[1fr_auto_1fr] md:gap-8">
+        <Link
+          href="/"
+          className="inline-flex items-center justify-self-start no-underline"
+          aria-label="fairveri"
         >
-          {/* Logo */}
-          <Link href="/" style={{ textDecoration: 'none' }}>
-            <Group gap="sm">
-              <Text
-                fw={800}
-                variant="gradient"
-                gradient={{ from: 'navy', to: 'electricBlue', deg: 45 }}
-                style={{
-                  fontSize: 'clamp(1.25rem, 3vw, 1.5rem)',
-                  lineHeight: 1.2,
-                }}
-              >
-                FairVeri
-              </Text>
-            </Group>
+          <FairveriLogo size={32} />
+        </Link>
+
+        <nav aria-label="Main" className="hidden justify-self-center md:flex">
+          <ul className="flex list-none gap-6 p-0">
+            {NAV_LINKS.map((l) => {
+              const active = pathname === l.href || pathname.startsWith(`${l.href}/`);
+              return (
+                <li key={l.href}>
+                  <Link
+                    href={l.href as any}
+                    className={`px-0.5 py-1.5 text-sm font-medium no-underline transition-colors ${
+                      active ? 'text-ink' : 'text-ink-2 hover:text-ink'
+                    }`}
+                  >
+                    {language === 'en' ? l.en : l.tr}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        <div className="flex items-center justify-self-end gap-2 md:gap-3">
+          <Link
+            href={'/search' as any}
+            aria-label={tx(t, 'common.search', 'Ara')}
+            className="hidden h-9 w-9 items-center justify-center rounded-full border border-line text-ink-2 hover:bg-bg-2 hover:text-ink md:inline-flex"
+          >
+            <Search className="h-4 w-4" />
           </Link>
 
-          {/* Desktop Navigation - Full Version (lg+) */}
-          <Group gap="md" visibleFrom="lg" style={{ flexWrap: 'nowrap' }}>
-            {navigationItems.map((item) => (
-              <div key={item.titleKey} style={{ position: 'relative' }}>
-                {item.children ? (
-                  <Menu
-                    opened={activeDropdown === item.titleKey}
-                    onChange={(opened) => setActiveDropdown(opened ? item.titleKey : null)}
-                    trigger="click"
-                    openDelay={0}
-                    closeDelay={100}
-                    zIndex={150}
-                    width={380}
-                    position="bottom-start"
-                    withinPortal={false}
-                    transitionProps={{ transition: 'fade', duration: 150 }}
+          <div className="hidden items-center gap-0.5 rounded-full bg-bg-2 p-[3px] text-[13px] font-medium sm:inline-flex">
+            <button
+              type="button"
+              onClick={() => setLanguage('tr')}
+              aria-pressed={language === 'tr'}
+              className={`rounded-full px-3 py-[5px] transition-all ${
+                language === 'tr'
+                  ? 'bg-surface text-ink shadow-xs'
+                  : 'text-muted hover:text-ink'
+              }`}
+            >
+              TR
+            </button>
+            <button
+              type="button"
+              onClick={() => setLanguage('en')}
+              aria-pressed={language === 'en'}
+              className={`rounded-full px-3 py-[5px] transition-all ${
+                language === 'en'
+                  ? 'bg-surface text-ink shadow-xs'
+                  : 'text-muted hover:text-ink'
+              }`}
+            >
+              EN
+            </button>
+          </div>
+
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label={`Switch to ${actualTheme === 'dark' ? 'light' : 'dark'} mode`}
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-2 hover:bg-bg-2 hover:text-ink"
+          >
+            {actualTheme === 'dark' ? (
+              <Sun className="h-4 w-4" />
+            ) : (
+              <Moon className="h-4 w-4" />
+            )}
+          </button>
+
+          <Link
+            href={'/assessment' as any}
+            className="hidden items-center gap-2 whitespace-nowrap rounded-full bg-ink px-4 py-2.5 text-sm font-semibold text-bg transition-all hover:-translate-y-px hover:shadow-md sm:inline-flex"
+          >
+            {tx(t, 'homepage.hero.ctaStart', 'Değerlendir')}
+          </Link>
+
+          <button
+            type="button"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-2 md:hidden"
+            aria-label="Menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+          </button>
+        </div>
+      </div>
+
+      {open && (
+        <div className="border-t border-line bg-bg md:hidden">
+          <nav aria-label="Mobile" className="px-[var(--gutter)] py-3">
+            <ul className="flex flex-col gap-1">
+              {NAV_LINKS.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href as any}
+                    className="block rounded-md px-3 py-2 text-sm font-medium text-ink-2 hover:bg-bg-2 hover:text-ink"
                   >
-                    <Menu.Target>
-                      <Button
-                        variant={isCurrentPath(item.href) ? 'light' : 'subtle'}
-                        color={isCurrentPath(item.href) ? 'navy' : 'gray'}
-                        rightSection={<IconChevronDown size={14} />}
-                        leftSection={<span style={{ fontSize: '0.9rem' }}>{item.icon}</span>}
-                        size="sm"
-                        style={{
-                          padding: '8px 12px',
-                          fontSize: '0.875rem',
-                          fontWeight: 500,
-                          minHeight: '36px',
-                          whiteSpace: 'nowrap',
-                        }}
-                      >
-                        {getDisplayText(item.titleKey, false)}
-                        {item.badge && (
-                          <Badge size="xs" ml="xs" variant="light">
-                            {item.badge}
-                          </Badge>
-                        )}
-                      </Button>
-                    </Menu.Target>
-
-                    <Menu.Dropdown
-                      style={{
-                        padding: '8px',
-                        border: '1px solid #e9ecef',
-                        boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                        borderRadius: '8px',
-                        maxWidth: '380px',
-                        minWidth: '320px'
-                      }}
-                    >
-                      <Menu.Label style={{ fontSize: '0.875rem', fontWeight: 600, marginBottom: '8px' }}>
-                        {getDisplayText(item.titleKey, false)}
-                      </Menu.Label>
-                      {item.children.map((child) => (
-                        <Menu.Item
-                          key={child.titleKey}
-                          component={Link}
-                          href={child.href}
-                          leftSection={<span style={{ fontSize: '1rem' }}>{child.icon}</span>}
-                          style={{
-                            borderRadius: '6px',
-                            padding: '8px 12px',
-                            marginBottom: '4px'
-                          }}
-                        >
-                          <div>
-                            <Text size="sm" fw={500} style={{ lineHeight: 1.3 }}>
-                              {t(child.titleKey)}
-                            </Text>
-                            {child.descriptionKey && (
-                              <Text size="xs" c="dimmed" style={{ marginTop: '2px', lineHeight: 1.2 }}>
-                                {t(child.descriptionKey)}
-                              </Text>
-                            )}
-                          </div>
-                        </Menu.Item>
-                      ))}
-                    </Menu.Dropdown>
-                  </Menu>
-                ) : (
-                  <Button
-                    component={Link}
-                    href={item.href}
-                    variant={isCurrentPath(item.href) ? 'light' : 'subtle'}
-                    color={isCurrentPath(item.href) ? 'navy' : 'gray'}
-                    leftSection={<span style={{ fontSize: '0.9rem' }}>{item.icon}</span>}
-                    size="sm"
-                    style={{
-                      padding: '8px 12px',
-                      fontSize: '0.875rem',
-                      fontWeight: 500,
-                      minHeight: '36px',
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    {getDisplayText(item.titleKey, false)}
-                    {item.badge && (
-                      <Badge size="xs" ml="xs" variant="light">
-                        {item.badge}
-                      </Badge>
-                    )}
-                  </Button>
-                )}
-              </div>
-            ))}
-          </Group>
-
-          {/* Right Section */}
-          <Group gap="xs">
-
-            {/* Language Selector - Always Visible on Desktop */}
-            <Box visibleFrom="md">
-              <LanguageSelector variant="compact" />
-            </Box>
-
-            {/* Mobile Controls */}
-            <Group gap="xs" hiddenFrom="md">
-              <Burger
-                opened={opened}
-                onClick={toggle}
-                size="sm"
-                style={{ minHeight: '44px', minWidth: '44px' }}
-              />
-            </Group>
-
-          </Group>
-        </Group>
-      </Container>
-
-      {/* Mobile Navigation Drawer */}
-      <Drawer
-        opened={opened}
-        onClose={close}
-        size="85vw"
-        padding="lg"
-        title={<Text fw={700} size="xl">Menu</Text>}
-        hiddenFrom="md"
-        zIndex={200}
-        classNames={{
-          content: 'safe-area-padding',
-        }}
-      >
-        <Stack gap="xs">
-          {navigationItems.map((item) => (
-            <div key={item.titleKey}>
-              <Button
-                component={Link}
-                href={item.href}
-                variant={isCurrentPath(item.href) ? 'light' : 'subtle'}
-                color={isCurrentPath(item.href) ? 'navy' : 'gray'}
-                leftSection={<span style={{ fontSize: '1.1rem' }}>{item.icon}</span>}
-                fullWidth
-                justify="flex-start"
-                onClick={close}
-                size="lg"
-                style={{
-                  minHeight: '56px',
-                  fontSize: '1rem',
-                  fontWeight: 500,
-                  borderRadius: '12px',
-                  padding: '12px 16px',
-                }}
-              >
-                {t(item.titleKey)}
-                {item.badge && (
-                  <Badge size="xs" ml="auto" variant="light">
-                    {item.badge}
-                  </Badge>
-                )}
-              </Button>
-
-              {item.children && (
-                <Stack gap="xs" pl="lg" mt="xs">
-                  {item.children.map((child) => (
-                    <Button
-                      key={child.titleKey}
-                      component={Link}
-                      href={child.href}
-                      variant="subtle"
-                      color="gray"
-                      size="md"
-                      leftSection={<span style={{ fontSize: '1rem' }}>{child.icon}</span>}
-                      fullWidth
-                      justify="flex-start"
-                      onClick={close}
-                      style={{
-                        minHeight: '48px',
-                        fontSize: '0.9rem',
-                        borderRadius: '10px',
-                        padding: '10px 14px',
-                      }}
-                    >
-                      {t(child.titleKey)}
-                    </Button>
-                  ))}
-                </Stack>
-              )}
-            </div>
-          ))}
-
-          <Divider my="md" />
-
-          {/* Mobile Language Selector */}
-          <LanguageSelector variant="button" />
-
-        </Stack>
-      </Drawer>
-    </Box>
+                    {language === 'en' ? l.en : l.tr}
+                  </Link>
+                </li>
+              ))}
+              <li className="mt-2 flex items-center gap-2 sm:hidden">
+                <button
+                  type="button"
+                  onClick={() => setLanguage('tr')}
+                  className={`rounded-full px-3 py-1.5 text-xs font-medium ${
+                    language === 'tr' ? 'bg-surface text-ink shadow-xs' : 'bg-bg-2 text-muted'
+                  }`}
+                >
+                  TR
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setLanguage('en')}
+                  className={`rounded-full px-3 py-1.5 text-xs font-medium ${
+                    language === 'en' ? 'bg-surface text-ink shadow-xs' : 'bg-bg-2 text-muted'
+                  }`}
+                >
+                  EN
+                </button>
+                <Link
+                  href={'/assessment' as any}
+                  className="ml-auto inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2 text-sm font-semibold text-bg"
+                >
+                  {tx(t, 'homepage.hero.ctaStart', 'Değerlendir')}
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      )}
+    </header>
   );
 }

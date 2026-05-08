@@ -8,6 +8,24 @@ export interface AssessmentAnswer {
   feedback?: string;
 }
 
+export interface AssessmentMetadata {
+  fullName: string;
+  institution: string;
+  datasetTitle: string;
+  doi?: string;
+  email?: string;
+}
+
+export const PASS_THRESHOLD = 85;
+
+function makeCertificateId(): string {
+  // Browser-only; assessment-store is consumed in client components.
+  if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
+    return `FV-${crypto.randomUUID().split('-')[0].toUpperCase()}`;
+  }
+  return `FV-${Math.random().toString(36).slice(2, 10).toUpperCase()}`;
+}
+
 export interface AssessmentResults {
   totalScore: number;
   maxScore: number;
@@ -31,15 +49,20 @@ interface AssessmentStore {
   answers: AssessmentAnswer[];
   isCompleted: boolean;
   results: AssessmentResults | null;
-  
+
+  // Certificate metadata
+  metadata: AssessmentMetadata | null;
+  certificateId: string | null;
+
   // UI state
   showExplanations: boolean;
-  
+
   // Actions
   setCurrentCategory: (index: number) => void;
   setCurrentQuestion: (index: number) => void;
   saveAnswer: (answer: AssessmentAnswer) => void;
   removeAnswer: (questionId: string) => void;
+  setMetadata: (m: AssessmentMetadata) => void;
   calculateResults: () => void;
   resetAssessment: () => void;
   toggleExplanations: () => void;
@@ -67,6 +90,10 @@ interface AssessmentStore {
   // Data persistence
   exportResults: () => string;
   importResults: (data: string) => void;
+
+  // Derived helpers
+  getOverallPercentage: () => number;
+  hasPassed: () => boolean;
 }
 
 // Import assessment questions
@@ -81,6 +108,8 @@ export const useAssessmentStore = create<AssessmentStore>()(
       answers: [],
       isCompleted: false,
       results: null,
+      metadata: null,
+      certificateId: null,
       showExplanations: false,
       
       // Actions
@@ -104,7 +133,9 @@ export const useAssessmentStore = create<AssessmentStore>()(
       removeAnswer: (questionId) => set((state) => ({
         answers: state.answers.filter(a => a.questionId !== questionId)
       })),
-      
+
+      setMetadata: (m) => set({ metadata: m }),
+
       calculateResults: () => {
         const state = get();
         const { assessment } = assessmentData;
@@ -148,15 +179,22 @@ export const useAssessmentStore = create<AssessmentStore>()(
           completedAt: new Date()
         };
         
-        set({ results, isCompleted: true });
+        set((prev) => ({
+          results,
+          isCompleted: true,
+          // Mint a stable certificate id once; preserve it on subsequent recalculations.
+          certificateId: prev.certificateId ?? makeCertificateId(),
+        }));
       },
-      
+
       resetAssessment: () => set({
         currentCategoryIndex: 0,
         currentQuestionIndex: 0,
         answers: [],
         isCompleted: false,
-        results: null
+        results: null,
+        metadata: null,
+        certificateId: null,
       }),
       
       toggleExplanations: () => set((state) => ({
@@ -267,7 +305,21 @@ export const useAssessmentStore = create<AssessmentStore>()(
         } catch (error) {
           // Failed to import assessment data - invalid JSON
         }
-      }
+      },
+
+      getOverallPercentage: () => {
+        const { results } = get();
+        if (!results) return 0;
+        // Read maxScore from the live data file rather than the stored snapshot, so that
+        // any data corrections (e.g. fixing a stale maxScore) immediately reflect on prior runs.
+        const liveMax = assessmentData.assessment.scoring.maxScore;
+        const max = liveMax > 0 ? liveMax : results.maxScore;
+        return max > 0 ? (results.totalScore / max) * 100 : 0;
+      },
+
+      hasPassed: () => {
+        return get().getOverallPercentage() >= PASS_THRESHOLD;
+      },
     }),
     {
       name: 'fair-assessment-storage',
@@ -277,7 +329,9 @@ export const useAssessmentStore = create<AssessmentStore>()(
         results: state.results,
         isCompleted: state.isCompleted,
         currentCategoryIndex: state.currentCategoryIndex,
-        currentQuestionIndex: state.currentQuestionIndex
+        currentQuestionIndex: state.currentQuestionIndex,
+        metadata: state.metadata,
+        certificateId: state.certificateId,
       })
     }
   )

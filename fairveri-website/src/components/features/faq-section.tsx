@@ -1,484 +1,465 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { Search, Tag, Clock, User, HelpCircle, ExternalLink } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { SearchInput } from '@/components/ui/search'
-import { cn } from '@/lib/utils'
-import faqData from '@/data/faq.json'
-
-// Helper function for tag colors - moved outside components for reusability
-const getTagColor = (tag: string) => {
-  const colors = {
-    'fair': 'info',
-    'open-data': 'success',
-    'metadata': 'purple',
-    'license': 'warning',
-    'privacy': 'destructive',
-    'technical': 'secondary',
-    'cost': 'outline',
-    'training': 'info'
-  }
-  return colors[tag as keyof typeof colors] || 'outline'
-}
+import React, { useEffect, useState } from 'react';
+import { Search, ChevronDown, HelpCircle, Tag, Lightbulb, CheckSquare, Target, Coins, Wrench, AlertCircle, ListChecks, X } from 'lucide-react';
+import { useLanguage } from '@/contexts/language-context';
+import faqData from '@/data/faq.json';
 
 interface FAQSectionProps {
-  className?: string
-  showSearch?: boolean
-  showCategories?: boolean
-  maxItems?: number
-  featured?: boolean
+  className?: string;
+  showSearch?: boolean;
+  showCategories?: boolean;
+  maxItems?: number;
 }
 
-const FAQSection: React.FC<FAQSectionProps> = ({ 
-  className, 
-  showSearch = true, 
-  showCategories = true, 
+const TR = {
+  searchPlaceholder: 'Soru, cevap veya etiket ile ara…',
+  allCategories: 'Tümü',
+  found: (n: number) => `${n} soru bulundu`,
+  noResults: 'Arama kriterlerinize uygun soru bulunamadı.',
+  tipsTitle: 'İpuçları',
+  checklistTitle: 'Kontrol Listesi',
+  benefitsTitle: 'Faydalar',
+  costsTitle: 'Maliyetler',
+  licensesTitle: 'Lisanslar',
+  requirementsTitle: 'Gereksinimler',
+  toolsTitle: 'Araçlar',
+  recommendedTitle: 'Önerilen',
+  avoidTitle: 'Kaçınılacak',
+  relatedTitle: 'İlgili Sorular',
+  tagsTitle: 'Etiketler',
+  clearSearch: 'Aramayı temizle',
+};
+
+const EN = {
+  searchPlaceholder: 'Search by question, answer or tag…',
+  allCategories: 'All',
+  found: (n: number) => `${n} question${n === 1 ? '' : 's'} found`,
+  noResults: 'No questions match your search.',
+  tipsTitle: 'Tips',
+  checklistTitle: 'Checklist',
+  benefitsTitle: 'Benefits',
+  costsTitle: 'Costs',
+  licensesTitle: 'Licenses',
+  requirementsTitle: 'Requirements',
+  toolsTitle: 'Tools',
+  recommendedTitle: 'Recommended',
+  avoidTitle: 'Avoid',
+  relatedTitle: 'Related Questions',
+  tagsTitle: 'Tags',
+  clearSearch: 'Clear search',
+};
+
+const FAQSection: React.FC<FAQSectionProps> = ({
+  className = '',
+  showSearch = true,
+  showCategories = true,
   maxItems,
-  featured = false
 }) => {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [activeCategory, setActiveCategory] = useState('all')
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())
+  const { language } = useLanguage();
+  const s = language === 'en' ? EN : TR;
 
-  const categories = faqData.faq.categories
-  const allQuestions = categories.flatMap(category => 
-    category.questions.map(q => ({ ...q, categoryId: category.id, categoryTitle: category.title }))
-  )
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [openId, setOpenId] = useState<string | null>(null);
 
-  const filteredQuestions = allQuestions.filter(question => {
-    const matchesSearch = searchQuery === '' || 
-      question.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      question.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      question.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-    
-    const matchesCategory = activeCategory === 'all' || question.categoryId === activeCategory
-    
-    return matchesSearch && matchesCategory
-  }).slice(0, maxItems)
+  const categories = faqData.faq.categories;
+  const allQuestions = categories.flatMap((category) =>
+    category.questions.map((q) => ({ ...q, categoryId: category.id, categoryTitle: category.title }))
+  );
 
-  const popularQuestions = allQuestions.filter(q => 
-    ['fair-vs-open', 'minimum-requirements', 'benefits', 'license-choice', 'file-formats'].includes(q.id)
-  )
+  // Open accordion item matching URL hash (e.g. #fair-vs-open from quick-link cards).
+  useEffect(() => {
+    const applyHash = () => {
+      const id = window.location.hash.replace(/^#/, '');
+      if (!id) return;
+      if (!allQuestions.some((q) => q.id === id)) return;
+      setActiveCategory('all');
+      setOpenId(id);
+      requestAnimationFrame(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    };
+    applyHash();
+    window.addEventListener('hashchange', applyHash);
+    return () => window.removeEventListener('hashchange', applyHash);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const toggleExpanded = (questionId: string) => {
-    const newExpanded = new Set(expandedItems)
-    if (newExpanded.has(questionId)) {
-      newExpanded.delete(questionId)
-    } else {
-      newExpanded.add(questionId)
-    }
-    setExpandedItems(newExpanded)
-  }
-
-  const getCategoryIcon = (categoryId: string) => {
-    switch (categoryId) {
-      case 'general': return '❓'
-      case 'technical': return '🔧'
-      case 'legal': return '⚖️'
-      case 'institutional': return '🏛️'
-      default: return '📝'
-    }
-  }
+  const q = searchQuery.trim().toLowerCase();
+  const filteredQuestions = allQuestions
+    .filter((question) => {
+      const matchesSearch =
+        q === '' ||
+        question.question.toLowerCase().includes(q) ||
+        question.answer.toLowerCase().includes(q) ||
+        question.tags?.some((t) => t.toLowerCase().includes(q));
+      const matchesCategory = activeCategory === 'all' || question.categoryId === activeCategory;
+      return matchesSearch && matchesCategory;
+    })
+    .slice(0, maxItems);
 
   return (
-    <div className={cn("w-full space-y-6", className)}>
-      {/* Header */}
-      <div className="text-center space-y-2">
-        <h2 className="text-3xl font-bold tracking-tight">
-          {faqData.faq.title}
-        </h2>
-        <p className="text-lg text-muted-foreground">
-          {faqData.faq.description}
-        </p>
-      </div>
-
+    <div className={`w-full space-y-6 ${className}`}>
       {/* Search */}
       {showSearch && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Search className="h-5 w-5" />
-              Soru Ara
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <SearchInput
-              value={searchQuery}
-              onValueChange={setSearchQuery}
-              placeholder="Soru, cevap veya etiket ile ara..."
-            />
-          </CardContent>
-        </Card>
-      )}
-
-      {/* Popular Questions */}
-      {featured && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <HelpCircle className="h-5 w-5" />
-              Popüler Sorular
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {popularQuestions.map((question, index) => (
-                <motion.div
-                  key={question.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Card className="cursor-pointer hover:shadow-md transition-shadow duration-200">
-                    <CardHeader className="pb-3">
-                      <CardTitle className="text-lg">{question.question}</CardTitle>
-                      <div className="flex flex-wrap gap-1 mt-2">
-                        {question.tags?.slice(0, 3).map((tag, tagIndex) => (
-                          <Badge 
-                            key={tagIndex} 
-                            variant={getTagColor(tag)}
-                            className="text-xs"
-                          >
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-muted-foreground line-clamp-3">
-                        {question.answer}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      )}
-
-      {/* Categories and Questions */}
-      {showCategories ? (
-        <Tabs value={activeCategory} onValueChange={setActiveCategory}>
-          <TabsList className="grid w-full grid-cols-5">
-            <TabsTrigger value="all">Tümü</TabsTrigger>
-            {categories.map((category) => (
-              <TabsTrigger key={category.id} value={category.id}>
-                <div className="flex items-center gap-2">
-                  <span>{getCategoryIcon(category.id)}</span>
-                  {category.title}
-                </div>
-              </TabsTrigger>
-            ))}
-          </TabsList>
-
-          <TabsContent value="all" className="space-y-4">
-            <div className="text-sm text-muted-foreground">
-              {filteredQuestions.length} soru bulundu
-            </div>
-            <Accordion type="single" collapsible>
-              {filteredQuestions.map((question, index) => (
-                <AccordionItem key={question.id} value={question.id}>
-                  <AccordionTrigger className="text-left">
-                    <div className="flex-1">
-                      <div className="font-semibold">{question.question}</div>
-                      <div className="flex items-center gap-2 mt-2">
-                        <Badge variant="outline" className="text-xs">
-                          {question.categoryTitle}
-                        </Badge>
-                        {question.tags?.slice(0, 2).map((tag, tagIndex) => (
-                          <Badge 
-                            key={tagIndex} 
-                            variant={getTagColor(tag)}
-                            className="text-xs"
-                          >
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <QuestionContent question={question} />
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </TabsContent>
-
-          {categories.map((category) => (
-            <TabsContent key={category.id} value={category.id} className="space-y-4">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-2xl">{getCategoryIcon(category.id)}</span>
-                <div>
-                  <h3 className="text-xl font-semibold">{category.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {category.questions.length} soru
-                  </p>
-                </div>
-              </div>
-              
-              <Accordion type="single" collapsible>
-                {category.questions.map((question, index) => (
-                  <AccordionItem key={question.id} value={question.id}>
-                    <AccordionTrigger className="text-left">
-                      <div className="flex-1">
-                        <div className="font-semibold">{question.question}</div>
-                        {question.tags && (
-                          <div className="flex flex-wrap gap-1 mt-2">
-                            {question.tags.slice(0, 3).map((tag, tagIndex) => (
-                              <Badge 
-                                key={tagIndex} 
-                                variant={getTagColor(tag)}
-                                className="text-xs"
-                              >
-                                {tag}
-                              </Badge>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <QuestionContent question={question} />
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </TabsContent>
-          ))}
-        </Tabs>
-      ) : (
-        <div className="space-y-4">
-          <div className="text-sm text-muted-foreground">
-            {filteredQuestions.length} soru bulundu
-          </div>
-          <Accordion type="single" collapsible>
-            {filteredQuestions.map((question, index) => (
-              <AccordionItem key={question.id} value={question.id}>
-                <AccordionTrigger className="text-left">
-                  <div className="flex-1">
-                    <div className="font-semibold">{question.question}</div>
-                    <div className="flex items-center gap-2 mt-2">
-                      <Badge variant="outline" className="text-xs">
-                        {question.categoryTitle}
-                      </Badge>
-                      {question.tags?.slice(0, 2).map((tag, tagIndex) => (
-                        <Badge 
-                          key={tagIndex} 
-                          variant={getTagColor(tag)}
-                          className="text-xs"
-                        >
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <QuestionContent question={question} />
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      )}
-
-      {filteredQuestions.length === 0 && (
-        <div className="text-center py-12">
-          <HelpCircle className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-          <p className="text-muted-foreground">
-            Arama kriterlerinize uygun soru bulunamadı.
-          </p>
-        </div>
-      )}
-    </div>
-  )
-}
-
-// Question Content Component
-const QuestionContent: React.FC<{ question: any }> = ({ question }) => {
-  return (
-    <div className="space-y-4">
-      <div className="prose prose-sm max-w-none">
-        <p>{question.answer}</p>
-      </div>
-
-      {/* Tips */}
-      {question.tips && (
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <h4 className="font-semibold mb-2 text-blue-800">💡 İpuçları</h4>
-          <ul className="space-y-1 text-sm text-blue-700">
-            {question.tips.map((tip: string, index: number) => (
-              <li key={index} className="flex items-start gap-2">
-                <span className="text-blue-500">•</span>
-                {tip}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Checklist */}
-      {question.checklist && (
-        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-          <h4 className="font-semibold mb-2 text-green-800">✅ Kontrol Listesi</h4>
-          <ul className="space-y-1 text-sm text-green-700">
-            {question.checklist.map((item: string, index: number) => (
-              <li key={index} className="flex items-start gap-2">
-                <span className="text-green-500">✓</span>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Benefits */}
-      {question.benefits && (
-        <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-          <h4 className="font-semibold mb-2 text-purple-800">🎯 Faydalar</h4>
-          <ul className="space-y-1 text-sm text-purple-700">
-            {question.benefits.map((benefit: string, index: number) => (
-              <li key={index} className="flex items-start gap-2">
-                <span className="text-purple-500">•</span>
-                {benefit}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Costs */}
-      {question.costs && (
-        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-          <h4 className="font-semibold mb-2 text-yellow-800">💰 Maliyetler</h4>
-          <div className="space-y-2 text-sm text-yellow-700">
-            {Object.entries(question.costs).map(([key, value]) => (
-              <div key={key} className="flex justify-between">
-                <span className="capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}:</span>
-                <span className="font-medium">{value}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Licenses */}
-      {question.licenses && (
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-          <h4 className="font-semibold mb-2 text-gray-800">📜 Lisanslar</h4>
-          <div className="space-y-3 text-sm">
-            {question.licenses.map((license: any, index: number) => (
-              <div key={index} className="flex items-start gap-3">
-                <Badge variant="outline" className="text-xs">
-                  {license.name}
-                </Badge>
-                <div className="flex-1">
-                  <p className="font-medium">{license.description}</p>
-                  <p className="text-muted-foreground mt-1">{license.use}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Requirements */}
-      {question.requirements && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-          <h4 className="font-semibold mb-2 text-red-800">📋 Gereksinimler</h4>
-          <ul className="space-y-1 text-sm text-red-700">
-            {question.requirements.map((requirement: string, index: number) => (
-              <li key={index} className="flex items-start gap-2">
-                <span className="text-red-500">•</span>
-                {requirement}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Tools */}
-      {question.tools && (
-        <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
-          <h4 className="font-semibold mb-2 text-indigo-800">🔧 Araçlar</h4>
-          <div className="flex flex-wrap gap-2">
-            {question.tools.map((tool: string, index: number) => (
-              <Badge key={index} variant="secondary" className="text-xs">
-                {tool}
-              </Badge>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Recommended/Avoid Lists */}
-      {question.recommended && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-            <h4 className="font-semibold mb-2 text-green-800">✅ Önerilen</h4>
-            <ul className="space-y-1 text-sm text-green-700">
-              {question.recommended.map((item: string, index: number) => (
-                <li key={index} className="flex items-start gap-2">
-                  <span className="text-green-500">✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          {question.avoid && (
-            <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-              <h4 className="font-semibold mb-2 text-red-800">❌ Kaçınılacak</h4>
-              <ul className="space-y-1 text-sm text-red-700">
-                {question.avoid.map((item: string, index: number) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <span className="text-red-500">✗</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="relative">
+          <Search
+            aria-hidden
+            className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
+          />
+          <input
+            type="search"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder={s.searchPlaceholder}
+            className="h-12 w-full rounded-full border border-line bg-surface pl-11 pr-12 text-[15px] text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20"
+          />
+          {searchQuery && (
+            <button
+              type="button"
+              onClick={() => setSearchQuery('')}
+              aria-label={s.clearSearch}
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-1.5 text-muted hover:bg-bg-2 hover:text-ink"
+            >
+              <X className="h-4 w-4" />
+            </button>
           )}
         </div>
       )}
 
-      {/* Related Questions */}
-      {question.relatedQuestions && (
-        <div className="border-t pt-4">
-          <h4 className="font-semibold mb-2">İlgili Sorular</h4>
-          <div className="flex flex-wrap gap-2">
-            {question.relatedQuestions.map((relatedId: string, index: number) => (
-              <Button key={index} variant="outline" size="sm" className="text-xs">
-                {relatedId}
-              </Button>
-            ))}
-          </div>
+      {/* Category pills */}
+      {showCategories && (
+        <div className="flex flex-wrap gap-2">
+          <CategoryPill
+            label={s.allCategories}
+            count={allQuestions.length}
+            active={activeCategory === 'all'}
+            onClick={() => setActiveCategory('all')}
+          />
+          {categories.map((category) => (
+            <CategoryPill
+              key={category.id}
+              label={category.title}
+              count={category.questions.length}
+              active={activeCategory === category.id}
+              onClick={() => setActiveCategory(category.id)}
+            />
+          ))}
         </div>
       )}
 
-      {/* Tags */}
-      {question.tags && (
-        <div className="border-t pt-4">
-          <h4 className="font-semibold mb-2">Etiketler</h4>
-          <div className="flex flex-wrap gap-1">
-            {question.tags.map((tag: string, index: number) => (
-              <Badge key={index} variant={getTagColor(tag)} className="text-xs">
-                <Tag className="h-3 w-3 mr-1" />
+      {/* Result count */}
+      <div className="font-mono text-[12px] uppercase tracking-wider text-muted">
+        {s.found(filteredQuestions.length)}
+      </div>
+
+      {/* Question list */}
+      {filteredQuestions.length === 0 ? (
+        <div className="flex flex-col items-center gap-3 rounded-2xl border border-line bg-surface px-6 py-16 text-center">
+          <HelpCircle className="h-10 w-10 text-muted" strokeWidth={1.5} />
+          <p className="text-sm text-ink-2">{s.noResults}</p>
+        </div>
+      ) : (
+        <ul className="space-y-3">
+          {filteredQuestions.map((question) => {
+            const isOpen = openId === question.id;
+            return (
+              <li
+                key={question.id}
+                id={question.id}
+                className="scroll-mt-24 overflow-hidden rounded-2xl border border-line bg-surface shadow-xs transition-shadow hover:shadow-sm"
+              >
+                <button
+                  type="button"
+                  aria-expanded={isOpen}
+                  onClick={() => setOpenId(isOpen ? null : question.id)}
+                  className="flex w-full items-start justify-between gap-4 px-6 py-5 text-left"
+                >
+                  <div className="min-w-0 flex-1">
+                    <div className="text-[16px] font-semibold leading-snug text-ink">
+                      {question.question}
+                    </div>
+                    <div className="mt-2 flex flex-wrap items-center gap-1.5">
+                      <CategoryBadge label={question.categoryTitle} />
+                      {question.tags?.slice(0, 3).map((tag) => (
+                        <TagBadge key={tag} label={tag} />
+                      ))}
+                    </div>
+                  </div>
+                  <ChevronDown
+                    aria-hidden
+                    className={`mt-1 h-5 w-5 flex-none text-muted transition-transform ${
+                      isOpen ? 'rotate-180' : ''
+                    }`}
+                    strokeWidth={2}
+                  />
+                </button>
+
+                {isOpen && (
+                  <div className="border-t border-line bg-bg-2/40 px-6 py-6">
+                    <QuestionContent question={question} s={s} />
+                  </div>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+// ── Category pill ────────────────────────────────────────────────
+function CategoryPill({
+  label,
+  count,
+  active,
+  onClick,
+}: {
+  label: string;
+  count: number;
+  active: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${
+        active
+          ? 'bg-ink text-bg shadow-xs'
+          : 'border border-line bg-surface text-ink-2 hover:border-line-2 hover:text-ink'
+      }`}
+    >
+      <span>{label}</span>
+      <span
+        className={`rounded-full px-1.5 font-mono text-[11px] ${
+          active ? 'bg-bg/15 text-bg/80' : 'bg-bg-2 text-muted'
+        }`}
+      >
+        {count}
+      </span>
+    </button>
+  );
+}
+
+// ── Category badge (inside accordion header) ─────────────────────
+function CategoryBadge({ label }: { label: string }) {
+  return (
+    <span className="rounded-md border border-line bg-bg-2 px-2 py-0.5 text-[11px] font-medium text-ink-2">
+      {label}
+    </span>
+  );
+}
+
+// ── Tag badge ───────────────────────────────────────────────────
+const TAG_TONE: Record<string, { bg: string; fg: string }> = {
+  fair: { bg: 'bg-r-bg', fg: 'text-r-fg' },
+  'open-data': { bg: 'bg-i-bg', fg: 'text-i-fg' },
+  metadata: { bg: 'bg-r-bg', fg: 'text-r-fg' },
+  license: { bg: 'bg-f-bg', fg: 'text-f-fg' },
+  privacy: { bg: 'bg-a-bg', fg: 'text-a-fg' },
+  technical: { bg: 'bg-bg-2', fg: 'text-ink-2' },
+  cost: { bg: 'bg-f-bg', fg: 'text-f-fg' },
+  training: { bg: 'bg-i-bg', fg: 'text-i-fg' },
+};
+
+function TagBadge({ label }: { label: string }) {
+  const tone = TAG_TONE[label] ?? { bg: 'bg-bg-2', fg: 'text-muted' };
+  return (
+    <span
+      className={`inline-flex items-center gap-1 rounded-md px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${tone.bg} ${tone.fg}`}
+    >
+      {label}
+    </span>
+  );
+}
+
+// ── Callout box (replaces pastel boxes) ─────────────────────────
+function Callout({
+  icon: Icon,
+  title,
+  tone = 'brand',
+  children,
+}: {
+  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
+  title: string;
+  tone?: 'brand' | 'f' | 'a' | 'i' | 'r' | 'neutral';
+  children: React.ReactNode;
+}) {
+  const map = {
+    brand: { bg: 'bg-brand-soft', accent: 'text-brand-deep', border: 'border-brand/15' },
+    f: { bg: 'bg-f-bg', accent: 'text-f-fg', border: 'border-f-dot/20' },
+    a: { bg: 'bg-a-bg', accent: 'text-a-fg', border: 'border-a-dot/20' },
+    i: { bg: 'bg-i-bg', accent: 'text-i-fg', border: 'border-i-dot/20' },
+    r: { bg: 'bg-r-bg', accent: 'text-r-fg', border: 'border-r-dot/20' },
+    neutral: { bg: 'bg-bg-2', accent: 'text-ink-2', border: 'border-line' },
+  } as const;
+  const c = map[tone];
+  return (
+    <div className={`rounded-xl border ${c.border} ${c.bg} px-4 py-3.5`}>
+      <div className={`mb-2 flex items-center gap-2 text-[13px] font-semibold ${c.accent}`}>
+        <Icon className="h-4 w-4" strokeWidth={2} />
+        {title}
+      </div>
+      <div className={`text-sm ${c.accent}`}>{children}</div>
+    </div>
+  );
+}
+
+// ── Question content ────────────────────────────────────────────
+const QuestionContent: React.FC<{ question: any; s: typeof TR }> = ({ question, s }) => {
+  return (
+    <div className="space-y-4">
+      <p className="text-[15px] leading-relaxed text-ink-2">{question.answer}</p>
+
+      {question.tips && (
+        <Callout icon={Lightbulb} title={s.tipsTitle} tone="i">
+          <ul className="space-y-1">
+            {question.tips.map((tip: string, i: number) => (
+              <li key={i} className="flex items-start gap-2">
+                <span aria-hidden className="mt-1.5 h-1 w-1 flex-none rounded-full bg-current opacity-70" />
+                <span>{tip}</span>
+              </li>
+            ))}
+          </ul>
+        </Callout>
+      )}
+
+      {question.checklist && (
+        <Callout icon={CheckSquare} title={s.checklistTitle} tone="brand">
+          <ul className="space-y-1">
+            {question.checklist.map((item: string, i: number) => (
+              <li key={i} className="flex items-start gap-2">
+                <span aria-hidden className="mt-1.5 h-1 w-1 flex-none rounded-full bg-current opacity-70" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </Callout>
+      )}
+
+      {question.benefits && (
+        <Callout icon={Target} title={s.benefitsTitle} tone="r">
+          <ul className="space-y-1">
+            {question.benefits.map((benefit: string, i: number) => (
+              <li key={i} className="flex items-start gap-2">
+                <span aria-hidden className="mt-1.5 h-1 w-1 flex-none rounded-full bg-current opacity-70" />
+                <span>{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </Callout>
+      )}
+
+      {question.costs && (
+        <Callout icon={Coins} title={s.costsTitle} tone="f">
+          <dl className="space-y-1.5">
+            {Object.entries(question.costs).map(([key, value]) => (
+              <div key={key} className="flex justify-between gap-3 border-b border-current/10 pb-1.5 last:border-b-0 last:pb-0">
+                <dt className="capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</dt>
+                <dd className="font-medium">{String(value)}</dd>
+              </div>
+            ))}
+          </dl>
+        </Callout>
+      )}
+
+      {question.licenses && (
+        <Callout icon={ListChecks} title={s.licensesTitle} tone="neutral">
+          <div className="space-y-2.5">
+            {question.licenses.map((license: any, i: number) => (
+              <div key={i} className="flex items-start gap-3">
+                <span className="rounded-md border border-line bg-surface px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-ink-2">
+                  {license.name}
+                </span>
+                <div className="flex-1 text-ink-2">
+                  <p className="font-medium text-ink">{license.description}</p>
+                  <p className="mt-0.5 text-muted">{license.use}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Callout>
+      )}
+
+      {question.requirements && (
+        <Callout icon={AlertCircle} title={s.requirementsTitle} tone="a">
+          <ul className="space-y-1">
+            {question.requirements.map((req: string, i: number) => (
+              <li key={i} className="flex items-start gap-2">
+                <span aria-hidden className="mt-1.5 h-1 w-1 flex-none rounded-full bg-current opacity-70" />
+                <span>{req}</span>
+              </li>
+            ))}
+          </ul>
+        </Callout>
+      )}
+
+      {question.tools && (
+        <Callout icon={Wrench} title={s.toolsTitle} tone="r">
+          <div className="flex flex-wrap gap-1.5">
+            {question.tools.map((tool: string, i: number) => (
+              <span
+                key={i}
+                className="rounded-md border border-current/15 bg-current/10 px-2 py-0.5 text-[12px] font-medium"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+        </Callout>
+      )}
+
+      {question.recommended && (
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+          <Callout icon={CheckSquare} title={s.recommendedTitle} tone="brand">
+            <ul className="space-y-1">
+              {question.recommended.map((item: string, i: number) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span aria-hidden className="mt-1.5 h-1 w-1 flex-none rounded-full bg-current opacity-70" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </Callout>
+          {question.avoid && (
+            <Callout icon={AlertCircle} title={s.avoidTitle} tone="a">
+              <ul className="space-y-1">
+                {question.avoid.map((item: string, i: number) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span aria-hidden className="mt-1.5 h-1 w-1 flex-none rounded-full bg-current opacity-70" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </Callout>
+          )}
+        </div>
+      )}
+
+      {question.tags && question.tags.length > 0 && (
+        <div className="border-t border-line pt-4">
+          <div className="mb-2 font-mono text-[11px] uppercase tracking-wider text-muted">
+            {s.tagsTitle}
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {question.tags.map((tag: string) => (
+              <span
+                key={tag}
+                className="inline-flex items-center gap-1 rounded-md bg-bg-2 px-2 py-0.5 font-mono text-[11px] uppercase tracking-wider text-ink-2"
+              >
+                <Tag className="h-3 w-3" />
                 {tag}
-              </Badge>
+              </span>
             ))}
           </div>
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default FAQSection
+export default FAQSection;

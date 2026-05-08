@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ['class', '[data-theme="dark"]'],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    // Mobile-first breakpoints
     screens: {
       'xs': '375px',
       'sm': '640px',
@@ -17,72 +17,112 @@ module.exports = {
     },
     extend: {
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        // fairveri.com refined palette — sourced from CSS variables in globals.css
+        bg: 'var(--bg)',
+        'bg-2': 'var(--bg-2)',
+        surface: 'var(--surface)',
+        ink: 'var(--ink)',
+        'ink-2': 'var(--ink-2)',
+        muted: 'var(--muted)',
+        line: 'var(--line)',
+        'line-2': 'var(--line-2)',
+        brand: {
+          DEFAULT: 'var(--brand)',
+          soft: 'var(--brand-soft)',
+          deep: 'var(--brand-deep)',
+        },
+        f: {
+          bg: 'var(--c-f-bg)',
+          fg: 'var(--c-f-fg)',
+          dot: 'var(--c-f-dot)',
+        },
+        a: {
+          bg: 'var(--c-a-bg)',
+          fg: 'var(--c-a-fg)',
+          dot: 'var(--c-a-dot)',
+        },
+        i: {
+          bg: 'var(--c-i-bg)',
+          fg: 'var(--c-i-fg)',
+          dot: 'var(--c-i-dot)',
+        },
+        r: {
+          bg: 'var(--c-r-bg)',
+          fg: 'var(--c-r-fg)',
+          dot: 'var(--c-r-dot)',
+        },
+
+        // Backwards-compat — kept so unmigrated pages still compile during rebuild.
+        background: 'var(--bg)',
+        foreground: 'var(--ink)',
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          DEFAULT: 'var(--brand)',
+          foreground: '#ffffff',
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
+          DEFAULT: 'var(--bg-2)',
+          foreground: 'var(--ink)',
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
+          DEFAULT: 'var(--brand)',
+          foreground: '#ffffff',
         },
         destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
+          DEFAULT: 'var(--c-a-dot)',
+          foreground: '#ffffff',
         },
         warning: {
-          DEFAULT: 'hsl(var(--warning))',
-          foreground: 'hsl(var(--warning-foreground))',
+          DEFAULT: 'var(--c-f-dot)',
+          foreground: '#0f172a',
         },
         success: {
-          DEFAULT: 'hsl(var(--success))',
-          foreground: 'hsl(var(--success-foreground))',
+          DEFAULT: 'var(--c-i-dot)',
+          foreground: '#ffffff',
         },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
+        border: 'var(--line)',
+        input: 'var(--line)',
+        ring: 'var(--brand)',
         card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+          DEFAULT: 'var(--surface)',
+          foreground: 'var(--ink)',
         },
         popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
+          DEFAULT: 'var(--surface)',
+          foreground: 'var(--ink)',
         },
-        // Modern Color Palette
+        navy: 'var(--ink)',
+        teal: 'var(--brand)',
+        'electric-blue': 'var(--c-r-dot)',
+        'fresh-green': 'var(--brand)',
+        'warm-amber': 'var(--c-f-dot)',
         slate: {
-          50: 'hsl(var(--slate-50))',
-          100: 'hsl(var(--slate-100))',
-          200: 'hsl(var(--slate-200))',
-          300: 'hsl(var(--slate-300))',
-          400: 'hsl(var(--slate-400))',
-          500: 'hsl(var(--slate-500))',
-          600: 'hsl(var(--slate-600))',
-          700: 'hsl(var(--slate-700))',
-          800: 'hsl(var(--slate-800))',
-          900: 'hsl(var(--slate-900))',
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
         },
-        navy: 'hsl(var(--navy))',
-        teal: 'hsl(var(--teal))',
-        'electric-blue': 'hsl(var(--electric-blue))',
-        'fresh-green': 'hsl(var(--fresh-green))',
-        'warm-amber': 'hsl(var(--warm-amber))',
+      },
+      fontFamily: {
+        sans: ['var(--font-inter)', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+        mono: ['var(--font-jetbrains-mono)', 'ui-monospace', 'monospace'],
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        sm: '8px',
+        md: '12px',
+        lg: '16px',
+        xl: '22px',
       },
-      // Mobile-optimized spacing
+      boxShadow: {
+        xs: 'var(--shadow-xs)',
+        sm: 'var(--shadow-sm)',
+        md: 'var(--shadow-md)',
+      },
       spacing: {
         'safe-top': 'env(safe-area-inset-top)',
         'safe-bottom': 'env(safe-area-inset-bottom)',
@@ -91,7 +131,6 @@ module.exports = {
         '18': '4.5rem',
         '88': '22rem',
       },
-      // Touch-friendly sizing
       minHeight: {
         'touch': '44px',
         'touch-lg': '48px',
@@ -100,7 +139,9 @@ module.exports = {
         'touch': '44px',
         'touch-lg': '48px',
       },
-      // Mobile-first typography
+      maxWidth: {
+        'wrap': '1200px',
+      },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1.5' }],
         'sm': ['0.875rem', { lineHeight: '1.5' }],
@@ -116,17 +157,17 @@ module.exports = {
         '8xl': ['6rem', { lineHeight: '1' }],
         '9xl': ['8rem', { lineHeight: '1' }],
       },
-      // Mobile-optimized animations
+      letterSpacing: {
+        tightest: '-0.035em',
+        tight: '-0.02em',
+      },
       animation: {
         'fade-in': 'fadeIn 0.3s ease-in-out',
         'slide-up': 'slideUp 0.3s ease-out',
         'bounce-gentle': 'bounceGentle 0.6s ease-in-out',
       },
       keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
+        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },

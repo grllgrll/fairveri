@@ -2,7 +2,7 @@
   "assessment": {
     "title": "FAIR Principles Assessment Tool",
     "description": "Evaluate your dataset's compliance with FAIR principles through this comprehensive assessment",
-    "totalQuestions": 32,
+    "totalQuestions": 15,
     "categories": [
       {
         "id": "findable",
@@ -597,11 +597,11 @@
       }
     ],
     "scoring": {
-      "maxScore": 320,
+      "maxScore": 150,
       "levels": [
         {
           "min": 0,
-          "max": 80,
+          "max": 37,
           "level": "Needs Improvement",
           "description": "Your dataset has significant gaps in FAIR compliance. Focus on implementing basic FAIR principles.",
           "color": "#EF4444",
@@ -613,8 +613,8 @@
           ]
         },
         {
-          "min": 81,
-          "max": 160,
+          "min": 38,
+          "max": 75,
           "level": "Basic FAIR",
           "description": "Your dataset has basic FAIR compliance but could benefit from enhancements.",
           "color": "#F59E0B",
@@ -626,8 +626,8 @@
           ]
         },
         {
-          "min": 161,
-          "max": 240,
+          "min": 76,
+          "max": 112,
           "level": "Good FAIR",
           "description": "Your dataset demonstrates good FAIR compliance with room for optimization.",
           "color": "#10B981",
@@ -639,8 +639,8 @@
           ]
         },
         {
-          "min": 241,
-          "max": 320,
+          "min": 113,
+          "max": 150,
           "level": "Excellent FAIR",
           "description": "Your dataset demonstrates excellent FAIR compliance and serves as a model for others.",
           "color": "#059669",

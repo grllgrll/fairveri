@@ -3,108 +3,113 @@
  * Centralized constants for consistent theming across components
  */
 
-// Color tokens
+// Color tokens — fairveri.com refined palette.
+// Brand is the green from --brand, FAIR letters use the four semantic colors.
 export const colors = {
-  // Primary brand colors
+  // Brand green
   primary: {
-    50: '#f0f4ff',
-    100: '#d9e2ff',
-    200: '#adc2ff', 
-    300: '#7c9eff',
-    400: '#5681ff',
-    500: '#3c71ff',
-    600: '#1e40af', // Main primary
-    700: '#1a3a9e',
-    800: '#16338c',
-    900: '#122b7a',
+    50: '#e8f5ee',
+    100: '#cfeadd',
+    200: '#9fd6bb',
+    300: '#6fc299',
+    400: '#3fae77',
+    500: '#0d8a5b', // --brand
+    600: '#0a7a4f',
+    700: '#075c3d',
+    800: '#053f2a',
+    900: '#032117',
   },
-  
+
+  // F — yellow
   secondary: {
-    50: '#e6f7ff',
-    100: '#bae7ff',
-    200: '#7dd3fc',
-    300: '#38bdf8', 
-    400: '#0ea5e9',
-    500: '#0891b2', // Main secondary
-    600: '#0e7490',
-    700: '#155e75',
-    800: '#164e63',
-    900: '#083344',
+    50: '#fff7e2',
+    100: '#fef0c7',
+    200: '#fde293',
+    300: '#fbd25e',
+    400: '#f8c129',
+    500: '#f5b400', // --c-f-dot
+    600: '#c79200',
+    700: '#8a6510',
+    800: '#5d440a',
+    900: '#2f2205',
   },
-  
+
+  // R — blue
   accent: {
-    50: '#eff6ff',
-    100: '#dbeafe',
-    200: '#bfdbfe',
-    300: '#93c5fd',
-    400: '#60a5fa',
-    500: '#3b82f6', // Main accent
-    600: '#2563eb',
-    700: '#1d4ed8', 
-    800: '#1e40af',
-    900: '#1e3a8a',
+    50: '#e7eefe',
+    100: '#cfddfd',
+    200: '#9fbafb',
+    300: '#7099f8',
+    400: '#4f7cea',
+    500: '#2f5dd5', // --c-r-dot
+    600: '#2548aa',
+    700: '#1d3fa8',
+    800: '#162c75',
+    900: '#0d1a47',
   },
-  
-  // Semantic colors
+
+  // I — mint
   success: {
-    50: '#ecfdf5',
-    100: '#d1fae5',
-    200: '#a7f3d0',
-    300: '#6ee7b7',
-    400: '#34d399',
-    500: '#059669', // Main success
-    600: '#047857',
-    700: '#065f46',
-    800: '#064e3b',
-    900: '#022c22',
+    50: '#e2f4ee',
+    100: '#bfe7d7',
+    200: '#8ed8b8',
+    300: '#5dc998',
+    400: '#2bba79',
+    500: '#06b07d', // --c-i-dot
+    600: '#0d7a55',
+    700: '#0a5e42',
+    800: '#06432f',
+    900: '#03291c',
   },
-  
+
+  // F — amber/yellow re-exposed for warning role
   warning: {
-    50: '#fffbeb',
-    100: '#fef3c7',
-    200: '#fde68a',
-    300: '#fcd34d',
-    400: '#fbbf24',
-    500: '#d97706', // Main warning
-    600: '#b45309',
-    700: '#92400e',
-    800: '#78350f',
-    900: '#451a03',
+    50: '#fff7e2',
+    100: '#fef0c7',
+    200: '#fde293',
+    300: '#fbd25e',
+    400: '#f8c129',
+    500: '#f5b400',
+    600: '#c79200',
+    700: '#8a6510',
+    800: '#5d440a',
+    900: '#2f2205',
   },
-  
+
+  // A — red
   error: {
-    50: '#fef2f2',
-    100: '#fee2e2',
-    200: '#fecaca',
-    300: '#fca5a5',
-    400: '#f87171',
-    500: '#dc2626', // Main error
-    600: '#b91c1c',
-    700: '#991b1b',
-    800: '#7f1d1d',
-    900: '#450a0a',
+    50: '#ffeae8',
+    100: '#fecdc9',
+    200: '#fc9b94',
+    300: '#fa6a5e',
+    400: '#f24a3d',
+    500: '#e63946', // --c-a-dot
+    600: '#c12c38',
+    700: '#a8231b',
+    800: '#75180f',
+    900: '#420d07',
   },
-  
-  // Neutral colors
+
+  // Neutral — slate
   neutral: {
-    50: '#f9fafb',
-    100: '#f3f4f6',
-    200: '#e5e7eb',
-    300: '#d1d5db',
-    400: '#9ca3af',
-    500: '#6b7280',
-    600: '#4b5563',
-    700: '#374151',
-    800: '#1f2937',
-    900: '#111827',
+    50: '#fbfbf8',  // --bg
+    100: '#f5f4ef', // --bg-2
+    200: '#e6e4dc', // --line
+    300: '#cbd5e1',
+    400: '#94a3b8',
+    500: '#64748b', // --muted
+    600: '#475569',
+    700: '#334155', // --ink-2
+    800: '#1e293b',
+    900: '#0f172a', // --ink
   },
 } as const;
 
 // Typography tokens
 export const typography = {
   fontFamily: {
-    sans: 'var(--font-geist-sans), system-ui, sans-serif',
-    mono: 'var(--font-geist-mono), ui-monospace, monospace',
+    sans: 'var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    mono: 'var(--font-jetbrains-mono), ui-monospace, monospace',
   },
   
   fontSize: {
@@ -278,15 +283,15 @@ export const components = {
   },
 } as const;
 
-// Brand-specific gradients
+// Brand-specific gradients (fairveri.com refined palette)
 export const gradients = {
-  fair: 'linear-gradient(135deg, #1e40af 0%, #0891b2 50%, #3b82f6 100%)',
-  hero: 'linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%)',
-  heroDark: 'linear-gradient(135deg, #1f2937 0%, #111827 50%, #374151 100%)',
-  primary: 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
-  secondary: 'linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)',
-  success: 'linear-gradient(135deg, #059669 0%, #10b981 100%)',
-  warning: 'linear-gradient(135deg, #d97706 0%, #f59e0b 100%)',
+  fair: 'linear-gradient(135deg, #f5b400 0%, #e63946 33%, #06b07d 66%, #2f5dd5 100%)',
+  hero: 'linear-gradient(135deg, #fbfbf8 0%, #ffffff 50%, #f5f4ef 100%)',
+  heroDark: 'linear-gradient(135deg, #0b1018 0%, #131c2b 50%, #0f1622 100%)',
+  primary: 'linear-gradient(135deg, #075c3d 0%, #0d8a5b 100%)',
+  secondary: 'linear-gradient(135deg, #f5b400 0%, #f8c129 100%)',
+  success: 'linear-gradient(135deg, #0d7a55 0%, #06b07d 100%)',
+  warning: 'linear-gradient(135deg, #8a6510 0%, #f5b400 100%)',
 } as const;
 
 // Export all tokens as a single object for convenience
